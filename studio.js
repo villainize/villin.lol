@@ -45,6 +45,12 @@ async function init() {
 
   const initialProfile = { ...sessionProfile };
   const defaultDraftProfile = defaultProfile(studioSession);
+  const publicProfileUrl = new URL(
+    window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+      ? `./?user=${encodeURIComponent(studioSession)}`
+      : profileUrl(studioSession),
+    window.location.href
+  ).toString();
 
   function repeatItemMarkup(type, item = {}) {
     if (type === "bubble") {
@@ -125,6 +131,7 @@ async function init() {
         </a>
         <div class="nav-actions">
           <a class="secondary-button" href="${profileUrl(studioSession)}">view page</a>
+          <button class="secondary-button" type="button" id="copyProfileLinkButton">copy profile link</button>
           <button class="danger-button" type="button" id="logoutButton">log out</button>
         </div>
       </nav>
@@ -142,6 +149,13 @@ async function init() {
           <button class="button" type="button" id="saveButton">save changes</button>
         </div>
       </header>
+
+      <div class="share-fallback" id="shareFallback" hidden>
+        <div class="field">
+          <label for="shareFallbackInput">Copy your profile link</label>
+          <input id="shareFallbackInput" type="text" readonly>
+        </div>
+      </div>
 
       <div class="editor-layout">
         <form class="control-panel" id="studioForm">
@@ -403,6 +417,8 @@ async function init() {
   const backgroundImageInput = document.getElementById("backgroundImageInput");
   const avatarPreview = document.getElementById("avatarPreview");
   const backgroundPreview = document.getElementById("backgroundPreview");
+  const shareFallback = document.getElementById("shareFallback");
+  const shareFallbackInput = document.getElementById("shareFallbackInput");
   const newPasswordInput = document.getElementById("studioNewPassword");
   const confirmPasswordInput = document.getElementById("studioConfirmPassword");
 
@@ -537,6 +553,38 @@ async function init() {
     newPasswordInput.value = "";
     confirmPasswordInput.value = "";
     setStudioFlash("Reset preview to defaults. Click save changes to make it permanent.", "success");
+  });
+
+  document.getElementById("copyProfileLinkButton").addEventListener("click", async () => {
+    try {
+      shareFallback.hidden = true;
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(publicProfileUrl);
+      } else {
+        const helper = document.createElement("textarea");
+        helper.value = publicProfileUrl;
+        helper.setAttribute("readonly", "");
+        helper.style.position = "fixed";
+        helper.style.opacity = "0";
+        helper.style.pointerEvents = "none";
+        document.body.appendChild(helper);
+        helper.focus();
+        helper.select();
+        const copied = document.execCommand("copy");
+        helper.remove();
+
+        if (!copied) {
+          throw new Error("copy command failed");
+        }
+      }
+      setStudioFlash("Profile link copied. You can share it now.", "success");
+    } catch {
+      shareFallback.hidden = false;
+      shareFallbackInput.value = publicProfileUrl.replace("/index.html?", "/?");
+      shareFallbackInput.focus();
+      shareFallbackInput.select();
+      setStudioFlash("Copy was blocked here. The link is selected below so you can copy it manually.", "error");
+    }
   });
 
   document.getElementById("changePasswordButton").addEventListener("click", async () => {
