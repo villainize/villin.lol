@@ -1,0 +1,147 @@
+{
+  "summary": {
+    "key": "gl:850148",
+    "server": "GL",
+    "id": "850148",
+    "name": "Divine Inspiration",
+    "desc": "50% boost to Def, Rec, max HP when Orphira is equipped, 20% boost to max HP for all allies, restores HP each turn for all allies & damage taken boosts BB gauge and may restore HP",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Orphira",
+    "searchText": "Divine Inspiration 50% boost to Def, Rec, max HP when Orphira is equipped, 20% boost to max HP for all allies, restores HP each turn for all allies & damage taken boosts BB gauge and may restore HP self 850148"
+  },
+  "raw": {
+    "desc": "50% boost to Def, Rec, max HP when Orphira is equipped, 20% boost to max HP for all allies, restores HP each turn for all allies & damage taken boosts BB gauge and may restore HP",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819183"
+            ]
+          }
+        ],
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 50
+      },
+      {
+        "conditions": [],
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 2000,
+        "turn heal low": 1000
+      },
+      {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 30,
+        "dmg% to hp% when attacked high": 40,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      },
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    ],
+    "id": "850148",
+    "name": "Divine Inspiration",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "def% buff: 50 / hp% buff: 50 / passive id: 1 / passive target: self / rec% buff: 50",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "819183"
+            ]
+          }
+        ],
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 50
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hp% buff: 20 / passive id: 1 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 33 / passive target: party / rec% added (turn heal): 10 / turn heal high: 2000 / turn heal low: 1000",
+      "raw": {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 2000,
+        "turn heal low": 1000
+      }
+    },
+    {
+      "index": 4,
+      "summary": "dmg% to hp% when attacked chance%: 30 / dmg% to hp% when attacked high: 40 / dmg% to hp% when attacked low: 20 / passive id: 24 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 30,
+        "dmg% to hp% when attacked high": 40,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "bc fill when attacked high: 3 / bc fill when attacked low: 2 / bc fill when attacked%: 100 / passive id: 25 / passive target: self",
+      "raw": {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Orphira",
+      "raw": {
+        "item required": [
+          "819183"
+        ]
+      }
+    }
+  ]
+}

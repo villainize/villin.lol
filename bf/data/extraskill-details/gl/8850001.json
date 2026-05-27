@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "key": "gl:8850001",
+    "server": "GL",
+    "id": "8850001",
+    "name": "Master of the Hunt",
+    "desc": "10% boost to Atk and considerably boosts BB gauge when guarding for all allies, 150% boost to Atk, greatly boosts critical hit rate & adds probability of activating BB/SBB/UBB twice for 3 turns effect to UBB",
+    "rarity": "8",
+    "rarityLabel": "Tier 8",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Master of the Hunt 10% boost to Atk and considerably boosts BB gauge when guarding for all allies, 150% boost to Atk, greatly boosts critical hit rate & adds probability of activating BB/SBB/UBB twice for 3 turns effect to UBB self 8850001"
+  },
+  "raw": {
+    "desc": "10% boost to Atk and considerably boosts BB gauge when guarding for all allies, 150% boost to Atk, greatly boosts critical hit rate & adds probability of activating BB/SBB/UBB twice for 3 turns effect to UBB",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 150,
+        "conditions": [],
+        "crit% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "bc filled on guard": 4,
+        "conditions": [],
+        "passive id": "61",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "70002",
+            "unknown proc param": "0.8,3,0,0,0,0,0,0,0"
+          }
+        ]
+      }
+    ],
+    "id": "8850001",
+    "name": "Master of the Hunt",
+    "rarity": "8",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 10 / passive id: 1 / passive target: party",
+      "raw": {
+        "atk% buff": 10,
+        "conditions": [],
+        "passive id": "1",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 150 / crit% buff: 30 / passive id: 1 / passive target: self",
+      "raw": {
+        "atk% buff": 150,
+        "conditions": [],
+        "crit% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "bc filled on guard: 4 / passive id: 61 / passive target: party",
+      "raw": {
+        "bc filled on guard": 4,
+        "conditions": [],
+        "passive id": "61",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on ubb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"70002\",\"unknown proc param\":\"0.8,3,0,0,0,0,0,0,0\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "70002",
+            "unknown proc param": "0.8,3,0,0,0,0,0,0,0"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

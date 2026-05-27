@@ -1,0 +1,2592 @@
+{
+  "summary": {
+    "key": "eu:830418",
+    "server": "EU",
+    "id": "830418",
+    "name": "White Wulf Faelan",
+    "title": "White Wulf Faelan",
+    "element": "Earth",
+    "rarity": "8 Star",
+    "role": "Female",
+    "cost": 60,
+    "stats": {
+      "hp": 8072,
+      "atk": 3207,
+      "def": 2614,
+      "rec": 2751
+    },
+    "images": {
+      "full": "units/img/unit_ills_full_830418.png",
+      "thumb": "units/img/unit_ills_thum_830418.png",
+      "battle": "units/img/unit_ills_battle_830418.png"
+    }
+  },
+  "raw": {
+    "ai": [
+      {
+        "action": "skill",
+        "chance%": 60,
+        "target conditions": "hp_50pr_over",
+        "target type": "enemy"
+      },
+      {
+        "action": "skill",
+        "chance%": 20,
+        "target conditions": "random",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 100,
+        "target conditions": "random",
+        "target type": "enemy"
+      }
+    ],
+    "animations": {
+      "attack": {
+        "total number of frames": 171
+      },
+      "idle": {
+        "total number of frames": 48
+      },
+      "move": {
+        "total number of frames": 12
+      }
+    },
+    "bb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            17,
+            20,
+            23,
+            26,
+            29,
+            32,
+            35,
+            38,
+            41,
+            44,
+            71,
+            74,
+            77,
+            80,
+            83,
+            89,
+            95,
+            113,
+            116,
+            125,
+            131
+          ],
+          "hit dmg% distribution": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            8,
+            8,
+            10,
+            12
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 21,
+          "proc id": "29"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "62"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "53"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "17"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "38"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "39"
+        }
+      ],
+      "desc": "21 combo Earth, Water attack on all foes & activates Water barrier (5000 HP) & probable status ailment counter for 3 turns, negates all status ailment for 3 turns & removes all status ailments & damage reduction from all element types (15%) for 1 turn",
+      "drop check count": 1,
+      "id": "830418",
+      "levels": [
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 300,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 310,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 320,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 330,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 340,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 350,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 360,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 370,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 380,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 27,
+          "effects": [
+            {
+              "bb atk%": 400,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 5000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "counter inflict ailment turns": 3,
+              "counter inflict curse% (82)": 10,
+              "counter inflict injury% (81)": 15,
+              "counter inflict paralysis% (83)": 10,
+              "counter inflict poison% (78)": 10,
+              "counter inflict sick% (80)": 15,
+              "counter inflict weaken% (79)": 15,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "53",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "17",
+              "resist curse% (34)": 100,
+              "resist injury% (33)": 100,
+              "resist paralysis% (35)": 100,
+              "resist poison% (30)": 100,
+              "resist sick% (32)": 100,
+              "resist status ails turns": 3,
+              "resist weaken% (31)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "dmg% mitigation for elemental attacks": 15,
+              "dmg% mitigation for elemental attacks buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "mitigate dark attacks": true,
+              "mitigate earth attacks": true,
+              "mitigate fire attacks": true,
+              "mitigate light attacks": true,
+              "mitigate thunder attacks": true,
+              "mitigate water attacks": true,
+              "proc id": "39",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Shroud of Joro"
+    },
+    "cost": 60,
+    "damage frames": {
+      "frame times": [
+        17,
+        20,
+        23,
+        26,
+        32,
+        38,
+        44,
+        71,
+        77,
+        83,
+        89,
+        95,
+        113,
+        116,
+        122,
+        128
+      ],
+      "hit dmg% distribution": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        4,
+        4,
+        5,
+        5,
+        8,
+        10,
+        11,
+        13,
+        15
+      ],
+      "hit dmg% distribution (total)": 100,
+      "hits": 16
+    },
+    "drop check count": 3,
+    "element": "earth",
+    "exp_pattern": 20,
+    "extra skill": {
+      "desc": "Negates all status ailments & boosts damage against afflicted foes (100%) & adds OD gauge boost (10%) effect to BB/SBB & boosts all parameters of Water and Earth types (25%, all)",
+      "effects": [
+        {
+          "conditions": [],
+          "curse resist%": 100,
+          "injury resist%": 100,
+          "paralysis resist%": 100,
+          "passive id": "73",
+          "passive target": "self",
+          "poison resist%": 100,
+          "sick resist%": 100,
+          "weaken resist%": 100
+        },
+        {
+          "atk% buff when enemy has ailment": 100,
+          "atk% buff when enemy has curse": true,
+          "atk% buff when enemy has injury": true,
+          "atk% buff when enemy has paralysis": true,
+          "atk% buff when enemy has poison": true,
+          "atk% buff when enemy has sick": true,
+          "atk% buff when enemy has weaken": true,
+          "conditions": [],
+          "passive id": "74",
+          "passive target": "self"
+        },
+        {
+          "conditions": [],
+          "passive id": "66",
+          "passive target": "self",
+          "trigger on bb": true,
+          "trigger on sbb": true,
+          "triggered effect": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase od gauge%": 10,
+              "proc id": "43",
+              "target area": "single",
+              "target type": "4"
+            }
+          ]
+        },
+        {
+          "atk% buff": 25,
+          "conditions": [],
+          "def% buff": 25,
+          "elements buffed": [
+            "water"
+          ],
+          "hp% buff": 25,
+          "passive id": "2",
+          "passive target": "party",
+          "rec% buff": 25
+        },
+        {
+          "atk% buff": 25,
+          "conditions": [],
+          "def% buff": 25,
+          "elements buffed": [
+            "earth"
+          ],
+          "hp% buff": 25,
+          "passive id": "2",
+          "passive target": "party",
+          "rec% buff": 25
+        }
+      ],
+      "id": "830418",
+      "name": "Isengrim Champion",
+      "rarity": "1",
+      "target": "self"
+    },
+    "gender": "female",
+    "getting type": "rare summon",
+    "guide_id": 8249,
+    "id": 830418,
+    "imp": {
+      "max atk": "800",
+      "max def": "400",
+      "max hp": "1250",
+      "max rec": "500"
+    },
+    "kind": "normal",
+    "leader skill": {
+      "desc": "Boosts all parameters (80%) & boosts BB ATK (350%) & boosts damage against afflicted foes (175%) & negates all status ailments and ATK, DEF, REC reduction effets & damage reduction (15%)",
+      "effects": [
+        {
+          "atk% buff": 80,
+          "def% buff": 80,
+          "hp% buff": 80,
+          "passive id": "1",
+          "rec% buff": 80
+        },
+        {
+          "bb atk% buff": 350,
+          "passive id": "64",
+          "sbb atk% buff": 350,
+          "ubb atk% buff": 350
+        },
+        {
+          "atk% buff when enemy has ailment": 175,
+          "atk% buff when enemy has curse": true,
+          "atk% buff when enemy has injury": true,
+          "atk% buff when enemy has paralysis": true,
+          "atk% buff when enemy has poison": true,
+          "atk% buff when enemy has sick": true,
+          "atk% buff when enemy has weaken": true,
+          "passive id": "74"
+        },
+        {
+          "atk down resist%": 100,
+          "curse resist%": 100,
+          "def down resist%": 100,
+          "injury resist%": 100,
+          "paralysis resist%": 100,
+          "passive id": "73",
+          "poison resist%": 100,
+          "rec down resist%": 100,
+          "sick resist%": 100,
+          "weaken resist%": 100
+        },
+        {
+          "dmg reduction chance%": 100,
+          "dmg reduction%": 15,
+          "passive id": "14"
+        }
+      ],
+      "id": "830418",
+      "name": "Chosen of the Forest"
+    },
+    "lord damage range": "2986~3335",
+    "movement": {
+      "attack": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      },
+      "skill": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      }
+    },
+    "name": "White Wulf Faelan",
+    "overdrive stats": {
+      "atk%": 100,
+      "def%": 100,
+      "rec%": 100
+    },
+    "rarity": 8,
+    "sbb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            17,
+            20,
+            23,
+            26,
+            29,
+            32,
+            35,
+            38,
+            41,
+            44,
+            47,
+            50,
+            71,
+            77,
+            83,
+            89,
+            95,
+            101,
+            107,
+            113,
+            116,
+            119,
+            121,
+            127,
+            133,
+            139
+          ],
+          "hit dmg% distribution": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            5,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5,
+            5,
+            6,
+            7,
+            7
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 26,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "33.3/2",
+          "frame times": [
+            6
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "13"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "11"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "11"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "65"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "45"
+        }
+      ],
+      "desc": "26 combo Earth attack on all foes (consecutive uses boost damage), 10 combo random Earth attack on all foes & random status ailment infliction & boosts damage against status afflicted foes (200%) for 3 turns & boosts BB ATK (500%) for 3 turns",
+      "drop check count": 1,
+      "id": "1830418",
+      "levels": [
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 400,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 410,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 420,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 430,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 440,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 450,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 460,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 470,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 510,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 480,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        },
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 600,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 500,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 4000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "33.3/2",
+              "proc id": "13",
+              "random attack": true,
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury%": 100,
+              "poison%": 100,
+              "proc id": "11",
+              "sick%": 100,
+              "target area": "aoe",
+              "target type": "enemy",
+              "weaken%": 100
+            },
+            {
+              "curse%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis%": 100,
+              "proc id": "11",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 500,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 500,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 500
+            }
+          ]
+        }
+      ],
+      "name": "Wolven Frenzy"
+    },
+    "sell caution": false,
+    "stats": {
+      "_base": {
+        "atk": 2244,
+        "def": 1829,
+        "hp": 5650,
+        "rec": 1925
+      },
+      "_lord": {
+        "atk": 3207,
+        "def": 2614,
+        "hp": 8072,
+        "rec": 2751
+      },
+      "anima": {
+        "atk": 3207,
+        "def": 2614,
+        "hp max": 9562,
+        "hp min": 8817,
+        "rec max": 2602,
+        "rec min": 2304
+      },
+      "breaker": {
+        "atk max": 3654,
+        "atk min": 3356,
+        "def max": 2465,
+        "def min": 2167,
+        "hp": 8072,
+        "rec": 2751
+      },
+      "guardian": {
+        "atk max": 3058,
+        "atk min": 2760,
+        "def max": 3061,
+        "def min": 2763,
+        "hp": 8072,
+        "rec": 2751
+      },
+      "oracle": {
+        "atk": 3207,
+        "def": 2614,
+        "hp max": 7327,
+        "hp min": 6582,
+        "rec max": 3198,
+        "rec min": 2900
+      }
+    },
+    "ubb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            17,
+            20,
+            23,
+            26,
+            29,
+            32,
+            35,
+            38,
+            41,
+            44,
+            47,
+            50,
+            56,
+            62,
+            71,
+            74,
+            77,
+            80,
+            83,
+            86,
+            89,
+            95,
+            98,
+            101,
+            107,
+            113,
+            116,
+            119,
+            125,
+            131,
+            137
+          ],
+          "hit dmg% distribution": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            5
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 31,
+          "proc id": "1"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "40"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "40"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "65"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "45"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "43"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "18"
+        }
+      ],
+      "desc": "31 combo Earth attack on all foes & adds random status ailment infliction to attack for 3 turns & boosts damage against afflicted foes (400%) and BB ATK (600%) for 3 turns & damage reduction (100%) for 3 turns & boosts OD gauge (50%)",
+      "drop check count": 1,
+      "id": "2830418",
+      "levels": [
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb atk%": 2000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "injury% buff": 100,
+              "poison% buff": 100,
+              "proc id": "40",
+              "sick% buff": 100,
+              "target area": "aoe",
+              "target type": "party",
+              "weaken% buff": 100
+            },
+            {
+              "buff turns": 3,
+              "curse% buff": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "paralysis% buff": 100,
+              "proc id": "40",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff turns (110)": 3,
+              "atk% buff when enemy has ailment": 400,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "65",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 600,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 600,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 600
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase od gauge%": 50,
+              "proc id": "43",
+              "target area": "single",
+              "target type": "4"
+            },
+            {
+              "dmg% reduction": 100,
+              "dmg% reduction turns (36)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "18",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Wrath of Fenris"
+    }
+  },
+  "evolution": null,
+  "feskills": {
+    "category": {
+      "1": {
+        "name": "ステアップ系"
+      },
+      "11": {
+        "name": "特殊"
+      }
+    },
+    "skills": [
+      {
+        "category": "1",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70707",
+        "skill": {
+          "bp": 10,
+          "desc": "Boosts all parameters (80%)",
+          "effects": [
+            {
+              "passive": {
+                "atk% buff": 80,
+                "def% buff": 80,
+                "hp% buff": 80,
+                "passive id": "1",
+                "rec% buff": 80
+              }
+            }
+          ],
+          "id": "70707",
+          "level": 2,
+          "name": "Boosts all parameters (80%)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70708",
+        "skill": {
+          "bp": 10,
+          "desc": "Enhances LS's all parameters boost (+10%, 90% total)",
+          "effects": [
+            {
+              "add to passive": {
+                "atk% buff": 10,
+                "def% buff": 10,
+                "hp% buff": 10,
+                "passive id": "1",
+                "rec% buff": 10
+              }
+            }
+          ],
+          "id": "70708",
+          "level": 1,
+          "name": "Enhances LS's all parameters boost (+10%, 90% total)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70709",
+        "skill": {
+          "bp": 15,
+          "desc": "Adds ATK, DEF, REC reduction negation for 2 turns effect to BB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "atk down resist% (120)": 100,
+                    "def down resist% (121)": 100,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "73",
+                    "rec down resist% (122)": 100,
+                    "stat down immunity buff turns": 2,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70709",
+          "level": 4,
+          "name": "Adds ATK, DEF, REC reduction negation for 2 turns effect to BB",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70710",
+        "skill": {
+          "bp": 20,
+          "desc": "Adds fill own BB gauge to max effect to SBB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "bb bc fill%": 100,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "4",
+                    "target area": "single",
+                    "target type": "self"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70710",
+          "level": 5,
+          "name": "Adds fill own BB gauge to max effect to SBB",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70711",
+        "skill": {
+          "bp": 10,
+          "desc": "Allows BB's status ailment counter and negation effects to last for 5 turns",
+          "effects": [
+            {
+              "add to bb": {
+                "counter inflict ailment turns": 2,
+                "proc id": "53"
+              }
+            },
+            {
+              "add to bb": {
+                "proc id": "17",
+                "resist status ails turns": 2
+              }
+            }
+          ],
+          "id": "70711",
+          "level": 4,
+          "name": "Allows BB's status ailment counter and negation effects to last for 5 turns",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70712",
+        "skill": {
+          "bp": 10,
+          "desc": "Adds Earth barrier (5000 HP) effect to SBB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "elemental barrier absorb dmg%": 100,
+                    "elemental barrier def": 0,
+                    "elemental barrier element": "earth",
+                    "elemental barrier hp": 5000,
+                    "proc id": "62",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70712",
+          "level": 5,
+          "name": "Adds Earth barrier (5000 HP) effect to SBB",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "1@70712",
+        "dependency comment": "",
+        "id": "70713",
+        "skill": {
+          "bp": 20,
+          "desc": "Enhances BB/SBB's barrier effect (+1000 HP, 6000 HP total)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "elemental barrier absorb dmg%": 100,
+                    "elemental barrier def": 0,
+                    "elemental barrier element": "earth",
+                    "elemental barrier hp": 6000,
+                    "proc id": "62",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "elemental barrier absorb dmg%": 100,
+                    "elemental barrier def": 0,
+                    "elemental barrier element": "water",
+                    "elemental barrier hp": 6000,
+                    "proc id": "62",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70713",
+          "level": 5,
+          "name": "Enhances BB/SBB's barrier effect (+1000 HP, 6000 HP total)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70714",
+        "skill": {
+          "bp": 20,
+          "desc": "Enhances SBB/UBB's BB ATK boost effect (+100%, 600% total on SBB, 700% total on UBB)",
+          "effects": [
+            {
+              "add to sbb": {
+                "bb atk% buff": 100,
+                "buff turns (72)": 0,
+                "proc id": "45",
+                "sbb atk% buff": 100,
+                "ubb atk% buff": 100
+              }
+            },
+            {
+              "add to ubb": {
+                "bb atk% buff": 100,
+                "buff turns (72)": 0,
+                "proc id": "45",
+                "sbb atk% buff": 100,
+                "ubb atk% buff": 100
+              }
+            }
+          ],
+          "id": "70714",
+          "level": 5,
+          "name": "Enhances SBB/UBB's BB ATK boost effect (+100%, 600% total on SBB, 700% total on UBB)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70715",
+        "skill": {
+          "bp": 15,
+          "desc": "Enhances SBB/UBB's damage boost against afflicted foes effect (+40%, 240% total on SBB, 440% total on UBB)",
+          "effects": [
+            {
+              "add to sbb": {
+                "atk% buff turns (110)": 0,
+                "atk% buff when enemy has ailment": 40,
+                "proc id": "65"
+              }
+            },
+            {
+              "add to ubb": {
+                "atk% buff turns (110)": 0,
+                "atk% buff when enemy has ailment": 40,
+                "proc id": "65"
+              }
+            }
+          ],
+          "id": "70715",
+          "level": 4,
+          "name": "Enhances SBB/UBB's damage boost against afflicted foes effect (+40%, 240% total on SBB, 440% total on UBB)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70716",
+        "skill": {
+          "bp": 10,
+          "desc": "Raises ATK parameter limits to 160000",
+          "effects": [
+            {
+              "passive": {
+                "increase atk cap": 160000,
+                "passive id": "143"
+              }
+            }
+          ],
+          "id": "70716",
+          "level": 1,
+          "name": "Raises ATK parameter limits to 160000",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70717",
+        "skill": {
+          "bp": 15,
+          "desc": "Adds Spark damage reduction effect (35%) for 2 turns to BB/SBB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "dmg resist turns": 2,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "93",
+                    "spark dmg base resist% (145)": 35,
+                    "spark dmg buffed resist% (145)": 35,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70717",
+          "level": 1,
+          "name": "Adds Spark damage reduction effect (35%) for 2 turns to BB/SBB",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70718",
+        "skill": {
+          "bp": 15,
+          "desc": "Adds ATK and Spark damage boost effects (100%, self) for 3 turns to SBB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "78",
+                    "self atk% buff": 100,
+                    "self stat buff turns": 3,
+                    "target area": "aoe",
+                    "target type": "self"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "88",
+                    "spark dmg inc%": 100,
+                    "spark dmg inc% turns (136)": 3,
+                    "target area": "aoe",
+                    "target type": "self"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70718",
+          "level": 1,
+          "name": "Adds ATK and Spark damage boost effects (100%, self) for 3 turns to SBB",
+          "series": ""
+        }
+      }
+    ]
+  }
+}

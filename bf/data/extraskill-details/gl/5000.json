@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "key": "gl:5000",
+    "server": "GL",
+    "id": "5000",
+    "name": "Commander's Rationale",
+    "desc": "Adds critical hit rate boost to BB/SBB for 3 turns & critical damage boosts BB gauge",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Commander's Rationale Adds critical hit rate boost to BB/SBB for 3 turns & critical damage boosts BB gauge self 5000"
+  },
+  "raw": {
+    "desc": "Adds critical hit rate boost to BB/SBB for 3 turns & critical damage boosts BB gauge",
+    "effects": [
+      {
+        "bc fill on crit max": 4,
+        "bc fill on crit min": 4,
+        "bc fill on crit%": 100,
+        "conditions": [],
+        "passive id": "65",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "5000",
+    "name": "Commander's Rationale",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill on crit max: 4 / bc fill on crit min: 4 / bc fill on crit%: 100 / passive id: 65 / passive target: self",
+      "raw": {
+        "bc fill on crit max": 4,
+        "bc fill on crit min": 4,
+        "bc fill on crit%": 100,
+        "conditions": [],
+        "passive id": "65",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

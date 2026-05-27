@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "key": "gl:810658",
+    "server": "GL",
+    "id": "810658",
+    "name": "Scorching Spirit",
+    "desc": "Adds Def ignoring effect to attack for all allies, negates critical damage for all allies, 50% boost to Atk, Def for first 5 turns & adds 15 combo (BB) / 21 combo (SBB) powerful Fire attack on all foes to BB/SBB",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Scorching Spirit Adds Def ignoring effect to attack for all allies, negates critical damage for all allies, 50% boost to Atk, Def for first 5 turns & adds 15 combo (BB) / 21 combo (SBB) powerful Fire attack on all foes to BB/SBB self 810658"
+  },
+  "raw": {
+    "desc": "Adds Def ignoring effect to attack for all allies, negates critical damage for all allies, 50% boost to Atk, Def for first 5 turns & adds 15 combo (BB) / 21 combo (SBB) powerful Fire attack on all foes to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 50,
+        "first x turns def% (3)": 50,
+        "passive id": "21",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "810658",
+    "name": "Scorching Spirit",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "ignore def%: 100 / passive id: 29 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "first x turns: 5 / first x turns atk% (1): 50 / first x turns def% (3): 50 / passive id: 21 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 50,
+        "first x turns def% (3)": 50,
+        "passive id": "21",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "crit chance base resist%: 100 / crit chance buffed resist%: 100 / crit dmg base damage resist%: 100 / crit dmg buffed damage resist%: 100 / passive id: 53 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bb atk%\":620,\"bb flat atk\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"1\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

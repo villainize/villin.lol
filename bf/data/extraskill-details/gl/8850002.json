@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "key": "gl:8850002",
+    "server": "GL",
+    "id": "8850002",
+    "name": "Sacred Word",
+    "desc": "40% boost to max HP, boosts Atk and Def relative to Rec, enormously boosts BB gauge each turn, activates at turn's end effects during turn's start instead & adds greatly restores HP effect to BB/SBB",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Sacred Word 40% boost to max HP, boosts Atk and Def relative to Rec, enormously boosts BB gauge each turn, activates at turn's end effects during turn's start instead & adds greatly restores HP effect to BB/SBB self 8850002"
+  },
+  "raw": {
+    "desc": "40% boost to max HP, boosts Atk and Def relative to Rec, enormously boosts BB gauge each turn, activates at turn's end effects during turn's start instead & adds greatly restores HP effect to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "converted attribute": "recovery",
+        "def% buff": 20,
+        "passive id": "40",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "heal high": 4000,
+            "heal low": 3500,
+            "proc id": "2",
+            "rec added% (from healer)": 40,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "bc fill per turn": 10,
+        "conditions": [],
+        "passive id": "9",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "72",
+        "unknown passive params": "1,1"
+      }
+    ],
+    "id": "8850002",
+    "name": "Sacred Word",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / converted attribute: recovery / def% buff: 20 / passive id: 40 / passive target: self",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [],
+        "converted attribute": "recovery",
+        "def% buff": 20,
+        "passive id": "40",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"heal high\":4000,\"heal low\":3500,\"proc id\":\"2\",\"rec added% (from healer)\":40,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "heal high": 4000,
+            "heal low": 3500,
+            "proc id": "2",
+            "rec added% (from healer)": 40,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "hp% buff: 40 / passive id: 1 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "bc fill per turn: 10 / passive id: 9 / passive target: self",
+      "raw": {
+        "bc fill per turn": 10,
+        "conditions": [],
+        "passive id": "9",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive target: self / unknown passive id: 72 / unknown passive params: 1,1",
+      "raw": {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "72",
+        "unknown passive params": "1,1"
+      }
+    }
+  ],
+  "conditions": []
+}

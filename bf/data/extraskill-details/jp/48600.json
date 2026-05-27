@@ -1,0 +1,102 @@
+{
+  "summary": {
+    "key": "jp:48600",
+    "server": "JP",
+    "id": "48600",
+    "name": "古からの存在",
+    "desc": "「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に１ターン、被ダメージを半分に軽減」を追加＆通常攻撃ＨＩＴ数を増加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Status Boost",
+    "searchText": "古からの存在 「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に１ターン、被ダメージを半分に軽減」を追加＆通常攻撃ＨＩＴ数を増加 self 48600"
+  },
+  "raw": {
+    "desc": "「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に１ターン、被ダメージを半分に軽減」を追加＆通常攻撃ＨＩＴ数を増加",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    ],
+    "id": "48600",
+    "name": "古からの存在",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"dmg% reduction\":50,\"dmg% reduction turns (36)\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"18\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hit increase/hit: 1 / passive id: 37 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Status Boost",
+      "raw": {
+        "sphere category required": "Status Boost",
+        "sphere category required (raw)": "1"
+      }
+    }
+  ]
+}

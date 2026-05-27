@@ -1,0 +1,111 @@
+{
+  "summary": {
+    "key": "eu:14900",
+    "server": "EU",
+    "id": "14900",
+    "name": "My Very Own Hero",
+    "desc": "20% boost to Atk, Def, Rec, max HP when Scarlet Necklace is equipped & adds Def ignoring effect to attack for 2 turns effect to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Scarlet Necklace",
+    "searchText": "My Very Own Hero 20% boost to Atk, Def, Rec, max HP when Scarlet Necklace is equipped & adds Def ignoring effect to attack for 2 turns effect to BB/SBB self 14900"
+  },
+  "raw": {
+    "desc": "20% boost to Atk, Def, Rec, max HP when Scarlet Necklace is equipped & adds Def ignoring effect to attack for 2 turns effect to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47208"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "14900",
+    "name": "My Very Own Hero",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47208"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Scarlet Necklace",
+      "raw": {
+        "item required": [
+          "47208"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "key": "eu:760226",
+    "server": "EU",
+    "id": "760226",
+    "name": "Obedient Soldier",
+    "desc": "50% boost to Spark Damage & If Arondight is equipped, adds statut ailment removal effect to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Arondight",
+    "searchText": "Obedient Soldier 50% boost to Spark Damage & If Arondight is equipped, adds statut ailment removal effect to BB/SBB self 760226"
+  },
+  "raw": {
+    "desc": "50% boost to Spark Damage & If Arondight is equipped, adds statut ailment removal effect to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "damage% for spark": 50,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701024"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "760226",
+    "name": "Obedient Soldier",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "damage% for spark: 50 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "damage% for spark": 50,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"10\",\"remove all status ailments\":true,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701024"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Arondight",
+      "raw": {
+        "item required": [
+          "701024"
+        ]
+      }
+    }
+  ]
+}

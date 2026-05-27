@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "key": "eu:740217",
+    "server": "EU",
+    "id": "740217",
+    "name": "Looking for Truth",
+    "desc": "When Hunting Guide or Pure Noblesse Title is equipped, boosts Spark damage (120%) for 2 turns when Sparks have exceeded certain amount (15), adds own BB gauge fill to max and negates Atk, Def, Rec reductions for 1 turn to BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 3,
+    "conditionSummary": "Needs item: Hunting Guide, Pure Noblesse Title",
+    "searchText": "Looking for Truth When Hunting Guide or Pure Noblesse Title is equipped, boosts Spark damage (120%) for 2 turns when Sparks have exceeded certain amount (15), adds own BB gauge fill to max and negates Atk, Def, Rec reductions for 1 turn to BB/SBB self 740217"
+  },
+  "raw": {
+    "desc": "When Hunting Guide or Pure Noblesse Title is equipped, boosts Spark damage (120%) for 2 turns when Sparks have exceeded certain amount (15), adds own BB gauge fill to max and negates Atk, Def, Rec reductions for 1 turn to BB/SBB",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701008",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb bc fill%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "4",
+            "target area": "single",
+            "target type": "self"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701008",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk down resist% (120)": 100,
+            "def down resist% (121)": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "73",
+            "rec down resist% (122)": 100,
+            "stat down immunity buff turns": 1,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 120
+        },
+        "conditions": [
+          {
+            "item required": [
+              "701008",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      }
+    ],
+    "id": "740217",
+    "name": "Looking for Truth",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bb bc fill%\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"4\",\"target area\":\"single\",\"target type\":\"self\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701008",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb bc fill%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "4",
+            "target area": "single",
+            "target type": "self"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"atk down resist% (120)\":100,\"def down resist% (121)\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"73\",\"rec down resist% (122)\":100,\"stat down immunity buff turns\":1,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701008",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk down resist% (120)": 100,
+            "def down resist% (121)": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "73",
+            "rec down resist% (122)": 100,
+            "stat down immunity buff turns": 1,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "buff: {\"buff turns (40)\":\"2\",\"spark dmg% buff\":120} / passive id: 86 / passive target: self / spark count buff activation: 15",
+      "raw": {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 120
+        },
+        "conditions": [
+          {
+            "item required": [
+              "701008",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Hunting Guide, Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701008",
+          "701047"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Hunting Guide, Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701008",
+          "701047"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Hunting Guide, Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701008",
+          "701047"
+        ]
+      }
+    }
+  ]
+}

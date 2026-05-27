@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "key": "jp:48300",
+    "server": "JP",
+    "id": "48300",
+    "name": "神聖なる救済",
+    "desc": "攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に樹属性のバリアを付与」を追加＆「ＨＰ回復系」タイプのスフィアを装備時、被ダメージ時、確率でＨＰを回復",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: HP Recovery",
+    "searchText": "神聖なる救済 攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に樹属性のバリアを付与」を追加＆「ＨＰ回復系」タイプのスフィアを装備時、被ダメージ時、確率でＨＰを回復 self 48300"
+  },
+  "raw": {
+    "desc": "攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に樹属性のバリアを付与」を追加＆「ＨＰ回復系」タイプのスフィアを装備時、被ダメージ時、確率でＨＰを回復",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "sphere category required": "HP Recovery",
+            "sphere category required (raw)": "7"
+          }
+        ],
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 20,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 1000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    ],
+    "id": "48300",
+    "name": "神聖なる救済",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "dmg% to hp% when attacked chance%: 25 / dmg% to hp% when attacked high: 20 / dmg% to hp% when attacked low: 20 / passive id: 24 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "sphere category required": "HP Recovery",
+            "sphere category required (raw)": "7"
+          }
+        ],
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 20,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"earth\",\"elemental barrier hp\":1000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 1000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: HP Recovery",
+      "raw": {
+        "sphere category required": "HP Recovery",
+        "sphere category required (raw)": "7"
+      }
+    }
+  ]
+}

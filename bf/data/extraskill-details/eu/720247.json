@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "key": "eu:720247",
+    "server": "EU",
+    "id": "720247",
+    "name": "Lack of Remorse",
+    "desc": "Damage taken considerably boosts BB gauge (3-4 BC) & when Hunter Title is equipped, adds resistance against 1 KO attack when HP is below 20% and adds probable evasion (self, 35%) for 1 turn to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Hunter Title",
+    "searchText": "Lack of Remorse Damage taken considerably boosts BB gauge (3-4 BC) & when Hunter Title is equipped, adds resistance against 1 KO attack when HP is below 20% and adds probable evasion (self, 35%) for 1 turn to BB/SBB self 720247"
+  },
+  "raw": {
+    "desc": "Damage taken considerably boosts BB gauge (3-4 BC) & when Hunter Title is equipped, adds resistance against 1 KO attack when HP is below 20% and adds probable evasion (self, 35%) for 1 turn to BB/SBB ",
+    "effects": [
+      {
+        "bc fill when attacked high": 7,
+        "bc fill when attacked low": 4,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "hp below % buff activation": 20,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "10007",
+            "unknown proc param": "100,1,0,35"
+          }
+        ]
+      }
+    ],
+    "id": "720247",
+    "name": "Lack of Remorse",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill when attacked high: 7 / bc fill when attacked low: 4 / bc fill when attacked%: 100 / passive id: 25 / passive target: self",
+      "raw": {
+        "bc fill when attacked high": 7,
+        "bc fill when attacked low": 4,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "buff: {\"angel idol buff (12)\":true,\"angel idol recover hp%\":100,\"buff turns (12)\":\"-1\"} / hp below % buff activation: 20 / passive id: 55 / passive target: self",
+      "raw": {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "hp below % buff activation": 20,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"single\",\"target type\":\"self\",\"unknown proc id\":\"10007\",\"unknown proc param\":\"100,1,0,35\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "self",
+            "unknown proc id": "10007",
+            "unknown proc param": "100,1,0,35"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Hunter Title",
+      "raw": {
+        "item required": [
+          "701045"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Hunter Title",
+      "raw": {
+        "item required": [
+          "701045"
+        ]
+      }
+    }
+  ]
+}

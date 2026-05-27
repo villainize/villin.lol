@@ -1,0 +1,162 @@
+{
+  "summary": {
+    "key": "gl:819217",
+    "server": "GL",
+    "id": "819217",
+    "name": "Resolute Carapace",
+    "type": "sphere",
+    "typeLabel": "Sphere",
+    "rarity": "7",
+    "desc": "45% all parameters (Guardian), probable damage reduction to 1, damage taken fills BB gauge and may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation], restores HP each turn & increases BB activation cost",
+    "maxStack": 1,
+    "sellPrice": 999999,
+    "sphereType": 10,
+    "sphereTypeText": "Damage Reducing",
+    "maxEquipped": null,
+    "raid": true,
+    "effectCount": 7,
+    "recipeCount": 3,
+    "usageCount": 1,
+    "image": "items/item/sphere_thum_2_3.png"
+  },
+  "raw": {
+    "desc": "45% all parameters (Guardian), probable damage reduction to 1, damage taken fills BB gauge and may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation], restores HP each turn & increases BB activation cost",
+    "effect": [
+      {
+        "passive id": "43",
+        "take 1 dmg%": 20
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 20,
+        "turn heal high": 6000,
+        "turn heal low": 4000
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 40,
+        "dmg% to hp% when attacked low": 40,
+        "passive id": "24"
+      },
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "3",
+        "rec% buff": 45,
+        "unit type buffed": "guardian"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "120,121,122,0,0,0,0,0,0,15"
+          }
+        ]
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -15
+      },
+      {
+        "bc fill when attacked high": 6,
+        "bc fill when attacked low": 4,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      }
+    ],
+    "id": 819217,
+    "max_stack": 1,
+    "name": "Resolute Carapace",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "1000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819216
+        },
+        {
+          "count": 1,
+          "id": 819225
+        },
+        {
+          "count": 350,
+          "id": 890009
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_2_3.png",
+    "type": "sphere"
+  },
+  "effects": [
+    {
+      "passive id": "43",
+      "take 1 dmg%": 20
+    },
+    {
+      "passive id": "33",
+      "rec% added (turn heal)": 20,
+      "turn heal high": 6000,
+      "turn heal low": 4000
+    },
+    {
+      "dmg% to hp% when attacked chance%": 50,
+      "dmg% to hp% when attacked high": 40,
+      "dmg% to hp% when attacked low": 40,
+      "passive id": "24"
+    },
+    {
+      "atk% buff": 45,
+      "def% buff": 45,
+      "hp% buff": 45,
+      "passive id": "3",
+      "rec% buff": 45,
+      "unit type buffed": "guardian"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "target area": "aoe",
+          "target type": "enemy",
+          "unknown proc id": "10019",
+          "unknown proc param": "120,121,122,0,0,0,0,0,0,15"
+        }
+      ]
+    },
+    {
+      "passive id": "48",
+      "reduced bb bc cost%": -15
+    },
+    {
+      "bc fill when attacked high": 6,
+      "bc fill when attacked low": 4,
+      "bc fill when attacked%": 100,
+      "passive id": "25"
+    }
+  ],
+  "usage": [
+    {
+      "id": "819244",
+      "count": 1,
+      "name": "Resolute Silence"
+    }
+  ],
+  "dictionary": {
+    "lore": "The apex of nature's defense. Noel has added a battery meter to inform the bearer when it is time to charge the armor.<br><br>In addition to maintaining a solid defense, the shield is now able to power up the wearer's strength and stamina. Some describe the experience as a powerful force of nature.<br><br>Its rudimentary sentience occasionally manifests as a soft whisper coming from the shield itself: \"I have root!\" Interpretations of this simple sentence vary, but the most popular and accepted one is that the armor as declared its host as part of itself—the source of its energy and something to protect."
+  }
+}

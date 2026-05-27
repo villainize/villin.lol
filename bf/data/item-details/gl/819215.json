@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "key": "gl:819215",
+    "server": "GL",
+    "id": "819215",
+    "name": "Providence",
+    "type": "sphere",
+    "typeLabel": "Sphere",
+    "rarity": "7",
+    "desc": "45% all parameters (Oracle), negates all status ailments, fills BB gauge each turn, add to BB/SBB [remove all status ailments and Atk, Def, Rec reduction, chance to purge Curse, Weak negation] & activates 7000 HP Shield when 15 BC collected",
+    "maxStack": 1,
+    "sellPrice": 999999,
+    "sphereType": 5,
+    "sphereTypeText": "Status Ailments Resistant",
+    "maxEquipped": null,
+    "raid": true,
+    "effectCount": 6,
+    "recipeCount": 3,
+    "usageCount": 1,
+    "image": "items/item/ls_sphere_thum_2_2.png"
+  },
+  "raw": {
+    "desc": "45% all parameters (Oracle), negates all status ailments, fills BB gauge each turn, add to BB/SBB [remove all status ailments and Atk, Def, Rec reduction, chance to purge Curse, Weak negation] & activates 7000 HP Shield when 15 BC collected",
+    "effect": [
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "bc fill per turn": 25,
+        "passive id": "9"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 45,
+        "def% buff": 45,
+        "hp% buff": 45,
+        "passive id": "3",
+        "rec% buff": 45,
+        "unit type buffed": "oracle"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "31,34,0,0,0,0,0,0,0,15"
+          }
+        ]
+      },
+      {
+        "bc receive count buff activation": 15,
+        "buff": {
+          "buff turns (10500)": "2",
+          "unknown buff id": "10500",
+          "unknown buff params": "0&7000&7000&7000"
+        },
+        "passive id": "82"
+      }
+    ],
+    "id": 819215,
+    "max_stack": 1,
+    "name": "Providence",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "1000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819214
+        },
+        {
+          "count": 1,
+          "id": 819225
+        },
+        {
+          "count": 350,
+          "id": 890008
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "ls_sphere_thum_2_2.png",
+    "type": "sphere"
+  },
+  "effects": [
+    {
+      "curse resist%": 100,
+      "injury resist%": 100,
+      "paralysis resist%": 100,
+      "passive id": "4",
+      "poison resist%": 100,
+      "sick resist%": 100,
+      "weaken resist%": 100
+    },
+    {
+      "bc fill per turn": 25,
+      "passive id": "9"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "ailments cured": [
+            "poison",
+            "weaken",
+            "sick",
+            "injury",
+            "curse",
+            "paralysis",
+            "atk down",
+            "def down",
+            "rec down"
+          ],
+          "effect delay time(ms)/frame": "0.0/0",
+          "proc id": "38",
+          "target area": "aoe",
+          "target type": "party"
+        }
+      ]
+    },
+    {
+      "atk% buff": 45,
+      "def% buff": 45,
+      "hp% buff": 45,
+      "passive id": "3",
+      "rec% buff": 45,
+      "unit type buffed": "oracle"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "target area": "aoe",
+          "target type": "enemy",
+          "unknown proc id": "10019",
+          "unknown proc param": "31,34,0,0,0,0,0,0,0,15"
+        }
+      ]
+    },
+    {
+      "bc receive count buff activation": 15,
+      "buff": {
+        "buff turns (10500)": "2",
+        "unknown buff id": "10500",
+        "unknown buff params": "0&7000&7000&7000"
+      },
+      "passive id": "82"
+    }
+  ],
+  "usage": [
+    {
+      "id": "819243",
+      "count": 1,
+      "name": "Lament of Dread"
+    }
+  ],
+  "dictionary": {
+    "lore": "The ultimate soothsayer. In addition to magical vision, its user is endowed with multiple visions of possible events in the near future. Only entities with great mental strength are capable of wearing this device and using it effectively instead of going insane. Noel says it is theoretically possible for a user to focus the mask's power into one single chain of events to see far into its future, but he has yet to find anyone who can."
+  }
+}

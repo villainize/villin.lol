@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "key": "jp:15200",
+    "server": "JP",
+    "id": "15200",
+    "name": "炎狼神の御影",
+    "desc": "ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆ターン毎に攻撃力をアップ（５ターン目まで上昇量が増加する）",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "炎狼神の御影 ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆ターン毎に攻撃力をアップ（５ターン目まで上昇量が増加する） self 15200"
+  },
+  "raw": {
+    "desc": "ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆ターン毎に攻撃力をアップ（５ターン目まで上昇量が増加する）",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% max buff": 80,
+        "conditions": [],
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 5
+      }
+    ],
+    "id": "15200",
+    "name": "炎狼神の御影",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 80 / increase from min to max: 1 / passive id: 105 / passive target: self / turn count: 5",
+      "raw": {
+        "atk% max buff": 80,
+        "conditions": [],
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 5
+      }
+    }
+  ],
+  "conditions": []
+}

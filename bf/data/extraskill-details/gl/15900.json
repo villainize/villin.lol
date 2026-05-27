@@ -1,0 +1,110 @@
+{
+  "summary": {
+    "key": "gl:15900",
+    "server": "GL",
+    "id": "15900",
+    "name": "Gifted Bloodline",
+    "desc": "Adds status removal effect to BB/SBB & negates all status ailments",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Gifted Bloodline Adds status removal effect to BB/SBB & negates all status ailments self 15900"
+  },
+  "raw": {
+    "desc": "Adds status removal effect to BB/SBB & negates all status ailments",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    ],
+    "id": "15900",
+    "name": "Gifted Bloodline",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "curse resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 73 / passive target: self / poison resist%: 100 / sick resist%: 100 / weaken resist%: 100",
+      "raw": {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    }
+  ],
+  "conditions": []
+}

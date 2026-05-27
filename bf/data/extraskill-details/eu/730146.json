@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "key": "eu:730146",
+    "server": "EU",
+    "id": "730146",
+    "name": "Clan Rituals",
+    "desc": "When Noblesse Title or Noble’s Wedding Ring is equiped adds boosts crit rate (60%) for 3 turns to BB/SBB & When Noble’s Wedding Ring is equipped adds probable (25%) enemy Spark vulnerability boost (+25% DMG) for 1 turn to BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 3,
+    "conditionSummary": "Needs item: Noblesse Emblem",
+    "searchText": "Clan Rituals When Noblesse Title or Noble’s Wedding Ring is equiped adds boosts crit rate (60%) for 3 turns to BB/SBB & When Noble’s Wedding Ring is equipped adds probable (25%) enemy Spark vulnerability boost (+25% DMG) for 1 turn to BB/SBB self 730146"
+  },
+  "raw": {
+    "desc": "When Noblesse Title or Noble’s Wedding Ring is equiped adds boosts crit rate (60%) for 3 turns to BB/SBB & When Noble’s Wedding Ring is equipped adds probable (25%) enemy Spark vulnerability boost (+25% DMG) for 1 turn to BB/SBB",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701006"
+            ]
+          },
+          {
+            "item required": [
+              "701007"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701007"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 25,
+            "spark dmg received debuff turns (94)": 3,
+            "spark dmg% received": 25,
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "730146",
+    "name": "Clan Rituals",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701006"
+            ]
+          },
+          {
+            "item required": [
+              "701007"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"58\",\"spark dmg received apply%\":25,\"spark dmg received debuff turns (94)\":3,\"spark dmg% received\":25,\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701007"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 25,
+            "spark dmg received debuff turns (94)": 3,
+            "spark dmg% received": 25,
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Noblesse Emblem",
+      "raw": {
+        "item required": [
+          "701006"
+        ]
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Needs item: Noblesse’s Wedding Ring",
+      "raw": {
+        "item required": [
+          "701007"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Noblesse’s Wedding Ring",
+      "raw": {
+        "item required": [
+          "701007"
+        ]
+      }
+    }
+  ]
+}

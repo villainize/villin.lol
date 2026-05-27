@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "key": "jp:32800",
+    "server": "JP",
+    "id": "32800",
+    "name": "終わりなき無",
+    "desc": "ＨＰが満タン時、攻撃力をアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "終わりなき無 ＨＰが満タン時、攻撃力をアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ」を追加 self 32800"
+  },
+  "raw": {
+    "desc": "ＨＰが満タン時、攻撃力をアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ」を追加",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 160,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 60,
+        "conditions": [],
+        "hp above % buff requirement": 100,
+        "passive id": "11",
+        "passive target": "self"
+      }
+    ],
+    "id": "32800",
+    "name": "終わりなき無",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"atk% buff turns (110)\":3,\"atk% buff when enemy has ailment\":160,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"65\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 160,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 60 / hp above % buff requirement: 100 / passive id: 11 / passive target: self",
+      "raw": {
+        "atk% buff": 60,
+        "conditions": [],
+        "hp above % buff requirement": 100,
+        "passive id": "11",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

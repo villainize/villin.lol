@@ -1,0 +1,206 @@
+{
+  "summary": {
+    "key": "gl:830998",
+    "server": "GL",
+    "id": "830998",
+    "name": "Old Zero",
+    "desc": "Restores HP each turn when Maeri is in squad or HP Recovery sphere is equipped, 15% DoT reduction, 10% BB gauge consumed reduction for all allies, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 2,
+    "conditionSummary": "Needs unit: Unit 820990",
+    "searchText": "Old Zero Restores HP each turn when Maeri is in squad or HP Recovery sphere is equipped, 15% DoT reduction, 10% BB gauge consumed reduction for all allies, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction) self 830998"
+  },
+  "raw": {
+    "desc": "Restores HP each turn when Maeri is in squad or HP Recovery sphere is equipped, 15% DoT reduction, 10% BB gauge consumed reduction for all allies, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "unit required": "820990"
+          },
+          {
+            "sphere category required": "HP Recovery",
+            "sphere category required (raw)": "7"
+          }
+        ],
+        "passive id": "33",
+        "passive target": "self",
+        "rec% added (turn heal)": 11,
+        "turn heal high": 4000,
+        "turn heal low": 3000
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "conditions": [],
+        "passive id": "49",
+        "passive target": "party",
+        "reduced bb bc use chance%": 100,
+        "reduced bb bc use% high": 10,
+        "reduced bb bc use% low": 10
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "830998",
+    "name": "Old Zero",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 33 / passive target: self / rec% added (turn heal): 11 / turn heal high: 4000 / turn heal low: 3000",
+      "raw": {
+        "conditions": [
+          {
+            "unit required": "820990"
+          },
+          {
+            "sphere category required": "HP Recovery",
+            "sphere category required (raw)": "7"
+          }
+        ],
+        "passive id": "33",
+        "passive target": "self",
+        "rec% added (turn heal)": 11,
+        "turn heal high": 4000,
+        "turn heal low": 3000
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive target: party / unknown passive id: 127 / unknown passive params: 100,15",
+      "raw": {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 49 / passive target: party / reduced bb bc use chance%: 100 / reduced bb bc use% high: 10 / reduced bb bc use% low: 10",
+      "raw": {
+        "conditions": [],
+        "passive id": "49",
+        "passive target": "party",
+        "reduced bb bc use chance%": 100,
+        "reduced bb bc use% high": 10,
+        "reduced bb bc use% low": 10
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk down resist%: 100 / curse resist%: 100 / def down resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 73 / passive target: self / poison resist%: 100",
+      "raw": {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs unit: Unit 820990",
+      "raw": {
+        "unit required": "820990"
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Sphere category: HP Recovery",
+      "raw": {
+        "sphere category required": "HP Recovery",
+        "sphere category required (raw)": "7"
+      }
+    }
+  ]
+}

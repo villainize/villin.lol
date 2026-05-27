@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "key": "gl:820748",
+    "server": "GL",
+    "id": "820748",
+    "name": "Dolphie Assist",
+    "desc": "5% damage reduction from Fire, Water, Thunder types and 15% additional damage reduction to all allies, probable damage reduction to 1, 60% boost to Atk, Def, Rec when BB gauge is over 50% & adds enormous boost to BB gauge effect to BB",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Dolphie Assist 5% damage reduction from Fire, Water, Thunder types and 15% additional damage reduction to all allies, probable damage reduction to 1, 60% boost to Atk, Def, Rec when BB gauge is over 50% & adds enormous boost to BB gauge effect to BB self 820748"
+  },
+  "raw": {
+    "desc": "5% damage reduction from Fire, Water, Thunder types and 15% additional damage reduction to all allies, probable damage reduction to 1, 60% boost to Atk, Def, Rec when BB gauge is over 50% & adds enormous boost to BB gauge effect to BB",
+    "effects": [
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 5,
+        "mitigate fire attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      },
+      {
+        "atk% buff": 60,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 60,
+        "passive id": "30",
+        "passive target": "self",
+        "rec% buff": 60
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge": 12,
+            "proc id": "31",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "820748",
+    "name": "Dolphie Assist",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive target: party / unknown passive id: 127 / unknown passive params: 100,15",
+      "raw": {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "dmg% mitigation for elemental attacks: 5 / mitigate fire attacks: true / mitigate thunder attacks: true / mitigate water attacks: true / passive id: 62 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "dmg% mitigation for elemental attacks": 5,
+        "mitigate fire attacks": true,
+        "mitigate thunder attacks": true,
+        "mitigate water attacks": true,
+        "passive id": "62",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 43 / passive target: self / take 1 dmg%: 15",
+      "raw": {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk% buff: 60 / bb gauge above % buff requirement: 50 / def% buff: 60 / passive id: 30 / passive target: self / rec% buff: 60",
+      "raw": {
+        "atk% buff": 60,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 60,
+        "passive id": "30",
+        "passive target": "self",
+        "rec% buff": 60
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge\":12,\"proc id\":\"31\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge": 12,
+            "proc id": "31",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

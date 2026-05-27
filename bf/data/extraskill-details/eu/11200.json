@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "key": "eu:11200",
+    "server": "EU",
+    "id": "11200",
+    "name": "Hopeful Hero's Resolve",
+    "desc": "Adds critical hit rate boost to BB/SBB for 3 turns & 20% boost to all parameters and Spark damage enormously boosts BB gauge when Guiding Light is equipped",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Guiding Light",
+    "searchText": "Hopeful Hero's Resolve Adds critical hit rate boost to BB/SBB for 3 turns & 20% boost to all parameters and Spark damage enormously boosts BB gauge when Guiding Light is equipped self 11200"
+  },
+  "raw": {
+    "desc": "Adds critical hit rate boost to BB/SBB for 3 turns & 20% boost to all parameters and Spark damage enormously boosts BB gauge when Guiding Light is equipped",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47205"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "bc fill on spark high": 10,
+        "bc fill on spark low": 10,
+        "bc fill on spark%": 100,
+        "conditions": [
+          {
+            "item required": [
+              "47205"
+            ]
+          }
+        ],
+        "passive id": "47",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "11200",
+    "name": "Hopeful Hero's Resolve",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47205"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "bc fill on spark high: 10 / bc fill on spark low: 10 / bc fill on spark%: 100 / passive id: 47 / passive target: self",
+      "raw": {
+        "bc fill on spark high": 10,
+        "bc fill on spark low": 10,
+        "bc fill on spark%": 100,
+        "conditions": [
+          {
+            "item required": [
+              "47205"
+            ]
+          }
+        ],
+        "passive id": "47",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Guiding Light",
+      "raw": {
+        "item required": [
+          "47205"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Guiding Light",
+      "raw": {
+        "item required": [
+          "47205"
+        ]
+      }
+    }
+  ]
+}

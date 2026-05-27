@@ -1,0 +1,142 @@
+{
+  "summary": {
+    "key": "gl:819216",
+    "server": "GL",
+    "id": "819216",
+    "name": "Living Armor",
+    "type": "sphere",
+    "typeLabel": "Sphere",
+    "rarity": "7",
+    "desc": "35% all parameters (Guardian), probable damage reduction to 1, damage taken may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation] & restores HP each turn",
+    "maxStack": 1,
+    "sellPrice": 999999,
+    "sphereType": 10,
+    "sphereTypeText": "Damage Reducing",
+    "maxEquipped": null,
+    "raid": true,
+    "effectCount": 5,
+    "recipeCount": 3,
+    "usageCount": 1,
+    "image": "items/item/ls_sphere_thum_1_3.png"
+  },
+  "raw": {
+    "desc": "35% all parameters (Guardian), probable damage reduction to 1, damage taken may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation] & restores HP each turn",
+    "effect": [
+      {
+        "passive id": "43",
+        "take 1 dmg%": 15
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4000,
+        "turn heal low": 2500
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 30,
+        "dmg% to hp% when attacked low": 30,
+        "passive id": "24"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "120,121,122,0,0,0,0,0,0,15"
+          }
+        ]
+      },
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "3",
+        "rec% buff": 35,
+        "unit type buffed": "guardian"
+      }
+    ],
+    "id": 819216,
+    "max_stack": 1,
+    "name": "Living Armor",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "800000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 49800
+        },
+        {
+          "count": 1,
+          "id": 819224
+        },
+        {
+          "count": 150,
+          "id": 890003
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "ls_sphere_thum_1_3.png",
+    "type": "sphere"
+  },
+  "effects": [
+    {
+      "passive id": "43",
+      "take 1 dmg%": 15
+    },
+    {
+      "passive id": "33",
+      "rec% added (turn heal)": 10,
+      "turn heal high": 4000,
+      "turn heal low": 2500
+    },
+    {
+      "dmg% to hp% when attacked chance%": 50,
+      "dmg% to hp% when attacked high": 30,
+      "dmg% to hp% when attacked low": 30,
+      "passive id": "24"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "target area": "single",
+          "target type": "enemy",
+          "unknown proc id": "10019",
+          "unknown proc param": "120,121,122,0,0,0,0,0,0,15"
+        }
+      ]
+    },
+    {
+      "atk% buff": 35,
+      "def% buff": 35,
+      "hp% buff": 35,
+      "passive id": "3",
+      "rec% buff": 35,
+      "unit type buffed": "guardian"
+    }
+  ],
+  "usage": [
+    {
+      "id": "819217",
+      "count": 1,
+      "name": "Resolute Carapace"
+    }
+  ],
+  "dictionary": {
+    "lore": "An improved version of Mordlim's shield. It creates an endless weave of interlocking branches and twigs around the wearer.<br><br>The shield has been upgraded to absorb and store vast amounts of solar energy, used to grow a wooden armor around its bearer. The wood is deceptively strong, as resilient as the best materials used in Noel's defensive technologies. In the rare case of the armor getting damaged in combat, the shield immediately regenerates the wood, as long as there is energy left."
+  }
+}

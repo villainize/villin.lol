@@ -1,0 +1,128 @@
+{
+  "summary": {
+    "key": "eu:840418",
+    "server": "EU",
+    "id": "840418",
+    "name": "Death from Above",
+    "desc": "Boosts ATK when BB gauge is full (100%) & boosts critical damage (25%, all) & adds resistance against 1 KO attack when HP is below 25% & adds 12 combo Thunder attack (damage relative to remaining HP) on single foe to SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Death from Above Boosts ATK when BB gauge is full (100%) & boosts critical damage (25%, all) & adds resistance against 1 KO attack when HP is below 25% & adds 12 combo Thunder attack (damage relative to remaining HP) on single foe to SBB self 840418"
+  },
+  "raw": {
+    "desc": "Boosts ATK when BB gauge is full (100%) & boosts critical damage (25%, all) & adds resistance against 1 KO attack when HP is below 25% & adds 12 combo Thunder attack (damage relative to remaining HP) on single foe to SBB",
+    "effects": [
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 25,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 100,
+        "bb gauge above % buff requirement": 100,
+        "conditions": [],
+        "passive id": "30",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 25,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb added atk% based on hp": 900,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 300,
+            "bb flat atk": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "47",
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "840418",
+    "name": "Death from Above",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "buff: {\"angel idol buff (12)\":true,\"angel idol recover hp%\":100,\"buff turns (12)\":\"-1\"} / hp below % buff activation: 25 / passive id: 55 / passive target: self",
+      "raw": {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 25,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 100 / bb gauge above % buff requirement: 100 / passive id: 30 / passive target: self",
+      "raw": {
+        "atk% buff": 100,
+        "bb gauge above % buff requirement": 100,
+        "conditions": [],
+        "passive id": "30",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "crit multiplier%: 25 / passive id: 34 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "crit multiplier%": 25,
+        "passive id": "34",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"bb added atk% based on hp\":900,\"bb added atk% proportional to hp\":\"remaining\",\"bb base atk%\":300,\"bb flat atk\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"47\",\"target area\":\"single\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb added atk% based on hp": 900,
+            "bb added atk% proportional to hp": "remaining",
+            "bb base atk%": 300,
+            "bb flat atk": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "47",
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

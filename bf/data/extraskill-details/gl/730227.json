@@ -1,0 +1,146 @@
+{
+  "summary": {
+    "key": "gl:730227",
+    "server": "GL",
+    "id": "730227",
+    "name": "Ancient's Knowledge",
+    "desc": "30% boost to Atk, Def, Rec when HP is over 50% for all allies, slightly boosts critical damage for all allies, 30% boost to all parameters, negates Def ignoring effects & adds Earth barrier effect to BB/SBB",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Ancient's Knowledge 30% boost to Atk, Def, Rec when HP is over 50% for all allies, slightly boosts critical damage for all allies, 30% boost to all parameters, negates Def ignoring effects & adds Earth barrier effect to BB/SBB self 730227"
+  },
+  "raw": {
+    "desc": "30% boost to Atk, Def, Rec when HP is over 50% for all allies, slightly boosts critical damage for all allies, 30% boost to all parameters, negates Def ignoring effects & adds Earth barrier effect to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "party",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 25,
+        "passive id": "34",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 6000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "730227",
+    "name": "Ancient's Knowledge",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp above % buff requirement: 50 / passive id: 11 / passive target: party / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "party",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 3,
+      "summary": "crit multiplier%: 25 / passive id: 34 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "crit multiplier%": 25,
+        "passive id": "34",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "ignore def resist chance%: 100 / passive id: 92 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"earth\",\"elemental barrier hp\":6000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 6000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

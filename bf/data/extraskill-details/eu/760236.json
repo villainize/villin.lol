@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "key": "eu:760236",
+    "server": "EU",
+    "id": "760236",
+    "name": "Spin Mastery",
+    "desc": "Boosts DEF (30%) & when Drill Sharpener is equipped, adds Spark damage boosts BB gauge (2-3 BC) for 3 turns to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Drill Sharpener",
+    "searchText": "Spin Mastery Boosts DEF (30%) & when Drill Sharpener is equipped, adds Spark damage boosts BB gauge (2-3 BC) for 3 turns to BB/SBB self 760236"
+  },
+  "raw": {
+    "desc": "Boosts DEF (30%) & when Drill Sharpener is equipped, adds Spark damage boosts BB gauge (2-3 BC) for 3 turns to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "def% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701038"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 3,
+            "bc fill on spark low": 2,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "760236",
+    "name": "Spin Mastery",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "def% buff: 30 / passive id: 1 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "def% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bc fill on spark buff turns (111)\":3,\"bc fill on spark high\":3,\"bc fill on spark low\":2,\"bc fill on spark%\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"67\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701038"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 3,
+            "bc fill on spark low": 2,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Drill Sharpener",
+      "raw": {
+        "item required": [
+          "701038"
+        ]
+      }
+    }
+  ]
+}

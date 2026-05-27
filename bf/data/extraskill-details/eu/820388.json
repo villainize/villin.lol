@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "key": "eu:820388",
+    "server": "EU",
+    "id": "820388",
+    "name": "Caring Heart",
+    "desc": "Boosts all stats (20%) and adds status ailment removal effect to BB/SBB when Patriot is equipped & negates critical damage",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Eremorn's Aegis",
+    "searchText": "Caring Heart Boosts all stats (20%) and adds status ailment removal effect to BB/SBB when Patriot is equipped & negates critical damage self 820388"
+  },
+  "raw": {
+    "desc": "Boosts all stats (20%) and adds status ailment removal effect to BB/SBB when Patriot is equipped & negates critical damage",
+    "effects": [
+      {
+        "conditions": [],
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "818934"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "818934"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    ],
+    "id": "820388",
+    "name": "Caring Heart",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "crit chance base resist%: 100 / crit chance buffed resist%: 100 / crit dmg base damage resist%: 100 / crit dmg buffed damage resist%: 100 / passive id: 53 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "crit chance base resist%": 100,
+        "crit chance buffed resist%": 100,
+        "crit dmg base damage resist%": 100,
+        "crit dmg buffed damage resist%": 100,
+        "passive id": "53",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "818934"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "818934"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Eremorn's Aegis",
+      "raw": {
+        "item required": [
+          "818934"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Eremorn's Aegis",
+      "raw": {
+        "item required": [
+          "818934"
+        ]
+      }
+    }
+  ]
+}

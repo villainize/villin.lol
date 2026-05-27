@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yu-Gi-Oh Deck Builder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 style="text-align:center;color:#D32F2F;">Yu-Gi-Oh Deck Builder</h1>
+
+<section>
+<h2>Search Cards</h2>
+<div class="deck-row">
+<input id="searchInput" placeholder="Card name">
+<button id="searchBtn">Search</button>
+<button id="closeSearchBtn">Close</button>
+</div>
+<div class="card-grid" id="searchResults"></div>
+</section>
+
+<section class="collection-section" id="collectionSection">
+<button id="collectionToggle">⬆️ Collection</button>
+<div class="card-grid" id="collectionGrid"></div>
+</section>
+
+<section>
+<h2>Decks</h2>
+<div class="deck-row">
+<select id="deckSelect"></select>
+<button id="newDeckBtn">New</button>
+<button id="renameDeckBtn">Rename</button>
+<button id="deleteDeckBtn">Delete</button>
+<button id="exportDeckBtn">Export</button>
+<input type="file" id="importDeckInput" hidden>
+<button id="importDeckBtn">Import</button>
+</div>
+
+<div id="allDeckSections">
+    <div class="deck-section" data-section="main">
+        <h3>Main Deck</h3>
+        <div class="card-grid" id="mainDeckGrid" data-section="main"></div>
+    </div>
+    <div class="deck-section" data-section="side">
+        <h3>Side Deck</h3>
+        <div class="card-grid" id="sideDeckGrid" data-section="side"></div>
+    </div>
+    <div class="deck-section" data-section="extra">
+        <h3>Extra Deck</h3>
+        <div class="card-grid" id="extraDeckGrid" data-section="extra"></div>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Test Hand</h2>
+<div class="deck-row">
+<button id="draw5">Draw 5</button>
+<button id="draw1">Draw 1</button>
+<select id="millCount">
+<option>1</option><option>2</option><option>3</option>
+<option>4</option><option>5</option><option>6</option>
+<option>7</option><option>8</option>
+</select>
+<button id="millBtn">Send to GY</button>
+<button id="resetTestBtn">Reset</button>
+</div>
+<div class="deck-row">
+Deck: <span id="deckCount">0</span> |
+Hand: <span id="handCount">0</span> |
+GY: <span id="gyCount">0</span>
+</div>
+
+<div class="deck-section">
+<h3>Hand</h3>
+<div class="card-grid" id="handGrid"></div>
+</div>
+
+<div class="deck-section">
+<h3>Graveyard</h3>
+<div class="card-grid" id="gyGrid"></div>
+</div>
+
+</section>
+
+<!-- Menu for selecting deck section when adding card -->
+<div id="addMenu" class="deck-menu" style="display:none;">
+<button data-section="main">Main</button>
+<button data-section="side">Side</button>
+<button data-section="extra">Extra</button>
+<button id="menuCancel">Cancel</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

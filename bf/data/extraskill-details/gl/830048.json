@@ -1,0 +1,128 @@
+{
+  "summary": {
+    "key": "gl:830048",
+    "server": "GL",
+    "id": "830048",
+    "name": "Burning Dragon Blood",
+    "desc": "Negates Atk, Def, Rec reduction for all allies, 1 KO resistance when HP is below 35%, raises Atk limit to 180k & add to SBB (19 combo Earth attack on Earth, Thunder foes)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Burning Dragon Blood Negates Atk, Def, Rec reduction for all allies, 1 KO resistance when HP is below 35%, raises Atk limit to 180k & add to SBB (19 combo Earth attack on Earth, Thunder foes) self 830048"
+  },
+  "raw": {
+    "desc": "Negates Atk, Def, Rec reduction for all allies, 1 KO resistance when HP is below 35%, raises Atk limit to 180k & add to SBB (19 combo Earth attack on Earth, Thunder foes)",
+    "effects": [
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 35,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "def down resist%": 100,
+        "passive id": "73",
+        "passive target": "party",
+        "rec down resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "additional element used for attack check": "fire",
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "97",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 180000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "830048",
+    "name": "Burning Dragon Blood",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "buff: {\"angel idol buff (12)\":true,\"angel idol recover hp%\":100,\"buff turns (12)\":\"-1\"} / hp below % buff activation: 35 / passive id: 55 / passive target: self",
+      "raw": {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 35,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk down resist%: 100 / def down resist%: 100 / passive id: 73 / passive target: party / rec down resist%: 100",
+      "raw": {
+        "atk down resist%": 100,
+        "conditions": [],
+        "def down resist%": 100,
+        "passive id": "73",
+        "passive target": "party",
+        "rec down resist%": 100
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"additional element used for attack check\":\"fire\",\"bb atk%\":620,\"bb flat atk\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"97\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "additional element used for attack check": "fire",
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "97",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "increase atk cap: 180000 / passive id: 143 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "increase atk cap": 180000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

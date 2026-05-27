@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "key": "eu:16500",
+    "server": "EU",
+    "id": "16500",
+    "name": "Divine Holy Rhythm",
+    "desc": "Adds BB gauge boost effect to BB/SBB & boosts Def when HP is low",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Divine Holy Rhythm Adds BB gauge boost effect to BB/SBB & boosts Def when HP is low self 16500"
+  },
+  "raw": {
+    "desc": "Adds BB gauge boost effect to BB/SBB & boosts Def when HP is low",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge": 5,
+            "proc id": "31",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "buff proportional to hp": "lost",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 50,
+        "passive id": "46",
+        "passive target": "self"
+      }
+    ],
+    "id": "16500",
+    "name": "Divine Holy Rhythm",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge\":5,\"proc id\":\"31\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge": 5,
+            "proc id": "31",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "buff proportional to hp: lost / def% base buff: 0 / def% extra buff based on hp: 50 / passive id: 46 / passive target: self",
+      "raw": {
+        "buff proportional to hp": "lost",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 50,
+        "passive id": "46",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

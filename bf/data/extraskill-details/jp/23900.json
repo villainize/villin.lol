@@ -1,0 +1,126 @@
+{
+  "summary": {
+    "key": "jp:23900",
+    "server": "JP",
+    "id": "23900",
+    "name": "シェイプシフター",
+    "desc": "「攻撃強化系」タイプのスフィアを装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆通常攻撃ＨＩＴ数を増加＆ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Atk Boosting",
+    "searchText": "シェイプシフター 「攻撃強化系」タイプのスフィアを装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆通常攻撃ＨＩＴ数を増加＆ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加 self 23900"
+  },
+  "raw": {
+    "desc": "「攻撃強化系」タイプのスフィアを装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆通常攻撃ＨＩＴ数を増加＆ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "23900",
+    "name": "シェイプシフター",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hit increase/hit: 1 / passive id: 37 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Atk Boosting",
+      "raw": {
+        "sphere category required": "Atk Boosting",
+        "sphere category required (raw)": "13"
+      }
+    }
+  ]
+}

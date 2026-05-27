@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "key": "jp:28400",
+    "server": "JP",
+    "id": "28400",
+    "name": "異天新生",
+    "desc": "状態異常の敵へのダメージを超絶アップ＆ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "異天新生 状態異常の敵へのダメージを超絶アップ＆ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加 self 28400"
+  },
+  "raw": {
+    "desc": "状態異常の敵へのダメージを超絶アップ＆ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加",
+    "effects": [
+      {
+        "atk% buff when enemy has ailment": 150,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "28400",
+    "name": "異天新生",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff when enemy has ailment: 150 / atk% buff when enemy has curse: true / atk% buff when enemy has injury: true / atk% buff when enemy has paralysis: true / atk% buff when enemy has poison: true / atk% buff when enemy has sick: true / atk% buff when enemy has weaken: true / passive id: 74",
+      "raw": {
+        "atk% buff when enemy has ailment": 150,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

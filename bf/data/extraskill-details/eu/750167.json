@@ -1,0 +1,287 @@
+{
+  "summary": {
+    "key": "eu:750167",
+    "server": "EU",
+    "id": "750167",
+    "name": "Unwavering Will",
+    "desc": "If Caliburn is equipped, 20% to ATK, DEF (all) and adds OD gauge fill rate (20%) 3 turns to BB/SBB & If Grail is equipped, boosts ATK and HP (50%), critical damage (100%), Spark damage (100%) and BB ATK (100%)",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 6,
+    "conditionCount": 6,
+    "conditionSummary": "Needs item: Caliburn",
+    "searchText": "Unwavering Will If Caliburn is equipped, 20% to ATK, DEF (all) and adds OD gauge fill rate (20%) 3 turns to BB/SBB & If Grail is equipped, boosts ATK and HP (50%), critical damage (100%), Spark damage (100%) and BB ATK (100%) self 750167"
+  },
+  "raw": {
+    "desc": "If Caliburn is equipped, 20% to ATK, DEF (all) and adds OD gauge fill rate (20%) 3 turns to BB/SBB & If Grail is equipped, boosts ATK and HP (50%), critical damage (100%), Spark damage (100%) and BB ATK (100%)",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "701023"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701023"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "od fill rate buff turns (132)": 3,
+            "od fill rate% buff": 20,
+            "proc id": "84",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 50,
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "bb atk% buff": 100,
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "passive id": "64",
+        "passive target": "self",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      }
+    ],
+    "id": "750167",
+    "name": "Unwavering Will",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / passive id: 1 / passive target: party",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "701023"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "passive id": "1",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"od fill rate buff turns (132)\":3,\"od fill rate% buff\":20,\"proc id\":\"84\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701023"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "od fill rate buff turns (132)": 3,
+            "od fill rate% buff": 20,
+            "proc id": "84",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% buff: 50 / hp% buff: 50 / passive id: 1 / passive target: self",
+      "raw": {
+        "atk% buff": 50,
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "crit multiplier%: 100 / passive id: 34 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "damage% for spark: 100 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 6,
+      "summary": "bb atk% buff: 100 / passive id: 64 / passive target: self / sbb atk% buff: 100 / ubb atk% buff: 100",
+      "raw": {
+        "bb atk% buff": 100,
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "passive id": "64",
+        "passive target": "self",
+        "sbb atk% buff": 100,
+        "ubb atk% buff": 100
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Caliburn",
+      "raw": {
+        "item required": [
+          "701023"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Caliburn",
+      "raw": {
+        "item required": [
+          "701023"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    },
+    {
+      "effectIndex": 5,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    },
+    {
+      "effectIndex": 6,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    }
+  ]
+}

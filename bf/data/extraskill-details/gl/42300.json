@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "key": "gl:42300",
+    "server": "GL",
+    "id": "42300",
+    "name": "呪われし繭",
+    "desc": "状態異常の敵へのダメージを大幅にアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージをかなりアップ」を追加＆全状態異常を無効",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "呪われし繭 状態異常の敵へのダメージを大幅にアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージをかなりアップ」を追加＆全状態異常を無効 self 42300"
+  },
+  "raw": {
+    "desc": "状態異常の敵へのダメージを大幅にアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージをかなりアップ」を追加＆全状態異常を無効",
+    "effects": [
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "atk% buff when enemy has ailment": 100,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 130,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "42300",
+    "name": "呪われし繭",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "curse resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 4 / passive target: self / poison resist%: 100 / sick resist%: 100 / weaken resist%: 100",
+      "raw": {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff when enemy has ailment: 100 / atk% buff when enemy has curse: true / atk% buff when enemy has injury: true / atk% buff when enemy has paralysis: true / atk% buff when enemy has poison: true / atk% buff when enemy has sick: true / atk% buff when enemy has weaken: true / passive id: 74",
+      "raw": {
+        "atk% buff when enemy has ailment": 100,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"atk% buff turns (110)\":3,\"atk% buff when enemy has ailment\":130,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"65\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 130,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

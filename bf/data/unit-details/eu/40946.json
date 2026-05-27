@@ -1,0 +1,1883 @@
+{
+  "summary": {
+    "key": "eu:40946",
+    "server": "EU",
+    "id": "40946",
+    "name": "Divine Machine",
+    "title": "Divine Machine",
+    "element": "Thunder",
+    "rarity": "7 Star",
+    "role": "Other",
+    "cost": 46,
+    "stats": {
+      "hp": 7355,
+      "atk": 2814,
+      "def": 2791,
+      "rec": 2644
+    },
+    "images": {
+      "full": "units/img/unit_ills_full_40946.png",
+      "thumb": "units/img/unit_ills_thum_40946.png",
+      "battle": "units/img/unit_ills_battle_40946.png"
+    }
+  },
+  "raw": {
+    "ai": [
+      {
+        "action": "skill",
+        "chance%": 60,
+        "target conditions": "hp_50pr_under",
+        "target type": "enemy"
+      },
+      {
+        "action": "skill",
+        "chance%": 30,
+        "target conditions": "random",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 70,
+        "target conditions": "hp_max",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 50,
+        "target conditions": "hp_min",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 100,
+        "target conditions": "random",
+        "target type": "enemy"
+      }
+    ],
+    "animations": {
+      "attack": {
+        "total number of frames": 283
+      },
+      "idle": {
+        "total number of frames": 68
+      },
+      "move": {
+        "total number of frames": 7
+      }
+    },
+    "bb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            65,
+            68,
+            71,
+            74,
+            77,
+            80,
+            83,
+            86,
+            89,
+            92,
+            95,
+            98,
+            101,
+            104,
+            107,
+            110,
+            113,
+            116,
+            120,
+            124,
+            128,
+            132,
+            136,
+            140,
+            144,
+            148,
+            152,
+            156,
+            160,
+            164,
+            168,
+            172
+          ],
+          "hit dmg% distribution": [
+            4,
+            4,
+            4,
+            4,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 32,
+          "proc id": "1"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "24"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "5"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "52"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "19"
+        }
+      ],
+      "desc": "32 combo Thunder attack on all foes, hugely boosts Def relative to Atk for 3 turns, considerably boosts BC efficacy for 3 turns, considerably boosts Atk, Def, Rec of Thunder types for 3 turns & hugely boosts BB gauge for 3 turns",
+      "drop check count": 1,
+      "id": "40946",
+      "levels": [
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 280,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 50,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 60,
+              "buff turns": 3,
+              "def% buff (14)": 60,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 60,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 10,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 4,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 290,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 52,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 64,
+              "buff turns": 3,
+              "def% buff (14)": 64,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 64,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 12,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 4,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 300,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 54,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 68,
+              "buff turns": 3,
+              "def% buff (14)": 68,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 68,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 14,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 4,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 310,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 56,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 72,
+              "buff turns": 3,
+              "def% buff (14)": 72,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 72,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 16,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 4,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 320,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 58,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 76,
+              "buff turns": 3,
+              "def% buff (14)": 76,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 76,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 18,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 5,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 330,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 60,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 80,
+              "buff turns": 3,
+              "def% buff (14)": 80,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 20,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 5,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 340,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 62,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 84,
+              "buff turns": 3,
+              "def% buff (14)": 84,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 84,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 22,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 5,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 350,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 64,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 88,
+              "buff turns": 3,
+              "def% buff (14)": 88,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 88,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 24,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 5,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 360,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 66,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 92,
+              "buff turns": 3,
+              "def% buff (14)": 92,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 92,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 26,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 5,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 9,
+          "effects": [
+            {
+              "bb atk%": 380,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 70,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb gauge fill rate% buff": 30,
+              "buff turns (77)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "52",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 6,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Reactive Shift B3"
+    },
+    "cost": 46,
+    "damage frames": {
+      "frame times": [
+        65,
+        74,
+        83,
+        92,
+        101,
+        110,
+        119,
+        128,
+        137,
+        146,
+        155,
+        164
+      ],
+      "hit dmg% distribution": [
+        9,
+        9,
+        9,
+        9,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "hit dmg% distribution (total)": 100,
+      "hits": 12
+    },
+    "drop check count": 3,
+    "element": "thunder",
+    "exp_pattern": 20,
+    "extra skill": {
+      "desc": "Slightly boosts Atk, Def when BB gauge is over 50%, boosts BB gauge each turn & raises max Atk value from 99999 to 130000",
+      "effects": [
+        {
+          "atk% buff": 30,
+          "bb gauge above % buff requirement": 50,
+          "conditions": [],
+          "def% buff": 30,
+          "passive id": "30",
+          "passive target": "self"
+        },
+        {
+          "bc fill per turn": 3,
+          "conditions": [],
+          "passive id": "9",
+          "passive target": "self"
+        },
+        {
+          "conditions": [],
+          "increase atk cap": 130000,
+          "passive id": "143",
+          "passive target": "self"
+        }
+      ],
+      "id": "38000",
+      "name": "Machine Seal Axis",
+      "rarity": "1",
+      "target": "self"
+    },
+    "gender": "other",
+    "getting type": "rare summon",
+    "guide_id": 1653,
+    "id": 40946,
+    "imp": {
+      "max atk": "440",
+      "max def": "440",
+      "max hp": "1100",
+      "max rec": "440"
+    },
+    "kind": "normal",
+    "leader skill": {
+      "desc": "50% boost to Def, max HP, negates Def ignoring effects, considerably boosts BB gauge each turn & probable Spark critical for 2 turns when BC collected exceeds certain amount",
+      "effects": [
+        {
+          "def% buff": 50,
+          "hp% buff": 50,
+          "passive id": "1"
+        },
+        {
+          "bc receive count buff activation": 10,
+          "buff": {
+            "buff turns (131)": "2",
+            "unknown buff id": "131",
+            "unknown buff params": "10&50"
+          },
+          "passive id": "82"
+        },
+        {
+          "bc fill per turn": 5,
+          "passive id": "9"
+        },
+        {
+          "ignore def resist chance%": 100,
+          "passive id": "92"
+        }
+      ],
+      "id": "4379",
+      "name": "Mechanical Order"
+    },
+    "lord damage range": "2619~2926",
+    "movement": {
+      "attack": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      },
+      "skill": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      }
+    },
+    "name": "Divine Machine",
+    "overdrive stats": {
+      "atk%": 100,
+      "def%": 100,
+      "rec%": 100
+    },
+    "rarity": 7,
+    "sbb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            65,
+            68,
+            71,
+            74,
+            77,
+            80,
+            83,
+            86,
+            89,
+            92,
+            95,
+            98,
+            101,
+            104,
+            107,
+            110,
+            113,
+            116,
+            119,
+            122,
+            125,
+            128,
+            131,
+            134,
+            137,
+            140,
+            143,
+            146,
+            149,
+            152,
+            155,
+            158,
+            161,
+            164,
+            167,
+            170,
+            173,
+            176
+          ],
+          "hit dmg% distribution": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 38,
+          "proc id": "1"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "24"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "5"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "20"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "31"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "83"
+        }
+      ],
+      "desc": "38 combo power. Thunder att. on all foes, consider. boosts BB gauge, hugely boosts Atk relative to Def for 3 turns, adds prob. Spark critical for 3 turns, consider. boosts Atk, Def, Rec of Thunder types for 3 turns & dam. taken boosts BB gauge for 3 turns",
+      "drop check count": 1,
+      "id": "140946",
+      "levels": [
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 480,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 50,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 3,
+              "bc fill when attacked low": 2,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 490,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 52,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 3,
+              "bc fill when attacked low": 2,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 500,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 54,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 3,
+              "bc fill when attacked low": 2,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 510,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 56,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 3,
+              "bc fill when attacked low": 2,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 520,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 58,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 5,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 530,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 60,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 5,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 540,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 62,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 5,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 550,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 64,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 5,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 560,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 66,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 5,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 21,
+          "effects": [
+            {
+              "bb atk%": 580,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 70,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "def% buff (14)": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 100,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge": 6,
+              "proc id": "31",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 20,
+              "spark dmg inc% buff": 50,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Executor"
+    },
+    "sell caution": false,
+    "stats": {
+      "_base": {
+        "atk": 2079,
+        "def": 2060,
+        "hp": 5165,
+        "rec": 1959
+      },
+      "_lord": {
+        "atk": 2814,
+        "def": 2791,
+        "hp": 7355,
+        "rec": 2644
+      },
+      "anima": {
+        "atk": 2814,
+        "def": 2791,
+        "hp max": 8545,
+        "hp min": 7950,
+        "rec max": 2525,
+        "rec min": 2287
+      },
+      "breaker": {
+        "atk max": 3171,
+        "atk min": 2933,
+        "def max": 2672,
+        "def min": 2434,
+        "hp": 7355,
+        "rec": 2644
+      },
+      "guardian": {
+        "atk max": 2695,
+        "atk min": 2457,
+        "def max": 3148,
+        "def min": 2910,
+        "hp": 7355,
+        "rec": 2644
+      },
+      "oracle": {
+        "atk": 2814,
+        "def": 2791,
+        "hp max": 6760,
+        "hp min": 6165,
+        "rec max": 3001,
+        "rec min": 2763
+      }
+    },
+    "ubb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            65,
+            68,
+            71,
+            74,
+            77,
+            80,
+            83,
+            86,
+            89,
+            92,
+            95,
+            98,
+            101,
+            104,
+            107,
+            110,
+            113,
+            116,
+            119,
+            122,
+            125,
+            128,
+            131,
+            134,
+            137,
+            140,
+            143,
+            146,
+            149,
+            152,
+            155,
+            158,
+            161,
+            164,
+            167,
+            170,
+            173,
+            176,
+            179,
+            182,
+            185
+          ],
+          "hit dmg% distribution": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 41,
+          "proc id": "1"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "24"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "24"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "5"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "19"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "83"
+        }
+      ],
+      "desc": "41 combo mass Thunder att on all foes, enorm boosts Atk rel to Def for 3 turns, enorm boosts Def rel to Atk for 3 turns, adds prob power Spark critical for 3 turns, huge boosts Atk, Def, Rec of Thunder types for 3 turns & enorm boosts BB gauge for 3 turns",
+      "drop check count": 1,
+      "id": "240946",
+      "levels": [
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb atk%": 1500,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "1",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 200,
+              "converted attribute": "defense",
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "converted attribute": "attack",
+              "def% buff (47)": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 180,
+              "buff turns": 3,
+              "def% buff (14)": 180,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "thunder",
+              "proc id": "5",
+              "rec% buff (15)": 180,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 50,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 50,
+              "spark dmg inc% buff": 100,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Alpha Phaser"
+    }
+  },
+  "evolution": {
+    "amount": 3000000,
+    "evo": {
+      "id": 40947,
+      "name": "Sacred Shift Becstain",
+      "rarity": 8
+    },
+    "mats": [
+      {
+        "id": "40334",
+        "name": "Thunder Mecha God",
+        "type": "unit"
+      },
+      {
+        "id": "40334",
+        "name": "Thunder Mecha God",
+        "type": "unit"
+      },
+      {
+        "id": "50354",
+        "name": "Miracle Totem",
+        "type": "unit"
+      },
+      {
+        "id": "40133",
+        "name": "Thunder Totem",
+        "type": "unit"
+      },
+      {
+        "id": "40133",
+        "name": "Thunder Totem",
+        "type": "unit"
+      },
+      {
+        "id": "60144",
+        "name": "Dragon Mimic",
+        "type": "unit"
+      },
+      {
+        "id": "60224",
+        "name": "Metal Mimic",
+        "type": "unit"
+      },
+      {
+        "id": "60224",
+        "name": "Metal Mimic",
+        "type": "unit"
+      }
+    ],
+    "name": "Divine Machine",
+    "rarity": 7
+  },
+  "feskills": null
+}

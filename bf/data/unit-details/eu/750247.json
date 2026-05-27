@@ -1,0 +1,1976 @@
+{
+  "summary": {
+    "key": "eu:750247",
+    "server": "EU",
+    "id": "750247",
+    "name": "Kaiser Apex Gilgamesh",
+    "title": "Kaiser Apex Gilgamesh",
+    "element": "Light",
+    "rarity": "8 Star",
+    "role": "Male",
+    "cost": 50,
+    "stats": {
+      "hp": 8214,
+      "atk": 3417,
+      "def": 2570,
+      "rec": 2869
+    },
+    "images": {
+      "full": "units/img/unit_ills_full_750247.png",
+      "thumb": "units/img/unit_ills_thum_750247.png",
+      "battle": "units/img/unit_ills_battle_750247.png"
+    }
+  },
+  "raw": {
+    "ai": [
+      {
+        "action": "skill",
+        "chance%": 60,
+        "target conditions": "random",
+        "target type": "enemy"
+      },
+      {
+        "action": "skill",
+        "chance%": 20,
+        "target conditions": "atk_max",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 30,
+        "target conditions": "hp_min",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 100,
+        "target conditions": "random",
+        "target type": "enemy"
+      }
+    ],
+    "animations": {
+      "attack": {
+        "total number of frames": 148
+      },
+      "idle": {
+        "total number of frames": 96
+      },
+      "move": {
+        "total number of frames": 8
+      }
+    },
+    "bb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "50.0/3",
+          "frame times": [
+            50,
+            52,
+            54,
+            56,
+            58,
+            60,
+            62,
+            64,
+            66,
+            68,
+            70,
+            72,
+            74,
+            76,
+            78,
+            80,
+            82,
+            84,
+            86,
+            88,
+            90,
+            92
+          ],
+          "hit dmg% distribution": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            2,
+            3,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            3,
+            2
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 22,
+          "proc id": "47"
+        }
+      ],
+      "desc": "22 combo Light attack on all foes (damage relative to remaining HP) & boosts REC (170%) & boosts REC for Light and Dark units (80%) for 3 turns & activates Mana Bubble Shield (25% REC)",
+      "drop check count": 1,
+      "id": "750247",
+      "levels": [
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 10,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 20,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 30,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 40,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 50,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 60,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 70,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 80,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 90,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 400,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 100,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "rec% buff (15)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "70001",
+              "unknown proc param": "3,25,0"
+            }
+          ]
+        }
+      ],
+      "name": "Ruler Authority"
+    },
+    "cost": 50,
+    "damage frames": {
+      "frame times": [
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        68,
+        70
+      ],
+      "hit dmg% distribution": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        5,
+        5
+      ],
+      "hit dmg% distribution (total)": 100,
+      "hits": 11
+    },
+    "drop check count": 4,
+    "element": "light",
+    "exp_pattern": 20,
+    "extra skill": {
+      "desc": "If an Apex sphere is equipped, boosts all parameters (30% and 10% all), boosts elemental damage (75% and 25% all) and adds boosts ATK (170%) for 3 turns to BB/SBB",
+      "effects": [
+        {
+          "atk% buff": 10,
+          "conditions": [
+            {
+              "item required": [
+                "701039",
+                "701040",
+                "701041"
+              ]
+            }
+          ],
+          "def% buff": 10,
+          "hp% buff": 10,
+          "passive id": "1",
+          "passive target": "party",
+          "rec% buff": 10
+        },
+        {
+          "atk% buff": 30,
+          "conditions": [
+            {
+              "item required": [
+                "701039",
+                "701040",
+                "701041"
+              ]
+            }
+          ],
+          "def% buff": 30,
+          "hp% buff": 30,
+          "passive id": "1",
+          "passive target": "self",
+          "rec% buff": 30
+        },
+        {
+          "conditions": [
+            {
+              "item required": [
+                "701039",
+                "701040",
+                "701041"
+              ]
+            }
+          ],
+          "dark units do extra elemental weakness dmg": true,
+          "earth units do extra elemental weakness dmg": true,
+          "elemental weakness multiplier%": 25,
+          "fire units do extra elemental weakness dmg": true,
+          "light units do extra elemental weakness dmg": true,
+          "passive id": "50",
+          "passive target": "party",
+          "thunder units do extra elemental weakness dmg": true,
+          "water units do extra elemental weakness dmg": true
+        },
+        {
+          "conditions": [
+            {
+              "item required": [
+                "701039",
+                "701040",
+                "701041"
+              ]
+            }
+          ],
+          "dark units do extra elemental weakness dmg": true,
+          "earth units do extra elemental weakness dmg": true,
+          "elemental weakness multiplier%": 75,
+          "fire units do extra elemental weakness dmg": true,
+          "light units do extra elemental weakness dmg": true,
+          "passive id": "50",
+          "passive target": "self",
+          "thunder units do extra elemental weakness dmg": true,
+          "water units do extra elemental weakness dmg": true
+        },
+        {
+          "conditions": [
+            {
+              "item required": [
+                "701039",
+                "701040",
+                "701041"
+              ]
+            }
+          ],
+          "passive id": "66",
+          "passive target": "self",
+          "trigger on bb": true,
+          "trigger on sbb": true,
+          "triggered effect": [
+            {
+              "atk% buff (1)": 170,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "id": "750247",
+      "name": "Eternal Destroyer",
+      "rarity": "0",
+      "target": "self"
+    },
+    "gender": "male",
+    "getting type": "rare summon",
+    "guide_id": 7209,
+    "id": 750247,
+    "imp": {
+      "max atk": "600",
+      "max def": "600",
+      "max hp": "1500",
+      "max rec": "600"
+    },
+    "kind": "normal",
+    "leader skill": {
+      "desc": "Boosts all parameters (50%) & boosts Light and Dark elemental damage (150%) & boosts Spark damage (100%) & boosts BB ATK (200%)",
+      "effects": [
+        {
+          "atk% buff": 50,
+          "def% buff": 50,
+          "hp% buff": 50,
+          "passive id": "1",
+          "rec% buff": 50
+        },
+        {
+          "dark units do extra elemental weakness dmg": true,
+          "elemental weakness multiplier%": 150,
+          "light units do extra elemental weakness dmg": true,
+          "passive id": "50"
+        },
+        {
+          "damage% for spark": 100,
+          "passive id": "31"
+        },
+        {
+          "bb atk% buff": 200,
+          "passive id": "64",
+          "sbb atk% buff": 200,
+          "ubb atk% buff": 200
+        }
+      ],
+      "id": "750247",
+      "name": "Epitaph Eternal"
+    },
+    "lord damage range": "3181~3553",
+    "movement": {
+      "attack": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      },
+      "skill": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      }
+    },
+    "name": "Kaiser Apex Gilgamesh",
+    "rarity": 8,
+    "sbb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "50.0/3",
+          "frame times": [
+            50,
+            55,
+            60,
+            65,
+            70,
+            75,
+            80
+          ],
+          "hit dmg% distribution": [
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            10
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 7,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "50.0/3",
+          "frame times": [
+            52,
+            62,
+            72,
+            82,
+            92
+          ],
+          "hit dmg% distribution": [
+            20,
+            20,
+            20,
+            20,
+            20
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 5,
+          "proc id": "1"
+        }
+      ],
+      "desc": "7 combo Light attack on all foes (damage relative to remaining HP), 5 combo Light attack on single foe & boosts ATK (100%) for Light and Dark units, BB ATK (450%) and Light and Dark elemental damage (125%) for 3 turns",
+      "drop check count": 3,
+      "id": "1750247",
+      "levels": [
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 210,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 220,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 230,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 240,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 250,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 260,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 270,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 280,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 290,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 600,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "1",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "light",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (13)": 100,
+              "buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "dark",
+              "proc id": "5",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 450,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 450,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 450
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 125,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Tyrant Obelion Slash"
+    },
+    "sell caution": false,
+    "stats": {
+      "_base": {
+        "atk": 2801,
+        "def": 2107,
+        "hp": 6733,
+        "rec": 2352
+      },
+      "_lord": {
+        "atk": 3417,
+        "def": 2570,
+        "hp": 8214,
+        "rec": 2869
+      },
+      "anima": {
+        "atk": 3417,
+        "def": 2570,
+        "hp max": 9704,
+        "hp min": 8959,
+        "rec max": 2720,
+        "rec min": 2422
+      },
+      "breaker": {
+        "atk max": 3864,
+        "atk min": 3566,
+        "def max": 2421,
+        "def min": 2123,
+        "hp": 8214,
+        "rec": 2869
+      },
+      "guardian": {
+        "atk max": 3268,
+        "atk min": 2970,
+        "def max": 3017,
+        "def min": 2719,
+        "hp": 8214,
+        "rec": 2869
+      },
+      "oracle": {
+        "atk": 3417,
+        "def": 2570,
+        "hp max": 7469,
+        "hp min": 6724,
+        "rec max": 3316,
+        "rec min": 3018
+      }
+    },
+    "ubb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "50.0/3",
+          "frame times": [
+            50,
+            55,
+            60,
+            65,
+            70,
+            75,
+            80,
+            85,
+            90
+          ],
+          "hit dmg% distribution": [
+            15,
+            15,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 9,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "50.0/3",
+          "frame times": [
+            52,
+            72,
+            92
+          ],
+          "hit dmg% distribution": [
+            34,
+            32,
+            34
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 3,
+          "proc id": "47"
+        }
+      ],
+      "desc": "9 combo Light attack on all foes (damage relative to remaining HP), 3 combo Light attack on single foe (damage relative to remaining HP) & boosts ATK, DEF, REC (400%), BB ATK (600%) and Light and Dark elemental damage (400%) for 3 turns",
+      "drop check count": 3,
+      "id": "2750247",
+      "levels": [
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb added atk% based on hp": 500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 1000,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 1000,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 1200,
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "50.0/3",
+              "proc id": "47",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (1)": 400,
+              "buff turns": 3,
+              "def% buff (3)": 400,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb atk% buff": 600,
+              "buff turns (72)": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "45",
+              "sbb atk% buff": 600,
+              "target area": "aoe",
+              "target type": "party",
+              "ubb atk% buff": 600
+            },
+            {
+              "dark units do extra elemental weakness dmg": true,
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental weakness buff turns": 3,
+              "elemental weakness multiplier%": 400,
+              "light units do extra elemental weakness dmg": true,
+              "proc id": "55",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Immortal Myth"
+    }
+  },
+  "evolution": null,
+  "feskills": {
+    "category": {
+      "1": {
+        "name": ""
+      },
+      "2": {
+        "name": ""
+      },
+      "11": {
+        "name": ""
+      }
+    },
+    "skills": [
+      {
+        "category": "1",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70231",
+        "skill": {
+          "bp": 20,
+          "desc": "Boosts all parameters (30%)",
+          "effects": [
+            {
+              "passive": {
+                "atk% buff": 30,
+                "def% buff": 30,
+                "hp% buff": 30,
+                "passive id": "1",
+                "rec% buff": 30
+              }
+            }
+          ],
+          "id": "70231",
+          "level": 1,
+          "name": "Boosts all parameters (30%)",
+          "series": ""
+        }
+      },
+      {
+        "category": "2",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70232",
+        "skill": {
+          "bp": 20,
+          "desc": "Boosts Spark damage (100%)",
+          "effects": [
+            {
+              "passive": {
+                "damage% for spark": 100,
+                "passive id": "31"
+              }
+            }
+          ],
+          "id": "70232",
+          "level": 1,
+          "name": "Boosts Spark damage (100%)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70233",
+        "skill": {
+          "bp": 10,
+          "desc": "Raises ATK parameter limits to 130000",
+          "effects": [
+            {
+              "passive": {
+                "increase atk cap": 130000,
+                "passive id": "143"
+              }
+            }
+          ],
+          "id": "70233",
+          "level": 1,
+          "name": "Raises ATK parameter limits to 130000",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70234",
+        "skill": {
+          "bp": 20,
+          "desc": "Enhances Leader Skill Spark damage boost (+20%)",
+          "effects": [
+            {
+              "add to passive": {
+                "damage% for spark": 20,
+                "passive id": "31"
+              }
+            }
+          ],
+          "id": "70234",
+          "level": 1,
+          "name": "Enhances Leader Skill Spark damage boost (+20%)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70235",
+        "skill": {
+          "bp": 10,
+          "desc": "Adds boost REC to Light and Dark units (80%) for 3 turns to SBB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "buff turns": 3,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "element buffed": "light",
+                    "proc id": "5",
+                    "rec% buff (15)": 80,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "buff turns": 3,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "element buffed": "dark",
+                    "proc id": "5",
+                    "rec% buff (15)": 80,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70235",
+          "level": 1,
+          "name": "Adds boost REC to Light and Dark units (80%) for 3 turns to SBB",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "1@70235",
+        "dependency comment": "Unlock Adds boost REC to Light and Dark units (80%) for 3 turns to SBB",
+        "id": "70236",
+        "skill": {
+          "bp": 20,
+          "desc": "Enhances BB/SBB's boost to REC to Light and Dark units effect (+20%)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "buff turns": 3,
+                    "effect delay time(ms)/frame": "33.3/2",
+                    "element buffed": "light",
+                    "proc id": "5",
+                    "rec% buff (15)": 120,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "buff turns": 3,
+                    "effect delay time(ms)/frame": "33.3/2",
+                    "element buffed": "dark",
+                    "proc id": "5",
+                    "rec% buff (15)": 120,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70236",
+          "level": 1,
+          "name": "Enhances BB/SBB's boost to REC to Light and Dark units effect (+20%)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70237",
+        "skill": {
+          "bp": 20,
+          "desc": "Adds boost REC (170%) for 3 turns to SBB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "buff turns": 3,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "element buffed": "all",
+                    "proc id": "5",
+                    "rec% buff (5)": 170,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70237",
+          "level": 1,
+          "name": "Adds boost REC (170%) for 3 turns to SBB",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70238",
+        "skill": {
+          "bp": 20,
+          "desc": "Enhances SBB's boost to ATK to Light and Dark units effect (+20%)",
+          "effects": [
+            {
+              "add to sbb": {
+                "atk% buff (13)": 20,
+                "buff turns": 0,
+                "element buffed": "light",
+                "proc id": "5"
+              }
+            },
+            {
+              "add to sbb": {
+                "atk% buff (13)": 20,
+                "buff turns": 0,
+                "element buffed": "dark",
+                "proc id": "5"
+              }
+            }
+          ],
+          "id": "70238",
+          "level": 1,
+          "name": "Enhances SBB's boost to ATK to Light and Dark units effect (+20%)",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70239",
+        "skill": {
+          "bp": 30,
+          "desc": "Allows UBB buff effects to last for 5 turns",
+          "effects": [
+            {
+              "add to ubb": {
+                "buff turns": 2,
+                "element buffed": "all",
+                "proc id": "5"
+              }
+            },
+            {
+              "add to ubb": {
+                "buff turns (72)": 2,
+                "proc id": "45"
+              }
+            },
+            {
+              "add to ubb": {
+                "elemental weakness buff turns": 2,
+                "elemental weakness multiplier%": 0,
+                "proc id": "55"
+              }
+            }
+          ],
+          "id": "70239",
+          "level": 1,
+          "name": "Allows UBB buff effects to last for 5 turns",
+          "series": ""
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "70240",
+        "skill": {
+          "bp": 40,
+          "desc": "Adds Mana Bubble Shield effect (25% REC) to SBB",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "target area": "aoe",
+                    "target type": "party",
+                    "unknown proc id": "70001",
+                    "unknown proc param": "3,25,0"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "70240",
+          "level": 1,
+          "name": "Adds Mana Bubble Shield effect (25% REC) to SBB",
+          "series": ""
+        }
+      }
+    ]
+  }
+}

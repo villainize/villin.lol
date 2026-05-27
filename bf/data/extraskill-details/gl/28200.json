@@ -1,0 +1,127 @@
+{
+  "summary": {
+    "key": "gl:28200",
+    "server": "GL",
+    "id": "28200",
+    "name": "Despair Breaker",
+    "desc": "30% boost to all parameters when Scarlet Necklace is equipped, adds Def ignoring effect to attack for 2 turns to BB/SBB & raises max Atk value from 99999 to 130000",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Scarlet Necklace",
+    "searchText": "Despair Breaker 30% boost to all parameters when Scarlet Necklace is equipped, adds Def ignoring effect to attack for 2 turns to BB/SBB & raises max Atk value from 99999 to 130000 self 28200"
+  },
+  "raw": {
+    "desc": "30% boost to all parameters when Scarlet Necklace is equipped, adds Def ignoring effect to attack for 2 turns to BB/SBB & raises max Atk value from 99999 to 130000",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "47208"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "28200",
+    "name": "Despair Breaker",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "47208"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "increase atk cap: 130000 / passive id: 143 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Scarlet Necklace",
+      "raw": {
+        "item required": [
+          "47208"
+        ]
+      }
+    }
+  ]
+}

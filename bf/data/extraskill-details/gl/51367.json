@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "key": "gl:51367",
+    "server": "GL",
+    "id": "51367",
+    "name": "Power to Protect Others",
+    "desc": "Negates ignore Def for all allies, probable 2 KO resistance, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (removes all status ailments and Atk, Def, Rec reduction)",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Power to Protect Others Negates ignore Def for all allies, probable 2 KO resistance, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (removes all status ailments and Atk, Def, Rec reduction) self 51367"
+  },
+  "raw": {
+    "desc": "Negates ignore Def for all allies, probable 2 KO resistance, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (removes all status ailments and Atk, Def, Rec reduction)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "party"
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 40,
+        "angel idol recover chance% low": 40,
+        "angel idol recover counts": 2,
+        "conditions": [],
+        "passive id": "69",
+        "passive target": "self"
+      }
+    ],
+    "id": "51367",
+    "name": "Power to Protect Others",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk down resist%: 100 / curse resist%: 100 / def down resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 73 / passive target: self / poison resist%: 100",
+      "raw": {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 3,
+      "summary": "ignore def resist chance%: 100 / passive id: 92 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "angel idol chance% condition: 0 / angel idol recover chance% high: 40 / angel idol recover chance% low: 40 / angel idol recover counts: 2 / passive id: 69 / passive target: self",
+      "raw": {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 40,
+        "angel idol recover chance% low": 40,
+        "angel idol recover counts": 2,
+        "conditions": [],
+        "passive id": "69",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

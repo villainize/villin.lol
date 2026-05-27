@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "key": "gl:15200",
+    "server": "GL",
+    "id": "15200",
+    "name": "Flame Wolf's Shadow",
+    "desc": "Adds Def ignoring effect for 2 turns effect to BB/SBB & boosts Atk each turn (boost increases until 5th turn)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Flame Wolf's Shadow Adds Def ignoring effect for 2 turns effect to BB/SBB & boosts Atk each turn (boost increases until 5th turn) self 15200"
+  },
+  "raw": {
+    "desc": "Adds Def ignoring effect for 2 turns effect to BB/SBB & boosts Atk each turn (boost increases until 5th turn)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% max buff": 80,
+        "conditions": [],
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 5
+      }
+    ],
+    "id": "15200",
+    "name": "Flame Wolf's Shadow",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 80 / increase from min to max: 1 / passive id: 105 / passive target: self / turn count: 5",
+      "raw": {
+        "atk% max buff": 80,
+        "conditions": [],
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 5
+      }
+    }
+  ],
+  "conditions": []
+}

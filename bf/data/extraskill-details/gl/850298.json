@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "key": "gl:850298",
+    "server": "GL",
+    "id": "850298",
+    "name": "Purifying Concerto",
+    "desc": "40% boost to all parameters when Kagura Suzu is equipped, negates status ailments, adds status ailment removal effect to BB/SBB/UBB, hugely restores HP for 3 turns when guarding for all allies & 15% boost to all parameters for all allies",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Kagura Suzu",
+    "searchText": "Purifying Concerto 40% boost to all parameters when Kagura Suzu is equipped, negates status ailments, adds status ailment removal effect to BB/SBB/UBB, hugely restores HP for 3 turns when guarding for all allies & 15% boost to all parameters for all allies self 850298"
+  },
+  "raw": {
+    "desc": "40% boost to all parameters when Kagura Suzu is equipped, negates status ailments, adds status ailment removal effect to BB/SBB/UBB, hugely restores HP for 3 turns when guarding for all allies & 15% boost to all parameters for all allies",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "819153"
+            ]
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 15
+      },
+      {
+        "buff": {
+          "buff turns (8)": "3",
+          "gradual heal high": 5000,
+          "gradual heal low": 4000
+        },
+        "conditions": [],
+        "on guard activation chance%": 100,
+        "passive id": "88",
+        "passive target": "party"
+      }
+    ],
+    "id": "850298",
+    "name": "Purifying Concerto",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 40 / def% buff: 40 / hp% buff: 40 / passive id: 1 / passive target: self / rec% buff: 40",
+      "raw": {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "819153"
+            ]
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      }
+    },
+    {
+      "index": 2,
+      "summary": "curse resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 4 / passive target: self / poison resist%: 100 / sick resist%: 100 / weaken resist%: 100",
+      "raw": {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk% buff: 15 / def% buff: 15 / hp% buff: 15 / passive id: 1 / passive target: party / rec% buff: 15",
+      "raw": {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 15
+      }
+    },
+    {
+      "index": 5,
+      "summary": "buff: {\"buff turns (8)\":\"3\",\"gradual heal high\":5000,\"gradual heal low\":4000} / on guard activation chance%: 100 / passive id: 88 / passive target: party",
+      "raw": {
+        "buff": {
+          "buff turns (8)": "3",
+          "gradual heal high": 5000,
+          "gradual heal low": 4000
+        },
+        "conditions": [],
+        "on guard activation chance%": 100,
+        "passive id": "88",
+        "passive target": "party"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Kagura Suzu",
+      "raw": {
+        "item required": [
+          "819153"
+        ]
+      }
+    }
+  ]
+}

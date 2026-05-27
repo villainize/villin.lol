@@ -1,0 +1,127 @@
+{
+  "summary": {
+    "key": "jp:36500",
+    "server": "JP",
+    "id": "36500",
+    "name": "常練必勝",
+    "desc": "「羅獄焔燼メドブレア」を装備時、攻撃力・防御力・回復力・最大ＨＰを４０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ」を追加＆攻撃力の上限値（９９９９９）を１５００００まで解放する",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: 羅獄焔燼メドブレア",
+    "searchText": "常練必勝 「羅獄焔燼メドブレア」を装備時、攻撃力・防御力・回復力・最大ＨＰを４０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ」を追加＆攻撃力の上限値（９９９９９）を１５００００まで解放する self 36500"
+  },
+  "raw": {
+    "desc": "「羅獄焔燼メドブレア」を装備時、攻撃力・防御力・回復力・最大ＨＰを４０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージを大幅にアップ」を追加＆攻撃力の上限値（９９９９９）を１５００００まで解放する",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "49940"
+            ]
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 180,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 150000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "36500",
+    "name": "常練必勝",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 40 / def% buff: 40 / hp% buff: 40 / passive id: 1 / passive target: self / rec% buff: 40",
+      "raw": {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "49940"
+            ]
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"atk% buff turns (110)\":3,\"atk% buff when enemy has ailment\":180,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"65\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 180,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "increase atk cap: 150000 / passive id: 143 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "increase atk cap": 150000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: 羅獄焔燼メドブレア",
+      "raw": {
+        "item required": [
+          "49940"
+        ]
+      }
+    }
+  ]
+}

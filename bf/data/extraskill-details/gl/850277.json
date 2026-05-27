@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "key": "gl:850277",
+    "server": "GL",
+    "id": "850277",
+    "name": "Concept Creation Matrix",
+    "desc": "Adds Def ignoring effect to BB/SBB for 3 turns & 30% boost to Atk, Def each turn (for up to 3 turns)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Concept Creation Matrix Adds Def ignoring effect to BB/SBB for 3 turns & 30% boost to Atk, Def each turn (for up to 3 turns) self 850277"
+  },
+  "raw": {
+    "desc": "Adds Def ignoring effect to BB/SBB for 3 turns & 30% boost to Atk, Def each turn (for up to 3 turns)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% max buff": 90,
+        "conditions": [],
+        "def% max buff": 90,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 3
+      }
+    ],
+    "id": "850277",
+    "name": "Concept Creation Matrix",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 90 / def% max buff: 90 / increase from min to max: 1 / passive id: 105 / passive target: self / turn count: 3",
+      "raw": {
+        "atk% max buff": 90,
+        "conditions": [],
+        "def% max buff": 90,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 3
+      }
+    }
+  ],
+  "conditions": []
+}

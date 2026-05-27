@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "key": "eu:740176",
+    "server": "EU",
+    "id": "740176",
+    "name": "Profane Voltage",
+    "desc": "Adds Removes status ailments to BB/SBB/UBB & Boosts BB gauge when attacked (3-5 BC)",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Profane Voltage Adds Removes status ailments to BB/SBB/UBB & Boosts BB gauge when attacked (3-5 BC) self 740176"
+  },
+  "raw": {
+    "desc": "Adds Removes status ailments to BB/SBB/UBB & Boosts BB gauge when attacked (3-5 BC)",
+    "effects": [
+      {
+        "bc fill when attacked high": 5,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "740176",
+    "name": "Profane Voltage",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill when attacked high: 5 / bc fill when attacked low: 3 / bc fill when attacked%: 100 / passive id: 25 / passive target: self",
+      "raw": {
+        "bc fill when attacked high": 5,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"10\",\"remove all status ailments\":true,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

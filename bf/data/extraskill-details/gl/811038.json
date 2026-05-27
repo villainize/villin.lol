@@ -1,0 +1,228 @@
+{
+  "summary": {
+    "key": "gl:811038",
+    "server": "GL",
+    "id": "811038",
+    "name": "Mystery Meat",
+    "desc": "200% damage against status afflicted foes when Summoner Special or spark type sphere is equipped, 15% DoT reduction for all allies, 0-100% Atk, Def, Rec relative to remaining HP, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Summoner Special",
+    "searchText": "Mystery Meat 200% damage against status afflicted foes when Summoner Special or spark type sphere is equipped, 15% DoT reduction for all allies, 0-100% Atk, Def, Rec relative to remaining HP, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction) self 811038"
+  },
+  "raw": {
+    "desc": "200% damage against status afflicted foes when Summoner Special or spark type sphere is equipped, 15% DoT reduction for all allies, 0-100% Atk, Def, Rec relative to remaining HP, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Removes all status ailments and Atk, Def, Rec reduction)",
+    "effects": [
+      {
+        "atk% buff when enemy has ailment": 200,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [
+          {
+            "item required": [
+              "819374"
+            ]
+          },
+          {
+            "sphere category required": "Spark",
+            "sphere category required (raw)": "11"
+          }
+        ],
+        "passive id": "74",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 100
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "811038",
+    "name": "Mystery Meat",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff when enemy has ailment: 200 / atk% buff when enemy has curse: true / atk% buff when enemy has injury: true / atk% buff when enemy has paralysis: true / atk% buff when enemy has poison: true / atk% buff when enemy has sick: true / atk% buff when enemy has weaken: true / passive id: 74",
+      "raw": {
+        "atk% buff when enemy has ailment": 200,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [
+          {
+            "item required": [
+              "819374"
+            ]
+          },
+          {
+            "sphere category required": "Spark",
+            "sphere category required (raw)": "11"
+          }
+        ],
+        "passive id": "74",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive target: party / unknown passive id: 127 / unknown passive params: 100,15",
+      "raw": {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "127",
+        "unknown passive params": "100,15"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% base buff: 0 / atk% extra buff based on hp: 100 / buff proportional to hp: remaining / def% base buff: 0 / def% extra buff based on hp: 100 / passive id: 46 / passive target: self / rec% base buff: 0",
+      "raw": {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 100
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk down resist%: 100 / curse resist%: 100 / def down resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 73 / passive target: self / poison resist%: 100",
+      "raw": {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Summoner Special",
+      "raw": {
+        "item required": [
+          "819374"
+        ]
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Sphere category: Spark",
+      "raw": {
+        "sphere category required": "Spark",
+        "sphere category required (raw)": "11"
+      }
+    }
+  ]
+}

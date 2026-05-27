@@ -1,0 +1,840 @@
+{
+  "summary": {
+    "key": "jp:30884",
+    "server": "JP",
+    "id": "30884",
+    "name": "不老神ゼルイア",
+    "title": "不老神ゼルイア",
+    "element": "Earth",
+    "rarity": "5 Star",
+    "role": "Other",
+    "cost": 21,
+    "stats": {
+      "hp": 5259,
+      "atk": 1813,
+      "def": 1845,
+      "rec": 1714
+    },
+    "images": {
+      "full": "units/img/unit_ills_full_30884.png",
+      "thumb": "units/img/unit_ills_thum_30884.png",
+      "battle": "units/img/unit_ills_battle_30884.png"
+    }
+  },
+  "raw": {
+    "ai": [
+      {
+        "action": "skill",
+        "chance%": 60,
+        "target conditions": "hp_50pr_over",
+        "target type": "enemy"
+      },
+      {
+        "action": "skill",
+        "chance%": 20,
+        "target conditions": "random",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 100,
+        "target conditions": "random",
+        "target type": "enemy"
+      }
+    ],
+    "animations": {
+      "attack": {
+        "total number of frames": 195
+      },
+      "idle": {
+        "total number of frames": 56
+      },
+      "move": {
+        "total number of frames": 7
+      }
+    },
+    "bb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            98,
+            101,
+            104,
+            107,
+            110,
+            113,
+            116,
+            119,
+            122,
+            125,
+            128,
+            131,
+            134,
+            137,
+            140,
+            143,
+            146,
+            149,
+            152,
+            155,
+            158,
+            161,
+            164,
+            167,
+            170
+          ],
+          "hit dmg% distribution": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 25,
+          "proc id": "29"
+        },
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            78
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "2"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "38"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "6"
+        }
+      ],
+      "desc": "敵全体に水・樹属性２５連ダメージ＆味方全体のＨＰを大回復＆全状態異常を回復＆３ターン、ＢＣ・ＨＣ出現率をアップ",
+      "drop check count": 1,
+      "id": "30884",
+      "levels": [
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 170,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 1800,
+              "heal low": 1500,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 10,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 10,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 180,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 1850,
+              "heal low": 1550,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 11,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 11,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 190,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 1900,
+              "heal low": 1600,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 12,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 12,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 200,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 1950,
+              "heal low": 1650,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 13,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 13,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 210,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 2000,
+              "heal low": 1700,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 14,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 14,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 220,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 2050,
+              "heal low": 1750,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 15,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 15,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 230,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 2100,
+              "heal low": 1800,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 16,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 16,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 240,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 2150,
+              "heal low": 1850,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 17,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 17,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 250,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 2200,
+              "heal low": 1900,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 18,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 18,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 25,
+          "effects": [
+            {
+              "bb atk%": 270,
+              "bb elements": [
+                "water",
+                "earth"
+              ],
+              "bb flat atk": 100,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "29",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "16.7/1",
+              "heal high": 2300,
+              "heal low": 2000,
+              "proc id": "2",
+              "rec added% (from healer)": 22.5,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc drop rate% buff (10)": 20,
+              "drop rate buff turns": 3,
+              "effect delay time(ms)/frame": "0.0/0",
+              "hc drop rate% buff (9)": 20,
+              "proc id": "6",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "妖精の賛歌"
+    },
+    "category": 30880,
+    "cost": 21,
+    "damage frames": {
+      "frame times": [
+        98,
+        101,
+        104,
+        107,
+        110,
+        113,
+        116
+      ],
+      "hit dmg% distribution": [
+        14,
+        14,
+        14,
+        14,
+        14,
+        15,
+        15
+      ],
+      "hit dmg% distribution (total)": 100,
+      "hits": 7
+    },
+    "drop check count": 3,
+    "element": "earth",
+    "exp_pattern": 20,
+    "gender": "other",
+    "getting type": "rare summon",
+    "guide_id": 1531,
+    "id": 30884,
+    "imp": {
+      "max atk": "200",
+      "max def": "200",
+      "max hp": "500",
+      "max rec": "200"
+    },
+    "kind": "normal",
+    "leader skill": {
+      "desc": "ＢＣ・ＨＣ・ゼル・カルマ・アイテム出現率をアップ＆ＢＣ獲得時の増加量をアップ",
+      "effects": [
+        {
+          "bc drop rate% buff": 10,
+          "hc drop rate% buff": 10,
+          "item drop rate% buff": 2,
+          "karma drop rate% buff": 5,
+          "passive id": "19",
+          "zel drop rate% buff": 5
+        },
+        {
+          "bb gauge fill rate%": 30,
+          "passive id": "32"
+        }
+      ],
+      "id": "5405",
+      "name": "星々の刻印"
+    },
+    "lord damage range": "1687~1885",
+    "movement": {
+      "attack": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      },
+      "skill": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      }
+    },
+    "name": "不老神ゼルイア",
+    "rarity": 5,
+    "sell caution": false,
+    "stats": {
+      "_base": {
+        "atk": 1360,
+        "def": 1384,
+        "hp": 3719,
+        "rec": 1286
+      },
+      "_lord": {
+        "atk": 1813,
+        "def": 1845,
+        "hp": 5259,
+        "rec": 1714
+      },
+      "anima": {
+        "atk": 1813,
+        "def": 1845,
+        "hp max": 6049,
+        "hp min": 5654,
+        "rec max": 1635,
+        "rec min": 1477
+      },
+      "breaker": {
+        "atk max": 2050,
+        "atk min": 1892,
+        "def max": 1766,
+        "def min": 1608,
+        "hp": 5259,
+        "rec": 1714
+      },
+      "guardian": {
+        "atk": 1813,
+        "def max": 2082,
+        "def min": 1924,
+        "hp": 5259,
+        "rec max": 1714,
+        "rec min": 1556
+      },
+      "oracle": {
+        "atk": 1813,
+        "def max": 1845,
+        "def min": 1687,
+        "hp": 5259,
+        "rec max": 2030,
+        "rec min": 1872
+      }
+    }
+  },
+  "evolution": {
+    "amount": 500000,
+    "evo": {
+      "id": 30885,
+      "name": "永護神ゼルイア",
+      "rarity": 6
+    },
+    "mats": [
+      {
+        "id": "50354",
+        "name": "奇跡の巨神",
+        "type": "unit"
+      },
+      {
+        "id": "30133",
+        "name": "樹の巨神",
+        "type": "unit"
+      },
+      {
+        "id": "30191",
+        "name": "樹のツボ",
+        "type": "unit"
+      },
+      {
+        "id": "30132",
+        "name": "樹の石像",
+        "type": "unit"
+      },
+      {
+        "id": "60144",
+        "name": "ドラゴンミミック",
+        "type": "unit"
+      }
+    ],
+    "name": "不老神ゼルイア",
+    "rarity": 5
+  },
+  "feskills": null
+}

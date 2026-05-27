@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "key": "gl:3700",
+    "server": "GL",
+    "id": "3700",
+    "name": "Sacrifice for the Future",
+    "desc": "Adds Light element to BB/SBB for 3 turns & when Nine Sacred Treasures is equipped, 20% boost to all parameters",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Sacred Gem, Sacred Lance, Sacred Axe, Sacred Dagger, Sacred Staff, Sacred Crystal, Sacred Blade, Sacred Longbow, Sacred Rod",
+    "searchText": "Sacrifice for the Future Adds Light element to BB/SBB for 3 turns & when Nine Sacred Treasures is equipped, 20% boost to all parameters self 3700"
+  },
+  "raw": {
+    "desc": "Adds Light element to BB/SBB for 3 turns & when Nine Sacred Treasures is equipped, 20% boost to all parameters",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "40400",
+              "43100",
+              "45900",
+              "47000",
+              "47100",
+              "47800",
+              "48207",
+              "49100",
+              "60150"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "light"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "3700",
+    "name": "Sacrifice for the Future",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "40400",
+              "43100",
+              "45900",
+              "47000",
+              "47100",
+              "47800",
+              "48207",
+              "49100",
+              "60150"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"light\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "light"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Sacred Gem, Sacred Lance, Sacred Axe, Sacred Dagger, Sacred Staff, Sacred Crystal, Sacred Blade, Sacred Longbow, Sacred Rod",
+      "raw": {
+        "item required": [
+          "40400",
+          "43100",
+          "45900",
+          "47000",
+          "47100",
+          "47800",
+          "48207",
+          "49100",
+          "60150"
+        ]
+      }
+    }
+  ]
+}

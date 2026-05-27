@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "key": "jp:33700",
+    "server": "JP",
+    "id": "33700",
+    "name": "豪将の導き",
+    "desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加＆クリティカル時、ＢＢゲージを超絶増加・ダメージをアップ",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "豪将の導き ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加＆クリティカル時、ＢＢゲージを超絶増加・ダメージをアップ self 33700"
+  },
+  "raw": {
+    "desc": "ＢＢ及びＳＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加＆クリティカル時、ＢＢゲージを超絶増加・ダメージをアップ",
+    "effects": [
+      {
+        "bc fill on crit max": 8,
+        "bc fill on crit min": 8,
+        "bc fill on crit%": 100,
+        "conditions": [],
+        "passive id": "65",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 50,
+        "passive id": "34",
+        "passive target": "self"
+      }
+    ],
+    "id": "33700",
+    "name": "豪将の導き",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill on crit max: 8 / bc fill on crit min: 8 / bc fill on crit%: 100 / passive id: 65 / passive target: self",
+      "raw": {
+        "bc fill on crit max": 8,
+        "bc fill on crit min": 8,
+        "bc fill on crit%": 100,
+        "conditions": [],
+        "passive id": "65",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "crit multiplier%: 50 / passive id: 34 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "crit multiplier%": 50,
+        "passive id": "34",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "key": "gl:8960288",
+    "server": "GL",
+    "id": "8960288",
+    "name": "Energy Effusion Calculation",
+    "desc": "50% boost to Atk of Dark types, 50% boost to Spark damage, adds Dark barrier effect to BB/SBB & raises Atk parameter limits to 130000<br>Boosts Atk, Def when BB gauge is over 50%, adds 22 combo powerful Dark attack on Light types effect to SBB & boosts Dark elemental damage for all allies in Guild Raid",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Energy Effusion Calculation 50% boost to Atk of Dark types, 50% boost to Spark damage, adds Dark barrier effect to BB/SBB & raises Atk parameter limits to 130000<br>Boosts Atk, Def when BB gauge is over 50%, adds 22 combo powerful Dark attack on Light types effect to SBB & boosts Dark elemental damage for all allies in Guild Raid self 8960288"
+  },
+  "raw": {
+    "desc": "50% boost to Atk of Dark types, 50% boost to Spark damage, adds Dark barrier effect to BB/SBB & raises Atk parameter limits to 130000<br>Boosts Atk, Def when BB gauge is over 50%, adds 22 combo powerful Dark attack on Light types effect to SBB & boosts Dark elemental damage for all allies in Guild Raid",
+    "effects": [
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 25,
+        "passive id": "50",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 75,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 75,
+        "passive id": "30",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "additional element used for attack check": "dark",
+            "bb atk%": 1100,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "97",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "8960288",
+    "name": "Energy Effusion Calculation",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "dark units do extra elemental weakness dmg: true / elemental weakness multiplier%: 25 / passive id: 50 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 25,
+        "passive id": "50",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 75 / bb gauge above % buff requirement: 50 / def% buff: 75 / passive id: 30 / passive target: self",
+      "raw": {
+        "atk% buff": 75,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 75,
+        "passive id": "30",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"additional element used for attack check\":\"dark\",\"bb atk%\":1100,\"bb flat atk\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"97\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "additional element used for attack check": "dark",
+            "bb atk%": 1100,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "97",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

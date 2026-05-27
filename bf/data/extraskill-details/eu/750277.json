@@ -1,0 +1,269 @@
+{
+  "summary": {
+    "key": "eu:750277",
+    "server": "EU",
+    "id": "750277",
+    "name": "Isolated Warrior",
+    "desc": "Adds probable random status ailment infliction to attack (20%) for 3 turn to BB/SBB & when Siegfried sphere is equipped, raises ATK parameter limits to 130000, negates DEF ignoring effect (all) and boosts ATK of Light types (30%)",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 3,
+    "conditionSummary": "Needs item: Siegfried's Hybrid Weapon, Siegfried's Fanged Gun, Siegfried's Propelled Shield, Siegfried's Doping Spaulder, Siegfried Draconic Rage",
+    "searchText": "Isolated Warrior Adds probable random status ailment infliction to attack (20%) for 3 turn to BB/SBB & when Siegfried sphere is equipped, raises ATK parameter limits to 130000, negates DEF ignoring effect (all) and boosts ATK of Light types (30%) self 750277"
+  },
+  "raw": {
+    "desc": "Adds probable random status ailment infliction to attack (20%) for 3 turn to BB/SBB & when Siegfried sphere is equipped, raises ATK parameter limits to 130000, negates DEF ignoring effect (all) and boosts ATK of Light types (30%)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "injury% buff": 20,
+            "poison% buff": 20,
+            "proc id": "40",
+            "sick% buff": 20,
+            "target area": "aoe",
+            "target type": "party",
+            "weaken% buff": 20
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "curse% buff": 20,
+            "effect delay time(ms)/frame": "0.0/0",
+            "paralysis% buff": 20,
+            "proc id": "40",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "elements buffed": [
+          "light"
+        ],
+        "passive id": "2",
+        "passive target": "party"
+      }
+    ],
+    "id": "750277",
+    "name": "Isolated Warrior",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"injury% buff\":20,\"poison% buff\":20,\"proc id\":\"40\",\"sick% buff\":20,\"target area\":\"aoe\",\"target type\":\"party\",\"weaken% buff\":20}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "injury% buff": 20,
+            "poison% buff": 20,
+            "proc id": "40",
+            "sick% buff": 20,
+            "target area": "aoe",
+            "target type": "party",
+            "weaken% buff": 20
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"curse% buff\":20,\"effect delay time(ms)/frame\":\"0.0/0\",\"paralysis% buff\":20,\"proc id\":\"40\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "curse% buff": 20,
+            "effect delay time(ms)/frame": "0.0/0",
+            "paralysis% buff": 20,
+            "proc id": "40",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "increase atk cap: 130000 / passive id: 143 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "ignore def resist chance%: 100 / passive id: 92 / passive target: party",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "atk% buff: 30 / elements buffed: [\"light\"] / passive id: 2 / passive target: party",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "elements buffed": [
+          "light"
+        ],
+        "passive id": "2",
+        "passive target": "party"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Siegfried's Hybrid Weapon, Siegfried's Fanged Gun, Siegfried's Propelled Shield, Siegfried's Doping Spaulder, Siegfried Draconic Rage",
+      "raw": {
+        "item required": [
+          "700065",
+          "700061",
+          "700062",
+          "700063",
+          "700067"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: Siegfried's Hybrid Weapon, Siegfried's Fanged Gun, Siegfried's Propelled Shield, Siegfried's Doping Spaulder, Siegfried Draconic Rage",
+      "raw": {
+        "item required": [
+          "700065",
+          "700061",
+          "700062",
+          "700063",
+          "700067"
+        ]
+      }
+    },
+    {
+      "effectIndex": 5,
+      "conditionIndex": 1,
+      "summary": "Needs item: Siegfried's Hybrid Weapon, Siegfried's Fanged Gun, Siegfried's Propelled Shield, Siegfried's Doping Spaulder, Siegfried Draconic Rage",
+      "raw": {
+        "item required": [
+          "700065",
+          "700061",
+          "700062",
+          "700063",
+          "700067"
+        ]
+      }
+    }
+  ]
+}

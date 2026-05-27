@@ -1,0 +1,2450 @@
+{
+  "summary": {
+    "key": "gl:860798",
+    "server": "GL",
+    "id": "860798",
+    "name": "Evie, Twilight Heir",
+    "title": "Evie, Twilight Heir",
+    "element": "Dark",
+    "rarity": "8 Star",
+    "role": "Female",
+    "cost": 60,
+    "stats": {
+      "hp": 10074,
+      "atk": 3659,
+      "def": 3362,
+      "rec": 3533
+    },
+    "images": {
+      "full": "units/img/unit_ills_full_860798.png",
+      "thumb": "units/img/unit_ills_thum_860798.png",
+      "battle": "units/img/unit_ills_battle_860798.png"
+    }
+  },
+  "raw": {
+    "ai": [
+      {
+        "action": "skill",
+        "chance%": 60,
+        "target conditions": "hp_50pr_over",
+        "target type": "enemy"
+      },
+      {
+        "action": "skill",
+        "chance%": 20,
+        "target conditions": "random",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 100,
+        "target conditions": "random",
+        "target type": "enemy"
+      }
+    ],
+    "animations": {
+      "attack": {
+        "total number of frames": 167
+      },
+      "idle": {
+        "total number of frames": 49
+      },
+      "move": {
+        "total number of frames": 49
+      }
+    },
+    "bb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            38,
+            41,
+            44,
+            47,
+            50,
+            53,
+            56,
+            59,
+            62,
+            65,
+            68,
+            71,
+            74,
+            77,
+            80,
+            83,
+            86,
+            89,
+            92,
+            95
+          ],
+          "hit dmg% distribution": [
+            2,
+            2,
+            2,
+            2,
+            4,
+            4,
+            4,
+            8,
+            8,
+            10,
+            10,
+            10,
+            8,
+            8,
+            4,
+            4,
+            4,
+            2,
+            2,
+            2
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 20,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "92"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "5"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "24"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "10007"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "44"
+        }
+      ],
+      "desc": "20 combo Dark attack on all foes (damage relative to remaining HP), boosts own max HP, boosts Atk, Def, Rec and critical rate (Dark) for 3 turns, boosts Atk, Def, Rec relative to max HP for 3 turns, probable evasion for 2 turns & 2 turns DoT infliction",
+      "drop check count": 1,
+      "id": "860798",
+      "levels": [
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 250,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 170,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 170,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 170,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 70,
+              "converted attribute": "hp",
+              "def% buff (47)": 70,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 70,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 260,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 175,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 175,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 175,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 71,
+              "converted attribute": "hp",
+              "def% buff (47)": 71,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 71,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 270,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 180,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 180,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 180,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 72,
+              "converted attribute": "hp",
+              "def% buff (47)": 72,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 72,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 280,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 185,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 185,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 185,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 73,
+              "converted attribute": "hp",
+              "def% buff (47)": 73,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 73,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 290,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 190,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 190,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 190,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 74,
+              "converted attribute": "hp",
+              "def% buff (47)": 74,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 74,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 300,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 195,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 195,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 195,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 75,
+              "converted attribute": "hp",
+              "def% buff (47)": 75,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 75,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 310,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 200,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 200,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 76,
+              "converted attribute": "hp",
+              "def% buff (47)": 76,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 76,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 320,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 205,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 205,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 205,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 77,
+              "converted attribute": "hp",
+              "def% buff (47)": 77,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 77,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 330,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 210,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 210,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 210,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 78,
+              "converted attribute": "hp",
+              "def% buff (47)": 78,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 78,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        },
+        {
+          "bc cost": 29,
+          "effects": [
+            {
+              "bb added atk% based on hp": 350,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb crit%": 60,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "single",
+              "target type": "self",
+              "unknown proc id": "92",
+              "unknown proc param": "0,35,0"
+            },
+            {
+              "atk% buff (1)": 220,
+              "buff turns": 3,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 220,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 220,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "% converted turns": 3,
+              "atk% buff (46)": 80,
+              "converted attribute": "hp",
+              "def% buff (47)": 80,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "24",
+              "rec% buff (48)": 80,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10007",
+              "unknown proc param": "100,2,0,20"
+            },
+            {
+              "dot atk%": 1000,
+              "dot element affected": true,
+              "dot flat atk": 100,
+              "dot turns (71)": 2,
+              "dot unit index": 0,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "44",
+              "target area": "aoe",
+              "target type": "enemy"
+            }
+          ]
+        }
+      ],
+      "name": "Tenebrous Star"
+    },
+    "category": 860790,
+    "cost": 60,
+    "damage frames": {
+      "frame times": [
+        38,
+        41,
+        44,
+        47,
+        50,
+        53,
+        56,
+        59,
+        62,
+        65,
+        68,
+        71,
+        74,
+        77,
+        80,
+        83,
+        86,
+        89,
+        92,
+        95
+      ],
+      "hit dmg% distribution": [
+        2,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8,
+        8,
+        10,
+        10,
+        10,
+        8,
+        8,
+        4,
+        4,
+        4,
+        2,
+        2,
+        2
+      ],
+      "hit dmg% distribution (total)": 100,
+      "hits": 20
+    },
+    "drop check count": 3,
+    "element": "dark",
+    "exp_pattern": 20,
+    "extra skill": {
+      "desc": "30% reduction to BB activation cost when Lost Innocence or Atk Boosting sphere is equipped, 25% all parameters (Dark), 20% Dark elemental damage and 25% critical damage for all allies & 30% all parameters",
+      "effects": [
+        {
+          "conditions": [
+            {
+              "item required": [
+                "819296"
+              ]
+            },
+            {
+              "sphere category required": "Atk Boosting",
+              "sphere category required (raw)": "13"
+            }
+          ],
+          "passive id": "48",
+          "passive target": "self",
+          "reduced bb bc cost%": 30
+        },
+        {
+          "conditions": [],
+          "crit multiplier%": 25,
+          "passive id": "34",
+          "passive target": "party"
+        },
+        {
+          "conditions": [],
+          "dark units do extra elemental weakness dmg": true,
+          "elemental weakness multiplier%": 20,
+          "passive id": "50",
+          "passive target": "party"
+        },
+        {
+          "atk% buff": 25,
+          "conditions": [],
+          "def% buff": 25,
+          "elements buffed": [
+            "dark"
+          ],
+          "hp% buff": 25,
+          "passive id": "2",
+          "passive target": "party",
+          "rec% buff": 25
+        },
+        {
+          "atk% buff": 30,
+          "conditions": [],
+          "def% buff": 30,
+          "hp% buff": 30,
+          "passive id": "1",
+          "passive target": "self",
+          "rec% buff": 30
+        }
+      ],
+      "id": "860798",
+      "name": "Unrequited Nostalgia",
+      "rarity": "7",
+      "target": "self"
+    },
+    "gender": "female",
+    "getting type": "rare summon",
+    "guide_id": 8598,
+    "id": 860798,
+    "imp": {
+      "max atk": "800",
+      "max def": "400",
+      "max hp": "1250",
+      "max rec": "500"
+    },
+    "kind": "normal",
+    "leader skill": {
+      "desc": "200% Atk, 140% Def, max HP and 30% critical rate (Dark), 250% critical damage, 250% spark damage, 30% reduction to BB activation cost & probable 25% damage reduction",
+      "effects": [
+        {
+          "atk% buff": 200,
+          "crit% buff": 30,
+          "def% buff": 140,
+          "elements buffed": [
+            "dark"
+          ],
+          "hp% buff": 140,
+          "passive id": "2"
+        },
+        {
+          "crit multiplier%": 250,
+          "passive id": "34"
+        },
+        {
+          "damage% for spark": 250,
+          "passive id": "31"
+        },
+        {
+          "passive id": "48",
+          "reduced bb bc cost%": 30
+        },
+        {
+          "dmg reduction chance%": 30,
+          "dmg reduction%": 25,
+          "passive id": "14"
+        }
+      ],
+      "id": "860798",
+      "name": "Forlorn Hope"
+    },
+    "lord damage range": "3407~3805",
+    "movement": {
+      "attack": {
+        "move speed": 0,
+        "move speed type": "5",
+        "move type": "3"
+      },
+      "skill": {
+        "move speed": 0,
+        "move speed type": "5",
+        "move type": "3"
+      }
+    },
+    "name": "Evie, Twilight Heir",
+    "overdrive stats": {
+      "atk%": 100,
+      "def%": 100,
+      "rec%": 100
+    },
+    "rarity": 8,
+    "sbb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            29,
+            32,
+            35,
+            38,
+            41,
+            44,
+            47,
+            50,
+            53,
+            56,
+            59,
+            62,
+            65,
+            68,
+            71,
+            74,
+            77,
+            80,
+            83,
+            86,
+            89,
+            92,
+            95,
+            98,
+            101
+          ],
+          "hit dmg% distribution": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            8,
+            8,
+            8,
+            8,
+            8,
+            6,
+            4,
+            4,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 25,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            54,
+            57,
+            60,
+            63,
+            66,
+            69,
+            72,
+            75,
+            78,
+            81
+          ],
+          "hit dmg% distribution": [
+            48,
+            4,
+            4,
+            8,
+            8,
+            8,
+            8,
+            4,
+            4,
+            4
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 10,
+          "proc id": "27"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "78"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "10016"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "10015"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "83"
+        }
+      ],
+      "desc": "25 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 5% damage of foes' max HP), boosts own Atk, Def, Rec and critical rate for 3 turns, boosts critical damage (Dark) for 3 turns, boosts spark damage (Dark) for 3 turns & probable spark critical for 3 turns",
+      "drop check count": 1,
+      "id": "1860798",
+      "levels": [
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 750,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 100,
+              "self crit% buff": 60,
+              "self def% buff": 100,
+              "self rec% buff": 100,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 70,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 660,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 105,
+              "self crit% buff": 60,
+              "self def% buff": 105,
+              "self rec% buff": 105,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 71,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 670,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 110,
+              "self crit% buff": 60,
+              "self def% buff": 110,
+              "self rec% buff": 110,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 72,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 680,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 115,
+              "self crit% buff": 60,
+              "self def% buff": 115,
+              "self rec% buff": 115,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 73,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 690,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 120,
+              "self crit% buff": 60,
+              "self def% buff": 120,
+              "self rec% buff": 120,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 74,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 700,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 125,
+              "self crit% buff": 60,
+              "self def% buff": 125,
+              "self rec% buff": 125,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 75,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 710,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 130,
+              "self crit% buff": 60,
+              "self def% buff": 130,
+              "self rec% buff": 130,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 76,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 720,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 135,
+              "self crit% buff": 60,
+              "self def% buff": 135,
+              "self rec% buff": 135,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 77,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 730,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 140,
+              "self crit% buff": 60,
+              "self def% buff": 140,
+              "self rec% buff": 140,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 78,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 750,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 1200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 10,
+              "hp% damage high": 5,
+              "hp% damage low": 5,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "78",
+              "self atk% buff": 150,
+              "self crit% buff": 60,
+              "self def% buff": 150,
+              "self rec% buff": 150,
+              "self stat buff turns": 3,
+              "target area": "single",
+              "target type": "self"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10016",
+              "unknown proc param": "0.75,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,6"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "83",
+              "spark dmg inc buff turns (131)": 3,
+              "spark dmg inc chance%": 60,
+              "spark dmg inc% buff": 80,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Eclipse Shatter"
+    },
+    "sell caution": false,
+    "stats": {
+      "_base": {
+        "atk": 2561,
+        "def": 2353,
+        "hp": 7052,
+        "rec": 2473
+      },
+      "_lord": {
+        "atk": 3659,
+        "def": 3362,
+        "hp": 10074,
+        "rec": 3533
+      },
+      "anima": {
+        "atk": 3659,
+        "def": 3362,
+        "hp max": 11564,
+        "hp min": 10819,
+        "rec max": 3384,
+        "rec min": 3086
+      },
+      "breaker": {
+        "atk max": 4106,
+        "atk min": 3808,
+        "def max": 3213,
+        "def min": 2915,
+        "hp": 10074,
+        "rec": 3533
+      },
+      "guardian": {
+        "atk": 3659,
+        "def max": 3809,
+        "def min": 3511,
+        "hp": 10074,
+        "rec max": 3533,
+        "rec min": 3235
+      },
+      "oracle": {
+        "atk": 3659,
+        "def max": 3362,
+        "def min": 3064,
+        "hp": 10074,
+        "rec max": 4129,
+        "rec min": 3831
+      }
+    },
+    "ubb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            23,
+            26,
+            29,
+            32,
+            35,
+            38,
+            41,
+            44,
+            47,
+            50,
+            53,
+            56,
+            59,
+            62,
+            65,
+            68,
+            71,
+            74,
+            77,
+            80,
+            83,
+            86,
+            89,
+            92,
+            95,
+            98,
+            101,
+            104,
+            107,
+            110
+          ],
+          "hit dmg% distribution": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            4,
+            4,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 30,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            54,
+            57,
+            60,
+            63,
+            66,
+            69,
+            72,
+            75,
+            78,
+            81
+          ],
+          "hit dmg% distribution": [
+            48,
+            4,
+            4,
+            8,
+            8,
+            8,
+            8,
+            4,
+            4,
+            4
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 10,
+          "proc id": "27"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "8"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "5"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "54"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "23"
+        }
+      ],
+      "desc": "30 combo Dark attack on all foes (damage relative to remaining HP), 10 combo Dark attack on single foe (or probable 7% damage of foes' max HP), boosts max HP, boosts Atk, Def, Rec and critical rate for 4 turns, boosts critical damage for 4 turns & boosts spark damage for 4 turns",
+      "drop check count": 1,
+      "id": "2860798",
+      "levels": [
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 1500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 1500,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb atk%": 2500,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "hp% damage chance%": 50,
+              "hp% damage high": 7,
+              "hp% damage low": 7,
+              "proc id": "27",
+              "target area": "single",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "max hp% increase": 55,
+              "proc id": "8",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "atk% buff (1)": 450,
+              "buff turns": 4,
+              "crit% buff (7)": 60,
+              "def% buff (3)": 450,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 450,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns (84)": 4,
+              "crit multiplier%": 500,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "54",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 4,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "23",
+              "spark dmg% buff (40)": 500,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Umbra Corona"
+    }
+  },
+  "evolution": null,
+  "feskills": {
+    "category": {
+      "1": {
+        "name": "ステアップ系"
+      },
+      "2": {
+        "name": "スパーク系"
+      },
+      "4": {
+        "name": "攻撃強化系"
+      },
+      "6": {
+        "name": "ＨＰ回復系"
+      },
+      "10": {
+        "name": "ダメージ軽減系"
+      },
+      "11": {
+        "name": "特殊"
+      }
+    },
+    "skills": [
+      {
+        "category": "1",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010100169",
+        "skill": {
+          "bp": 10,
+          "desc": "100% all parameters",
+          "effects": [
+            {
+              "passive": {
+                "atk% buff": 100,
+                "def% buff": 100,
+                "hp% buff": 100,
+                "passive id": "1",
+                "rec% buff": 100
+              }
+            }
+          ],
+          "id": "1010100169",
+          "level": 2,
+          "name": "100% all parameters",
+          "series": "1010100169"
+        }
+      },
+      {
+        "category": "2",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500052",
+        "skill": {
+          "bp": 10,
+          "desc": "150% spark damage",
+          "effects": [
+            {
+              "passive": {
+                "damage% for spark": 150,
+                "passive id": "31"
+              }
+            }
+          ],
+          "id": "1010500052",
+          "level": 2,
+          "name": "150% spark damage",
+          "series": "1010500052"
+        }
+      },
+      {
+        "category": "4",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010100172",
+        "skill": {
+          "bp": 15,
+          "desc": "200% critical damage",
+          "effects": [
+            {
+              "passive": {
+                "crit multiplier%": 200,
+                "passive id": "34"
+              }
+            }
+          ],
+          "id": "1010100172",
+          "level": 5,
+          "name": "200% critical damage",
+          "series": "1010100172"
+        }
+      },
+      {
+        "category": "6",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1100000469",
+        "skill": {
+          "bp": 10,
+          "desc": "Fills BB gauge each turn",
+          "effects": [
+            {
+              "passive": {
+                "bc fill per turn": 8,
+                "passive id": "9"
+              }
+            }
+          ],
+          "id": "1100000469",
+          "level": 4,
+          "name": "Fills BB gauge each turn",
+          "series": "1100000469"
+        }
+      },
+      {
+        "category": "10",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500107",
+        "skill": {
+          "bp": 10,
+          "desc": "Negates ignore Def",
+          "effects": [
+            {
+              "passive": {
+                "ignore def resist chance%": 100,
+                "passive id": "92"
+              }
+            }
+          ],
+          "id": "1010500107",
+          "level": 2,
+          "name": "Negates ignore Def",
+          "series": "1010500107"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010100176",
+        "skill": {
+          "bp": 10,
+          "desc": "Raises Atk limit to 200k",
+          "effects": [
+            {
+              "passive": {
+                "increase atk cap": 200000,
+                "passive id": "143"
+              }
+            }
+          ],
+          "id": "1010100176",
+          "level": 5,
+          "name": "Raises Atk limit to 200k",
+          "series": "1010100176"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1100000470",
+        "skill": {
+          "bp": 25,
+          "desc": "Add to BB (Removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "ailments cured": [
+                      "poison",
+                      "weaken",
+                      "sick",
+                      "injury",
+                      "curse",
+                      "paralysis",
+                      "atk down",
+                      "def down",
+                      "rec down"
+                    ],
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "38",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "17",
+                    "resist curse% (34)": 100,
+                    "resist injury% (33)": 100,
+                    "resist paralysis% (35)": 100,
+                    "resist poison% (30)": 100,
+                    "resist sick% (32)": 100,
+                    "resist status ails turns": 3,
+                    "resist weaken% (31)": 100,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "atk down resist% (120)": 100,
+                    "def down resist% (121)": 100,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "73",
+                    "rec down resist% (122)": 100,
+                    "stat down immunity buff turns": 3,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1100000470",
+          "level": 4,
+          "name": "Add to BB (Removes and negates all status ailments and Atk, Def, Rec reduction for 3 turns)",
+          "series": "1100000470"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010100199",
+        "skill": {
+          "bp": 15,
+          "desc": "Add to BB (restores HP)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "heal high": 5500,
+                    "heal low": 5000,
+                    "proc id": "2",
+                    "rec added% (from healer)": 20,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010100199",
+          "level": 3,
+          "name": "Add to BB (restores HP)",
+          "series": "1010100199"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500109",
+        "skill": {
+          "bp": 20,
+          "desc": "Add to SBB (3 turns spark vulnerability infliction and probable 3 turns critical vulnerability infliction)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "crit vuln chance%": 75,
+                    "crit vuln dmg% (157)": 30,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "132",
+                    "target area": "aoe",
+                    "target type": "enemy",
+                    "vuln turns": 3
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "58",
+                    "spark dmg received apply%": 100,
+                    "spark dmg received debuff turns (94)": 2,
+                    "spark dmg% received": 40,
+                    "target area": "aoe",
+                    "target type": "enemy"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010500109",
+          "level": 4,
+          "name": "Add to SBB (3 turns spark vulnerability infliction and probable 3 turns critical vulnerability infliction)",
+          "series": "1010500109"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010100188",
+        "skill": {
+          "bp": 20,
+          "desc": "Add to SBB (Probable 3 turns Atk, Def reduction infliction)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "buff #1": {
+                      "atk% buff (2)": -60,
+                      "proc chance%": 50
+                    },
+                    "buff #2": {
+                      "def% buff (4)": -60,
+                      "proc chance%": 50
+                    },
+                    "buff turns": 3,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "element buffed": "all",
+                    "proc id": "9",
+                    "target area": "aoe",
+                    "target type": "enemy"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010100188",
+          "level": 4,
+          "name": "Add to SBB (Probable 3 turns Atk, Def reduction infliction)",
+          "series": "1010100188"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500110",
+        "skill": {
+          "bp": 15,
+          "desc": "Add to SBB (34 combo Dark attack on all foes (damage relative to remaining HP))",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "bb added atk% based on hp": 300,
+                    "bb added atk% proportional to hp": "remaining",
+                    "bb base atk%": 200,
+                    "bb flat atk": 200,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "47",
+                    "target area": "aoe",
+                    "target type": "enemy"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010500110",
+          "level": 3,
+          "name": "Add to SBB (34 combo Dark attack on all foes (damage relative to remaining HP))",
+          "series": "1010500110"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500111",
+        "skill": {
+          "bp": 15,
+          "desc": "Allows BB effects to last an additional turn",
+          "effects": [
+            {
+              "add to bb": {
+                "buff turns": 1,
+                "element buffed": "all",
+                "proc id": "5"
+              }
+            },
+            {
+              "add to bb": {
+                "% converted turns": 1,
+                "converted attribute": null,
+                "proc id": "24"
+              }
+            },
+            {
+              "add to bb": {
+                "unknown proc id": "10007",
+                "unknown proc param": "0,1,0,0"
+              }
+            },
+            {
+              "add to bb": {
+                "dot atk%": 0,
+                "dot element affected": true,
+                "dot turns (71)": 1,
+                "dot unit index": 0,
+                "proc id": "44"
+              }
+            }
+          ],
+          "id": "1010500111",
+          "level": 3,
+          "name": "Allows BB effects to last an additional turn",
+          "series": "1010500111"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "key": "eu:810588",
+    "server": "EU",
+    "id": "810588",
+    "name": "Destructive Hero",
+    "desc": "20% boost to all param. when All Might is in the same Squad, boosts Atk relative to remaining HP and boosts Fire elemental dmg when Grenadier Bracers is equipped, boosts Atk critical hit rate for all allies, boosts critical dmg & 50% add. dmg reduction",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 6,
+    "conditionCount": 3,
+    "conditionSummary": "Needs unit: Unit 850580",
+    "searchText": "Destructive Hero 20% boost to all param. when All Might is in the same Squad, boosts Atk relative to remaining HP and boosts Fire elemental dmg when Grenadier Bracers is equipped, boosts Atk critical hit rate for all allies, boosts critical dmg & 50% add. dmg reduction self 810588"
+  },
+  "raw": {
+    "desc": "20% boost to all param. when All Might is in the same Squad, boosts Atk relative to remaining HP and boosts Fire elemental dmg when Grenadier Bracers is equipped, boosts Atk critical hit rate for all allies, boosts critical dmg & 50% add. dmg reduction",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "unit required": "850580"
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [
+          {
+            "item required": [
+              "819168"
+            ]
+          }
+        ],
+        "passive id": "46",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819168"
+            ]
+          }
+        ],
+        "elemental weakness multiplier%": 100,
+        "fire units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,50"
+      },
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      }
+    ],
+    "id": "810588",
+    "name": "Destructive Hero",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "unit required": "850580"
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% base buff: 0 / atk% extra buff based on hp: 100 / buff proportional to hp: remaining / passive id: 46 / passive target: self",
+      "raw": {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [
+          {
+            "item required": [
+              "819168"
+            ]
+          }
+        ],
+        "passive id": "46",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "elemental weakness multiplier%: 100 / fire units do extra elemental weakness dmg: true / passive id: 50 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "819168"
+            ]
+          }
+        ],
+        "elemental weakness multiplier%": 100,
+        "fire units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "crit multiplier%: 100 / passive id: 34 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive target: self / unknown passive id: 127 / unknown passive params: 100,50",
+      "raw": {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "127",
+        "unknown passive params": "100,50"
+      }
+    },
+    {
+      "index": 6,
+      "summary": "atk% buff: 50 / crit% buff: 15 / passive id: 1 / passive target: party",
+      "raw": {
+        "atk% buff": 50,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs unit: Unit 850580",
+      "raw": {
+        "unit required": "850580"
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Grenadier Bracers",
+      "raw": {
+        "item required": [
+          "819168"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Grenadier Bracers",
+      "raw": {
+        "item required": [
+          "819168"
+        ]
+      }
+    }
+  ]
+}

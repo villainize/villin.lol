@@ -1,0 +1,111 @@
+{
+  "summary": {
+    "key": "jp:12100",
+    "server": "JP",
+    "id": "12100",
+    "name": "老練なる遠慮",
+    "desc": "「聖魔斬刃イシュリオン」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「３ターン、ターン毎にＢＢゲージを超絶増加」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: 聖魔斬刃イシュリオン",
+    "searchText": "老練なる遠慮 「聖魔斬刃イシュリオン」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「３ターン、ターン毎にＢＢゲージを超絶増加」を追加 self 12100"
+  },
+  "raw": {
+    "desc": "「聖魔斬刃イシュリオン」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「３ターン、ターン毎にＢＢゲージを超絶増加」を追加",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "45000"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 8,
+            "increase bb gauge gradual turns (37)": 3,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "12100",
+    "name": "老練なる遠慮",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "45000"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge gradual\":8,\"increase bb gauge gradual turns (37)\":3,\"proc id\":\"19\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 8,
+            "increase bb gauge gradual turns (37)": 3,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: 聖魔斬刃イシュリオン",
+      "raw": {
+        "item required": [
+          "45000"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "key": "gl:860658",
+    "server": "GL",
+    "id": "860658",
+    "name": "Ruinous Spirit",
+    "desc": "Adds Def ignoring effect to attack for all allies, 50% boost to Atk and slightly boosts critical hit rate for all allies, 50% boost to Atk, Def for first 5 turns & adds 18 combo (BB) / 23 combo (SBB) powerful [620%] Dark attack on all foes to BB/SBB",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Ruinous Spirit Adds Def ignoring effect to attack for all allies, 50% boost to Atk and slightly boosts critical hit rate for all allies, 50% boost to Atk, Def for first 5 turns & adds 18 combo (BB) / 23 combo (SBB) powerful [620%] Dark attack on all foes to BB/SBB self 860658"
+  },
+  "raw": {
+    "desc": "Adds Def ignoring effect to attack for all allies, 50% boost to Atk and slightly boosts critical hit rate for all allies, 50% boost to Atk, Def for first 5 turns & adds 18 combo (BB) / 23 combo (SBB) powerful [620%] Dark attack on all foes to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 50,
+        "first x turns def% (3)": 50,
+        "passive id": "21",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "860658",
+    "name": "Ruinous Spirit",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "ignore def%: 100 / passive id: 29 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "first x turns: 5 / first x turns atk% (1): 50 / first x turns def% (3): 50 / passive id: 21 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "first x turns": 5,
+        "first x turns atk% (1)": 50,
+        "first x turns def% (3)": 50,
+        "passive id": "21",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% buff: 50 / crit% buff: 15 / passive id: 1 / passive target: party",
+      "raw": {
+        "atk% buff": 50,
+        "conditions": [],
+        "crit% buff": 15,
+        "passive id": "1",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bb atk%\":620,\"bb flat atk\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"1\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "1",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

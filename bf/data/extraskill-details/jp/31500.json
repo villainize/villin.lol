@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "key": "jp:31500",
+    "server": "JP",
+    "id": "31500",
+    "name": "森の赤き守護者",
+    "desc": "ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆ＨＰを少し吸収",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "森の赤き守護者 ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆ＨＰを少し吸収 self 31500"
+  },
+  "raw": {
+    "desc": "ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆ＨＰを少し吸収",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 10,
+        "hp drain% low": 5,
+        "passive id": "17",
+        "passive target": "self"
+      }
+    ],
+    "id": "31500",
+    "name": "森の赤き守護者",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hp drain chance%: 100 / hp drain% high: 10 / hp drain% low: 5 / passive id: 17 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 10,
+        "hp drain% low": 5,
+        "passive id": "17",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

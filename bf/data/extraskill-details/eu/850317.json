@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "key": "eu:850317",
+    "server": "EU",
+    "id": "850317",
+    "name": "Arcane Erudition",
+    "desc": "Adds removal and negation of status ailments effects for 3 turns to BB/SBB when Ritus Staff is equipped",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Ritus Staff",
+    "searchText": "Arcane Erudition Adds removal and negation of status ailments effects for 3 turns to BB/SBB when Ritus Staff is equipped self 850317"
+  },
+  "raw": {
+    "desc": "Adds removal and negation of status ailments effects for 3 turns to BB/SBB when Ritus Staff is equipped",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "818935"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "818935"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "850317",
+    "name": "Arcane Erudition",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "818935"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"17\",\"resist curse% (34)\":100,\"resist injury% (33)\":100,\"resist paralysis% (35)\":100,\"resist poison% (30)\":100,\"resist sick% (32)\":100,\"resist status ails turns\":3,\"resist weaken% (31)\":100,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "818935"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Ritus Staff",
+      "raw": {
+        "item required": [
+          "818935"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Ritus Staff",
+      "raw": {
+        "item required": [
+          "818935"
+        ]
+      }
+    }
+  ]
+}

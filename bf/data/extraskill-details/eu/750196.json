@@ -1,0 +1,90 @@
+{
+  "summary": {
+    "key": "eu:750196",
+    "server": "EU",
+    "id": "750196",
+    "name": "Psychic Resonance",
+    "desc": "Adds gradual HP recovery for 3 turns to BB/SBB & Reflect DMG taken to other random enemy (50%)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Psychic Resonance Adds gradual HP recovery for 3 turns to BB/SBB & Reflect DMG taken to other random enemy (50%) self 750196"
+  },
+  "raw": {
+    "desc": "Adds gradual HP recovery for 3 turns to BB/SBB & Reflect DMG taken to other random enemy (50%)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 3000,
+            "gradual heal low": 2500,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 15,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "dmg% reflect chance%": 100,
+        "dmg% reflect high": 50,
+        "dmg% reflect low": 50,
+        "passive id": "26",
+        "passive target": "self"
+      }
+    ],
+    "id": "750196",
+    "name": "Psychic Resonance",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"gradual heal high\":3000,\"gradual heal low\":2500,\"gradual heal turns (8)\":3,\"proc id\":\"3\",\"rec added% (from target)\":15,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 3000,
+            "gradual heal low": 2500,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 15,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "dmg% reflect chance%: 100 / dmg% reflect high: 50 / dmg% reflect low: 50 / passive id: 26 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "dmg% reflect chance%": 100,
+        "dmg% reflect high": 50,
+        "dmg% reflect low": 50,
+        "passive id": "26",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "key": "eu:810508",
+    "server": "EU",
+    "id": "810508",
+    "name": "Enkindling Soul",
+    "desc": "Damage taken may restore HP (25% chance 25-30%) & adds resistance against 1 KO attack when HP is below 20% & adds damage reduction (15%) from Fire, Water, Earth, Thunder types for 1 turn effect to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Enkindling Soul Damage taken may restore HP (25% chance 25-30%) & adds resistance against 1 KO attack when HP is below 20% & adds damage reduction (15%) from Fire, Water, Earth, Thunder types for 1 turn effect to BB/SBB self 810508"
+  },
+  "raw": {
+    "desc": "Damage taken may restore HP (25% chance 25-30%) & adds resistance against 1 KO attack when HP is below 20% & adds damage reduction (15%) from Fire, Water, Earth, Thunder types for 1 turn effect to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      },
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 20,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% mitigation for elemental attacks": 15,
+            "dmg% mitigation for elemental attacks buff turns": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "mitigate earth attacks": true,
+            "mitigate fire attacks": true,
+            "mitigate thunder attacks": true,
+            "mitigate water attacks": true,
+            "proc id": "39",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "810508",
+    "name": "Enkindling Soul",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "dmg% to hp% when attacked chance%: 25 / dmg% to hp% when attacked high: 25 / dmg% to hp% when attacked low: 20 / passive id: 24 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "buff: {\"angel idol buff (12)\":true,\"angel idol recover hp%\":100,\"buff turns (12)\":\"-1\"} / hp below % buff activation: 20 / passive id: 55 / passive target: self",
+      "raw": {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 20,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"dmg% mitigation for elemental attacks\":15,\"dmg% mitigation for elemental attacks buff turns\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate earth attacks\":true,\"mitigate fire attacks\":true,\"mitigate thunder attacks\":true,\"mitigate water attacks\":true,\"proc id\":\"39\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% mitigation for elemental attacks": 15,
+            "dmg% mitigation for elemental attacks buff turns": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "mitigate earth attacks": true,
+            "mitigate fire attacks": true,
+            "mitigate thunder attacks": true,
+            "mitigate water attacks": true,
+            "proc id": "39",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

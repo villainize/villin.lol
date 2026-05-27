@@ -1,0 +1,147 @@
+{
+  "summary": {
+    "key": "jp:36600",
+    "server": "JP",
+    "id": "36600",
+    "name": "精練たる深慮",
+    "desc": "「聖魔斬刃イシュリオン」装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、ターン毎にＢＢゲージ超絶増加」追加＆被ダメージ時、確率でＨＰ回復＆攻撃力の上限値（９９９９９）を１３００００まで解放",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: 聖魔斬刃イシュリオン",
+    "searchText": "精練たる深慮 「聖魔斬刃イシュリオン」装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、ターン毎にＢＢゲージ超絶増加」追加＆被ダメージ時、確率でＨＰ回復＆攻撃力の上限値（９９９９９）を１３００００まで解放 self 36600"
+  },
+  "raw": {
+    "desc": "「聖魔斬刃イシュリオン」装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、ターン毎にＢＢゲージ超絶増加」追加＆被ダメージ時、確率でＨＰ回復＆攻撃力の上限値（９９９９９）を１３００００まで解放",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "45000"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 9,
+            "increase bb gauge gradual turns (37)": 3,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      }
+    ],
+    "id": "36600",
+    "name": "精練たる深慮",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "45000"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge gradual\":9,\"increase bb gauge gradual turns (37)\":3,\"proc id\":\"19\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 9,
+            "increase bb gauge gradual turns (37)": 3,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "increase atk cap: 130000 / passive id: 143 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "dmg% to hp% when attacked chance%: 25 / dmg% to hp% when attacked high: 25 / dmg% to hp% when attacked low: 20 / passive id: 24 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "dmg% to hp% when attacked chance%": 25,
+        "dmg% to hp% when attacked high": 25,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: 聖魔斬刃イシュリオン",
+      "raw": {
+        "item required": [
+          "45000"
+        ]
+      }
+    }
+  ]
+}

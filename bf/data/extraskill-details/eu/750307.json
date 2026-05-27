@@ -1,0 +1,166 @@
+{
+  "summary": {
+    "key": "eu:750307",
+    "server": "EU",
+    "id": "750307",
+    "name": "War and Peace",
+    "desc": "Reduces BB gauge required for BB (5%, all) & adds probability of activating BB/SBB/UBB twice (25%) and Light barrier (4000 HP) effects to BB/SBB & negates status ailments (all) & negates elemental damage",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "War and Peace Reduces BB gauge required for BB (5%, all) & adds probability of activating BB/SBB/UBB twice (25%) and Light barrier (4000 HP) effects to BB/SBB & negates status ailments (all) & negates elemental damage self 750307"
+  },
+  "raw": {
+    "desc": "Reduces BB gauge required for BB (5%, all) & adds probability of activating BB/SBB/UBB twice (25%) and Light barrier (4000 HP) effects to BB/SBB & negates status ailments (all) & negates elemental damage",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "party",
+        "reduced bb bc cost%": 5
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "70002",
+            "unknown proc param": "0.25,3,0,0,0,0,0,0,0"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 4000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "party",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "53",
+        "passive target": "self",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    ],
+    "id": "750307",
+    "name": "War and Peace",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 48 / passive target: party / reduced bb bc cost%: 5",
+      "raw": {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "party",
+        "reduced bb bc cost%": 5
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"70002\",\"unknown proc param\":\"0.25,3,0,0,0,0,0,0,0\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "70002",
+            "unknown proc param": "0.25,3,0,0,0,0,0,0,0"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"light\",\"elemental barrier hp\":4000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 4000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "curse resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 4 / passive target: party / poison resist%: 100 / sick resist%: 100 / weaken resist%: 100",
+      "raw": {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "party",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 53 / passive target: self / strong base element damage resist%: 100 / strong buffed element damage resist%: 100",
+      "raw": {
+        "conditions": [],
+        "passive id": "53",
+        "passive target": "self",
+        "strong base element damage resist%": 100,
+        "strong buffed element damage resist%": 100
+      }
+    }
+  ],
+  "conditions": []
+}

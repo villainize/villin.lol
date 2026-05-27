@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "key": "gl:860167",
+    "server": "GL",
+    "id": "860167",
+    "name": "Dimensional Antithesis",
+    "desc": "Adds huge damage boost against status afflicted foes for 3 turns effect to BB/SBB, greatly boosts Atk when HP is over 50%, 40% boost to all parameters when Spark Sphere is equipped & 15% boost to all parameters of Female types",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Spark",
+    "searchText": "Dimensional Antithesis Adds huge damage boost against status afflicted foes for 3 turns effect to BB/SBB, greatly boosts Atk when HP is over 50%, 40% boost to all parameters when Spark Sphere is equipped & 15% boost to all parameters of Female types self 860167"
+  },
+  "raw": {
+    "desc": "Adds huge damage boost against status afflicted foes for 3 turns effect to BB/SBB, greatly boosts Atk when HP is over 50%, 40% boost to all parameters when Spark Sphere is equipped & 15% boost to all parameters of Female types",
+    "effects": [
+      {
+        "atk% buff": 100,
+        "conditions": [],
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "sphere category required": "Spark",
+            "sphere category required (raw)": "11"
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "gender required": "female",
+        "hp% buff": 15,
+        "passive id": "42",
+        "passive target": "party",
+        "rec% buff": 15
+      }
+    ],
+    "id": "860167",
+    "name": "Dimensional Antithesis",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 100 / hp above % buff requirement: 50 / passive id: 11 / passive target: self",
+      "raw": {
+        "atk% buff": 100,
+        "conditions": [],
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"atk% buff turns (110)\":3,\"atk% buff when enemy has ailment\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"65\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% buff: 40 / def% buff: 40 / hp% buff: 40 / passive id: 1 / passive target: self / rec% buff: 40",
+      "raw": {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "sphere category required": "Spark",
+            "sphere category required (raw)": "11"
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk% buff: 15 / def% buff: 15 / gender required: female / hp% buff: 15 / passive id: 42 / passive target: party / rec% buff: 15",
+      "raw": {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "gender required": "female",
+        "hp% buff": 15,
+        "passive id": "42",
+        "passive target": "party",
+        "rec% buff": 15
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Spark",
+      "raw": {
+        "sphere category required": "Spark",
+        "sphere category required (raw)": "11"
+      }
+    }
+  ]
+}

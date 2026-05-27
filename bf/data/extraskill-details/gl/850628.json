@@ -1,0 +1,156 @@
+{
+  "summary": {
+    "key": "gl:850628",
+    "server": "GL",
+    "id": "850628",
+    "name": "Lightness of Being",
+    "desc": "25% boost to all parameters for all allies, restores HP each turn for all allies, adds Light barrier effect to BB/SBB, boosts Atk, Def, Rec each turn (up to 3 turns) & damage taken boosts BB gauge",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Lightness of Being 25% boost to all parameters for all allies, restores HP each turn for all allies, adds Light barrier effect to BB/SBB, boosts Atk, Def, Rec each turn (up to 3 turns) & damage taken boosts BB gauge self 850628"
+  },
+  "raw": {
+    "desc": "25% boost to all parameters for all allies, restores HP each turn for all allies, adds Light barrier effect to BB/SBB, boosts Atk, Def, Rec each turn (up to 3 turns) & damage taken boosts BB gauge",
+    "effects": [
+      {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "atk% max buff": 120,
+        "conditions": [],
+        "def% max buff": 120,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 120,
+        "turn count": 3
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 6000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4500,
+        "turn heal low": 3000
+      },
+      {
+        "atk% buff": 25,
+        "conditions": [],
+        "def% buff": 25,
+        "hp% buff": 25,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 25
+      }
+    ],
+    "id": "850628",
+    "name": "Lightness of Being",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill when attacked high: 4 / bc fill when attacked low: 3 / bc fill when attacked%: 100 / passive id: 25 / passive target: self",
+      "raw": {
+        "bc fill when attacked high": 4,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 120 / def% max buff: 120 / increase from min to max: 1 / passive id: 105 / passive target: self / rec% max buff: 120 / turn count: 3",
+      "raw": {
+        "atk% max buff": 120,
+        "conditions": [],
+        "def% max buff": 120,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 120,
+        "turn count": 3
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"light\",\"elemental barrier hp\":6000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 6000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 33 / passive target: party / rec% added (turn heal): 10 / turn heal high: 4500 / turn heal low: 3000",
+      "raw": {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 10,
+        "turn heal high": 4500,
+        "turn heal low": 3000
+      }
+    },
+    {
+      "index": 5,
+      "summary": "atk% buff: 25 / def% buff: 25 / hp% buff: 25 / passive id: 1 / passive target: party / rec% buff: 25",
+      "raw": {
+        "atk% buff": 25,
+        "conditions": [],
+        "def% buff": 25,
+        "hp% buff": 25,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 25
+      }
+    }
+  ],
+  "conditions": []
+}

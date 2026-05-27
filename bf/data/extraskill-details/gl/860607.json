@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "key": "gl:860607",
+    "server": "GL",
+    "id": "860607",
+    "name": "Knowledge of the Ages",
+    "desc": "Adds 50% damage reduction for 1 turn effect to BB/SBB when Photon Scepter is equipped & raises normal hit amount",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Photon Scepter",
+    "searchText": "Knowledge of the Ages Adds 50% damage reduction for 1 turn effect to BB/SBB when Photon Scepter is equipped & raises normal hit amount self 860607"
+  },
+  "raw": {
+    "desc": "Adds 50% damage reduction for 1 turn effect to BB/SBB when Photon Scepter is equipped & raises normal hit amount",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "88700007"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    ],
+    "id": "860607",
+    "name": "Knowledge of the Ages",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"dmg% reduction\":50,\"dmg% reduction turns (36)\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"18\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "88700007"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hit increase/hit: 1 / passive id: 37 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Photon Scepter",
+      "raw": {
+        "item required": [
+          "88700007"
+        ]
+      }
+    }
+  ]
+}

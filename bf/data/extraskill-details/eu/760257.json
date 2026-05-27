@@ -1,0 +1,147 @@
+{
+  "summary": {
+    "key": "eu:760257",
+    "server": "EU",
+    "id": "760257",
+    "name": "Politician and Warrior",
+    "desc": "Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & when Hunter Title is equipped, boosts ATK and critical damage (20%, all)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Hunter Title",
+    "searchText": "Politician and Warrior Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & when Hunter Title is equipped, boosts ATK and critical damage (20%, all) self 760257"
+  },
+  "raw": {
+    "desc": "Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & when Hunter Title is equipped, boosts ATK and critical damage (20%, all)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "crit multiplier%": 20,
+        "passive id": "34",
+        "passive target": "party"
+      }
+    ],
+    "id": "760257",
+    "name": "Politician and Warrior",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 20 / passive id: 1 / passive target: party",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "passive id": "1",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "crit multiplier%: 20 / passive id: 34 / passive target: party",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701045"
+            ]
+          }
+        ],
+        "crit multiplier%": 20,
+        "passive id": "34",
+        "passive target": "party"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Hunter Title",
+      "raw": {
+        "item required": [
+          "701045"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Hunter Title",
+      "raw": {
+        "item required": [
+          "701045"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "key": "gl:840688",
+    "server": "GL",
+    "id": "840688",
+    "name": "Scales of Judgment",
+    "desc": "Add to BB (may purge Turn Skip from all allies), UBB (purges Turn Skip from all allies) when Sha of Neith or Paradox of Neith is equipped, 35% Def, max HP for all allies, add to BB (Injury, Weakness, Sick, Paralysis infliction)& reduces Turn Skip and ES Lock effect duration by 3 turns",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 4,
+    "conditionSummary": "Needs item: Sha of Neith",
+    "searchText": "Scales of Judgment Add to BB (may purge Turn Skip from all allies), UBB (purges Turn Skip from all allies) when Sha of Neith or Paradox of Neith is equipped, 35% Def, max HP for all allies, add to BB (Injury, Weakness, Sick, Paralysis infliction)& reduces Turn Skip and ES Lock effect duration by 3 turns self 840688"
+  },
+  "raw": {
+    "desc": "Add to BB (may purge Turn Skip from all allies), UBB (purges Turn Skip from all allies) when Sha of Neith or Paradox of Neith is equipped, 35% Def, max HP for all allies, add to BB (Injury, Weakness, Sick, Paralysis infliction)& reduces Turn Skip and ES Lock effect duration by 3 turns",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819269"
+            ]
+          },
+          {
+            "item required": [
+              "819270"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,0,0,0,0,0,0,0,0,40"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "injury%": 100,
+            "paralysis%": 100,
+            "proc id": "11",
+            "sick%": 100,
+            "target area": "aoe",
+            "target type": "enemy",
+            "weaken%": 100
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "11009",
+        "unknown passive params": "10005,-3,147,-3,0,0,0,0,0,0"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819269"
+            ]
+          },
+          {
+            "item required": [
+              "819270"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,0,0,0,0,0,0,0,0,100"
+          }
+        ]
+      }
+    ],
+    "id": "840688",
+    "name": "Scales of Judgment",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"10019\",\"unknown proc param\":\"10005,0,0,0,0,0,0,0,0,40\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "819269"
+            ]
+          },
+          {
+            "item required": [
+              "819270"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,0,0,0,0,0,0,0,0,40"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "def% buff: 35 / hp% buff: 35 / passive id: 1 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "1",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"injury%\":100,\"paralysis%\":100,\"proc id\":\"11\",\"sick%\":100,\"target area\":\"aoe\",\"target type\":\"enemy\",\"weaken%\":100}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "injury%": 100,
+            "paralysis%": 100,
+            "proc id": "11",
+            "sick%": 100,
+            "target area": "aoe",
+            "target type": "enemy",
+            "weaken%": 100
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive target: self / unknown passive id: 11009 / unknown passive params: 10005,-3,147,-3,0,0,0,0,0,0",
+      "raw": {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "11009",
+        "unknown passive params": "10005,-3,147,-3,0,0,0,0,0,0"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on ubb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"10019\",\"unknown proc param\":\"10005,0,0,0,0,0,0,0,0,100\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "819269"
+            ]
+          },
+          {
+            "item required": [
+              "819270"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "10019",
+            "unknown proc param": "10005,0,0,0,0,0,0,0,0,100"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Sha of Neith",
+      "raw": {
+        "item required": [
+          "819269"
+        ]
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Needs item: Paradox of Neith",
+      "raw": {
+        "item required": [
+          "819270"
+        ]
+      }
+    },
+    {
+      "effectIndex": 5,
+      "conditionIndex": 1,
+      "summary": "Needs item: Sha of Neith",
+      "raw": {
+        "item required": [
+          "819269"
+        ]
+      }
+    },
+    {
+      "effectIndex": 5,
+      "conditionIndex": 2,
+      "summary": "Needs item: Paradox of Neith",
+      "raw": {
+        "item required": [
+          "819270"
+        ]
+      }
+    }
+  ]
+}

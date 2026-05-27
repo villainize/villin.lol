@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "key": "gl:840178",
+    "server": "GL",
+    "id": "840178",
+    "name": "Iaigeri",
+    "desc": "Raises normal hit amount, adds Thunder element to BB/SBB for 3 turns & enormously boosts OD gauge fill rate for 1 turn when damage taken has exceeded a certain amount",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Iaigeri Raises normal hit amount, adds Thunder element to BB/SBB for 3 turns & enormously boosts OD gauge fill rate for 1 turn when damage taken has exceeded a certain amount self 840178"
+  },
+  "raw": {
+    "desc": "Raises normal hit amount, adds Thunder element to BB/SBB for 3 turns & enormously boosts OD gauge fill rate for 1 turn when damage taken has exceeded a certain amount",
+    "effects": [
+      {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "thunder"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "buff": {
+          "buff turns (132)": "1",
+          "unknown buff id": "132",
+          "unknown buff params": "300&1&0"
+        },
+        "conditions": [],
+        "damage threshold buff activation": 5000,
+        "passive id": "78",
+        "passive target": "self"
+      }
+    ],
+    "id": "840178",
+    "name": "Iaigeri",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "hit increase/hit: 1 / passive id: 37 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"thunder\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "thunder"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "buff: {\"buff turns (132)\":\"1\",\"unknown buff id\":\"132\",\"unknown buff params\":\"300&1&0\"} / damage threshold buff activation: 5000 / passive id: 78 / passive target: self",
+      "raw": {
+        "buff": {
+          "buff turns (132)": "1",
+          "unknown buff id": "132",
+          "unknown buff params": "300&1&0"
+        },
+        "conditions": [],
+        "damage threshold buff activation": 5000,
+        "passive id": "78",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

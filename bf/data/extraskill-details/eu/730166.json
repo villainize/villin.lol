@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "key": "eu:730166",
+    "server": "EU",
+    "id": "730166",
+    "name": "Divine Salvation",
+    "desc": "(Requires Grail equipped) Chance of recovering HP when attacked (30% chance, 20% DMG to HP) & Boost to all parameters (20%) & Adds all elements to attacks for 3 turns to BB/SBB & Activates Earth Barrier (2500 HP) to BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 4,
+    "conditionSummary": "Needs item: The Grail",
+    "searchText": "Divine Salvation (Requires Grail equipped) Chance of recovering HP when attacked (30% chance, 20% DMG to HP) & Boost to all parameters (20%) & Adds all elements to attacks for 3 turns to BB/SBB & Activates Earth Barrier (2500 HP) to BB/SBB self 730166"
+  },
+  "raw": {
+    "desc": "(Requires Grail equipped) Chance of recovering HP when attacked (30% chance, 20% DMG to HP) & Boost to all parameters (20%) & Adds all elements to attacks for 3 turns to BB/SBB & Activates Earth Barrier (2500 HP) to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "dmg% to hp% when attacked chance%": 30,
+        "dmg% to hp% when attacked high": 20,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "fire",
+              "water",
+              "earth",
+              "thunder",
+              "light",
+              "dark"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 2500,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "730166",
+    "name": "Divine Salvation",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "dmg% to hp% when attacked chance%: 30 / dmg% to hp% when attacked high: 20 / dmg% to hp% when attacked low: 20 / passive id: 24 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "dmg% to hp% when attacked chance%": 30,
+        "dmg% to hp% when attacked high": 20,
+        "dmg% to hp% when attacked low": 20,
+        "passive id": "24",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"fire\",\"water\",\"earth\",\"thunder\",\"light\",\"dark\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "fire",
+              "water",
+              "earth",
+              "thunder",
+              "light",
+              "dark"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"earth\",\"elemental barrier hp\":2500,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700008"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 2500,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: The Grail",
+      "raw": {
+        "item required": [
+          "700008"
+        ]
+      }
+    }
+  ]
+}

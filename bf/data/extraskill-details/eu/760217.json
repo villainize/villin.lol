@@ -1,0 +1,195 @@
+{
+  "summary": {
+    "key": "eu:760217",
+    "server": "EU",
+    "id": "760217",
+    "name": "Rift Knowledge",
+    "desc": "When Explorer's Journal is equipped, adds reduce Light and Dark damage (10%) for 1 turn to SBB and BB gauge boost (7 BC) for 3 turns to BB/SBB and boosts all stats (30%)​",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 3,
+    "conditionSummary": "Needs item: Explorer's Journal",
+    "searchText": "Rift Knowledge When Explorer's Journal is equipped, adds reduce Light and Dark damage (10%) for 1 turn to SBB and BB gauge boost (7 BC) for 3 turns to BB/SBB and boosts all stats (30%)​ self 760217"
+  },
+  "raw": {
+    "desc": "When Explorer's Journal is equipped, adds reduce Light and Dark damage (10%) for 1 turn to SBB and BB gauge boost (7 BC) for 3 turns to BB/SBB and boosts all stats (30%)​",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "701005"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701005"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% mitigation for elemental attacks": 10,
+            "dmg% mitigation for elemental attacks buff turns": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "mitigate dark attacks": true,
+            "mitigate light attacks": true,
+            "proc id": "39",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701005"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 7,
+            "increase bb gauge gradual turns (37)": 3,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "760217",
+    "name": "Rift Knowledge",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "701005"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"dmg% mitigation for elemental attacks\":10,\"dmg% mitigation for elemental attacks buff turns\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate dark attacks\":true,\"mitigate light attacks\":true,\"proc id\":\"39\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701005"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% mitigation for elemental attacks": 10,
+            "dmg% mitigation for elemental attacks buff turns": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "mitigate dark attacks": true,
+            "mitigate light attacks": true,
+            "proc id": "39",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge gradual\":7,\"increase bb gauge gradual turns (37)\":3,\"proc id\":\"19\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701005"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge gradual": 7,
+            "increase bb gauge gradual turns (37)": 3,
+            "proc id": "19",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Explorer's Journal",
+      "raw": {
+        "item required": [
+          "701005"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Explorer's Journal",
+      "raw": {
+        "item required": [
+          "701005"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Explorer's Journal",
+      "raw": {
+        "item required": [
+          "701005"
+        ]
+      }
+    }
+  ]
+}

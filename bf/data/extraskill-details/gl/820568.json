@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "key": "gl:820568",
+    "server": "GL",
+    "id": "820568",
+    "name": "L'appel du Vide",
+    "desc": "20% boost to all parameters for all allies, raises Atk parameter limits to 150000 for all allies, adds enormous boost to critical hit rate for 3 turns effect to BB/SBB, & adds 23 combo powerful Water, Fire and Earth attack on all foes to SBB",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "L'appel du Vide 20% boost to all parameters for all allies, raises Atk parameter limits to 150000 for all allies, adds enormous boost to critical hit rate for 3 turns effect to BB/SBB, & adds 23 combo powerful Water, Fire and Earth attack on all foes to SBB self 820568"
+  },
+  "raw": {
+    "desc": "20% boost to all parameters for all allies, raises Atk parameter limits to 150000 for all allies, adds enormous boost to critical hit rate for 3 turns effect to BB/SBB, & adds 23 combo powerful Water, Fire and Earth attack on all foes to SBB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 150000,
+        "passive id": "143",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 670,
+            "bb elements": [
+              "fire",
+              "earth"
+            ],
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "29",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "820568",
+    "name": "L'appel du Vide",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: party / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "increase atk cap: 150000 / passive id: 143 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "increase atk cap": 150000,
+        "passive id": "143",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"bb atk%\":670,\"bb elements\":[\"fire\",\"earth\"],\"bb flat atk\":200,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"29\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 670,
+            "bb elements": [
+              "fire",
+              "earth"
+            ],
+            "bb flat atk": 200,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "29",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

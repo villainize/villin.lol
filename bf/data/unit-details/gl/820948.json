@@ -1,0 +1,2296 @@
+{
+  "summary": {
+    "key": "gl:820948",
+    "server": "GL",
+    "id": "820948",
+    "name": "Icy Steel René",
+    "title": "Icy Steel René",
+    "element": "Water",
+    "rarity": "8 Star",
+    "role": "Female",
+    "cost": 60,
+    "stats": {
+      "hp": 10050,
+      "atk": 3550,
+      "def": 3550,
+      "rec": 3550
+    },
+    "images": {
+      "full": "units/img/unit_ills_full_820948.png",
+      "thumb": "units/img/unit_ills_thum_820948.png",
+      "battle": "units/img/unit_ills_battle_820948.png"
+    }
+  },
+  "raw": {
+    "ai": [
+      {
+        "action": "skill",
+        "chance%": 80,
+        "target conditions": "hp_50pr_under",
+        "target type": "party"
+      },
+      {
+        "action": "skill",
+        "chance%": 20,
+        "target conditions": "hp_min",
+        "target type": "party"
+      },
+      {
+        "action": "attack",
+        "chance%": 100,
+        "target conditions": "random",
+        "target type": "enemy"
+      }
+    ],
+    "animations": {
+      "attack": {
+        "total number of frames": 153
+      },
+      "idle": {
+        "total number of frames": 66
+      },
+      "move": {
+        "total number of frames": 5
+      }
+    },
+    "bb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            89,
+            92,
+            95,
+            98,
+            101,
+            104,
+            107,
+            110,
+            113,
+            116,
+            119,
+            122
+          ],
+          "hit dmg% distribution": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            8,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 12,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "3"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "126"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "62"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "19"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "66"
+        }
+      ],
+      "desc": "12 combo Water attack on all foes (damage relative to remaining HP), restores HP for 3 turns, 25% DoT reduction for 3 turns, adds Water barrier, fills BB gauge for 3 turns & may raise allies from KO",
+      "drop check count": 1,
+      "id": "820948",
+      "levels": [
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 250,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 260,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 270,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 280,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 290,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 300,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 310,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 320,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 330,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 26,
+          "effects": [
+            {
+              "bb added atk% based on hp": 350,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 200,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 5000,
+              "gradual heal low": 4500,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 12,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "126",
+              "unknown proc param": "25,3,0"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "increase bb gauge gradual": 14,
+              "increase bb gauge gradual turns (37)": 3,
+              "proc id": "19",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 20,
+              "revive unit hp%": 35,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Isolation"
+    },
+    "category": 820940,
+    "cost": 60,
+    "damage frames": {
+      "frame times": [
+        89,
+        92,
+        95,
+        98,
+        101,
+        104,
+        107,
+        110,
+        113,
+        116
+      ],
+      "hit dmg% distribution": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "hit dmg% distribution (total)": 100,
+      "hits": 10
+    },
+    "drop check count": 6,
+    "element": "water",
+    "exp_pattern": 20,
+    "extra skill": {
+      "desc": "Fills BB gauge each turn for all allies when Serpent Legacy Hilda is in the same squad or when BB gauge sphere is equipped, 20% Atk, Def each turn (3 times) for all allies, 120% spark damage, negates all status ailments and Atk, Def, Rec reduction & add to BB (Removes all status ailments and Atk, Def, Rec reduction)",
+      "effects": [
+        {
+          "bc fill per turn": 5,
+          "conditions": [
+            {
+              "unit required": [
+                {
+                  "id": 820938,
+                  "name": "Serpent Legacy Hilda"
+                }
+              ]
+            },
+            {
+              "sphere category required": "BB Gauge",
+              "sphere category required (raw)": "6"
+            }
+          ],
+          "passive id": "9",
+          "passive target": "party"
+        },
+        {
+          "atk% max buff": 60,
+          "conditions": [],
+          "def% max buff": 60,
+          "increase from min to max": 1,
+          "passive id": "105",
+          "passive target": "party",
+          "turn count": 3
+        },
+        {
+          "conditions": [],
+          "damage% for spark": 120,
+          "passive id": "31",
+          "passive target": "self"
+        },
+        {
+          "atk down resist%": 100,
+          "conditions": [],
+          "curse resist%": 100,
+          "def down resist%": 100,
+          "injury resist%": 100,
+          "paralysis resist%": 100,
+          "passive id": "73",
+          "passive target": "self",
+          "poison resist%": 100,
+          "rec down resist%": 100,
+          "sick resist%": 100,
+          "weaken resist%": 100
+        },
+        {
+          "conditions": [],
+          "passive id": "66",
+          "passive target": "self",
+          "trigger on bb": true,
+          "triggered effect": [
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "id": "820948",
+      "name": "Innocent Younger Sister",
+      "rarity": "8",
+      "target": "self"
+    },
+    "gender": "female",
+    "getting type": "rare summon",
+    "guide_id": 8630,
+    "id": 820948,
+    "imp": {
+      "max atk": "600",
+      "max def": "600",
+      "max hp": "1500",
+      "max rec": "600"
+    },
+    "kind": "normal",
+    "leader skill": {
+      "desc": "120% Def, 150% Rec, max HP and 30% critical rate (Water), 15% DoT reduction, spark damage restores HP, probable 1 KO resistance & 250% spark damage",
+      "effects": [
+        {
+          "crit% buff": 30,
+          "def% buff": 120,
+          "elements buffed": [
+            "water"
+          ],
+          "hp% buff": 150,
+          "passive id": "2",
+          "rec% buff": 150
+        },
+        {
+          "unknown passive id": "127",
+          "unknown passive params": "100,15"
+        },
+        {
+          "heal on spark high": 600,
+          "heal on spark low": 500,
+          "heal on spark%": 100,
+          "passive id": "101"
+        },
+        {
+          "angel idol chance% condition": 0,
+          "angel idol recover chance% high": 25,
+          "angel idol recover chance% low": 25,
+          "angel idol recover counts": 1,
+          "passive id": "69"
+        },
+        {
+          "damage% for spark": 250,
+          "passive id": "31"
+        }
+      ],
+      "id": "820948",
+      "name": "Enchanted Ice"
+    },
+    "lord damage range": "3305~3692",
+    "movement": {
+      "attack": {
+        "move speed": 2,
+        "move speed type": "4",
+        "move type": "2"
+      },
+      "skill": {
+        "move speed": 2,
+        "move speed type": "4",
+        "move type": "2"
+      }
+    },
+    "name": "Icy Steel René",
+    "overdrive stats": {
+      "atk%": 100,
+      "def%": 100,
+      "rec%": 100
+    },
+    "rarity": 8,
+    "sbb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            89,
+            92,
+            95,
+            98,
+            101,
+            104,
+            107,
+            110,
+            113,
+            116,
+            119,
+            122,
+            125,
+            128,
+            131,
+            134
+          ],
+          "hit dmg% distribution": [
+            6,
+            9,
+            9,
+            9,
+            9,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            4,
+            4,
+            4,
+            4
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 16,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            88,
+            91,
+            94,
+            97,
+            100,
+            103,
+            106,
+            109,
+            112,
+            115,
+            118,
+            121,
+            124,
+            127,
+            130,
+            133
+          ],
+          "hit dmg% distribution": [
+            6,
+            9,
+            9,
+            9,
+            9,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            4,
+            4,
+            4,
+            4
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 16,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "67"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "87"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "62"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "10015"
+        }
+      ],
+      "desc": "16 combo Water attack on all foes (damage relative to remaining HP), 16 combo Water attack on all foes (damage relative to remaining HP), spark damage fills BB gauge for 3 turns, spark damage restores HP for 3 turns, adds Water barrier & boosts spark damage (Water) for 3 turns",
+      "drop check count": 1,
+      "id": "1820948",
+      "levels": [
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 550,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 550,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 560,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 560,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 570,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 570,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 580,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 580,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 590,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 590,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 600,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 600,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 610,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 610,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 620,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 620,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 630,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 630,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        },
+        {
+          "bc cost": 28,
+          "effects": [
+            {
+              "bb added atk% based on hp": 650,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bb added atk% based on hp": 650,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 300,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "bc fill on spark buff turns (111)": 3,
+              "bc fill on spark high": 4,
+              "bc fill on spark low": 3,
+              "bc fill on spark%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "67",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "87",
+              "spark recover hp buff turns (135)": 3,
+              "spark recover hp chance%": 100,
+              "spark recover hp high": 500,
+              "spark recover hp low": 400,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "elemental barrier absorb dmg%": 100,
+              "elemental barrier def": 0,
+              "elemental barrier element": "water",
+              "elemental barrier hp": 7000,
+              "proc id": "62",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "target area": "aoe",
+              "target type": "party",
+              "unknown proc id": "10015",
+              "unknown proc param": "125,3,0,2"
+            }
+          ]
+        }
+      ],
+      "name": "Frozen Divia"
+    },
+    "sell caution": false,
+    "stats": {
+      "_base": {
+        "atk": 2485,
+        "def": 2485,
+        "hp": 7035,
+        "rec": 2485
+      },
+      "_lord": {
+        "atk": 3550,
+        "def": 3550,
+        "hp": 10050,
+        "rec": 3550
+      },
+      "anima": {
+        "atk": 3550,
+        "def": 3550,
+        "hp max": 11540,
+        "hp min": 10795,
+        "rec max": 3401,
+        "rec min": 3103
+      },
+      "breaker": {
+        "atk max": 3997,
+        "atk min": 3699,
+        "def max": 3401,
+        "def min": 3103,
+        "hp": 10050,
+        "rec": 3550
+      },
+      "guardian": {
+        "atk": 3550,
+        "def max": 3997,
+        "def min": 3699,
+        "hp": 10050,
+        "rec max": 3550,
+        "rec min": 3252
+      },
+      "oracle": {
+        "atk": 3550,
+        "def max": 3550,
+        "def min": 3252,
+        "hp": 10050,
+        "rec max": 4146,
+        "rec min": 3848
+      }
+    },
+    "ubb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "16.7/1",
+          "frame times": [
+            89,
+            92,
+            95,
+            98,
+            101,
+            104,
+            107,
+            110,
+            113,
+            116,
+            119,
+            122,
+            125,
+            128,
+            131,
+            134,
+            137,
+            140,
+            143,
+            146
+          ],
+          "hit dmg% distribution": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            5,
+            5,
+            5,
+            5,
+            5,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 20,
+          "proc id": "47"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "5"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "23"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "3"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "4"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "66"
+        }
+      ],
+      "desc": "20 combo Water attack on all foes (damage relative to remaining HP), boosts Atk, Def, Rec for 4 turns, boosts spark damage for 4 turns, fully restores HP for 4 turns, fills BB gauge to max & raises allies from KO",
+      "drop check count": 1,
+      "id": "2820948",
+      "levels": [
+        {
+          "bc cost": 30,
+          "effects": [
+            {
+              "bb added atk% based on hp": 1500,
+              "bb added atk% proportional to hp": "remaining",
+              "bb base atk%": 1500,
+              "bb flat atk": 200,
+              "effect delay time(ms)/frame": "16.7/1",
+              "proc id": "47",
+              "target area": "aoe",
+              "target type": "enemy"
+            },
+            {
+              "atk% buff (1)": 450,
+              "buff turns": 4,
+              "def% buff (3)": 450,
+              "effect delay time(ms)/frame": "0.0/0",
+              "element buffed": "all",
+              "proc id": "5",
+              "rec% buff (5)": 450,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "buff turns": 4,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "23",
+              "spark dmg% buff (40)": 500,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 99999,
+              "gradual heal low": 98999,
+              "gradual heal turns (8)": 4,
+              "proc id": "3",
+              "rec added% (from target)": 10,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bb bc fill%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "4",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "66",
+              "revive unit chance%": 100,
+              "revive unit hp%": 100,
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Delirium"
+    }
+  },
+  "evolution": null,
+  "feskills": {
+    "category": {
+      "1": {
+        "name": "ステアップ系"
+      },
+      "2": {
+        "name": "スパーク系"
+      },
+      "4": {
+        "name": "攻撃強化系"
+      },
+      "5": {
+        "name": "ＢＢゲージ系"
+      },
+      "10": {
+        "name": "ダメージ軽減系"
+      },
+      "11": {
+        "name": "特殊"
+      }
+    },
+    "skills": [
+      {
+        "category": "1",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010700054",
+        "skill": {
+          "bp": 10,
+          "desc": "130% Atk, max HP",
+          "effects": [
+            {
+              "passive": {
+                "atk% buff": 130,
+                "hp% buff": 130,
+                "passive id": "1"
+              }
+            }
+          ],
+          "id": "1010700054",
+          "level": 2,
+          "name": "130% Atk, max HP",
+          "series": "1010700054"
+        }
+      },
+      {
+        "category": "2",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500033",
+        "skill": {
+          "bp": 10,
+          "desc": "200% spark damage",
+          "effects": [
+            {
+              "passive": {
+                "damage% for spark": 200,
+                "passive id": "31"
+              }
+            }
+          ],
+          "id": "1010500033",
+          "level": 2,
+          "name": "200% spark damage",
+          "series": "1010500033"
+        }
+      },
+      {
+        "category": "4",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500017",
+        "skill": {
+          "bp": 15,
+          "desc": "300% elemental damage",
+          "effects": [
+            {
+              "passive": {
+                "dark units do extra elemental weakness dmg": true,
+                "earth units do extra elemental weakness dmg": true,
+                "elemental weakness multiplier%": 300,
+                "fire units do extra elemental weakness dmg": true,
+                "light units do extra elemental weakness dmg": true,
+                "passive id": "50",
+                "thunder units do extra elemental weakness dmg": true,
+                "water units do extra elemental weakness dmg": true
+              }
+            }
+          ],
+          "id": "1010500017",
+          "level": 3,
+          "name": "300% elemental damage",
+          "series": "1010500017"
+        }
+      },
+      {
+        "category": "5",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500018",
+        "skill": {
+          "bp": 15,
+          "desc": "25% reduction to BB activation cost",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "48",
+                "reduced bb bc cost%": 25
+              }
+            }
+          ],
+          "id": "1010500018",
+          "level": 3,
+          "name": "25% reduction to BB activation cost",
+          "series": "1010500018"
+        }
+      },
+      {
+        "category": "10",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500095",
+        "skill": {
+          "bp": 10,
+          "desc": "30% DoT reduction",
+          "effects": [
+            {
+              "passive": {
+                "unknown passive id": "127",
+                "unknown passive params": "100,30"
+              }
+            }
+          ],
+          "id": "1010500095",
+          "level": 2,
+          "name": "30% DoT reduction",
+          "series": "1010500095"
+        }
+      },
+      {
+        "category": "10",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010500036",
+        "skill": {
+          "bp": 10,
+          "desc": "10% damage reduction",
+          "effects": [
+            {
+              "passive": {
+                "dmg% mitigation": 10,
+                "passive id": "8"
+              }
+            }
+          ],
+          "id": "1010500036",
+          "level": 2,
+          "name": "10% damage reduction",
+          "series": "1010500036"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010700079",
+        "skill": {
+          "bp": 10,
+          "desc": "Raises Atk limits to 200k",
+          "effects": [
+            {
+              "passive": {
+                "increase atk cap": 200000,
+                "passive id": "143"
+              }
+            }
+          ],
+          "id": "1010700079",
+          "level": 2,
+          "name": "Raises Atk limits to 200k",
+          "series": "1010700079"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010700019",
+        "skill": {
+          "bp": 15,
+          "desc": "Add to BB (Boosts OD gauge fill rate for 3 turns)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "od fill rate buff turns (132)": 3,
+                    "od fill rate% buff": 75,
+                    "proc id": "84",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010700019",
+          "level": 3,
+          "name": "Add to BB (Boosts OD gauge fill rate for 3 turns)",
+          "series": "1010700019"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010700113",
+        "skill": {
+          "bp": 25,
+          "desc": "Add to SBB (Boosts spark damage for 3 turns)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "buff turns": 3,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "23",
+                    "spark dmg% buff (40)": 250,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010700113",
+          "level": 5,
+          "name": "Add to SBB (Boosts spark damage for 3 turns)",
+          "series": "1010700113"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010700058",
+        "skill": {
+          "bp": 25,
+          "desc": "Add to BB/SBB (Boosts Atk, Def, Rec and critical rate for 3 turns)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "trigger on sbb": true,
+                "triggered effect": [
+                  {
+                    "atk% buff (1)": 220,
+                    "buff turns": 3,
+                    "crit% buff (7)": 60,
+                    "def% buff (3)": 220,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "element buffed": "all",
+                    "proc id": "5",
+                    "rec% buff (5)": 220,
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010700058",
+          "level": 5,
+          "name": "Add to BB/SBB (Boosts Atk, Def, Rec and critical rate for 3 turns)",
+          "series": "1010700058"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010700114",
+        "skill": {
+          "bp": 25,
+          "desc": "Add to BB (Boosts own max HP ), UBB (Boosts max HP )",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "target area": "single",
+                    "target type": "self",
+                    "unknown proc id": "92",
+                    "unknown proc param": "0,35,0"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on ubb": true,
+                "triggered effect": [
+                  {
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "max hp% increase": 55,
+                    "proc id": "8",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010700114",
+          "level": 5,
+          "name": "Add to BB (Boosts own max HP ), UBB (Boosts max HP )",
+          "series": "1010700114"
+        }
+      },
+      {
+        "category": "11",
+        "dependency": "",
+        "dependency comment": "",
+        "id": "1010700115",
+        "skill": {
+          "bp": 25,
+          "desc": "Add to BB (Probable 1 KO resistance), UBB (Probable 1 KO resistance)",
+          "effects": [
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on bb": true,
+                "triggered effect": [
+                  {
+                    "angel idol buff turns (91)": 999,
+                    "angel idol recover chance%": 20,
+                    "angel idol recover hp%": 1,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "56",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            },
+            {
+              "passive": {
+                "passive id": "66",
+                "trigger on ubb": true,
+                "triggered effect": [
+                  {
+                    "angel idol buff turns (91)": 999,
+                    "angel idol recover chance%": 80,
+                    "angel idol recover hp%": 1,
+                    "effect delay time(ms)/frame": "0.0/0",
+                    "proc id": "56",
+                    "target area": "aoe",
+                    "target type": "party"
+                  }
+                ]
+              }
+            }
+          ],
+          "id": "1010700115",
+          "level": 5,
+          "name": "Add to BB (Probable 1 KO resistance), UBB (Probable 1 KO resistance)",
+          "series": "1010700115"
+        }
+      }
+    ]
+  }
+}

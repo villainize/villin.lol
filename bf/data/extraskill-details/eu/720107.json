@@ -1,0 +1,165 @@
+{
+  "summary": {
+    "key": "eu:720107",
+    "server": "EU",
+    "id": "720107",
+    "name": "Lover's Harmony",
+    "desc": "10% boost to all parameters of Female units (all) & if Sergio sphere is equipped, boosts Spark damage (100%) and adds Spark vulnerability infliction for 2 turns effect (30% chance 30%) to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Sergio's Wedding Ring, Sergio's vow, Wedding announcement",
+    "searchText": "Lover's Harmony 10% boost to all parameters of Female units (all) & if Sergio sphere is equipped, boosts Spark damage (100%) and adds Spark vulnerability infliction for 2 turns effect (30% chance 30%) to BB/SBB self 720107"
+  },
+  "raw": {
+    "desc": "10% boost to all parameters of Female units (all) & if Sergio sphere is equipped, boosts Spark damage (100%) and adds Spark vulnerability infliction for 2 turns effect (30% chance 30%) to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "gender required": "female",
+        "hp% buff": 10,
+        "passive id": "42",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700043",
+              "700071",
+              "700073"
+            ]
+          }
+        ],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700043",
+              "700071",
+              "700073"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 30,
+            "spark dmg received debuff turns (94)": 2,
+            "spark dmg% received": 30,
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "720107",
+    "name": "Lover's Harmony",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 10 / def% buff: 10 / gender required: female / hp% buff: 10 / passive id: 42 / passive target: party / rec% buff: 10",
+      "raw": {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "gender required": "female",
+        "hp% buff": 10,
+        "passive id": "42",
+        "passive target": "party",
+        "rec% buff": 10
+      }
+    },
+    {
+      "index": 2,
+      "summary": "damage% for spark: 100 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700043",
+              "700071",
+              "700073"
+            ]
+          }
+        ],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"58\",\"spark dmg received apply%\":30,\"spark dmg received debuff turns (94)\":2,\"spark dmg% received\":30,\"target area\":\"single\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700043",
+              "700071",
+              "700073"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 30,
+            "spark dmg received debuff turns (94)": 2,
+            "spark dmg% received": 30,
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Sergio's Wedding Ring, Sergio's vow, Wedding announcement",
+      "raw": {
+        "item required": [
+          "700043",
+          "700071",
+          "700073"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Sergio's Wedding Ring, Sergio's vow, Wedding announcement",
+      "raw": {
+        "item required": [
+          "700043",
+          "700071",
+          "700073"
+        ]
+      }
+    }
+  ]
+}

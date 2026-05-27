@@ -1,0 +1,104 @@
+{
+  "summary": {
+    "key": "jp:35100",
+    "server": "JP",
+    "id": "35100",
+    "name": "啓発されし叡智",
+    "desc": "ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆スパーク時、ＢＢゲージを増加＆確率でスパーククリティカルが発生",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "啓発されし叡智 ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆スパーク時、ＢＢゲージを増加＆確率でスパーククリティカルが発生 self 35100"
+  },
+  "raw": {
+    "desc": "ＢＢ及びＳＢＢに「味方全体に２ターン、防御貫通効果を付与」を追加＆スパーク時、ＢＢゲージを増加＆確率でスパーククリティカルが発生",
+    "effects": [
+      {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "conditions": [],
+        "passive id": "47",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "100",
+        "passive target": "self",
+        "spark crit chance%": 20,
+        "spark crit dmg%": 50
+      }
+    ],
+    "id": "35100",
+    "name": "啓発されし叡智",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill on spark high: 3 / bc fill on spark low: 2 / bc fill on spark%: 100 / passive id: 47 / passive target: self",
+      "raw": {
+        "bc fill on spark high": 3,
+        "bc fill on spark low": 2,
+        "bc fill on spark%": 100,
+        "conditions": [],
+        "passive id": "47",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 100 / passive target: self / spark crit chance%: 20 / spark crit dmg%: 50",
+      "raw": {
+        "conditions": [],
+        "passive id": "100",
+        "passive target": "self",
+        "spark crit chance%": 20,
+        "spark crit dmg%": 50
+      }
+    }
+  ],
+  "conditions": []
+}

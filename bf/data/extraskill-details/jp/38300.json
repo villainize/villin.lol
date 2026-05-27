@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "key": "jp:38300",
+    "server": "JP",
+    "id": "38300",
+    "name": "機械と人との信義",
+    "desc": "全状態異常を無効＆クリティカルダメージをアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に炎属性を付与」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "機械と人との信義 全状態異常を無効＆クリティカルダメージをアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に炎属性を付与」を追加 self 38300"
+  },
+  "raw": {
+    "desc": "全状態異常を無効＆クリティカルダメージをアップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に炎属性を付与」を追加",
+    "effects": [
+      {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "crit multiplier%": 50,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "fire"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "38300",
+    "name": "機械と人との信義",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "curse resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 4 / passive target: self / poison resist%: 100 / sick resist%: 100 / weaken resist%: 100",
+      "raw": {
+        "conditions": [],
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "passive target": "self",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 2,
+      "summary": "crit multiplier%: 50 / passive id: 34 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "crit multiplier%": 50,
+        "passive id": "34",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"fire\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "fire"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

@@ -1,0 +1,90 @@
+{
+  "summary": {
+    "key": "jp:11400",
+    "server": "JP",
+    "id": "11400",
+    "name": "本質へと至る麗瞳",
+    "desc": "ＢＢ及びＳＢＢに「確率でスパークダメージ耐性を２ターン低下」を追加＆ＨＰが半分以上の時、攻撃力・防御力・回復力をアップ",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "本質へと至る麗瞳 ＢＢ及びＳＢＢに「確率でスパークダメージ耐性を２ターン低下」を追加＆ＨＰが半分以上の時、攻撃力・防御力・回復力をアップ self 11400"
+  },
+  "raw": {
+    "desc": "ＢＢ及びＳＢＢに「確率でスパークダメージ耐性を２ターン低下」を追加＆ＨＰが半分以上の時、攻撃力・防御力・回復力をアップ",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 25,
+            "spark dmg received debuff turns (94)": 1,
+            "spark dmg% received": 25,
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      },
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "def% buff": 50,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "self",
+        "rec% buff": 50
+      }
+    ],
+    "id": "11400",
+    "name": "本質へと至る麗瞳",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"58\",\"spark dmg received apply%\":25,\"spark dmg received debuff turns (94)\":1,\"spark dmg% received\":25,\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 25,
+            "spark dmg received debuff turns (94)": 1,
+            "spark dmg% received": 25,
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 50 / def% buff: 50 / hp above % buff requirement: 50 / passive id: 11 / passive target: self / rec% buff: 50",
+      "raw": {
+        "atk% buff": 50,
+        "conditions": [],
+        "def% buff": 50,
+        "hp above % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "self",
+        "rec% buff": 50
+      }
+    }
+  ],
+  "conditions": []
+}

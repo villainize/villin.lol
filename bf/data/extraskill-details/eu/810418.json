@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "key": "eu:810418",
+    "server": "EU",
+    "id": "810418",
+    "name": "Daemones Malleus Infinitium",
+    "desc": "Boosts DEF and Spark damage (120%) when Sparks have exceeded a certain amount (15) & boosts Spark damage (25%, all) & adds 11 combo Thunder attack on all foes and 16 combo Fire attack on single foe to SBB & adds DEF ignoring effect (all)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 6,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Daemones Malleus Infinitium Boosts DEF and Spark damage (120%) when Sparks have exceeded a certain amount (15) & boosts Spark damage (25%, all) & adds 11 combo Thunder attack on all foes and 16 combo Fire attack on single foe to SBB & adds DEF ignoring effect (all) self 810418"
+  },
+  "raw": {
+    "desc": "Boosts DEF and Spark damage (120%) when Sparks have exceeded a certain amount (15) & boosts Spark damage (25%, all) & adds 11 combo Thunder attack on all foes and 16 combo Fire attack on single foe to SBB & adds DEF ignoring effect (all)",
+    "effects": [
+      {
+        "buff": {
+          "buff turns (3)": "2",
+          "def% buff (3)": 120
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 120
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 25,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb elements": [
+              "thunder"
+            ],
+            "bb flat atk": 100,
+            "effect delay time(ms)/frame": "50.0/3",
+            "proc id": "29",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb elements": [
+              "fire"
+            ],
+            "bb flat atk": 100,
+            "effect delay time(ms)/frame": "50.0/3",
+            "proc id": "29",
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "810418",
+    "name": "Daemones Malleus Infinitium",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "buff: {\"buff turns (3)\":\"2\",\"def% buff (3)\":120} / passive id: 86 / passive target: self / spark count buff activation: 15",
+      "raw": {
+        "buff": {
+          "buff turns (3)": "2",
+          "def% buff (3)": 120
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      }
+    },
+    {
+      "index": 2,
+      "summary": "buff: {\"buff turns (40)\":\"2\",\"spark dmg% buff\":120} / passive id: 86 / passive target: self / spark count buff activation: 15",
+      "raw": {
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 120
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      }
+    },
+    {
+      "index": 3,
+      "summary": "damage% for spark: 25 / passive id: 31 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "damage% for spark": 25,
+        "passive id": "31",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "ignore def%: 100 / passive id: 29 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "ignore def%": 100,
+        "passive id": "29",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"bb atk%\":620,\"bb elements\":[\"thunder\"],\"bb flat atk\":100,\"effect delay time(ms)/frame\":\"50.0/3\",\"proc id\":\"29\",\"target area\":\"aoe\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb elements": [
+              "thunder"
+            ],
+            "bb flat atk": 100,
+            "effect delay time(ms)/frame": "50.0/3",
+            "proc id": "29",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"bb atk%\":620,\"bb elements\":[\"fire\"],\"bb flat atk\":100,\"effect delay time(ms)/frame\":\"50.0/3\",\"proc id\":\"29\",\"target area\":\"single\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk%": 620,
+            "bb elements": [
+              "fire"
+            ],
+            "bb flat atk": 100,
+            "effect delay time(ms)/frame": "50.0/3",
+            "proc id": "29",
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

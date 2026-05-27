@@ -1,0 +1,156 @@
+{
+  "summary": {
+    "key": "gl:8000704",
+    "server": "GL",
+    "id": "8000704",
+    "name": "Titan's Pauldron",
+    "desc": "10% reduction to BB activation cost, add to BB (Fills BB gauge to max from one random ally), add to SBB (fully restores HP from one random ally) & add to BB/SBB (Probable KO resistance)",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Titan's Pauldron 10% reduction to BB activation cost, add to BB (Fills BB gauge to max from one random ally), add to SBB (fully restores HP from one random ally) & add to BB/SBB (Probable KO resistance) self 8000704"
+  },
+  "raw": {
+    "desc": "10% reduction to BB activation cost, add to BB (Fills BB gauge to max from one random ally), add to SBB (fully restores HP from one random ally) & add to BB/SBB (Probable KO resistance)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 10
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "bb bc fill%": 100,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "4",
+            "target area": "single",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "16.7/1",
+            "heal high": 99999,
+            "heal low": 98999,
+            "proc id": "2",
+            "rec added% (from healer)": 40,
+            "target area": "single",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 15,
+            "angel idol recover hp%": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "8000704",
+    "name": "Titan's Pauldron",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 48 / passive target: self / reduced bb bc cost%: 10",
+      "raw": {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 10
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / triggered effect: [{\"bb bc fill%\":100,\"effect delay time(ms)/frame\":\"16.7/1\",\"proc id\":\"4\",\"target area\":\"single\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "bb bc fill%": 100,
+            "effect delay time(ms)/frame": "16.7/1",
+            "proc id": "4",
+            "target area": "single",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"16.7/1\",\"heal high\":99999,\"heal low\":98999,\"proc id\":\"2\",\"rec added% (from healer)\":40,\"target area\":\"single\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "16.7/1",
+            "heal high": 99999,
+            "heal low": 98999,
+            "proc id": "2",
+            "rec added% (from healer)": 40,
+            "target area": "single",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"angel idol buff turns (91)\":999,\"angel idol recover chance%\":15,\"angel idol recover hp%\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"56\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "angel idol buff turns (91)": 999,
+            "angel idol recover chance%": 15,
+            "angel idol recover hp%": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "56",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

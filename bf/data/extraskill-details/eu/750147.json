@@ -1,0 +1,165 @@
+{
+  "summary": {
+    "key": "eu:750147",
+    "server": "EU",
+    "id": "750147",
+    "name": "Dear Sister",
+    "desc": "Reduces BB gauge required for BB (20%) & boosts BB gauge each turn (4 BC) & when Pure Noblesse Title is equipped, boosts REC and HP (20%) and adds damage taken may slightly restore HP (20% chance 30% damage) for 3 turns to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Pure Noblesse Title",
+    "searchText": "Dear Sister Reduces BB gauge required for BB (20%) & boosts BB gauge each turn (4 BC) & when Pure Noblesse Title is equipped, boosts REC and HP (20%) and adds damage taken may slightly restore HP (20% chance 30% damage) for 3 turns to BB/SBB self 750147"
+  },
+  "raw": {
+    "desc": "Reduces BB gauge required for BB (20%) & boosts BB gauge each turn (4 BC) & when Pure Noblesse Title is equipped, boosts REC and HP (20%) and adds damage taken may slightly restore HP (20% chance 30% damage) for 3 turns to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 20
+      },
+      {
+        "bc fill per turn": 4,
+        "conditions": [],
+        "passive id": "9",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701047"
+            ]
+          }
+        ],
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "hp recover from dmg buff turns (133)": 3,
+            "hp recover from dmg chance": 30,
+            "hp recover from dmg% high": 20,
+            "hp recover from dmg% low": 20,
+            "proc id": "85",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "750147",
+    "name": "Dear Sister",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 48 / passive target: self / reduced bb bc cost%: 20",
+      "raw": {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "bc fill per turn: 4 / passive id: 9 / passive target: self",
+      "raw": {
+        "bc fill per turn": 4,
+        "conditions": [],
+        "passive id": "9",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701047"
+            ]
+          }
+        ],
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"hp recover from dmg buff turns (133)\":3,\"hp recover from dmg chance\":30,\"hp recover from dmg% high\":20,\"hp recover from dmg% low\":20,\"proc id\":\"85\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "hp recover from dmg buff turns (133)": 3,
+            "hp recover from dmg chance": 30,
+            "hp recover from dmg% high": 20,
+            "hp recover from dmg% low": 20,
+            "proc id": "85",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701047"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701047"
+        ]
+      }
+    }
+  ]
+}

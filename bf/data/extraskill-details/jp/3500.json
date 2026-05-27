@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "key": "jp:3500",
+    "server": "JP",
+    "id": "3500",
+    "name": "魔動人形の意志",
+    "desc": "「ゴーレム・コア」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃ＢＢの威力をアップ」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: ゴーレム・コア",
+    "searchText": "魔動人形の意志 「ゴーレム・コア」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃ＢＢの威力をアップ」を追加 self 3500"
+  },
+  "raw": {
+    "desc": "「ゴーレム・コア」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃ＢＢの威力をアップ」を追加",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47202"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk% buff": 100,
+            "buff turns (72)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "45",
+            "sbb atk% buff": 100,
+            "target area": "aoe",
+            "target type": "party",
+            "ubb atk% buff": 100
+          }
+        ]
+      }
+    ],
+    "id": "3500",
+    "name": "魔動人形の意志",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47202"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bb atk% buff\":100,\"buff turns (72)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"45\",\"sbb atk% buff\":100,\"target area\":\"aoe\",\"target type\":\"party\",\"ubb atk% buff\":100}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk% buff": 100,
+            "buff turns (72)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "45",
+            "sbb atk% buff": 100,
+            "target area": "aoe",
+            "target type": "party",
+            "ubb atk% buff": 100
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: ゴーレム・コア",
+      "raw": {
+        "item required": [
+          "47202"
+        ]
+      }
+    }
+  ]
+}

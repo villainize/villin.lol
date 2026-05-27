@@ -1,0 +1,321 @@
+{
+  "summary": {
+    "key": "eu:710016",
+    "server": "EU",
+    "id": "710016",
+    "name": "Soul Receptacle",
+    "desc": "If Jack's Soul equipped, boosts HP, ATK (15%) and critical dmg (100%) & adds Critical Rate to BB/SBB/UBB (60%) & If Ardent Coal equipped, boosts DEF, REC (15%) & boosts Spark dmg (50%) for 2 turns when 20 BC received & adds BC on Spark to BB/SBB (1-2 BC)",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 6,
+    "conditionCount": 6,
+    "conditionSummary": "Needs item: Jack's Soul",
+    "searchText": "Soul Receptacle If Jack's Soul equipped, boosts HP, ATK (15%) and critical dmg (100%) & adds Critical Rate to BB/SBB/UBB (60%) & If Ardent Coal equipped, boosts DEF, REC (15%) & boosts Spark dmg (50%) for 2 turns when 20 BC received & adds BC on Spark to BB/SBB (1-2 BC) self 710016"
+  },
+  "raw": {
+    "desc": "If Jack's Soul equipped, boosts HP, ATK (15%) and critical dmg (100%) & adds Critical Rate to BB/SBB/UBB (60%) & If Ardent Coal equipped, boosts DEF, REC (15%) & boosts Spark dmg (50%) for 2 turns when 20 BC received & adds BC on Spark to BB/SBB (1-2 BC)",
+    "effects": [
+      {
+        "atk% buff": 15,
+        "conditions": [
+          {
+            "item required": [
+              "700003"
+            ]
+          }
+        ],
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700003"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700003"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700032"
+            ]
+          }
+        ],
+        "def% buff": 15,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 15
+      },
+      {
+        "bc receive count buff activation": 20,
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 50
+        },
+        "conditions": [
+          {
+            "item required": [
+              "700032"
+            ]
+          }
+        ],
+        "passive id": "82",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700032"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 2,
+            "bc fill on spark low": 1,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "710016",
+    "name": "Soul Receptacle",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 15 / hp% buff: 15 / passive id: 1 / passive target: self",
+      "raw": {
+        "atk% buff": 15,
+        "conditions": [
+          {
+            "item required": [
+              "700003"
+            ]
+          }
+        ],
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "crit multiplier%: 100 / passive id: 34 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700003"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700003"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "def% buff: 15 / passive id: 1 / passive target: self / rec% buff: 15",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700032"
+            ]
+          }
+        ],
+        "def% buff": 15,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 15
+      }
+    },
+    {
+      "index": 5,
+      "summary": "bc receive count buff activation: 20 / buff: {\"buff turns (40)\":\"2\",\"spark dmg% buff\":50} / passive id: 82 / passive target: self",
+      "raw": {
+        "bc receive count buff activation": 20,
+        "buff": {
+          "buff turns (40)": "2",
+          "spark dmg% buff": 50
+        },
+        "conditions": [
+          {
+            "item required": [
+              "700032"
+            ]
+          }
+        ],
+        "passive id": "82",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 6,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bc fill on spark buff turns (111)\":3,\"bc fill on spark high\":2,\"bc fill on spark low\":1,\"bc fill on spark%\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"67\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700032"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 2,
+            "bc fill on spark low": 1,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Jack's Soul",
+      "raw": {
+        "item required": [
+          "700003"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Jack's Soul",
+      "raw": {
+        "item required": [
+          "700003"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Jack's Soul",
+      "raw": {
+        "item required": [
+          "700003"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: Ardent Coal",
+      "raw": {
+        "item required": [
+          "700032"
+        ]
+      }
+    },
+    {
+      "effectIndex": 5,
+      "conditionIndex": 1,
+      "summary": "Needs item: Ardent Coal",
+      "raw": {
+        "item required": [
+          "700032"
+        ]
+      }
+    },
+    {
+      "effectIndex": 6,
+      "conditionIndex": 1,
+      "summary": "Needs item: Ardent Coal",
+      "raw": {
+        "item required": [
+          "700032"
+        ]
+      }
+    }
+  ]
+}

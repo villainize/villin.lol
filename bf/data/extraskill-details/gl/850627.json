@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "key": "gl:850627",
+    "server": "GL",
+    "id": "850627",
+    "name": "Split-Soul Duality",
+    "desc": "Restores HP each turn for all allies, adds Light barrier effect to BB/SBB, boosts Atk, Def, Rec each turn (up to 3 turns) & damage taken slightly boosts BB gauge",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Split-Soul Duality Restores HP each turn for all allies, adds Light barrier effect to BB/SBB, boosts Atk, Def, Rec each turn (up to 3 turns) & damage taken slightly boosts BB gauge self 850627"
+  },
+  "raw": {
+    "desc": "Restores HP each turn for all allies, adds Light barrier effect to BB/SBB, boosts Atk, Def, Rec each turn (up to 3 turns) & damage taken slightly boosts BB gauge",
+    "effects": [
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "atk% max buff": 120,
+        "conditions": [],
+        "def% max buff": 120,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 120,
+        "turn count": 3
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 5000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "850627",
+    "name": "Split-Soul Duality",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill when attacked high: 3 / bc fill when attacked low: 2 / bc fill when attacked%: 100 / passive id: 25 / passive target: self",
+      "raw": {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 2,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 120 / def% max buff: 120 / increase from min to max: 1 / passive id: 105 / passive target: self / rec% max buff: 120 / turn count: 3",
+      "raw": {
+        "atk% max buff": 120,
+        "conditions": [],
+        "def% max buff": 120,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 120,
+        "turn count": 3
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"light\",\"elemental barrier hp\":5000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 5000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

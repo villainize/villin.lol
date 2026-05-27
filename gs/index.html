@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Distances GS Library</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar" aria-label="Library controls">
+        <div class="brand">
+          <span class="brand-mark">GS</span>
+          <div>
+            <h1>Distances GS Library</h1>
+            <p>Units and equipment database</p>
+          </div>
+        </div>
+
+        <button id="settingsButton" class="settings-button" type="button">
+          <span aria-hidden="true">&#9881;</span>
+          Settings
+        </button>
+
+        <div class="status-panel" aria-live="polite">
+          <span id="syncStatus">Ready to load the latest data.</span>
+          <span id="lastUpdated"></span>
+        </div>
+
+        <section class="filters" aria-label="Search filters">
+          <label for="searchInput">Keyword search</label>
+          <div class="search-row">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Try burn, healer, demon, arts..."
+              autocomplete="off"
+            />
+            <button id="clearSearchButton" class="clear-search-button" type="button" aria-label="Clear search">&times;</button>
+          </div>
+
+          <div id="unitFilters" class="filter-stack">
+            <label for="elementFilter">Element</label>
+            <select id="elementFilter">
+              <option value="">All elements</option>
+            </select>
+
+            <label for="raceFilter">Race</label>
+            <select id="raceFilter">
+              <option value="">All races</option>
+            </select>
+          </div>
+
+          <div id="equipmentFilters" class="filter-stack" hidden>
+            <label for="slotFilter">Equipment slot</label>
+            <select id="slotFilter">
+              <option value="">All slots</option>
+            </select>
+          </div>
+
+          <label for="sortSelect">Sort results</label>
+          <select id="sortSelect">
+            <option value="old-new">Old to new</option>
+            <option value="new-old">New to old</option>
+            <option value="relevance">Best match</option>
+            <option value="name">Name A-Z</option>
+            <option value="type">Type</option>
+          </select>
+
+          <details class="keyword-menu">
+            <summary>Keyword searches</summary>
+            <div id="quickChips" class="chips" aria-label="Quick keyword searches"></div>
+          </details>
+        </section>
+      </aside>
+
+      <section class="workspace" id="listView">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Fast finder</p>
+            <h2 id="sectionTitle">Units</h2>
+          </div>
+          <div class="topbar-actions">
+            <div class="counts" aria-label="Library totals">
+              <span><strong id="unitCount">0</strong> units</span>
+              <span><strong id="equipmentCount">0</strong> equipment</span>
+              <span><strong id="guideCount">0</strong> guides</span>
+            </div>
+            <button id="addGuideButton" class="update-button add-guide-button" type="button" hidden>Add guide</button>
+          </div>
+        </header>
+
+        <nav class="library-tabs" aria-label="Library sections">
+          <button class="segment is-active" data-type="unit" type="button">Units</button>
+          <button class="segment" data-type="equipment" type="button">Equipment</button>
+          <button class="segment" data-type="guide" type="button">Guides</button>
+        </nav>
+
+        <div class="result-summary">
+          <span id="resultCount">No results yet</span>
+          <span id="activeQuery"></span>
+        </div>
+
+        <nav id="paginationTop" class="pagination" aria-label="Result pages"></nav>
+        <section id="results" class="results" aria-label="Search results"></section>
+        <nav id="paginationBottom" class="pagination" aria-label="Result pages"></nav>
+      </section>
+
+      <section class="workspace detail-view" id="detailView" hidden>
+        <button id="backToResultsButton" class="back-button" type="button">&#8592; Back to results</button>
+        <section id="detailPanel" class="detail-panel detail-page is-open" aria-label="Selected result"></section>
+      </section>
+    </main>
+
+    <dialog id="settingsDialog" class="settings-dialog">
+      <div class="settings-header">
+        <div>
+          <p class="eyebrow">Settings</p>
+          <h2>Data and updates</h2>
+        </div>
+        <button id="closeSettingsButton" class="icon-button" type="button" aria-label="Close settings">&times;</button>
+      </div>
+
+      <div class="settings-grid">
+        <section class="settings-section">
+          <h3>GitHub sync</h3>
+          <p>The library updates unit and equipment data from the public source files.</p>
+          <button id="updateButton" class="update-button" type="button">
+            <span aria-hidden="true">&#8635;</span>
+            Update from GitHub
+          </button>
+        </section>
+
+        <section class="settings-section">
+          <h3>Current library</h3>
+          <div class="settings-stat"><span>Units</span><strong id="settingsUnitCount">0</strong></div>
+          <div class="settings-stat"><span>Equipment</span><strong id="settingsEquipmentCount">0</strong></div>
+          <div class="settings-stat"><span>Total records</span><strong id="settingsTotalCount">0</strong></div>
+        </section>
+
+        <section class="settings-section settings-section-wide">
+          <h3>Results per page</h3>
+          <p>Choose how many units or equipment items show at once.</p>
+          <div class="page-size-options" role="group" aria-label="Results per page">
+            <label><input type="radio" name="pageSize" value="20" /> 20</label>
+            <label><input type="radio" name="pageSize" value="50" checked /> 50</label>
+            <label><input type="radio" name="pageSize" value="all" /> No limit</label>
+          </div>
+        </section>
+
+        <section class="settings-section settings-section-wide">
+          <h3>Detail pages</h3>
+          <p>Minimal shows the important info first. In-depth adds every data field below it.</p>
+          <div class="page-size-options" role="group" aria-label="Detail page depth">
+            <label><input type="radio" name="detailMode" value="minimal" checked /> Minimal</label>
+            <label><input type="radio" name="detailMode" value="indepth" /> In-depth</label>
+          </div>
+        </section>
+
+        <section class="settings-section settings-section-wide">
+          <h3>Source files</h3>
+          <div class="source-links" aria-label="GitHub data files">
+            <a href="https://github.com/Reymdusk/GSReact/blob/main/src/shared/unitInfo.js" target="_blank" rel="noreferrer">Open unitInfo.js</a>
+            <a href="https://github.com/Reymdusk/GSReact/blob/main/src/shared/equipInfo.js" target="_blank" rel="noreferrer">Open equipInfo.js</a>
+            <a href="https://github.com/Reymdusk/GSReact" target="_blank" rel="noreferrer">Open source repository</a>
+          </div>
+        </section>
+      </div>
+    </dialog>
+
+    <dialog id="guideDialog" class="settings-dialog guide-dialog">
+      <form id="guideForm" method="dialog">
+        <div class="settings-header">
+          <div>
+            <p class="eyebrow">Guides</p>
+            <h2 id="guideDialogTitle">Add guide</h2>
+          </div>
+          <button id="closeGuideButton" class="icon-button" type="button" aria-label="Close guide editor">&times;</button>
+        </div>
+
+        <div class="settings-grid guide-form-grid">
+          <section class="settings-section settings-section-wide">
+            <label for="guideTitleInput">Title</label>
+            <input id="guideTitleInput" name="title" type="text" placeholder="Guide title" required />
+          </section>
+
+          <section class="settings-section">
+            <label for="guideCategoryInput">Category</label>
+            <input id="guideCategoryInput" name="category" type="text" placeholder="Beginner, Boss, Team..." />
+          </section>
+
+          <section class="settings-section">
+            <label for="guideLinkInput">Link</label>
+            <input id="guideLinkInput" name="link" type="url" placeholder="Optional external guide link" />
+          </section>
+
+          <section class="settings-section settings-section-wide">
+            <label for="guideSummaryInput">Summary</label>
+            <textarea id="guideSummaryInput" name="summary" rows="3" placeholder="Short summary for the guide card"></textarea>
+          </section>
+
+          <section class="settings-section settings-section-wide">
+            <label for="guideContentInput">Guide content</label>
+            <textarea id="guideContentInput" name="content" rows="10" placeholder="Write the full guide here. Separate sections with blank lines."></textarea>
+          </section>
+
+          <section class="settings-section settings-section-wide guide-form-actions">
+            <button id="deleteGuideButton" class="back-button" type="button" hidden>Delete guide</button>
+            <button id="saveGuideButton" class="update-button" type="submit">Save guide</button>
+          </section>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./data-cache.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

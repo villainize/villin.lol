@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "key": "jp:48100",
+    "server": "JP",
+    "id": "48100",
+    "name": "燃え盛る吸管",
+    "desc": "確率で呪い・麻痺状態にする＆ＨＰを少し吸収＆「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージをかなりアップ」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Status Boost",
+    "searchText": "燃え盛る吸管 確率で呪い・麻痺状態にする＆ＨＰを少し吸収＆「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージをかなりアップ」を追加 self 48100"
+  },
+  "raw": {
+    "desc": "確率で呪い・麻痺状態にする＆ＨＰを少し吸収＆「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に３ターン、状態異常の敵へのダメージをかなりアップ」を追加",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 130,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "curse%": 10,
+        "paralysis%": 10,
+        "passive id": "20",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 15,
+        "hp drain% low": 10,
+        "passive id": "17",
+        "passive target": "self"
+      }
+    ],
+    "id": "48100",
+    "name": "燃え盛る吸管",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"atk% buff turns (110)\":3,\"atk% buff when enemy has ailment\":130,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"65\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "atk% buff turns (110)": 3,
+            "atk% buff when enemy has ailment": 130,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "65",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "curse%: 10 / paralysis%: 10 / passive id: 20 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "curse%": 10,
+        "paralysis%": 10,
+        "passive id": "20",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "hp drain chance%: 100 / hp drain% high: 15 / hp drain% low: 10 / passive id: 17 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 15,
+        "hp drain% low": 10,
+        "passive id": "17",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Status Boost",
+      "raw": {
+        "sphere category required": "Status Boost",
+        "sphere category required (raw)": "1"
+      }
+    }
+  ]
+}

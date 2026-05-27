@@ -1,0 +1,111 @@
+{
+  "summary": {
+    "key": "gl:819118",
+    "server": "GL",
+    "id": "819118",
+    "name": "Star Wing",
+    "type": "sphere",
+    "typeLabel": "Sphere",
+    "rarity": "6",
+    "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Light types, adds additional attack at turn's end for 3 turns effect to BB/SBB & negates Def ignoring effect",
+    "maxStack": 1,
+    "sellPrice": 30000,
+    "sphereType": 13,
+    "sphereTypeText": "Atk Boosting",
+    "maxEquipped": null,
+    "raid": false,
+    "effectCount": 4,
+    "recipeCount": 0,
+    "usageCount": 0,
+    "image": "items/item/sphere_thum_828002.png"
+  },
+  "raw": {
+    "desc": "Raises Atk parameter limits to 150000, 100% boost to Atk and boosts critical hit rate of Light types, adds additional attack at turn's end for 3 turns effect to BB/SBB & negates Def ignoring effect",
+    "effect": [
+      {
+        "increase atk cap": 150000,
+        "passive id": "143"
+      },
+      {
+        "atk% buff": 100,
+        "crit% buff": 20,
+        "elements buffed": [
+          "light"
+        ],
+        "passive id": "2"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dot atk%": 600,
+            "dot element affected": true,
+            "dot flat atk": 100,
+            "dot turns (71)": 3,
+            "dot unit index": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "44",
+            "target area": "aoe",
+            "target type": "enemy"
+          }
+        ]
+      },
+      {
+        "ignore def resist chance%": 100,
+        "passive id": "92"
+      }
+    ],
+    "id": 819118,
+    "max_stack": 1,
+    "name": "Star Wing",
+    "raid": false,
+    "rarity": 6,
+    "sell_price": 30000,
+    "sphere type": 13,
+    "sphere type text": "Atk Boosting",
+    "thumbnail": "sphere_thum_828002.png",
+    "type": "sphere"
+  },
+  "effects": [
+    {
+      "increase atk cap": 150000,
+      "passive id": "143"
+    },
+    {
+      "atk% buff": 100,
+      "crit% buff": 20,
+      "elements buffed": [
+        "light"
+      ],
+      "passive id": "2"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "dot atk%": 600,
+          "dot element affected": true,
+          "dot flat atk": 100,
+          "dot turns (71)": 3,
+          "dot unit index": 1,
+          "effect delay time(ms)/frame": "0.0/0",
+          "proc id": "44",
+          "target area": "aoe",
+          "target type": "enemy"
+        }
+      ]
+    },
+    {
+      "ignore def resist chance%": 100,
+      "passive id": "92"
+    }
+  ],
+  "usage": [],
+  "dictionary": {
+    "lore": "A wing of scintillating, barely-bound elemental power, it can blind those careless enough to handle it improperly. Attuning to it grants a great boost in magical energy...and a glimpse of something greater."
+  }
+}

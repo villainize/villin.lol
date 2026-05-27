@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "key": "gl:810148",
+    "server": "GL",
+    "id": "810148",
+    "name": "General's Mandate",
+    "desc": "50% boost to Atk, Def, max HP and greatly boosts critical damage when Obrim is equipped, 10% damage reduction from normal attacks for all allies, resistance against 1 KO attack when HP is below 35% & 20% damage reduction for 2 turns when damage taken has exceeded certain amount",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Obrim",
+    "searchText": "General's Mandate 50% boost to Atk, Def, max HP and greatly boosts critical damage when Obrim is equipped, 10% damage reduction from normal attacks for all allies, resistance against 1 KO attack when HP is below 35% & 20% damage reduction for 2 turns when damage taken has exceeded certain amount self 810148"
+  },
+  "raw": {
+    "desc": "50% boost to Atk, Def, max HP and greatly boosts critical damage when Obrim is equipped, 10% damage reduction from normal attacks for all allies, resistance against 1 KO attack when HP is below 35% & 20% damage reduction for 2 turns when damage taken has exceeded certain amount",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "conditions": [
+          {
+            "item required": [
+              "819202"
+            ]
+          }
+        ],
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "819202"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      },
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 35,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 20
+        },
+        "conditions": [],
+        "damage threshold buff activation": 20000,
+        "passive id": "78",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "128",
+        "unknown passive params": "100,10,100,10"
+      }
+    ],
+    "id": "810148",
+    "name": "General's Mandate",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 50 / def% buff: 50 / hp% buff: 50 / passive id: 1 / passive target: self",
+      "raw": {
+        "atk% buff": 50,
+        "conditions": [
+          {
+            "item required": [
+              "819202"
+            ]
+          }
+        ],
+        "def% buff": 50,
+        "hp% buff": 50,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "crit multiplier%: 100 / passive id: 34 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "819202"
+            ]
+          }
+        ],
+        "crit multiplier%": 100,
+        "passive id": "34",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "buff: {\"angel idol buff (12)\":true,\"angel idol recover hp%\":100,\"buff turns (12)\":\"-1\"} / hp below % buff activation: 35 / passive id: 55 / passive target: self",
+      "raw": {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 35,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "buff: {\"buff turns (36)\":\"1\",\"dmg reduction% buff\":20} / damage threshold buff activation: 20000 / passive id: 78 / passive target: self",
+      "raw": {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 20
+        },
+        "conditions": [],
+        "damage threshold buff activation": 20000,
+        "passive id": "78",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive target: party / unknown passive id: 128 / unknown passive params: 100,10,100,10",
+      "raw": {
+        "conditions": [],
+        "passive target": "party",
+        "unknown passive id": "128",
+        "unknown passive params": "100,10,100,10"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Obrim",
+      "raw": {
+        "item required": [
+          "819202"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Obrim",
+      "raw": {
+        "item required": [
+          "819202"
+        ]
+      }
+    }
+  ]
+}

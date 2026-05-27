@@ -1,0 +1,886 @@
+{
+  "summary": {
+    "key": "eu:50934",
+    "server": "EU",
+    "id": "50934",
+    "name": "Guiding Light Layla",
+    "title": "Guiding Light Layla",
+    "element": "Light",
+    "rarity": "5 Star",
+    "role": "Female",
+    "cost": 21,
+    "stats": {
+      "hp": 4865,
+      "atk": 1904,
+      "def": 1941,
+      "rec": 2028
+    },
+    "images": {
+      "full": "units/img/unit_ills_full_50934.png",
+      "thumb": "units/img/unit_ills_thum_50934.png",
+      "battle": "units/img/unit_ills_battle_50934.png"
+    }
+  },
+  "raw": {
+    "ai": [
+      {
+        "action": "skill",
+        "chance%": 60,
+        "target conditions": "hp_50pr_over",
+        "target type": "enemy"
+      },
+      {
+        "action": "skill",
+        "chance%": 20,
+        "target conditions": "random",
+        "target type": "enemy"
+      },
+      {
+        "action": "attack",
+        "chance%": 100,
+        "target conditions": "random",
+        "target type": "enemy"
+      }
+    ],
+    "animations": {
+      "attack": {
+        "total number of frames": 169
+      },
+      "idle": {
+        "total number of frames": 52
+      },
+      "move": {
+        "total number of frames": 6
+      }
+    },
+    "bb": {
+      "damage frames": [
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            70
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "2"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "38"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "3"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "85"
+        },
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "frame times": [
+            0
+          ],
+          "hit dmg% distribution": [
+            100
+          ],
+          "hit dmg% distribution (total)": 100,
+          "hits": 1,
+          "proc id": "20"
+        }
+      ],
+      "desc": "Considerably restores HP, removes all status ailments, greatly restores HP for 3 turns, damage taken boosts BB gauge for 3 turns & probable slight HP recovery for 3 turns",
+      "drop check count": 1,
+      "id": "50934",
+      "levels": [
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2300,
+              "heal low": 2000,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2200,
+              "gradual heal low": 2000,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 15,
+              "hp recover from dmg% low": 10,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2340,
+              "heal low": 2040,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2240,
+              "gradual heal low": 2030,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 16,
+              "hp recover from dmg% low": 11,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2380,
+              "heal low": 2080,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2280,
+              "gradual heal low": 2060,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 17,
+              "hp recover from dmg% low": 12,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2420,
+              "heal low": 2120,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2320,
+              "gradual heal low": 2090,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 18,
+              "hp recover from dmg% low": 13,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2460,
+              "heal low": 2160,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2360,
+              "gradual heal low": 2120,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 19,
+              "hp recover from dmg% low": 14,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2500,
+              "heal low": 2200,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2400,
+              "gradual heal low": 2150,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 20,
+              "hp recover from dmg% low": 15,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2540,
+              "heal low": 2240,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2440,
+              "gradual heal low": 2180,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 21,
+              "hp recover from dmg% low": 16,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2580,
+              "heal low": 2280,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2480,
+              "gradual heal low": 2210,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 15,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 22,
+              "hp recover from dmg% low": 17,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2620,
+              "heal low": 2320,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2520,
+              "gradual heal low": 2240,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 23,
+              "hp recover from dmg% low": 18,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        },
+        {
+          "bc cost": 22,
+          "effects": [
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "heal high": 2700,
+              "heal low": 2400,
+              "proc id": "2",
+              "rec added% (from healer)": 40,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "ailments cured": [
+                "poison",
+                "weaken",
+                "sick",
+                "injury",
+                "curse",
+                "paralysis",
+                "atk down",
+                "def down",
+                "rec down"
+              ],
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "38",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "gradual heal high": 2600,
+              "gradual heal low": 2300,
+              "gradual heal turns (8)": 3,
+              "proc id": "3",
+              "rec added% (from target)": 18,
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "effect delay time(ms)/frame": "0.0/0",
+              "hp recover from dmg buff turns (133)": 3,
+              "hp recover from dmg chance": 20,
+              "hp recover from dmg% high": 25,
+              "hp recover from dmg% low": 20,
+              "proc id": "85",
+              "target area": "aoe",
+              "target type": "party"
+            },
+            {
+              "bc fill when attacked high": 6,
+              "bc fill when attacked low": 3,
+              "bc fill when attacked turns (38)": 3,
+              "bc fill when attacked%": 100,
+              "effect delay time(ms)/frame": "0.0/0",
+              "proc id": "20",
+              "target area": "aoe",
+              "target type": "party"
+            }
+          ]
+        }
+      ],
+      "name": "Canonical Hope"
+    },
+    "cost": 21,
+    "damage frames": {
+      "frame times": [
+        13,
+        19,
+        73,
+        79,
+        86,
+        94,
+        98
+      ],
+      "hit dmg% distribution": [
+        10,
+        8,
+        12,
+        17,
+        23,
+        20,
+        10
+      ],
+      "hit dmg% distribution (total)": 100,
+      "hits": 7
+    },
+    "drop check count": 3,
+    "element": "light",
+    "exp_pattern": 20,
+    "gender": "female",
+    "getting type": "rare summon",
+    "guide_id": 1319,
+    "id": 50934,
+    "imp": {
+      "max atk": "160",
+      "max def": "160",
+      "max hp": "500",
+      "max rec": "280"
+    },
+    "kind": "normal",
+    "leader skill": {
+      "desc": "30% boost to Rec, max HP",
+      "effects": [
+        {
+          "hp% buff": 30,
+          "passive id": "1",
+          "rec% buff": 30
+        }
+      ],
+      "id": "8803",
+      "name": "Cleric's White Light"
+    },
+    "lord damage range": "1772~1980",
+    "movement": {
+      "attack": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      },
+      "skill": {
+        "move speed": 0.0033,
+        "move speed type": "3",
+        "move type": "1"
+      }
+    },
+    "name": "Guiding Light Layla",
+    "rarity": 5,
+    "sell caution": false,
+    "stats": {
+      "_base": {
+        "atk": 1428,
+        "def": 1456,
+        "hp": 3424,
+        "rec": 1521
+      },
+      "_lord": {
+        "atk": 1904,
+        "def": 1941,
+        "hp": 4865,
+        "rec": 2028
+      },
+      "anima": {
+        "atk": 1904,
+        "def": 1941,
+        "hp max": 5655,
+        "hp min": 5260,
+        "rec max": 1949,
+        "rec min": 1791
+      },
+      "breaker": {
+        "atk max": 2141,
+        "atk min": 1983,
+        "def max": 1862,
+        "def min": 1704,
+        "hp": 4865,
+        "rec": 2028
+      },
+      "guardian": {
+        "atk max": 1825,
+        "atk min": 1667,
+        "def max": 2178,
+        "def min": 2020,
+        "hp": 4865,
+        "rec": 2028
+      },
+      "oracle": {
+        "atk": 1904,
+        "def": 1941,
+        "hp max": 4470,
+        "hp min": 4075,
+        "rec max": 2265,
+        "rec min": 2107
+      }
+    }
+  },
+  "evolution": {
+    "amount": 500000,
+    "evo": {
+      "id": 50935,
+      "name": "Virtuous Shimmer Layla",
+      "rarity": 6
+    },
+    "mats": [
+      {
+        "id": "50354",
+        "name": "Miracle Totem",
+        "type": "unit"
+      },
+      {
+        "id": "50123",
+        "name": "Light Totem",
+        "type": "unit"
+      },
+      {
+        "id": "50123",
+        "name": "Light Totem",
+        "type": "unit"
+      },
+      {
+        "id": "60144",
+        "name": "Dragon Mimic",
+        "type": "unit"
+      },
+      {
+        "id": "60224",
+        "name": "Metal Mimic",
+        "type": "unit"
+      }
+    ],
+    "name": "Guiding Light Layla",
+    "rarity": 5
+  },
+  "feskills": null
+}

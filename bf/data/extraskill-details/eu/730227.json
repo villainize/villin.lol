@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "key": "eu:730227",
+    "server": "EU",
+    "id": "730227",
+    "name": "Ancient's Knowledge",
+    "desc": "Boosts all parameters (30%) & negates DEF ignoring damage & boosts DEF and REC (80%) for 2 turns when Sparks have exceeded certain amount (15) & adds Earth Barrier (3500 HP) and boosts critical hit rate (60%) to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 6,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Ancient's Knowledge Boosts all parameters (30%) & negates DEF ignoring damage & boosts DEF and REC (80%) for 2 turns when Sparks have exceeded certain amount (15) & adds Earth Barrier (3500 HP) and boosts critical hit rate (60%) to BB/SBB self 730227"
+  },
+  "raw": {
+    "desc": "Boosts all parameters (30%) & negates DEF ignoring damage & boosts DEF and REC (80%) for 2 turns when Sparks have exceeded certain amount (15) & adds Earth Barrier (3500 HP) and boosts critical hit rate (60%) to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 3000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "buff": {
+          "buff turns (3)": "2",
+          "def% buff (3)": 50
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      },
+      {
+        "buff": {
+          "buff turns (5)": "2",
+          "rec% buff (5)": 50
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "730227",
+    "name": "Ancient's Knowledge",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "ignore def resist chance%: 100 / passive id: 92 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "ignore def resist chance%": 100,
+        "passive id": "92",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"earth\",\"elemental barrier hp\":3000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "earth",
+            "elemental barrier hp": 3000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "buff: {\"buff turns (3)\":\"2\",\"def% buff (3)\":50} / passive id: 86 / passive target: self / spark count buff activation: 15",
+      "raw": {
+        "buff": {
+          "buff turns (3)": "2",
+          "def% buff (3)": 50
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      }
+    },
+    {
+      "index": 4,
+      "summary": "buff: {\"buff turns (5)\":\"2\",\"rec% buff (5)\":50} / passive id: 86 / passive target: self / spark count buff activation: 15",
+      "raw": {
+        "buff": {
+          "buff turns (5)": "2",
+          "rec% buff (5)": 50
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      }
+    },
+    {
+      "index": 5,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 6,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

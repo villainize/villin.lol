@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "key": "gl:819214",
+    "server": "GL",
+    "id": "819214",
+    "name": "Vision",
+    "type": "sphere",
+    "typeLabel": "Sphere",
+    "rarity": "7",
+    "desc": "35% all parameters (Oracle), negates all status ailments, fills BB gauge each turn, add to BB/SBB [chance to purge Curse, Weak negation] & activates 3500 HP shield when 15 BC collected",
+    "maxStack": 1,
+    "sellPrice": 999999,
+    "sphereType": 5,
+    "sphereTypeText": "Status Ailments Resistant",
+    "maxEquipped": null,
+    "raid": true,
+    "effectCount": 5,
+    "recipeCount": 3,
+    "usageCount": 1,
+    "image": "items/item/ls_sphere_thum_1_2.png"
+  },
+  "raw": {
+    "desc": "35% all parameters (Oracle), negates all status ailments, fills BB gauge each turn, add to BB/SBB [chance to purge Curse, Weak negation] & activates 3500 HP shield when 15 BC collected",
+    "effect": [
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "bc fill per turn": 15,
+        "passive id": "9"
+      },
+      {
+        "atk% buff": 35,
+        "def% buff": 35,
+        "hp% buff": 35,
+        "passive id": "3",
+        "rec% buff": 35,
+        "unit type buffed": "oracle"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "single",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "31,34,0,0,0,0,0,0,0,15"
+          }
+        ]
+      },
+      {
+        "bc receive count buff activation": 15,
+        "buff": {
+          "buff turns (10500)": "1",
+          "unknown buff id": "10500",
+          "unknown buff params": "0&3500&3500&3500&"
+        },
+        "passive id": "82"
+      }
+    ],
+    "id": 819214,
+    "max_stack": 1,
+    "name": "Vision",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "800000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 49700
+        },
+        {
+          "count": 1,
+          "id": 819224
+        },
+        {
+          "count": 150,
+          "id": 890002
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "ls_sphere_thum_1_2.png",
+    "type": "sphere"
+  },
+  "effects": [
+    {
+      "curse resist%": 100,
+      "injury resist%": 100,
+      "paralysis resist%": 100,
+      "passive id": "4",
+      "poison resist%": 100,
+      "sick resist%": 100,
+      "weaken resist%": 100
+    },
+    {
+      "bc fill per turn": 15,
+      "passive id": "9"
+    },
+    {
+      "atk% buff": 35,
+      "def% buff": 35,
+      "hp% buff": 35,
+      "passive id": "3",
+      "rec% buff": 35,
+      "unit type buffed": "oracle"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "target area": "single",
+          "target type": "enemy",
+          "unknown proc id": "10019",
+          "unknown proc param": "31,34,0,0,0,0,0,0,0,15"
+        }
+      ]
+    },
+    {
+      "bc receive count buff activation": 15,
+      "buff": {
+        "buff turns (10500)": "1",
+        "unknown buff id": "10500",
+        "unknown buff params": "0&3500&3500&3500&"
+      },
+      "passive id": "82"
+    }
+  ],
+  "usage": [
+    {
+      "id": "819215",
+      "count": 1,
+      "name": "Providence"
+    }
+  ],
+  "dictionary": {
+    "lore": "An unassuming metal half-mask, it grants the wearer extraordinary vision of the magics and energies that permeate all things.<br><br>With an improved understanding of magical neural interfaces, Noel has overhauled the way it communicates with the user, removing the unintended side effect of vegetation by long-term use. Noel's testers have, however, reported slight migraines and nausea after extended periods of use, presumably due to the average mind's inability to handle extreme clarity and detail."
+  }
+}

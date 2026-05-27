@@ -1,0 +1,165 @@
+{
+  "summary": {
+    "key": "eu:760227",
+    "server": "EU",
+    "id": "760227",
+    "name": "Selfishness",
+    "desc": "100% boost to Spark Damage & boosts all parameters (30%) & If Arondight is equipped, adds statut ailment removal effect to BB/SBB and 30% boost to DEF, HP",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Arondight",
+    "searchText": "Selfishness 100% boost to Spark Damage & boosts all parameters (30%) & If Arondight is equipped, adds statut ailment removal effect to BB/SBB and 30% boost to DEF, HP self 760227"
+  },
+  "raw": {
+    "desc": "100% boost to Spark Damage & boosts all parameters (30%) & If Arondight is equipped, adds statut ailment removal effect to BB/SBB and 30% boost to DEF, HP",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701024"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701024"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    ],
+    "id": "760227",
+    "name": "Selfishness",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "damage% for spark: 100 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "damage% for spark": 100,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"10\",\"remove all status ailments\":true,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701024"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701024"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Arondight",
+      "raw": {
+        "item required": [
+          "701024"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: Arondight",
+      "raw": {
+        "item required": [
+          "701024"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "key": "gl:811118",
+    "server": "GL",
+    "id": "811118",
+    "name": "Dharmapala",
+    "desc": "Adds Water barrier to BB/SBB & boosts Atk, Def, Rec when BB gauge is over 50%",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Dharmapala Adds Water barrier to BB/SBB & boosts Atk, Def, Rec when BB gauge is over 50% self 811118"
+  },
+  "raw": {
+    "desc": "Adds Water barrier to BB/SBB & boosts Atk, Def, Rec when BB gauge is over 50%",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "water",
+            "elemental barrier hp": 2500,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 60,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 60,
+        "passive id": "30",
+        "passive target": "self",
+        "rec% buff": 60
+      }
+    ],
+    "id": "811118",
+    "name": "Dharmapala",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"water\",\"elemental barrier hp\":2500,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "water",
+            "elemental barrier hp": 2500,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 60 / bb gauge above % buff requirement: 50 / def% buff: 60 / passive id: 30 / passive target: self / rec% buff: 60",
+      "raw": {
+        "atk% buff": 60,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 60,
+        "passive id": "30",
+        "passive target": "self",
+        "rec% buff": 60
+      }
+    }
+  ],
+  "conditions": []
+}

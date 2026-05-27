@@ -1,0 +1,166 @@
+{
+  "summary": {
+    "key": "gl:840118",
+    "server": "GL",
+    "id": "840118",
+    "name": "Bonnie Warrior Dignity",
+    "desc": "50% damage against status afflicted foes for all allies, 100% Atk when BB gauge is above 50%, add to BB/SBB (Adds ignore Def to attack for 3 turns) & add to BB/SBB/UBB (Adds all elements to attack for 3 turns)",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Bonnie Warrior Dignity 50% damage against status afflicted foes for all allies, 100% Atk when BB gauge is above 50%, add to BB/SBB (Adds ignore Def to attack for 3 turns) & add to BB/SBB/UBB (Adds all elements to attack for 3 turns) self 840118"
+  },
+  "raw": {
+    "desc": "50% damage against status afflicted foes for all allies, 100% Atk when BB gauge is above 50%, add to BB/SBB (Adds ignore Def to attack for 3 turns) & add to BB/SBB/UBB (Adds all elements to attack for 3 turns)",
+    "effects": [
+      {
+        "atk% buff when enemy has ailment": 50,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "party"
+      },
+      {
+        "atk% buff": 100,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "passive id": "30",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "fire",
+              "water",
+              "earth",
+              "thunder",
+              "light",
+              "dark"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "840118",
+    "name": "Bonnie Warrior Dignity",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff when enemy has ailment: 50 / atk% buff when enemy has curse: true / atk% buff when enemy has injury: true / atk% buff when enemy has paralysis: true / atk% buff when enemy has poison: true / atk% buff when enemy has sick: true / atk% buff when enemy has weaken: true / passive id: 74",
+      "raw": {
+        "atk% buff when enemy has ailment": 50,
+        "atk% buff when enemy has curse": true,
+        "atk% buff when enemy has injury": true,
+        "atk% buff when enemy has paralysis": true,
+        "atk% buff when enemy has poison": true,
+        "atk% buff when enemy has sick": true,
+        "atk% buff when enemy has weaken": true,
+        "conditions": [],
+        "passive id": "74",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 100 / bb gauge above % buff requirement: 50 / passive id: 30 / passive target: self",
+      "raw": {
+        "atk% buff": 100,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "passive id": "30",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"fire\",\"water\",\"earth\",\"thunder\",\"light\",\"dark\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "fire",
+              "water",
+              "earth",
+              "thunder",
+              "light",
+              "dark"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

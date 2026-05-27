@@ -1,0 +1,131 @@
+body{
+    background:#1a1a1a;
+    color:#fff;
+    font-family:'Segoe UI',Tahoma,sans-serif;
+    margin:0;
+    padding:15px;
+}
+h1,h2,h3{margin:6px 0;font-weight:600}
+section{margin-bottom:25px}
+input,button,select{font-size:14px;border-radius:6px;border:none}
+input{padding:6px;width:100%;background:#2c2c2c;color:#fff}
+button{padding:7px 12px;font-weight:bold;cursor:pointer;background:#D32F2F;color:#fff;transition:0.3s}
+button:hover{background:#B71C1C}
+select{background:#2c2c2c;color:#fff;padding:6px}
+
+/* ===== CARD GRID ===== */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px}
+.card{
+    background:#2a2a2a;
+    border-radius:12px;
+    text-align:center;
+    padding:6px;
+    cursor:pointer;
+    position:relative;
+    transition:0.2s;
+    box-shadow:0 0 5px rgba(0,0,0,0.5);
+}
+.card:hover{box-shadow:0 0 10px #D32F2F; transform:translateY(-2px);}
+.card img{width:100%;border-radius:8px}
+.card-name{font-size:13px;margin-top:4px}
+.qty{color:#ff5252;font-weight:bold;font-size:12px}
+.odds{font-size:11px;color:#aaa;margin-top:2px}
+
+/* ===== DELETE BUTTON ===== */
+.card .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #B71C1C;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s;
+}
+.card .delete-btn:hover { background: #D32F2F; }
+
+/* ===== DECK SECTIONS ===== */
+.deck-section{
+    border:1px solid #D32F2F;
+    border-radius:12px;
+    padding:10px;
+    margin-bottom:15px;
+    background:#222;
+    box-shadow:0 0 10px rgba(0,0,0,0.6);
+}
+.deck-section h3{
+    margin-bottom:6px;
+    color:#D32F2F;
+    text-align:center;
+}
+
+/* ===== MENU ===== */
+.deck-menu {
+  position: absolute;
+  background: #1a1a1a;
+  border: 1px solid red;
+  color: white;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  border-radius: 4px;
+  z-index: 1000;
+}
+.deck-menu button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.deck-menu button:hover { background: darkred; }
+
+/* ===== COLLECTION ===== */
+.collection-section.collapsed .card-grid{display:none}
+
+/* ===== DECK CONTROLS ===== */
+.deck-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+
+/* ===== HAND & GY ===== */
+#handGrid .card, #gyGrid .card{background:#2c2c2c;}
+
+/* ===== LINKS/EXPORT ===== */
+a{color:#D32F2F;text-decoration:none}
+
+// Add tooltip element
+const tooltip = document.createElement("div");
+tooltip.className = "card-tooltip";
+tooltip.style.position = "absolute";
+tooltip.style.padding = "8px";
+tooltip.style.background = "#111";
+tooltip.style.color = "#fff";
+tooltip.style.border = "1px solid #666";
+tooltip.style.borderRadius = "5px";
+tooltip.style.maxWidth = "250px";
+tooltip.style.display = "none";
+tooltip.style.zIndex = 9999;
+document.body.appendChild(tooltip);
+
+// Show tooltip
+function showTooltip(e, card) {
+    let text = `${card.name || "Unknown"}\n`;
+    if(card.type) text += `Type: ${card.type}\n`;
+    if(card.archetype) text += `Archetype: ${card.archetype}\n`;
+    if(card.desc) text += `\n${card.desc}`;
+    tooltip.textContent = text;
+    tooltip.style.left = (e.pageX + 15) + "px";
+    tooltip.style.top = (e.pageY + 15) + "px";
+    tooltip.style.display = "block";
+}
+
+// Hide tooltip
+function hideTooltip() {
+    tooltip.style.display = "none";
+}

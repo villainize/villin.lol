@@ -1,0 +1,111 @@
+{
+  "summary": {
+    "key": "eu:710237",
+    "server": "EU",
+    "id": "710237",
+    "name": "Defensive Wings",
+    "desc": "Boosts REC and HP (40%) & if Pure Noblesse Title is equipped, adds Fire Barrier for all allies effect (3500 HP) to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Pure Noblesse Title",
+    "searchText": "Defensive Wings Boosts REC and HP (40%) & if Pure Noblesse Title is equipped, adds Fire Barrier for all allies effect (3500 HP) to BB/SBB self 710237"
+  },
+  "raw": {
+    "desc": "Boosts REC and HP (40%) & if Pure Noblesse Title is equipped, adds Fire Barrier for all allies effect (3500 HP) to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "fire",
+            "elemental barrier hp": 3500,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "710237",
+    "name": "Defensive Wings",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "hp% buff: 40 / passive id: 1 / passive target: self / rec% buff: 40",
+      "raw": {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"fire\",\"elemental barrier hp\":3500,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "fire",
+            "elemental barrier hp": 3500,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701047"
+        ]
+      }
+    }
+  ]
+}

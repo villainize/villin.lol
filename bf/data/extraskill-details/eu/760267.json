@@ -1,0 +1,169 @@
+{
+  "summary": {
+    "key": "eu:760267",
+    "server": "EU",
+    "id": "760267",
+    "name": "Consumed Genome",
+    "desc": "Boosts elemental damage (20%, all) and if Pure Noblesse Title or Old Crown Fragment is equipped, boosts ATK, DEF, REC (15%) each turn (6 turns max) and adds boosts OD gauge fill rate at turn's end (400 OD) for 3 turns to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Old Crown Fragment, Pure Noblesse Title",
+    "searchText": "Consumed Genome Boosts elemental damage (20%, all) and if Pure Noblesse Title or Old Crown Fragment is equipped, boosts ATK, DEF, REC (15%) each turn (6 turns max) and adds boosts OD gauge fill rate at turn's end (400 OD) for 3 turns to BB/SBB self 760267"
+  },
+  "raw": {
+    "desc": "Boosts elemental damage (20%, all) and if Pure Noblesse Title or Old Crown Fragment is equipped, boosts ATK, DEF, REC (15%) each turn (6 turns max) and adds boosts OD gauge fill rate at turn's end (400 OD) for 3 turns to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 20,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      },
+      {
+        "atk% max buff": 90,
+        "conditions": [
+          {
+            "item required": [
+              "701053",
+              "701047"
+            ]
+          }
+        ],
+        "def% max buff": 90,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 90,
+        "turn count": 6
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701053",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "od fill rate buff turns (132)": 3,
+            "od fill rate% buff": 40,
+            "proc id": "84",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "760267",
+    "name": "Consumed Genome",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "dark units do extra elemental weakness dmg: true / earth units do extra elemental weakness dmg: true / elemental weakness multiplier%: 20 / fire units do extra elemental weakness dmg: true / light units do extra elemental weakness dmg: true / passive id: 50 / passive target: party / thunder units do extra elemental weakness dmg: true",
+      "raw": {
+        "conditions": [],
+        "dark units do extra elemental weakness dmg": true,
+        "earth units do extra elemental weakness dmg": true,
+        "elemental weakness multiplier%": 20,
+        "fire units do extra elemental weakness dmg": true,
+        "light units do extra elemental weakness dmg": true,
+        "passive id": "50",
+        "passive target": "party",
+        "thunder units do extra elemental weakness dmg": true,
+        "water units do extra elemental weakness dmg": true
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 90 / def% max buff: 90 / increase from min to max: 1 / passive id: 105 / passive target: self / rec% max buff: 90 / turn count: 6",
+      "raw": {
+        "atk% max buff": 90,
+        "conditions": [
+          {
+            "item required": [
+              "701053",
+              "701047"
+            ]
+          }
+        ],
+        "def% max buff": 90,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "rec% max buff": 90,
+        "turn count": 6
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"od fill rate buff turns (132)\":3,\"od fill rate% buff\":40,\"proc id\":\"84\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701053",
+              "701047"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "od fill rate buff turns (132)": 3,
+            "od fill rate% buff": 40,
+            "proc id": "84",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Old Crown Fragment, Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701053",
+          "701047"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Old Crown Fragment, Pure Noblesse Title",
+      "raw": {
+        "item required": [
+          "701053",
+          "701047"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "key": "eu:750257",
+    "server": "EU",
+    "id": "750257",
+    "name": "Summoning Memories",
+    "desc": "Boosts ATK, DEF, REC relative to remaining HP (0-50%) & reduces damage taken for 2 turns (25%) when HP is below 50% & adds Light Barrier (4000 HP) on BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Summoning Memories Boosts ATK, DEF, REC relative to remaining HP (0-50%) & reduces damage taken for 2 turns (25%) when HP is below 50% & adds Light Barrier (4000 HP) on BB/SBB self 750257"
+  },
+  "raw": {
+    "desc": "Boosts ATK, DEF, REC relative to remaining HP (0-50%) & reduces damage taken for 2 turns (25%) when HP is below 50% & adds Light Barrier (4000 HP) on BB/SBB",
+    "effects": [
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 50,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 50,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 50
+      },
+      {
+        "conditions": [],
+        "hp below % buff activation": 50,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 4000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "750257",
+    "name": "Summoning Memories",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% base buff: 0 / atk% extra buff based on hp: 50 / buff proportional to hp: remaining / def% base buff: 0 / def% extra buff based on hp: 50 / passive id: 46 / passive target: self / rec% base buff: 0",
+      "raw": {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 50,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 50,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 50
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hp below % buff activation: 50 / passive id: 55 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp below % buff activation": 50,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"light\",\"elemental barrier hp\":4000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 4000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "key": "gl:850178",
+    "server": "GL",
+    "id": "850178",
+    "name": "Psychic Mastery",
+    "desc": "Adds Light element and great HP restoration for 3 turns to BB/SBB & 50% damage counter",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Psychic Mastery Adds Light element and great HP restoration for 3 turns to BB/SBB & 50% damage counter self 850178"
+  },
+  "raw": {
+    "desc": "Adds Light element and great HP restoration for 3 turns to BB/SBB & 50% damage counter",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "light"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 3500,
+            "gradual heal low": 3000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 15,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "dmg% reflect chance%": 100,
+        "dmg% reflect high": 50,
+        "dmg% reflect low": 50,
+        "passive id": "26",
+        "passive target": "self"
+      }
+    ],
+    "id": "850178",
+    "name": "Psychic Mastery",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"light\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "light"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"gradual heal high\":3500,\"gradual heal low\":3000,\"gradual heal turns (8)\":3,\"proc id\":\"3\",\"rec added% (from target)\":15,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "gradual heal high": 3500,
+            "gradual heal low": 3000,
+            "gradual heal turns (8)": 3,
+            "proc id": "3",
+            "rec added% (from target)": 15,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "dmg% reflect chance%: 100 / dmg% reflect high: 50 / dmg% reflect low: 50 / passive id: 26 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "dmg% reflect chance%": 100,
+        "dmg% reflect high": 50,
+        "dmg% reflect low": 50,
+        "passive id": "26",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

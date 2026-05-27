@@ -1,0 +1,133 @@
+{
+  "summary": {
+    "key": "gl:830147",
+    "server": "GL",
+    "id": "830147",
+    "name": "Soul of the Watcher",
+    "desc": "40% boost to HP, Atk & adds slight BB boost when damaged effect to BB/SBB for 3 turns when Bow of Andaria is equipped",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Bow of Andaria",
+    "searchText": "Soul of the Watcher 40% boost to HP, Atk & adds slight BB boost when damaged effect to BB/SBB for 3 turns when Bow of Andaria is equipped self 830147"
+  },
+  "raw": {
+    "desc": "40% boost to HP, Atk & adds slight BB boost when damaged effect to BB/SBB for 3 turns when Bow of Andaria is equipped",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "818922"
+            ]
+          }
+        ],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "818922"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill when attacked high": 3,
+            "bc fill when attacked low": 2,
+            "bc fill when attacked turns (38)": 3,
+            "bc fill when attacked%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "20",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "830147",
+    "name": "Soul of the Watcher",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 40 / hp% buff: 40 / passive id: 1 / passive target: self",
+      "raw": {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "818922"
+            ]
+          }
+        ],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bc fill when attacked high\":3,\"bc fill when attacked low\":2,\"bc fill when attacked turns (38)\":3,\"bc fill when attacked%\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"20\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "818922"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill when attacked high": 3,
+            "bc fill when attacked low": 2,
+            "bc fill when attacked turns (38)": 3,
+            "bc fill when attacked%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "20",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Bow of Andaria",
+      "raw": {
+        "item required": [
+          "818922"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Bow of Andaria",
+      "raw": {
+        "item required": [
+          "818922"
+        ]
+      }
+    }
+  ]
+}

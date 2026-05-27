@@ -1,0 +1,177 @@
+{
+  "summary": {
+    "key": "eu:750237",
+    "server": "EU",
+    "id": "750237",
+    "name": "Rest in Peace",
+    "desc": "When Blink's Glasses is equipped, boosts all parameters (20%) and adds reduce Thunder and Dark damage (15%) for 1 turn and raise normal hit amount (+2) for 3 turns to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Blink's Glasses",
+    "searchText": "Rest in Peace When Blink's Glasses is equipped, boosts all parameters (20%) and adds reduce Thunder and Dark damage (15%) for 1 turn and raise normal hit amount (+2) for 3 turns to BB/SBB self 750237"
+  },
+  "raw": {
+    "desc": "When Blink's Glasses is equipped, boosts all parameters (20%) and adds reduce Thunder and Dark damage (15%) for 1 turn and raise normal hit amount (+2) for 3 turns to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "700018"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% mitigation for elemental attacks": 15,
+            "dmg% mitigation for elemental attacks buff turns": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "mitigate dark attacks": true,
+            "mitigate thunder attacks": true,
+            "proc id": "39",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700018"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "extra hits dmg%": 20,
+            "hit increase buff turns (50)": 3,
+            "hit increase/hit": 2,
+            "proc id": "26",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "750237",
+    "name": "Rest in Peace",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "700018"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"dmg% mitigation for elemental attacks\":15,\"dmg% mitigation for elemental attacks buff turns\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"mitigate dark attacks\":true,\"mitigate thunder attacks\":true,\"proc id\":\"39\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% mitigation for elemental attacks": 15,
+            "dmg% mitigation for elemental attacks buff turns": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "mitigate dark attacks": true,
+            "mitigate thunder attacks": true,
+            "proc id": "39",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"extra hits dmg%\":20,\"hit increase buff turns (50)\":3,\"hit increase/hit\":2,\"proc id\":\"26\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700018"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "extra hits dmg%": 20,
+            "hit increase buff turns (50)": 3,
+            "hit increase/hit": 2,
+            "proc id": "26",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Blink's Glasses",
+      "raw": {
+        "item required": [
+          "700018"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Blink's Glasses",
+      "raw": {
+        "item required": [
+          "700018"
+        ]
+      }
+    }
+  ]
+}

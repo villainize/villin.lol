@@ -1,0 +1,143 @@
+{
+  "summary": {
+    "key": "gl:810327",
+    "server": "GL",
+    "id": "810327",
+    "name": "Shapeshifter",
+    "desc": "30% boost to all parameters when Wolven Shroud is equipped or when Ravenna is in the same squad, raises normal hit amount & adds critical hit rate boost to BB/SBB for 3 turns",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs unit: Unit 840320",
+    "searchText": "Shapeshifter 30% boost to all parameters when Wolven Shroud is equipped or when Ravenna is in the same squad, raises normal hit amount & adds critical hit rate boost to BB/SBB for 3 turns self 810327"
+  },
+  "raw": {
+    "desc": "30% boost to all parameters when Wolven Shroud is equipped or when Ravenna is in the same squad, raises normal hit amount & adds critical hit rate boost to BB/SBB for 3 turns",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "unit required": "840320"
+          },
+          {
+            "item required": [
+              "838001"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "810327",
+    "name": "Shapeshifter",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "unit required": "840320"
+          },
+          {
+            "item required": [
+              "838001"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hit increase/hit: 1 / passive id: 37 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs unit: Unit 840320",
+      "raw": {
+        "unit required": "840320"
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Needs item: Wolven Shroud",
+      "raw": {
+        "item required": [
+          "838001"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "summary": {
+    "key": "jp:10600",
+    "server": "JP",
+    "id": "10600",
+    "name": "永遠なる忠誠",
+    "desc": "ＢＢ及びＳＢＢに「味方のＢＢゲージを増加」を追加＆「氷輝天鎧レーゼ」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: 氷輝天鎧レーゼ",
+    "searchText": "永遠なる忠誠 ＢＢ及びＳＢＢに「味方のＢＢゲージを増加」を追加＆「氷輝天鎧レーゼ」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ self 10600"
+  },
+  "raw": {
+    "desc": "ＢＢ及びＳＢＢに「味方のＢＢゲージを増加」を追加＆「氷輝天鎧レーゼ」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47206"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge": 4,
+            "proc id": "31",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "10600",
+    "name": "永遠なる忠誠",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47206"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"increase bb gauge\":4,\"proc id\":\"31\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "increase bb gauge": 4,
+            "proc id": "31",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: 氷輝天鎧レーゼ",
+      "raw": {
+        "item required": [
+          "47206"
+        ]
+      }
+    }
+  ]
+}

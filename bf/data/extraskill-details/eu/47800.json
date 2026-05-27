@@ -1,0 +1,164 @@
+{
+  "summary": {
+    "key": "eu:47800",
+    "server": "EU",
+    "id": "47800",
+    "name": "Creation Beyond Reason",
+    "desc": "Boosts all parameters (40%) when status boost type sphere is equipped & boosts all parameters (15%, all) & boosts OD gauge fill rate (50%) & reduces BB gauge required for BB (5%, all) & adds Spark vulnerability infliction (30%) for 2 turns effect to BB/SB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Status Boost",
+    "searchText": "Creation Beyond Reason Boosts all parameters (40%) when status boost type sphere is equipped & boosts all parameters (15%, all) & boosts OD gauge fill rate (50%) & reduces BB gauge required for BB (5%, all) & adds Spark vulnerability infliction (30%) for 2 turns effect to BB/SB self 47800"
+  },
+  "raw": {
+    "desc": "Boosts all parameters (40%) when status boost type sphere is equipped & boosts all parameters (15%, all) & boosts OD gauge fill rate (50%) & reduces BB gauge required for BB (5%, all) & adds Spark vulnerability infliction (30%) for 2 turns effect to BB/SB",
+    "effects": [
+      {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      },
+      {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 15
+      },
+      {
+        "conditions": [],
+        "od fill rate%": 50,
+        "passive id": "70",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "party",
+        "reduced bb bc cost%": 5
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 100,
+            "spark dmg received debuff turns (94)": 2,
+            "spark dmg% received": 30,
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    ],
+    "id": "47800",
+    "name": "Creation Beyond Reason",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 40 / def% buff: 40 / hp% buff: 40 / passive id: 1 / passive target: self / rec% buff: 40",
+      "raw": {
+        "atk% buff": 40,
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "def% buff": 40,
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 40
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 15 / def% buff: 15 / hp% buff: 15 / passive id: 1 / passive target: party / rec% buff: 15",
+      "raw": {
+        "atk% buff": 15,
+        "conditions": [],
+        "def% buff": 15,
+        "hp% buff": 15,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 15
+      }
+    },
+    {
+      "index": 3,
+      "summary": "od fill rate%: 50 / passive id: 70 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "od fill rate%": 50,
+        "passive id": "70",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 48 / passive target: party / reduced bb bc cost%: 5",
+      "raw": {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "party",
+        "reduced bb bc cost%": 5
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"58\",\"spark dmg received apply%\":100,\"spark dmg received debuff turns (94)\":2,\"spark dmg% received\":30,\"target area\":\"single\",\"target type\":\"enemy\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "58",
+            "spark dmg received apply%": 100,
+            "spark dmg received debuff turns (94)": 2,
+            "spark dmg% received": 30,
+            "target area": "single",
+            "target type": "enemy"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Status Boost",
+      "raw": {
+        "sphere category required": "Status Boost",
+        "sphere category required (raw)": "1"
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "key": "eu:760186",
+    "server": "EU",
+    "id": "760186",
+    "name": "Invisible Presence",
+    "desc": "Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & Chances to drain HP (100% to drain 10-15%) and chance to reduce damage taken to 1 (20%).",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Invisible Presence Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & Chances to drain HP (100% to drain 10-15%) and chance to reduce damage taken to 1 (20%). self 760186"
+  },
+  "raw": {
+    "desc": "Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & Chances to drain HP (100% to drain 10-15%) and chance to reduce damage taken to 1 (20%).",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 15,
+        "hp drain% low": 10,
+        "passive id": "17",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      }
+    ],
+    "id": "760186",
+    "name": "Invisible Presence",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hp drain chance%: 100 / hp drain% high: 15 / hp drain% low: 10 / passive id: 17 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 15,
+        "hp drain% low": 10,
+        "passive id": "17",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 43 / passive target: self / take 1 dmg%: 20",
+      "raw": {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      }
+    }
+  ],
+  "conditions": []
+}

@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "key": "gl:820948",
+    "server": "GL",
+    "id": "820948",
+    "name": "Innocent Younger Sister",
+    "desc": "Fills BB gauge each turn for all allies when Serpent Legacy Hilda is in the same squad or when BB gauge sphere is equipped, 20% Atk, Def each turn (3 times) for all allies, 120% spark damage, negates all status ailments and Atk, Def, Rec reduction & add to BB (Removes all status ailments and Atk, Def, Rec reduction)",
+    "rarity": "8",
+    "rarityLabel": "Tier 8",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 2,
+    "conditionSummary": "Needs unit: Unit 820930",
+    "searchText": "Innocent Younger Sister Fills BB gauge each turn for all allies when Serpent Legacy Hilda is in the same squad or when BB gauge sphere is equipped, 20% Atk, Def each turn (3 times) for all allies, 120% spark damage, negates all status ailments and Atk, Def, Rec reduction & add to BB (Removes all status ailments and Atk, Def, Rec reduction) self 820948"
+  },
+  "raw": {
+    "desc": "Fills BB gauge each turn for all allies when Serpent Legacy Hilda is in the same squad or when BB gauge sphere is equipped, 20% Atk, Def each turn (3 times) for all allies, 120% spark damage, negates all status ailments and Atk, Def, Rec reduction & add to BB (Removes all status ailments and Atk, Def, Rec reduction)",
+    "effects": [
+      {
+        "bc fill per turn": 5,
+        "conditions": [
+          {
+            "unit required": "820930"
+          },
+          {
+            "sphere category required": "BB Gauge",
+            "sphere category required (raw)": "6"
+          }
+        ],
+        "passive id": "9",
+        "passive target": "party"
+      },
+      {
+        "atk% max buff": 60,
+        "conditions": [],
+        "def% max buff": 60,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "turn count": 3
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 120,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "820948",
+    "name": "Innocent Younger Sister",
+    "rarity": "8",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill per turn: 5 / passive id: 9 / passive target: party",
+      "raw": {
+        "bc fill per turn": 5,
+        "conditions": [
+          {
+            "unit required": "820930"
+          },
+          {
+            "sphere category required": "BB Gauge",
+            "sphere category required (raw)": "6"
+          }
+        ],
+        "passive id": "9",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 60 / def% max buff: 60 / increase from min to max: 1 / passive id: 105 / passive target: party / turn count: 3",
+      "raw": {
+        "atk% max buff": 60,
+        "conditions": [],
+        "def% max buff": 60,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "party",
+        "turn count": 3
+      }
+    },
+    {
+      "index": 3,
+      "summary": "damage% for spark: 120 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "damage% for spark": 120,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk down resist%: 100 / curse resist%: 100 / def down resist%: 100 / injury resist%: 100 / paralysis resist%: 100 / passive id: 73 / passive target: self / poison resist%: 100",
+      "raw": {
+        "atk down resist%": 100,
+        "conditions": [],
+        "curse resist%": 100,
+        "def down resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "73",
+        "passive target": "self",
+        "poison resist%": 100,
+        "rec down resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      }
+    },
+    {
+      "index": 5,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs unit: Unit 820930",
+      "raw": {
+        "unit required": "820930"
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Sphere category: BB Gauge",
+      "raw": {
+        "sphere category required": "BB Gauge",
+        "sphere category required (raw)": "6"
+      }
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "summary": {
+    "key": "eu:740146",
+    "server": "EU",
+    "id": "740146",
+    "name": "Shiver of Combat",
+    "desc": "If Aries' Hammers or Noblesse Title equipped, Boosts critical damage (150%) for 2 turns on critical & If Aries' Hammers equipped, Adds Boosts Spark dmg (100%) for 3 turns to BB/SBB and boosts DEF (120%) for 2 turns when HP are below 50%",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 4,
+    "conditionSummary": "Needs item: Noblesse Title",
+    "searchText": "Shiver of Combat If Aries' Hammers or Noblesse Title equipped, Boosts critical damage (150%) for 2 turns on critical & If Aries' Hammers equipped, Adds Boosts Spark dmg (100%) for 3 turns to BB/SBB and boosts DEF (120%) for 2 turns when HP are below 50% self 740146"
+  },
+  "raw": {
+    "desc": "If Aries' Hammers or Noblesse Title equipped, Boosts critical damage (150%) for 2 turns on critical & If Aries' Hammers equipped, Adds Boosts Spark dmg (100%) for 3 turns to BB/SBB and boosts DEF (120%) for 2 turns when HP are below 50%",
+    "effects": [
+      {
+        "buff": {
+          "buff turns (84)": "2",
+          "unknown buff id": "84",
+          "unknown buff params": "1.5"
+        },
+        "conditions": [
+          {
+            "item required": [
+              "701009"
+            ]
+          },
+          {
+            "item required": [
+              "701013"
+            ]
+          }
+        ],
+        "on crit activation chance%": 100,
+        "passive id": "89",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701013"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701013"
+            ]
+          }
+        ],
+        "def% buff": 120,
+        "hp below % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "self"
+      }
+    ],
+    "id": "740146",
+    "name": "Shiver of Combat",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "buff: {\"buff turns (84)\":\"2\",\"unknown buff id\":\"84\",\"unknown buff params\":\"1.5\"} / on crit activation chance%: 100 / passive id: 89 / passive target: self",
+      "raw": {
+        "buff": {
+          "buff turns (84)": "2",
+          "unknown buff id": "84",
+          "unknown buff params": "1.5"
+        },
+        "conditions": [
+          {
+            "item required": [
+              "701009"
+            ]
+          },
+          {
+            "item required": [
+              "701013"
+            ]
+          }
+        ],
+        "on crit activation chance%": 100,
+        "passive id": "89",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"23\",\"spark dmg% buff (40)\":100,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701013"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "def% buff: 120 / hp below % buff requirement: 50 / passive id: 11 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701013"
+            ]
+          }
+        ],
+        "def% buff": 120,
+        "hp below % buff requirement": 50,
+        "passive id": "11",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Noblesse Title",
+      "raw": {
+        "item required": [
+          "701009"
+        ]
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Needs item: Aries' Hammers",
+      "raw": {
+        "item required": [
+          "701013"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Aries' Hammers",
+      "raw": {
+        "item required": [
+          "701013"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Aries' Hammers",
+      "raw": {
+        "item required": [
+          "701013"
+        ]
+      }
+    }
+  ]
+}

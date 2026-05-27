@@ -1,0 +1,171 @@
+{
+  "summary": {
+    "key": "eu:720257",
+    "server": "EU",
+    "id": "720257",
+    "name": "Sparring Partner",
+    "desc": "Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & when one of the Siegfried spheres is equipped, raises ATK parameter limits to 130000 and boosts ATK of Water types (50%, all)",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Siegfried's Hybrid Weapon, Siegfried's Fanged Gun, Siegfried's Propelled Shield, Siegfried's Doping Spaulder, Siegfried Draconic Rage",
+    "searchText": "Sparring Partner Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & when one of the Siegfried spheres is equipped, raises ATK parameter limits to 130000 and boosts ATK of Water types (50%, all) self 720257"
+  },
+  "raw": {
+    "desc": "Adds boost critical hit rate (60%) for 3 turns to BB/SBB/UBB & when one of the Siegfried spheres is equipped, raises ATK parameter limits to 130000 and boosts ATK of Water types (50%, all)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 50,
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "passive id": "1",
+        "passive target": "party"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "720257",
+    "name": "Sparring Partner",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 50 / passive id: 1 / passive target: party",
+      "raw": {
+        "atk% buff": 50,
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "passive id": "1",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "increase atk cap: 130000 / passive id: 143 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "700065",
+              "700061",
+              "700062",
+              "700063",
+              "700067"
+            ]
+          }
+        ],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Siegfried's Hybrid Weapon, Siegfried's Fanged Gun, Siegfried's Propelled Shield, Siegfried's Doping Spaulder, Siegfried Draconic Rage",
+      "raw": {
+        "item required": [
+          "700065",
+          "700061",
+          "700062",
+          "700063",
+          "700067"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Siegfried's Hybrid Weapon, Siegfried's Fanged Gun, Siegfried's Propelled Shield, Siegfried's Doping Spaulder, Siegfried Draconic Rage",
+      "raw": {
+        "item required": [
+          "700065",
+          "700061",
+          "700062",
+          "700063",
+          "700067"
+        ]
+      }
+    }
+  ]
+}

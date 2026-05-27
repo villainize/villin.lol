@@ -1,0 +1,138 @@
+{
+  "summary": {
+    "key": "gl:850288",
+    "server": "GL",
+    "id": "850288",
+    "name": "The Ace of Spades",
+    "desc": "50% Atk (Light) for all allies, 0-100% Atk, Def relative to remaining HP, 30% all parameters & add to BB/SBB (Adds Light barrier)<br>25% Light elemental damage for all allies, 40% Atk, Def each turn (3 times) & raises normal hit amount in Guild Raid",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "The Ace of Spades 50% Atk (Light) for all allies, 0-100% Atk, Def relative to remaining HP, 30% all parameters & add to BB/SBB (Adds Light barrier)<br>25% Light elemental damage for all allies, 40% Atk, Def each turn (3 times) & raises normal hit amount in Guild Raid self 850288"
+  },
+  "raw": {
+    "desc": "50% Atk (Light) for all allies, 0-100% Atk, Def relative to remaining HP, 30% all parameters & add to BB/SBB (Adds Light barrier)<br>25% Light elemental damage for all allies, 40% Atk, Def each turn (3 times) & raises normal hit amount in Guild Raid",
+    "effects": [
+      {
+        "atk% buff": 50,
+        "conditions": [],
+        "elements buffed": [
+          "light"
+        ],
+        "passive id": "2",
+        "passive target": "party"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 7000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "850288",
+    "name": "The Ace of Spades",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 50 / elements buffed: [\"light\"] / passive id: 2 / passive target: party",
+      "raw": {
+        "atk% buff": 50,
+        "conditions": [],
+        "elements buffed": [
+          "light"
+        ],
+        "passive id": "2",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% base buff: 0 / atk% extra buff based on hp: 100 / buff proportional to hp: remaining / def% base buff: 0 / def% extra buff based on hp: 100 / passive id: 46 / passive target: self",
+      "raw": {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"light\",\"elemental barrier hp\":7000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 7000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

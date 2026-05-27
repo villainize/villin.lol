@@ -1,0 +1,162 @@
+{
+  "summary": {
+    "key": "gl:811028",
+    "server": "GL",
+    "id": "811028",
+    "name": "Thermal Breach",
+    "desc": "150% spark damage when Lleva or Bonnie is in squad or spark type sphere equipped, 0-100% Atk, Def, Rec relative to remaining HP, probable damage reduction to 1 & 1 KO resistance when HP is below 40%",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 3,
+    "conditionSummary": "Needs unit: Unit 841020",
+    "searchText": "Thermal Breach 150% spark damage when Lleva or Bonnie is in squad or spark type sphere equipped, 0-100% Atk, Def, Rec relative to remaining HP, probable damage reduction to 1 & 1 KO resistance when HP is below 40% self 811028"
+  },
+  "raw": {
+    "desc": "150% spark damage when Lleva or Bonnie is in squad or spark type sphere equipped, 0-100% Atk, Def, Rec relative to remaining HP, probable damage reduction to 1 & 1 KO resistance when HP is below 40%",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "unit required": "841020"
+          },
+          {
+            "unit required": "840110"
+          },
+          {
+            "sphere category required": "Spark",
+            "sphere category required (raw)": "11"
+          }
+        ],
+        "damage% for spark": 150,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      },
+      {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 40,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    ],
+    "id": "811028",
+    "name": "Thermal Breach",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "damage% for spark: 150 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "unit required": "841020"
+          },
+          {
+            "unit required": "840110"
+          },
+          {
+            "sphere category required": "Spark",
+            "sphere category required (raw)": "11"
+          }
+        ],
+        "damage% for spark": 150,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% base buff: 0 / atk% extra buff based on hp: 100 / buff proportional to hp: remaining / def% base buff: 0 / def% extra buff based on hp: 100 / passive id: 46 / passive target: self / rec% base buff: 0",
+      "raw": {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 100,
+        "passive id": "46",
+        "passive target": "self",
+        "rec% base buff": 0,
+        "rec% extra buff based on hp": 100
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 43 / passive target: self / take 1 dmg%: 20",
+      "raw": {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 20
+      }
+    },
+    {
+      "index": 4,
+      "summary": "buff: {\"angel idol buff (12)\":true,\"angel idol recover hp%\":100,\"buff turns (12)\":\"-1\"} / hp below % buff activation: 40 / passive id: 55 / passive target: self",
+      "raw": {
+        "buff": {
+          "angel idol buff (12)": true,
+          "angel idol recover hp%": 100,
+          "buff turns (12)": "-1"
+        },
+        "conditions": [],
+        "hp below % buff activation": 40,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs unit: Unit 841020",
+      "raw": {
+        "unit required": "841020"
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Needs unit: Unit 840110",
+      "raw": {
+        "unit required": "840110"
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 3,
+      "summary": "Sphere category: Spark",
+      "raw": {
+        "sphere category required": "Spark",
+        "sphere category required (raw)": "11"
+      }
+    }
+  ]
+}

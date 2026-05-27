@@ -1,0 +1,127 @@
+{
+  "summary": {
+    "key": "eu:720166",
+    "server": "EU",
+    "id": "720166",
+    "name": "Avalon's Essence",
+    "desc": "Boost to Max HP (40%) & Boosts BC and HC drop rate (15% BC, 15% HC, SELF) & If Temporal Cybernetic Skin is equipped, adds Boosts ATK and DEF relative to HP (20%) for 3 turns to BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Temporal Cybernetic Skin",
+    "searchText": "Avalon's Essence Boost to Max HP (40%) & Boosts BC and HC drop rate (15% BC, 15% HC, SELF) & If Temporal Cybernetic Skin is equipped, adds Boosts ATK and DEF relative to HP (20%) for 3 turns to BB/SBB self 720166"
+  },
+  "raw": {
+    "desc": "Boost to Max HP (40%) & Boosts BC and HC drop rate (15% BC, 15% HC, SELF) & If Temporal Cybernetic Skin is equipped, adds Boosts ATK and DEF relative to HP (20%) for 3 turns to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "bc drop rate% buff": 15,
+        "conditions": [],
+        "hc drop rate% buff": 15,
+        "passive id": "19",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701020"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "% converted turns": 3,
+            "atk% buff (46)": 20,
+            "converted attribute": "hp",
+            "def% buff (47)": 20,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "24",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "720166",
+    "name": "Avalon's Essence",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "hp% buff: 40 / passive id: 1 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp% buff": 40,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "bc drop rate% buff: 15 / hc drop rate% buff: 15 / passive id: 19 / passive target: self",
+      "raw": {
+        "bc drop rate% buff": 15,
+        "conditions": [],
+        "hc drop rate% buff": 15,
+        "passive id": "19",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"% converted turns\":3,\"atk% buff (46)\":20,\"converted attribute\":\"hp\",\"def% buff (47)\":20,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"24\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701020"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "% converted turns": 3,
+            "atk% buff (46)": 20,
+            "converted attribute": "hp",
+            "def% buff (47)": 20,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "24",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Temporal Cybernetic Skin",
+      "raw": {
+        "item required": [
+          "701020"
+        ]
+      }
+    }
+  ]
+}

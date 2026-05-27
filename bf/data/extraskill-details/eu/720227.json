@@ -1,0 +1,107 @@
+{
+  "summary": {
+    "key": "eu:720227",
+    "server": "EU",
+    "id": "720227",
+    "name": "Wave Mastery",
+    "desc": "Boosts ATK, DEF (20%) & if Wastelands Sailor Hat is equipped, adds boost Spark damage (130%) to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Wastelands Sailor Hat",
+    "searchText": "Wave Mastery Boosts ATK, DEF (20%) & if Wastelands Sailor Hat is equipped, adds boost Spark damage (130%) to BB/SBB self 720227"
+  },
+  "raw": {
+    "desc": "Boosts ATK, DEF (20%) & if Wastelands Sailor Hat is equipped, adds boost Spark damage (130%) to BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701027"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 130,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "720227",
+    "name": "Wave Mastery",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / passive id: 1 / passive target: self",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"23\",\"spark dmg% buff (40)\":130,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701027"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "23",
+            "spark dmg% buff (40)": 130,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Wastelands Sailor Hat",
+      "raw": {
+        "item required": [
+          "701027"
+        ]
+      }
+    }
+  ]
+}

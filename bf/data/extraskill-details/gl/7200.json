@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "key": "gl:7200",
+    "server": "GL",
+    "id": "7200",
+    "name": "To the Unlonely",
+    "desc": "Adds status ailment negation effect to BB/SBB for 3 turns & 20% boost to all parameters when Reeze's Armor is equipped",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Reeze's Armor",
+    "searchText": "To the Unlonely Adds status ailment negation effect to BB/SBB for 3 turns & 20% boost to all parameters when Reeze's Armor is equipped self 7200"
+  },
+  "raw": {
+    "desc": "Adds status ailment negation effect to BB/SBB for 3 turns & 20% boost to all parameters when Reeze's Armor is equipped",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47206"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "7200",
+    "name": "To the Unlonely",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47206"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"17\",\"resist curse% (34)\":100,\"resist injury% (33)\":100,\"resist paralysis% (35)\":100,\"resist poison% (30)\":100,\"resist sick% (32)\":100,\"resist status ails turns\":3,\"resist weaken% (31)\":100,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Reeze's Armor",
+      "raw": {
+        "item required": [
+          "47206"
+        ]
+      }
+    }
+  ]
+}

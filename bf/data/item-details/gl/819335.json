@@ -1,0 +1,156 @@
+{
+  "summary": {
+    "key": "gl:819335",
+    "server": "GL",
+    "id": "819335",
+    "name": "Absolute Silence",
+    "type": "sphere",
+    "typeLabel": "Sphere",
+    "rarity": "7",
+    "desc": "55% all parameters (Guardian), probable damage reduction to 1, damage taken fills BB gauge and may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation], restores HP each turn & increases BB activation cost",
+    "maxStack": 1,
+    "sellPrice": 999999,
+    "sphereType": 10,
+    "sphereTypeText": "Damage Reducing",
+    "maxEquipped": null,
+    "raid": true,
+    "effectCount": 7,
+    "recipeCount": 3,
+    "usageCount": 0,
+    "image": "items/item/sphere_thum_819244.png"
+  },
+  "raw": {
+    "desc": "55% all parameters (Guardian), probable damage reduction to 1, damage taken fills BB gauge and may restore HP, add to BB/SBB [chance to purge Atk, Def, Rec reduction negation], restores HP each turn & increases BB activation cost",
+    "effect": [
+      {
+        "passive id": "43",
+        "take 1 dmg%": 25
+      },
+      {
+        "passive id": "33",
+        "rec% added (turn heal)": 20,
+        "turn heal high": 8000,
+        "turn heal low": 6000
+      },
+      {
+        "dmg% to hp% when attacked chance%": 50,
+        "dmg% to hp% when attacked high": 40,
+        "dmg% to hp% when attacked low": 40,
+        "passive id": "24"
+      },
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "hp% buff": 55,
+        "passive id": "3",
+        "rec% buff": 55,
+        "unit type buffed": "guardian"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "120,121,122,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "passive id": "48",
+        "reduced bb bc cost%": -15
+      },
+      {
+        "bc fill when attacked high": 8,
+        "bc fill when attacked low": 6,
+        "bc fill when attacked%": 100,
+        "passive id": "25"
+      }
+    ],
+    "id": 819335,
+    "max_stack": 1,
+    "name": "Absolute Silence",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819244
+        },
+        {
+          "count": 2,
+          "id": 819332
+        },
+        {
+          "count": 7,
+          "id": 890033
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 10,
+    "sphere type text": "Damage Reducing",
+    "thumbnail": "sphere_thum_819244.png",
+    "type": "sphere"
+  },
+  "effects": [
+    {
+      "passive id": "43",
+      "take 1 dmg%": 25
+    },
+    {
+      "passive id": "33",
+      "rec% added (turn heal)": 20,
+      "turn heal high": 8000,
+      "turn heal low": 6000
+    },
+    {
+      "dmg% to hp% when attacked chance%": 50,
+      "dmg% to hp% when attacked high": 40,
+      "dmg% to hp% when attacked low": 40,
+      "passive id": "24"
+    },
+    {
+      "atk% buff": 55,
+      "def% buff": 55,
+      "hp% buff": 55,
+      "passive id": "3",
+      "rec% buff": 55,
+      "unit type buffed": "guardian"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "target area": "aoe",
+          "target type": "enemy",
+          "unknown proc id": "10019",
+          "unknown proc param": "120,121,122,0,0,0,0,0,0,25"
+        }
+      ]
+    },
+    {
+      "passive id": "48",
+      "reduced bb bc cost%": -15
+    },
+    {
+      "bc fill when attacked high": 8,
+      "bc fill when attacked low": 6,
+      "bc fill when attacked%": 100,
+      "passive id": "25"
+    }
+  ],
+  "usage": [],
+  "dictionary": {
+    "lore": "Bestowed upon the best to walk the Halls of Akras.<br><br>The gods themselves dare not speak out of turn in your presence."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "key": "gl:850278",
+    "server": "GL",
+    "id": "850278",
+    "name": "Omni-Concept Instantiation",
+    "desc": "10% boost to all parameters of Light types for all allies, adds Def ignoring effect to BB/SBB for 3 turns, adds resistance to 1 KO attack after activating OD & 40% boost to Atk, Def each turn (3 turns max, capping at 120%)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Omni-Concept Instantiation 10% boost to all parameters of Light types for all allies, adds Def ignoring effect to BB/SBB for 3 turns, adds resistance to 1 KO attack after activating OD & 40% boost to Atk, Def each turn (3 turns max, capping at 120%) self 850278"
+  },
+  "raw": {
+    "desc": "10% boost to all parameters of Light types for all allies, adds Def ignoring effect to BB/SBB for 3 turns, adds resistance to 1 KO attack after activating OD & 40% boost to Atk, Def each turn (3 turns max, capping at 120%)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% max buff": 120,
+        "conditions": [],
+        "def% max buff": 120,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 3
+      },
+      {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "106",
+        "unknown passive params": "12,100,1,100,-1"
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "light"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      }
+    ],
+    "id": "850278",
+    "name": "Omni-Concept Instantiation",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% max buff: 120 / def% max buff: 120 / increase from min to max: 1 / passive id: 105 / passive target: self / turn count: 3",
+      "raw": {
+        "atk% max buff": 120,
+        "conditions": [],
+        "def% max buff": 120,
+        "increase from min to max": 1,
+        "passive id": "105",
+        "passive target": "self",
+        "turn count": 3
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive target: self / unknown passive id: 106 / unknown passive params: 12,100,1,100,-1",
+      "raw": {
+        "conditions": [],
+        "passive target": "self",
+        "unknown passive id": "106",
+        "unknown passive params": "12,100,1,100,-1"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk% buff: 10 / def% buff: 10 / elements buffed: [\"light\"] / hp% buff: 10 / passive id: 2 / passive target: party / rec% buff: 10",
+      "raw": {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "elements buffed": [
+          "light"
+        ],
+        "hp% buff": 10,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 10
+      }
+    }
+  ],
+  "conditions": []
+}

@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "key": "jp:17000",
+    "server": "JP",
+    "id": "17000",
+    "name": "神竜のリュミエール",
+    "desc": "ＨＰが５０％以下の時、２ターン、被ダメージを軽減＆ＢＢ及びＳＢＢに「味方全体に３ターン、ＢＣ・ＨＣ出現率をかなりアップ」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "神竜のリュミエール ＨＰが５０％以下の時、２ターン、被ダメージを軽減＆ＢＢ及びＳＢＢに「味方全体に３ターン、ＢＣ・ＨＣ出現率をかなりアップ」を追加 self 17000"
+  },
+  "raw": {
+    "desc": "ＨＰが５０％以下の時、２ターン、被ダメージを軽減＆ＢＢ及びＳＢＢに「味方全体に３ターン、ＢＣ・ＨＣ出現率をかなりアップ」を追加",
+    "effects": [
+      {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 25
+        },
+        "conditions": [],
+        "hp below % buff activation": 50,
+        "passive id": "55",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc drop rate% buff (10)": 35,
+            "drop rate buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "hc drop rate% buff (9)": 35,
+            "proc id": "6",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "17000",
+    "name": "神竜のリュミエール",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "buff: {\"buff turns (36)\":\"1\",\"dmg reduction% buff\":25} / hp below % buff activation: 50 / passive id: 55 / passive target: self",
+      "raw": {
+        "buff": {
+          "buff turns (36)": "1",
+          "dmg reduction% buff": 25
+        },
+        "conditions": [],
+        "hp below % buff activation": 50,
+        "passive id": "55",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bc drop rate% buff (10)\":35,\"drop rate buff turns\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"hc drop rate% buff (9)\":35,\"proc id\":\"6\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc drop rate% buff (10)": 35,
+            "drop rate buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "hc drop rate% buff (9)": 35,
+            "proc id": "6",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

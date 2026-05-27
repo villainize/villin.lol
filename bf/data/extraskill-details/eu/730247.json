@@ -1,0 +1,233 @@
+{
+  "summary": {
+    "key": "eu:730247",
+    "server": "EU",
+    "id": "730247",
+    "name": "Explosive Cruelty",
+    "desc": "Adds probable random status ailment infliction to attack for 3 turn to BB/SBB & If Instable Flask is equipped, boosts HP (30%) and all parameters (10%, all) and boosts Spark damage (70%)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 5,
+    "conditionCount": 3,
+    "conditionSummary": "Needs item: Instable Flask",
+    "searchText": "Explosive Cruelty Adds probable random status ailment infliction to attack for 3 turn to BB/SBB & If Instable Flask is equipped, boosts HP (30%) and all parameters (10%, all) and boosts Spark damage (70%) self 730247"
+  },
+  "raw": {
+    "desc": "Adds probable random status ailment infliction to attack for 3 turn to BB/SBB & If Instable Flask is equipped, boosts HP (30%) and all parameters (10%, all) and boosts Spark damage (70%)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "injury% buff": 20,
+            "proc id": "40",
+            "sick% buff": 15,
+            "target area": "aoe",
+            "target type": "party",
+            "weaken% buff": 15
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "curse% buff": 10,
+            "effect delay time(ms)/frame": "0.0/0",
+            "paralysis% buff": 10,
+            "poison% buff": 10,
+            "proc id": "40",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701030"
+            ]
+          }
+        ],
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [
+          {
+            "item required": [
+              "701030"
+            ]
+          }
+        ],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701030"
+            ]
+          }
+        ],
+        "damage% for spark": 70,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    ],
+    "id": "730247",
+    "name": "Explosive Cruelty",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"injury% buff\":20,\"proc id\":\"40\",\"sick% buff\":15,\"target area\":\"aoe\",\"target type\":\"party\",\"weaken% buff\":15}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "injury% buff": 20,
+            "proc id": "40",
+            "sick% buff": 15,
+            "target area": "aoe",
+            "target type": "party",
+            "weaken% buff": 15
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"buff turns\":3,\"curse% buff\":10,\"effect delay time(ms)/frame\":\"0.0/0\",\"paralysis% buff\":10,\"poison% buff\":10,\"proc id\":\"40\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "curse% buff": 10,
+            "effect delay time(ms)/frame": "0.0/0",
+            "paralysis% buff": 10,
+            "poison% buff": 10,
+            "proc id": "40",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "hp% buff: 30 / passive id: 1 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701030"
+            ]
+          }
+        ],
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk% buff: 10 / def% buff: 10 / hp% buff: 10 / passive id: 1 / passive target: party / rec% buff: 10",
+      "raw": {
+        "atk% buff": 10,
+        "conditions": [
+          {
+            "item required": [
+              "701030"
+            ]
+          }
+        ],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      }
+    },
+    {
+      "index": 5,
+      "summary": "damage% for spark: 70 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701030"
+            ]
+          }
+        ],
+        "damage% for spark": 70,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Instable Flask",
+      "raw": {
+        "item required": [
+          "701030"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: Instable Flask",
+      "raw": {
+        "item required": [
+          "701030"
+        ]
+      }
+    },
+    {
+      "effectIndex": 5,
+      "conditionIndex": 1,
+      "summary": "Needs item: Instable Flask",
+      "raw": {
+        "item required": [
+          "701030"
+        ]
+      }
+    }
+  ]
+}

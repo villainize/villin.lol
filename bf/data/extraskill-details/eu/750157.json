@@ -1,0 +1,133 @@
+{
+  "summary": {
+    "key": "eu:750157",
+    "server": "EU",
+    "id": "750157",
+    "name": "Memory of the Soulmate",
+    "desc": "Damage taken boosts BB gauge (3 BC) & Adds Def ignoring effect for 2 turns to BB/SBB & if Plumatachi's Glasses is equipped, adds probable resistance against 1 KO attack (50%)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Plumatachi's Glasses",
+    "searchText": "Memory of the Soulmate Damage taken boosts BB gauge (3 BC) & Adds Def ignoring effect for 2 turns to BB/SBB & if Plumatachi's Glasses is equipped, adds probable resistance against 1 KO attack (50%) self 750157"
+  },
+  "raw": {
+    "desc": "Damage taken boosts BB gauge (3 BC) & Adds Def ignoring effect for 2 turns to BB/SBB & if Plumatachi's Glasses is equipped, adds probable resistance against 1 KO attack (50%)",
+    "effects": [
+      {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 50,
+        "angel idol recover chance% low": 50,
+        "angel idol recover counts": 1,
+        "angel idol recover hp%": 1,
+        "conditions": [
+          {
+            "item required": [
+              "701033"
+            ]
+          }
+        ],
+        "passive id": "69",
+        "passive target": "self"
+      }
+    ],
+    "id": "750157",
+    "name": "Memory of the Soulmate",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "bc fill when attacked high: 3 / bc fill when attacked low: 3 / bc fill when attacked%: 100 / passive id: 25 / passive target: self",
+      "raw": {
+        "bc fill when attacked high": 3,
+        "bc fill when attacked low": 3,
+        "bc fill when attacked%": 100,
+        "conditions": [],
+        "passive id": "25",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"defense% ignore\":100,\"defense% ignore turns (39)\":2,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"22\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "defense% ignore": 100,
+            "defense% ignore turns (39)": 2,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "22",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "angel idol chance% condition: 0 / angel idol recover chance% high: 50 / angel idol recover chance% low: 50 / angel idol recover counts: 1 / angel idol recover hp%: 1 / passive id: 69 / passive target: self",
+      "raw": {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 50,
+        "angel idol recover chance% low": 50,
+        "angel idol recover counts": 1,
+        "angel idol recover hp%": 1,
+        "conditions": [
+          {
+            "item required": [
+              "701033"
+            ]
+          }
+        ],
+        "passive id": "69",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Plumatachi's Glasses",
+      "raw": {
+        "item required": [
+          "701033"
+        ]
+      }
+    }
+  ]
+}

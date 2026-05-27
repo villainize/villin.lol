@@ -1,0 +1,161 @@
+{
+  "summary": {
+    "key": "eu:720157",
+    "server": "EU",
+    "id": "720157",
+    "name": "Bubble Mastery",
+    "desc": "Adds status ailment removal to BB/SBB and if Enhanced Bubble Generator is equipped, adds Mana Bubble Shield (20% REC) to BB/SBB and boosts REC (30%, all)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Enhanced Bubble Generator",
+    "searchText": "Bubble Mastery Adds status ailment removal to BB/SBB and if Enhanced Bubble Generator is equipped, adds Mana Bubble Shield (20% REC) to BB/SBB and boosts REC (30%, all) self 720157"
+  },
+  "raw": {
+    "desc": "Adds status ailment removal to BB/SBB and if Enhanced Bubble Generator is equipped, adds Mana Bubble Shield (20% REC) to BB/SBB and boosts REC (30%, all)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701031"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "70001",
+            "unknown proc param": "3,20,30"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701031"
+            ]
+          }
+        ],
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 30
+      }
+    ],
+    "id": "720157",
+    "name": "Bubble Mastery",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"10\",\"remove all status ailments\":true,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "10",
+            "remove all status ailments": true,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"target area\":\"aoe\",\"target type\":\"party\",\"unknown proc id\":\"70001\",\"unknown proc param\":\"3,20,30\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701031"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "party",
+            "unknown proc id": "70001",
+            "unknown proc param": "3,20,30"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 1 / passive target: party / rec% buff: 30",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701031"
+            ]
+          }
+        ],
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 30
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Enhanced Bubble Generator",
+      "raw": {
+        "item required": [
+          "701031"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Enhanced Bubble Generator",
+      "raw": {
+        "item required": [
+          "701031"
+        ]
+      }
+    }
+  ]
+}

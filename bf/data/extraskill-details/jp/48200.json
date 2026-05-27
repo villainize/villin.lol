@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "key": "jp:48200",
+    "server": "JP",
+    "id": "48200",
+    "name": "アヴァロンの本質",
+    "desc": "最大ＨＰを３０％アップ＆ＢＣ・ＨＣ出現率をかなりアップ＆「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に３ターン、最大ＨＰに応じて攻撃力・防御力をかなりアップ」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Status Boost",
+    "searchText": "アヴァロンの本質 最大ＨＰを３０％アップ＆ＢＣ・ＨＣ出現率をかなりアップ＆「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に３ターン、最大ＨＰに応じて攻撃力・防御力をかなりアップ」を追加 self 48200"
+  },
+  "raw": {
+    "desc": "最大ＨＰを３０％アップ＆ＢＣ・ＨＣ出現率をかなりアップ＆「ステータス強化系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に３ターン、最大ＨＰに応じて攻撃力・防御力をかなりアップ」を追加",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "% converted turns": 3,
+            "atk% buff (46)": 20,
+            "converted attribute": "hp",
+            "def% buff (47)": 20,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "24",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      },
+      {
+        "bc drop rate% buff": 15,
+        "conditions": [],
+        "hc drop rate% buff": 15,
+        "passive id": "19",
+        "passive target": "self"
+      }
+    ],
+    "id": "48200",
+    "name": "アヴァロンの本質",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"% converted turns\":3,\"atk% buff (46)\":20,\"converted attribute\":\"hp\",\"def% buff (47)\":20,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"24\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "sphere category required": "Status Boost",
+            "sphere category required (raw)": "1"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "% converted turns": 3,
+            "atk% buff (46)": 20,
+            "converted attribute": "hp",
+            "def% buff (47)": 20,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "24",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hp% buff: 30 / passive id: 1 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "bc drop rate% buff: 15 / hc drop rate% buff: 15 / passive id: 19 / passive target: self",
+      "raw": {
+        "bc drop rate% buff": 15,
+        "conditions": [],
+        "hc drop rate% buff": 15,
+        "passive id": "19",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Status Boost",
+      "raw": {
+        "sphere category required": "Status Boost",
+        "sphere category required (raw)": "1"
+      }
+    }
+  ]
+}

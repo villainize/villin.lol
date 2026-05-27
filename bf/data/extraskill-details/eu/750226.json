@@ -1,0 +1,163 @@
+{
+  "summary": {
+    "key": "eu:750226",
+    "server": "EU",
+    "id": "750226",
+    "name": "Dedicated Companion",
+    "desc": "If Arthur's Will equipped or Arthur is in the squad, adds Boosts BB ATK (300%) for 3 turns to BB/SBB and Critical hit fill BB gauge (6 BC)",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 4,
+    "conditionSummary": "Needs unit: Unit 750160",
+    "searchText": "Dedicated Companion If Arthur's Will equipped or Arthur is in the squad, adds Boosts BB ATK (300%) for 3 turns to BB/SBB and Critical hit fill BB gauge (6 BC) self 750226"
+  },
+  "raw": {
+    "desc": "If Arthur's Will equipped or Arthur is in the squad, adds Boosts BB ATK (300%) for 3 turns to BB/SBB and Critical hit fill BB gauge (6 BC)",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "unit required": "750160"
+          },
+          {
+            "item required": [
+              "701022"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk% buff": 300,
+            "buff turns (72)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "45",
+            "sbb atk% buff": 300,
+            "target area": "aoe",
+            "target type": "party",
+            "ubb atk% buff": 300
+          }
+        ]
+      },
+      {
+        "bc fill on crit max": 6,
+        "bc fill on crit min": 6,
+        "bc fill on crit%": 100,
+        "conditions": [
+          {
+            "unit required": "750160"
+          },
+          {
+            "item required": [
+              "701022"
+            ]
+          }
+        ],
+        "passive id": "65",
+        "passive target": "self"
+      }
+    ],
+    "id": "750226",
+    "name": "Dedicated Companion",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bb atk% buff\":300,\"buff turns (72)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"45\",\"sbb atk% buff\":300,\"target area\":\"aoe\",\"target type\":\"party\",\"ubb atk% buff\":300}]",
+      "raw": {
+        "conditions": [
+          {
+            "unit required": "750160"
+          },
+          {
+            "item required": [
+              "701022"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk% buff": 300,
+            "buff turns (72)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "45",
+            "sbb atk% buff": 300,
+            "target area": "aoe",
+            "target type": "party",
+            "ubb atk% buff": 300
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "bc fill on crit max: 6 / bc fill on crit min: 6 / bc fill on crit%: 100 / passive id: 65 / passive target: self",
+      "raw": {
+        "bc fill on crit max": 6,
+        "bc fill on crit min": 6,
+        "bc fill on crit%": 100,
+        "conditions": [
+          {
+            "unit required": "750160"
+          },
+          {
+            "item required": [
+              "701022"
+            ]
+          }
+        ],
+        "passive id": "65",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs unit: Unit 750160",
+      "raw": {
+        "unit required": "750160"
+      }
+    },
+    {
+      "effectIndex": 1,
+      "conditionIndex": 2,
+      "summary": "Needs item: Arthur's Will",
+      "raw": {
+        "item required": [
+          "701022"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs unit: Unit 750160",
+      "raw": {
+        "unit required": "750160"
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 2,
+      "summary": "Needs item: Arthur's Will",
+      "raw": {
+        "item required": [
+          "701022"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bf-db</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Database navigation">
+      <div class="brand-block">
+        <span class="brand-mark">BF</span>
+        <div>
+          <p class="eyebrow">Brave Frontier</p>
+          <h1>bf-db</h1>
+        </div>
+      </div>
+
+      <nav class="nav-list" aria-label="Sections">
+        <button class="nav-item active" data-view="units" type="button">Units</button>
+        <button class="nav-item" data-view="items" type="button">Items</button>
+        <button id="nav-characters" class="nav-item" data-view="characters" type="button">Characters</button>
+        <button class="nav-item" data-view="extra-skills" type="button">Extra Skills</button>
+        <button class="nav-item" data-view="settings" type="button">Settings</button>
+        <button class="nav-item" data-view="paths" type="button">Image Paths</button>
+      </nav>
+
+      <div class="drop-guide compact-panel">
+        <p class="panel-label">Image root</p>
+        <code>assets/images/</code>
+        <p>Use <code>units/img</code> for unit art and <code>items/item</code> for item and sphere icons.</p>
+      </div>
+    </aside>
+
+    <main class="main-stage">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Database remake</p>
+          <h2 id="view-title">Units</h2>
+        </div>
+        <div class="top-actions">
+          <label class="search-field">
+            <span>Search</span>
+            <input id="search-input" type="search" placeholder="Name, element, role, id">
+          </label>
+          <label class="select-field">
+            <span>Server</span>
+            <select id="server-filter">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label class="select-field">
+            <span>Element</span>
+            <select id="element-filter">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label class="select-field">
+            <span id="type-filter-label">Type</span>
+            <select id="type-filter">
+              <option value="all">All</option>
+            </select>
+          </label>
+          <label class="select-field compact-select">
+            <span>Sort</span>
+            <select id="sort-select">
+              <option value="id-asc">ID Up</option>
+              <option value="id-desc">ID Down</option>
+              <option value="name-asc">Name A-Z</option>
+              <option value="name-desc">Name Z-A</option>
+              <option value="rarity-desc">Rarity Down</option>
+              <option value="rarity-asc">Rarity Up</option>
+            </select>
+          </label>
+          <button id="clear-filters" class="mini-action" type="button">Clear</button>
+        </div>
+      </header>
+
+      <section id="units-view" class="view active" aria-labelledby="view-title">
+        <div class="hero-strip">
+          <div>
+            <p class="eyebrow">Red archive shell</p>
+            <h3>Unit archive, thumbnails, items, and clean image routing.</h3>
+            <p>Built as a static project so you can keep expanding the database without touching the older game folders.</p>
+          </div>
+          <div class="stat-row" aria-label="Database stats">
+            <div><strong id="unit-count">0</strong><span>Units</span></div>
+            <div><strong id="item-count">0</strong><span>Items</span></div>
+            <div><strong id="character-count">0</strong><span>Characters</span></div>
+            <div><strong id="extra-skill-count">0</strong><span>Extra Skills</span></div>
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <section class="list-panel" aria-label="Unit list">
+            <div class="result-toolbar">
+              <p id="unit-result-summary">0 results</p>
+              <div class="pager" data-pager="units">
+                <button class="mini-action" data-page-action="prev" type="button">Prev</button>
+                <span id="unit-page-status">Page 1</span>
+                <button class="mini-action" data-page-action="next" type="button">Next</button>
+              </div>
+            </div>
+            <div id="unit-grid" class="unit-grid"></div>
+          </section>
+
+          <aside class="detail-panel" aria-label="Selected unit details">
+            <div class="detail-art-wrap">
+              <img id="detail-art" alt="Selected unit art">
+            </div>
+            <div class="detail-copy">
+              <p id="detail-id" class="eyebrow">Unit</p>
+              <h3 id="detail-name">Select a unit</h3>
+              <p id="detail-title">Choose a card to inspect image paths and stats.</p>
+            </div>
+            <div id="detail-tags" class="tag-row"></div>
+            <dl class="stats-list" id="detail-stats"></dl>
+            <div class="path-card">
+              <p class="panel-label">Resolved images</p>
+              <code id="detail-full-path"></code>
+              <code id="detail-thumb-path"></code>
+              <code id="detail-battle-path"></code>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="items-view" class="view" aria-label="Items">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Inventory</p>
+            <h3>Items and spheres</h3>
+          </div>
+          <p>Use the same image folder rules for icons and upgrade materials.</p>
+        </div>
+        <div class="result-toolbar">
+          <p id="item-result-summary">0 results</p>
+          <div class="pager" data-pager="items">
+            <button class="mini-action" data-page-action="prev" type="button">Prev</button>
+            <span id="item-page-status">Page 1</span>
+            <button class="mini-action" data-page-action="next" type="button">Next</button>
+          </div>
+        </div>
+        <div id="item-grid" class="item-grid"></div>
+      </section>
+
+      <section id="characters-view" class="view" aria-label="Characters">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Lore Archive</p>
+            <h3>Characters</h3>
+          </div>
+          <p>Story characters, NPCs, gods, and factions pulled from the Brave Frontier lore pages.</p>
+        </div>
+        <div class="result-toolbar">
+          <p id="character-result-summary">0 results</p>
+          <div class="pager" data-pager="characters">
+            <button class="mini-action" data-page-action="prev" type="button">Prev</button>
+            <span id="character-page-status">Page 1</span>
+            <button class="mini-action" data-page-action="next" type="button">Next</button>
+          </div>
+        </div>
+        <div id="character-grid" class="character-grid"></div>
+      </section>
+
+      <section id="character-detail-view" class="view" aria-label="Character details">
+        <button id="character-detail-back" class="mini-action back-inline" type="button">Back to Characters</button>
+        <div class="equipment-detail-layout character-detail-layout">
+          <aside class="equipment-detail-hero character-detail-hero">
+            <div id="character-page-art" class="character-detail-art"></div>
+            <div class="detail-copy">
+              <p id="character-page-id" class="eyebrow">Character</p>
+              <h3 id="character-page-name">Character</h3>
+              <p id="character-page-desc">Loading...</p>
+            </div>
+            <div id="character-page-tags" class="tag-row"></div>
+          </aside>
+          <div id="character-page-info" class="equipment-detail-content"></div>
+        </div>
+      </section>
+
+      <section id="extra-skills-view" class="view" aria-label="Extra skills">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Passive Archive</p>
+            <h3>Extra Skills</h3>
+          </div>
+          <p>Extra passive skills from the local bravefrontier_data <code>es.json</code> files.</p>
+        </div>
+        <div class="result-toolbar">
+          <p id="extra-skill-result-summary">0 results</p>
+          <div class="pager" data-pager="extraSkills">
+            <button class="mini-action" data-page-action="prev" type="button">Prev</button>
+            <span id="extra-skill-page-status">Page 1</span>
+            <button class="mini-action" data-page-action="next" type="button">Next</button>
+          </div>
+        </div>
+        <div id="extra-skill-grid" class="extra-skill-grid"></div>
+      </section>
+
+      <section id="extra-skill-detail-view" class="view" aria-label="Extra skill details">
+        <button id="extra-skill-detail-back" class="mini-action back-inline" type="button">Back to Extra Skills</button>
+        <div class="equipment-detail-layout extra-skill-detail-layout">
+          <aside class="equipment-detail-hero extra-skill-detail-hero">
+            <div class="detail-art-wrap detail-art-wrap--large extra-skill-art-wrap">
+              <img id="extra-skill-page-art" alt="Extra skill art">
+            </div>
+            <div class="detail-copy">
+              <p id="extra-skill-page-id" class="eyebrow">Extra Skill</p>
+              <h3 id="extra-skill-page-name">Extra Skill</h3>
+              <p id="extra-skill-page-desc">Loading...</p>
+            </div>
+            <div id="extra-skill-page-tags" class="tag-row"></div>
+          </aside>
+          <div id="extra-skill-page-info" class="equipment-detail-content"></div>
+        </div>
+      </section>
+
+      <section id="item-detail-view" class="view" aria-label="Equipment details">
+        <button id="item-detail-back" class="mini-action back-inline" type="button">Back to Items</button>
+        <div class="equipment-detail-layout">
+          <aside class="equipment-detail-hero">
+            <img id="item-page-art" alt="Equipment icon">
+            <div class="detail-copy">
+              <p id="item-page-id" class="eyebrow">Item</p>
+              <h3 id="item-page-name">Item</h3>
+              <p id="item-page-desc">Loading...</p>
+            </div>
+            <div id="item-page-tags" class="tag-row"></div>
+          </aside>
+          <div id="item-page-info" class="detail-card-grid"></div>
+        </div>
+      </section>
+
+      <section id="unit-detail-view" class="view" aria-label="Unit details">
+        <div class="detail-actions-row">
+          <button id="unit-detail-back" class="mini-action" type="button">Back to Units</button>
+          <div class="detail-mode-control">
+            <span id="unit-detail-mode-label">Simple unit page</span>
+            <button id="unit-detail-mode-toggle" class="mini-action" type="button">Show extended info</button>
+          </div>
+        </div>
+        <div class="unit-detail-layout">
+          <aside class="unit-detail-hero">
+            <div class="detail-art-wrap detail-art-wrap--large">
+              <img id="unit-page-art" alt="Unit art">
+            </div>
+            <div class="detail-copy">
+              <p id="unit-page-id" class="eyebrow">Unit</p>
+              <h3 id="unit-page-name">Unit</h3>
+              <p id="unit-page-title">Loading...</p>
+            </div>
+            <div id="unit-page-tags" class="tag-row"></div>
+          </aside>
+          <div class="unit-detail-content">
+            <section class="detail-section">
+              <div class="section-head compact-head"><h3>Stats</h3><p>Base, Lord, type, and imp values when available.</p></div>
+              <div id="unit-page-stats" class="detail-table-wrap"></div>
+            </section>
+            <section class="detail-section">
+              <div class="section-head compact-head"><h3>Skills</h3><p>Leader, extra, and Brave Burst information.</p></div>
+              <div id="unit-page-skills" class="detail-card-grid"></div>
+            </section>
+            <section class="detail-section">
+              <div class="section-head compact-head"><h3>Evolution and Combat</h3><p>Materials, movement, attack frames, and metadata.</p></div>
+              <div id="unit-page-extra" class="detail-card-grid"></div>
+            </section>
+            <section class="detail-section">
+              <div class="section-head compact-head"><h3>SP Builds</h3><p>Feskills / enhancement tree entries for this unit.</p></div>
+              <div id="unit-page-feskills" class="sp-skill-list"></div>
+            </section>
+            <section id="unit-page-raw-section" class="detail-section extended-only">
+              <div class="section-head compact-head"><h3>Raw Data</h3><p>Everything loaded from the source entry.</p></div>
+              <pre id="unit-page-raw" class="raw-json"></pre>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="settings-view" class="view" aria-label="Settings">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Controls</p>
+            <h3>Settings</h3>
+          </div>
+          <p>Choose how many records show per page, what opens first, and how much detail unit pages show.</p>
+        </div>
+        <div class="settings-grid">
+          <article class="settings-card">
+            <h4>Results per page</h4>
+            <label class="select-field wide-field">
+              <span>Page size</span>
+              <select id="page-size-select">
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="150">150</option>
+              </select>
+            </label>
+          </article>
+          <article class="settings-card">
+            <h4>Unit detail pages</h4>
+            <label class="select-field wide-field">
+              <span>Detail mode</span>
+              <select id="unit-detail-mode-select">
+                <option value="simple">Simple</option>
+                <option value="extended">Extended</option>
+              </select>
+            </label>
+          </article>
+          <article class="settings-card">
+            <h4>Default page</h4>
+            <label class="select-field wide-field">
+              <span>Open to</span>
+              <select id="default-view-select">
+                <option value="units">Units</option>
+                <option value="items">Items</option>
+                <option id="default-view-characters-option" value="characters">Characters</option>
+                <option value="extra-skills">Extra Skills</option>
+                <option value="paths">Image Paths</option>
+              </select>
+            </label>
+          </article>
+          <article class="settings-card">
+            <h4>Navigation</h4>
+            <label class="select-field wide-field">
+              <span>Character tab</span>
+              <select id="characters-tab-select">
+                <option value="disabled">Hidden</option>
+                <option value="enabled">Visible</option>
+              </select>
+            </label>
+            <p class="settings-note">Keep lore pages tucked away unless you want them in the main sidebar.</p>
+          </article>
+          <article class="settings-card">
+            <h4>Screen fit</h4>
+            <label class="select-field wide-field">
+              <span>Interface size</span>
+              <select id="ui-scale-select">
+                <option value="100">Normal</option>
+                <option value="92">Smaller</option>
+                <option value="84">Smallest</option>
+              </select>
+            </label>
+            <p class="settings-note">Use a smaller size when you want more of the page visible on tighter screens.</p>
+          </article>
+          <article class="settings-card">
+            <h4>Database totals</h4>
+            <div class="settings-stats">
+              <span><strong id="settings-unit-count">0</strong> units</span>
+              <span><strong id="settings-item-count">0</strong> items</span>
+              <span><strong id="settings-character-count">0</strong> characters</span>
+              <span><strong id="settings-extra-skill-count">0</strong> extra skills</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="paths-view" class="view" aria-label="Image path instructions">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Setup</p>
+            <h3>Put your images here</h3>
+          </div>
+          <p>The app reads paths from <code>data/catalog.js</code>. These folders already exist.</p>
+        </div>
+        <div class="path-grid">
+          <article class="path-card large"><h4>All unit images</h4><code>assets/images/units/img/</code><p>Put full art, thumbnails, and battle images together here.</p></article>
+          <article class="path-card large"><h4>Unit filename examples</h4><code>unit_ills_full_10011.png</code><code>unit_ills_battle_10011.png</code><p>The database can point to any filename in this folder.</p></article>
+          <article class="path-card large"><h4>Items and spheres</h4><code>assets/images/items/item/</code><p>Put item icons and sphere icons together here.</p></article>
+          <article class="path-card large"><h4>Item filename examples</h4><code>item_700001.png</code><code>sphere_818000.png</code><p>Use <code>items/item/filename.png</code> in <code>data/catalog.js</code>.</p></article>
+          <article class="path-card large"><h4>Backgrounds and icons</h4><code>assets/images/backgrounds/</code><code>assets/images/icons/</code><p>Use these for banners, element icons, and future pages.</p></article>
+          <article class="path-card large"><h4>Character portraits</h4><code>assets/images/characters/portrait/</code><p>Optional local overrides for lore and NPC portraits. The character tab can also use the Fandom artwork links.</p></article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data/catalog.js"></script>
+  <script src="data/characters.js"></script>
+  <script src="data/extraskills.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

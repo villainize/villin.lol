@@ -1,0 +1,196 @@
+{
+  "summary": {
+    "key": "gl:819334",
+    "server": "GL",
+    "id": "819334",
+    "name": "Dirge of Dread",
+    "type": "sphere",
+    "typeLabel": "Sphere",
+    "rarity": "7",
+    "desc": "55% all parameters (Oracle), negates all status ailments, fills BB gauge each turn, add to BB/SBB [remove all status ailments and Atk, Def, Rec reduction, chance to purge Curse, Weak negation] & activates 9000 HP Shield when 15 BC collected",
+    "maxStack": 1,
+    "sellPrice": 999999,
+    "sphereType": 5,
+    "sphereTypeText": "Status Ailments Resistant",
+    "maxEquipped": null,
+    "raid": true,
+    "effectCount": 6,
+    "recipeCount": 3,
+    "usageCount": 0,
+    "image": "items/item/sphere_thum_819243.png"
+  },
+  "raw": {
+    "desc": "55% all parameters (Oracle), negates all status ailments, fills BB gauge each turn, add to BB/SBB [remove all status ailments and Atk, Def, Rec reduction, chance to purge Curse, Weak negation] & activates 9000 HP Shield when 15 BC collected",
+    "effect": [
+      {
+        "curse resist%": 100,
+        "injury resist%": 100,
+        "paralysis resist%": 100,
+        "passive id": "4",
+        "poison resist%": 100,
+        "sick resist%": 100,
+        "weaken resist%": 100
+      },
+      {
+        "bc fill per turn": 30,
+        "passive id": "9"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 55,
+        "def% buff": 55,
+        "hp% buff": 55,
+        "passive id": "3",
+        "rec% buff": 55,
+        "unit type buffed": "oracle"
+      },
+      {
+        "passive id": "66",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "target area": "aoe",
+            "target type": "enemy",
+            "unknown proc id": "10019",
+            "unknown proc param": "31,34,0,0,0,0,0,0,0,25"
+          }
+        ]
+      },
+      {
+        "bc receive count buff activation": 15,
+        "buff": {
+          "buff turns (10500)": "2",
+          "unknown buff id": "10500",
+          "unknown buff params": "0&9000&9000&9000"
+        },
+        "passive id": "82"
+      }
+    ],
+    "id": 819334,
+    "max_stack": 1,
+    "name": "Dirge of Dread",
+    "raid": true,
+    "rarity": 7,
+    "recipe": {
+      "karma": "7000000",
+      "materials": [
+        {
+          "count": 1,
+          "id": 819243
+        },
+        {
+          "count": 2,
+          "id": 819332
+        },
+        {
+          "count": 7,
+          "id": 890033
+        }
+      ]
+    },
+    "sell_price": 999999,
+    "sphere type": 5,
+    "sphere type text": "Status Ailments Resistant",
+    "thumbnail": "sphere_thum_819243.png",
+    "type": "sphere"
+  },
+  "effects": [
+    {
+      "curse resist%": 100,
+      "injury resist%": 100,
+      "paralysis resist%": 100,
+      "passive id": "4",
+      "poison resist%": 100,
+      "sick resist%": 100,
+      "weaken resist%": 100
+    },
+    {
+      "bc fill per turn": 30,
+      "passive id": "9"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "ailments cured": [
+            "poison",
+            "weaken",
+            "sick",
+            "injury",
+            "curse",
+            "paralysis",
+            "atk down",
+            "def down",
+            "rec down"
+          ],
+          "effect delay time(ms)/frame": "0.0/0",
+          "proc id": "38",
+          "target area": "aoe",
+          "target type": "party"
+        }
+      ]
+    },
+    {
+      "atk% buff": 55,
+      "def% buff": 55,
+      "hp% buff": 55,
+      "passive id": "3",
+      "rec% buff": 55,
+      "unit type buffed": "oracle"
+    },
+    {
+      "passive id": "66",
+      "trigger on bb": true,
+      "trigger on sbb": true,
+      "triggered effect": [
+        {
+          "effect delay time(ms)/frame": "0.0/0",
+          "target area": "aoe",
+          "target type": "enemy",
+          "unknown proc id": "10019",
+          "unknown proc param": "31,34,0,0,0,0,0,0,0,25"
+        }
+      ]
+    },
+    {
+      "bc receive count buff activation": 15,
+      "buff": {
+        "buff turns (10500)": "2",
+        "unknown buff id": "10500",
+        "unknown buff params": "0&9000&9000&9000"
+      },
+      "passive id": "82"
+    }
+  ],
+  "usage": [],
+  "dictionary": {
+    "lore": "Bestowed upon the best to walk the Halls of Akras.<br><br>The gods themselves submit to your infinite wisdom."
+  }
+}

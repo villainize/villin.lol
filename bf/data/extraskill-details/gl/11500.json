@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "key": "gl:11500",
+    "server": "GL",
+    "id": "11500",
+    "name": "Draconic Blood Tie",
+    "desc": "Adds BC efficacy boost to BB/SBB for 3 turns & boosts Atk, Def, Rec when BB gauge is over 50%",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Draconic Blood Tie Adds BC efficacy boost to BB/SBB for 3 turns & boosts Atk, Def, Rec when BB gauge is over 50% self 11500"
+  },
+  "raw": {
+    "desc": "Adds BC efficacy boost to BB/SBB for 3 turns & boosts Atk, Def, Rec when BB gauge is over 50%",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb gauge fill rate% buff": 30,
+            "buff turns (77)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "52",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 50,
+        "passive id": "30",
+        "passive target": "self",
+        "rec% buff": 50
+      }
+    ],
+    "id": "11500",
+    "name": "Draconic Blood Tie",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bb gauge fill rate% buff\":30,\"buff turns (77)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"52\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb gauge fill rate% buff": 30,
+            "buff turns (77)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "52",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 50 / bb gauge above % buff requirement: 50 / def% buff: 50 / passive id: 30 / passive target: self / rec% buff: 50",
+      "raw": {
+        "atk% buff": 50,
+        "bb gauge above % buff requirement": 50,
+        "conditions": [],
+        "def% buff": 50,
+        "passive id": "30",
+        "passive target": "self",
+        "rec% buff": 50
+      }
+    }
+  ],
+  "conditions": []
+}

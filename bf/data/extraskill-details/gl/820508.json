@@ -1,0 +1,176 @@
+{
+  "summary": {
+    "key": "gl:820508",
+    "server": "GL",
+    "id": "820508",
+    "name": "Time Leap",
+    "desc": "Hugely reduces BB gauge required for BB, adds status ailment removal and negation effects for 3 turns to BB/SBB & 20% boost to all parameters of Water types",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Time Leap Hugely reduces BB gauge required for BB, adds status ailment removal and negation effects for 3 turns to BB/SBB & 20% boost to all parameters of Water types self 820508"
+  },
+  "raw": {
+    "desc": "Hugely reduces BB gauge required for BB, adds status ailment removal and negation effects for 3 turns to BB/SBB & 20% boost to all parameters of Water types",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 25
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 20,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 20
+      }
+    ],
+    "id": "820508",
+    "name": "Time Leap",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 48 / passive target: self / reduced bb bc cost%: 25",
+      "raw": {
+        "conditions": [],
+        "passive id": "48",
+        "passive target": "self",
+        "reduced bb bc cost%": 25
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"17\",\"resist curse% (34)\":100,\"resist injury% (33)\":100,\"resist paralysis% (35)\":100,\"resist poison% (30)\":100,\"resist sick% (32)\":100,\"resist status ails turns\":3,\"resist weaken% (31)\":100,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "17",
+            "resist curse% (34)": 100,
+            "resist injury% (33)": 100,
+            "resist paralysis% (35)": 100,
+            "resist poison% (30)": 100,
+            "resist sick% (32)": 100,
+            "resist status ails turns": 3,
+            "resist weaken% (31)": 100,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk% buff: 20 / def% buff: 20 / elements buffed: [\"water\"] / hp% buff: 20 / passive id: 2 / passive target: party / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "elements buffed": [
+          "water"
+        ],
+        "hp% buff": 20,
+        "passive id": "2",
+        "passive target": "party",
+        "rec% buff": 20
+      }
+    }
+  ],
+  "conditions": []
+}

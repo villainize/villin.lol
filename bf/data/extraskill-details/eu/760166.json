@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "key": "eu:760166",
+    "server": "EU",
+    "id": "760166",
+    "name": "Ancient Presence",
+    "desc": "Increases number of hits dealt by normal attack (+1) & If Photon Scepter of Summoning is equipped, adds damage reduction (50%) for 1 turn to BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Photon Scepter of Summoning",
+    "searchText": "Ancient Presence Increases number of hits dealt by normal attack (+1) & If Photon Scepter of Summoning is equipped, adds damage reduction (50%) for 1 turn to BB/SBB self 760166"
+  },
+  "raw": {
+    "desc": "Increases number of hits dealt by normal attack (+1) & If Photon Scepter of Summoning is equipped, adds damage reduction (50%) for 1 turn to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701021"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "760166",
+    "name": "Ancient Presence",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "hit increase/hit: 1 / passive id: 37 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hit increase/hit": 1,
+        "passive id": "37",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"dmg% reduction\":50,\"dmg% reduction turns (36)\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"18\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701021"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Photon Scepter of Summoning",
+      "raw": {
+        "item required": [
+          "701021"
+        ]
+      }
+    }
+  ]
+}

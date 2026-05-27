@@ -1,0 +1,149 @@
+{
+  "summary": {
+    "key": "eu:740157",
+    "server": "EU",
+    "id": "740157",
+    "name": "Nitro Booster",
+    "desc": "Adds probable Spark critical for 3 turns to BB/SBB & when Customized Reactor is equipped, boosts Spark damage (50%) and BB ATK (40%, all)",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Customized Reactor",
+    "searchText": "Nitro Booster Adds probable Spark critical for 3 turns to BB/SBB & when Customized Reactor is equipped, boosts Spark damage (50%) and BB ATK (40%, all) self 740157"
+  },
+  "raw": {
+    "desc": "Adds probable Spark critical for 3 turns to BB/SBB & when Customized Reactor is equipped, boosts Spark damage (50%) and BB ATK (40%, all)",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "83",
+            "spark dmg inc buff turns (131)": 3,
+            "spark dmg inc chance%": 30,
+            "spark dmg inc% buff": 50,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701037"
+            ]
+          }
+        ],
+        "damage% for spark": 50,
+        "passive id": "31",
+        "passive target": "self"
+      },
+      {
+        "bb atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "701037"
+            ]
+          }
+        ],
+        "passive id": "64",
+        "passive target": "party",
+        "sbb atk% buff": 40,
+        "ubb atk% buff": 40
+      }
+    ],
+    "id": "740157",
+    "name": "Nitro Booster",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"83\",\"spark dmg inc buff turns (131)\":3,\"spark dmg inc chance%\":30,\"spark dmg inc% buff\":50,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "83",
+            "spark dmg inc buff turns (131)": 3,
+            "spark dmg inc chance%": 30,
+            "spark dmg inc% buff": 50,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "damage% for spark: 50 / passive id: 31 / passive target: self",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701037"
+            ]
+          }
+        ],
+        "damage% for spark": 50,
+        "passive id": "31",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "bb atk% buff: 40 / passive id: 64 / passive target: party / sbb atk% buff: 40 / ubb atk% buff: 40",
+      "raw": {
+        "bb atk% buff": 40,
+        "conditions": [
+          {
+            "item required": [
+              "701037"
+            ]
+          }
+        ],
+        "passive id": "64",
+        "passive target": "party",
+        "sbb atk% buff": 40,
+        "ubb atk% buff": 40
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Customized Reactor",
+      "raw": {
+        "item required": [
+          "701037"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Customized Reactor",
+      "raw": {
+        "item required": [
+          "701037"
+        ]
+      }
+    }
+  ]
+}

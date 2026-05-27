@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "key": "gl:46700",
+    "server": "GL",
+    "id": "46700",
+    "name": "闇の知識",
+    "desc": "攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆「ダメージ軽減系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に１ターン、被ダメージを半分に軽減」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Damage Reducing",
+    "searchText": "闇の知識 攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆「ダメージ軽減系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に１ターン、被ダメージを半分に軽減」を追加 self 46700"
+  },
+  "raw": {
+    "desc": "攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆「ダメージ軽減系」タイプのスフィアを装備時、ＢＢ及びＳＢＢに「味方全体に１ターン、被ダメージを半分に軽減」を追加",
+    "effects": [
+      {
+        "conditions": [
+          {
+            "sphere category required": "Damage Reducing",
+            "sphere category required (raw)": "10"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    ],
+    "id": "46700",
+    "name": "闇の知識",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"dmg% reduction\":50,\"dmg% reduction turns (36)\":1,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"18\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "sphere category required": "Damage Reducing",
+            "sphere category required (raw)": "10"
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "dmg% reduction": 50,
+            "dmg% reduction turns (36)": 1,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "18",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Damage Reducing",
+      "raw": {
+        "sphere category required": "Damage Reducing",
+        "sphere category required (raw)": "10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "key": "eu:850158",
+    "server": "EU",
+    "id": "850158",
+    "name": "Sharing is Caring",
+    "desc": "Boosts all parameters and BC, HC drop rate (10%, all) & boosts BC, HC efficacy (20%) & adds status ailment removal and Light Barrier activation (4000 HP) effects to BB/SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 6,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Sharing is Caring Boosts all parameters and BC, HC drop rate (10%, all) & boosts BC, HC efficacy (20%) & adds status ailment removal and Light Barrier activation (4000 HP) effects to BB/SBB self 850158"
+  },
+  "raw": {
+    "desc": "Boosts all parameters and BC, HC drop rate (10%, all) & boosts BC, HC efficacy (20%) & adds status ailment removal and Light Barrier activation (4000 HP) effects to BB/SBB",
+    "effects": [
+      {
+        "conditions": [],
+        "hc effectiveness%": 20,
+        "passive id": "10",
+        "passive target": "self"
+      },
+      {
+        "bb gauge fill rate%": 20,
+        "conditions": [],
+        "passive id": "32",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "bc drop rate% buff": 10,
+        "conditions": [],
+        "hc drop rate% buff": 10,
+        "passive id": "19",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 4000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "850158",
+    "name": "Sharing is Caring",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "hc effectiveness%: 20 / passive id: 10 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hc effectiveness%": 20,
+        "passive id": "10",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "bb gauge fill rate%: 20 / passive id: 32 / passive target: self",
+      "raw": {
+        "bb gauge fill rate%": 20,
+        "conditions": [],
+        "passive id": "32",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"ailments cured\":[\"poison\",\"weaken\",\"sick\",\"injury\",\"curse\",\"paralysis\",\"atk down\",\"def down\",\"rec down\"],\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"38\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "ailments cured": [
+              "poison",
+              "weaken",
+              "sick",
+              "injury",
+              "curse",
+              "paralysis",
+              "atk down",
+              "def down",
+              "rec down"
+            ],
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "38",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "atk% buff: 10 / def% buff: 10 / hp% buff: 10 / passive id: 1 / passive target: party / rec% buff: 10",
+      "raw": {
+        "atk% buff": 10,
+        "conditions": [],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      }
+    },
+    {
+      "index": 5,
+      "summary": "bc drop rate% buff: 10 / hc drop rate% buff: 10 / passive id: 19 / passive target: party",
+      "raw": {
+        "bc drop rate% buff": 10,
+        "conditions": [],
+        "hc drop rate% buff": 10,
+        "passive id": "19",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 6,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elemental barrier absorb dmg%\":100,\"elemental barrier def\":0,\"elemental barrier element\":\"light\",\"elemental barrier hp\":4000,\"proc id\":\"62\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elemental barrier absorb dmg%": 100,
+            "elemental barrier def": 0,
+            "elemental barrier element": "light",
+            "elemental barrier hp": 4000,
+            "proc id": "62",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

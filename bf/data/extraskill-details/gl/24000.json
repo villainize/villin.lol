@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "key": "gl:24000",
+    "server": "GL",
+    "id": "24000",
+    "name": "凶魔の覚醒",
+    "desc": "「攻撃強化系」タイプのスフィアを装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に雷・闇属性を付与」を追加＆確率で１回まで戦闘不能を耐える",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 1,
+    "conditionSummary": "Sphere category: Atk Boosting",
+    "searchText": "凶魔の覚醒 「攻撃強化系」タイプのスフィアを装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に雷・闇属性を付与」を追加＆確率で１回まで戦闘不能を耐える self 24000"
+  },
+  "raw": {
+    "desc": "「攻撃強化系」タイプのスフィアを装備時、攻撃力・防御力・回復力・最大ＨＰを３０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に雷・闇属性を付与」を追加＆確率で１回まで戦闘不能を耐える",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "thunder",
+              "dark"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 20,
+        "angel idol recover chance% low": 20,
+        "angel idol recover counts": 1,
+        "conditions": [],
+        "passive id": "69",
+        "passive target": "self"
+      }
+    ],
+    "id": "24000",
+    "name": "凶魔の覚醒",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "sphere category required": "Atk Boosting",
+            "sphere category required (raw)": "13"
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"thunder\",\"dark\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "thunder",
+              "dark"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "summary": "angel idol chance% condition: 0 / angel idol recover chance% high: 20 / angel idol recover chance% low: 20 / angel idol recover counts: 1 / passive id: 69 / passive target: self",
+      "raw": {
+        "angel idol chance% condition": 0,
+        "angel idol recover chance% high": 20,
+        "angel idol recover chance% low": 20,
+        "angel idol recover counts": 1,
+        "conditions": [],
+        "passive id": "69",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Sphere category: Atk Boosting",
+      "raw": {
+        "sphere category required": "Atk Boosting",
+        "sphere category required (raw)": "13"
+      }
+    }
+  ]
+}

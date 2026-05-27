@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "key": "eu:710227",
+    "server": "EU",
+    "id": "710227",
+    "name": "Magma-Armored Warrior",
+    "desc": "If an Apex sphere is equipped, boosts all parameters (30% and 10% all), boosts ATK relative to remaining HP (0-100%) and adds boost ATK relative to DEF (90%) for 3 turns to SBB",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 4,
+    "conditionSummary": "Needs item: Apex Sword, Apex Ring, Apex Shield, Apex Jewel",
+    "searchText": "Magma-Armored Warrior If an Apex sphere is equipped, boosts all parameters (30% and 10% all), boosts ATK relative to remaining HP (0-100%) and adds boost ATK relative to DEF (90%) for 3 turns to SBB self 710227"
+  },
+  "raw": {
+    "desc": "If an Apex sphere is equipped, boosts all parameters (30% and 10% all), boosts ATK relative to remaining HP (0-100%) and adds boost ATK relative to DEF (90%) for 3 turns to SBB",
+    "effects": [
+      {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      },
+      {
+        "atk% buff": 10,
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      },
+      {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "passive id": "46",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "% converted turns": 3,
+            "atk% buff (46)": 90,
+            "converted attribute": "defense",
+            "effect delay time(ms)/frame": "50.0/3",
+            "proc id": "24",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "710227",
+    "name": "Magma-Armored Warrior",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 30 / def% buff: 30 / hp% buff: 30 / passive id: 1 / passive target: self / rec% buff: 30",
+      "raw": {
+        "atk% buff": 30,
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "def% buff": 30,
+        "hp% buff": 30,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 30
+      }
+    },
+    {
+      "index": 2,
+      "summary": "atk% buff: 10 / def% buff: 10 / hp% buff: 10 / passive id: 1 / passive target: party / rec% buff: 10",
+      "raw": {
+        "atk% buff": 10,
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "def% buff": 10,
+        "hp% buff": 10,
+        "passive id": "1",
+        "passive target": "party",
+        "rec% buff": 10
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk% base buff: 0 / atk% extra buff based on hp: 100 / buff proportional to hp: remaining / passive id: 46 / passive target: self",
+      "raw": {
+        "atk% base buff": 0,
+        "atk% extra buff based on hp": 100,
+        "buff proportional to hp": "remaining",
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "passive id": "46",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on sbb: true / triggered effect: [{\"% converted turns\":3,\"atk% buff (46)\":90,\"converted attribute\":\"defense\",\"effect delay time(ms)/frame\":\"50.0/3\",\"proc id\":\"24\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701039",
+              "701040",
+              "701041",
+              "701044"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "% converted turns": 3,
+            "atk% buff (46)": 90,
+            "converted attribute": "defense",
+            "effect delay time(ms)/frame": "50.0/3",
+            "proc id": "24",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Apex Sword, Apex Ring, Apex Shield, Apex Jewel",
+      "raw": {
+        "item required": [
+          "701039",
+          "701040",
+          "701041",
+          "701044"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Apex Sword, Apex Ring, Apex Shield, Apex Jewel",
+      "raw": {
+        "item required": [
+          "701039",
+          "701040",
+          "701041",
+          "701044"
+        ]
+      }
+    },
+    {
+      "effectIndex": 3,
+      "conditionIndex": 1,
+      "summary": "Needs item: Apex Sword, Apex Ring, Apex Shield, Apex Jewel",
+      "raw": {
+        "item required": [
+          "701039",
+          "701040",
+          "701041",
+          "701044"
+        ]
+      }
+    },
+    {
+      "effectIndex": 4,
+      "conditionIndex": 1,
+      "summary": "Needs item: Apex Sword, Apex Ring, Apex Shield, Apex Jewel",
+      "raw": {
+        "item required": [
+          "701039",
+          "701040",
+          "701041",
+          "701044"
+        ]
+      }
+    }
+  ]
+}

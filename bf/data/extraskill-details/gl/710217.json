@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "key": "gl:710217",
+    "server": "GL",
+    "id": "710217",
+    "name": "Rocket Fangs Mastery",
+    "desc": "Considerably boosts Atk for 2 turns when Sparks have exceeded certain amount, slightly boosts Spark damage for all allies, adds probable Spark critical effect to BB/SBB for 3 turns & raises Atk parameter limits to 130000",
+    "rarity": "7",
+    "rarityLabel": "Tier 7",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Rocket Fangs Mastery Considerably boosts Atk for 2 turns when Sparks have exceeded certain amount, slightly boosts Spark damage for all allies, adds probable Spark critical effect to BB/SBB for 3 turns & raises Atk parameter limits to 130000 self 710217"
+  },
+  "raw": {
+    "desc": "Considerably boosts Atk for 2 turns when Sparks have exceeded certain amount, slightly boosts Spark damage for all allies, adds probable Spark critical effect to BB/SBB for 3 turns & raises Atk parameter limits to 130000",
+    "effects": [
+      {
+        "buff": {
+          "atk% buff (1)": 100,
+          "buff turns (1)": "2"
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      },
+      {
+        "conditions": [],
+        "damage% for spark": 20,
+        "passive id": "31",
+        "passive target": "party"
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "83",
+            "spark dmg inc buff turns (131)": 3,
+            "spark dmg inc chance%": 40,
+            "spark dmg inc% buff": 50,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    ],
+    "id": "710217",
+    "name": "Rocket Fangs Mastery",
+    "rarity": "7",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "buff: {\"atk% buff (1)\":100,\"buff turns (1)\":\"2\"} / passive id: 86 / passive target: self / spark count buff activation: 15",
+      "raw": {
+        "buff": {
+          "atk% buff (1)": 100,
+          "buff turns (1)": "2"
+        },
+        "conditions": [],
+        "passive id": "86",
+        "passive target": "self",
+        "spark count buff activation": 15
+      }
+    },
+    {
+      "index": 2,
+      "summary": "damage% for spark: 20 / passive id: 31 / passive target: party",
+      "raw": {
+        "conditions": [],
+        "damage% for spark": 20,
+        "passive id": "31",
+        "passive target": "party"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"83\",\"spark dmg inc buff turns (131)\":3,\"spark dmg inc chance%\":40,\"spark dmg inc% buff\":50,\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "83",
+            "spark dmg inc buff turns (131)": 3,
+            "spark dmg inc chance%": 40,
+            "spark dmg inc% buff": 50,
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "summary": "increase atk cap: 130000 / passive id: 143 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "increase atk cap": 130000,
+        "passive id": "143",
+        "passive target": "self"
+      }
+    }
+  ],
+  "conditions": []
+}

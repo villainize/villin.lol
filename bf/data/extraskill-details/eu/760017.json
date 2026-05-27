@@ -1,0 +1,133 @@
+{
+  "summary": {
+    "key": "eu:760017",
+    "server": "EU",
+    "id": "760017",
+    "name": "My Own Tale",
+    "desc": "If Winter's Bells is equipped, boosts ATK (80%) when HP is full and adds Spark damage boosts BB gauge (2-3 BC) for 3 turns on BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 2,
+    "conditionSummary": "Needs item: Winter's Bells",
+    "searchText": "My Own Tale If Winter's Bells is equipped, boosts ATK (80%) when HP is full and adds Spark damage boosts BB gauge (2-3 BC) for 3 turns on BB/SBB self 760017"
+  },
+  "raw": {
+    "desc": "If Winter's Bells is equipped, boosts ATK (80%) when HP is full and adds Spark damage boosts BB gauge (2-3 BC) for 3 turns on BB/SBB",
+    "effects": [
+      {
+        "atk% buff": 80,
+        "conditions": [
+          {
+            "item required": [
+              "701025"
+            ]
+          }
+        ],
+        "hp above % buff requirement": 100,
+        "passive id": "11",
+        "passive target": "self"
+      },
+      {
+        "conditions": [
+          {
+            "item required": [
+              "701025"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 3,
+            "bc fill on spark low": 2,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "760017",
+    "name": "My Own Tale",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 80 / hp above % buff requirement: 100 / passive id: 11 / passive target: self",
+      "raw": {
+        "atk% buff": 80,
+        "conditions": [
+          {
+            "item required": [
+              "701025"
+            ]
+          }
+        ],
+        "hp above % buff requirement": 100,
+        "passive id": "11",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bc fill on spark buff turns (111)\":3,\"bc fill on spark high\":3,\"bc fill on spark low\":2,\"bc fill on spark%\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"67\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [
+          {
+            "item required": [
+              "701025"
+            ]
+          }
+        ],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill on spark buff turns (111)": 3,
+            "bc fill on spark high": 3,
+            "bc fill on spark low": 2,
+            "bc fill on spark%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "67",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Winter's Bells",
+      "raw": {
+        "item required": [
+          "701025"
+        ]
+      }
+    },
+    {
+      "effectIndex": 2,
+      "conditionIndex": 1,
+      "summary": "Needs item: Winter's Bells",
+      "raw": {
+        "item required": [
+          "701025"
+        ]
+      }
+    }
+  ]
+}

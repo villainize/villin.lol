@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "key": "gl:3500",
+    "server": "GL",
+    "id": "3500",
+    "name": "Demon Puppet's Will",
+    "desc": "Boosts BB/SBB Atk for 3 turns & when Golem Core is equipped, 20% boost to all parameters",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: Golem Core",
+    "searchText": "Demon Puppet's Will Boosts BB/SBB Atk for 3 turns & when Golem Core is equipped, 20% boost to all parameters self 3500"
+  },
+  "raw": {
+    "desc": "Boosts BB/SBB Atk for 3 turns & when Golem Core is equipped, 20% boost to all parameters",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47202"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk% buff": 100,
+            "buff turns (72)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "45",
+            "sbb atk% buff": 100,
+            "target area": "aoe",
+            "target type": "party",
+            "ubb atk% buff": 100
+          }
+        ]
+      }
+    ],
+    "id": "3500",
+    "name": "Demon Puppet's Will",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "47202"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bb atk% buff\":100,\"buff turns (72)\":3,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"45\",\"sbb atk% buff\":100,\"target area\":\"aoe\",\"target type\":\"party\",\"ubb atk% buff\":100}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bb atk% buff": 100,
+            "buff turns (72)": 3,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "45",
+            "sbb atk% buff": 100,
+            "target area": "aoe",
+            "target type": "party",
+            "ubb atk% buff": 100
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: Golem Core",
+      "raw": {
+        "item required": [
+          "47202"
+        ]
+      }
+    }
+  ]
+}

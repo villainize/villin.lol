@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "key": "eu:860418",
+    "server": "EU",
+    "id": "860418",
+    "name": "Web of Shattered Deceptions",
+    "desc": "Boosts DEF relative to lost HP (0-150%) & restores HP each turn (all) & negates ATK, DEF, REC reduction effects (all) & adds damage taken boosts BB gauge (5-9 BC) for 3 turns effect to BB/SBB",
+    "rarity": "0",
+    "rarityLabel": "Tier 0",
+    "target": "self",
+    "effectCount": 4,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "Web of Shattered Deceptions Boosts DEF relative to lost HP (0-150%) & restores HP each turn (all) & negates ATK, DEF, REC reduction effects (all) & adds damage taken boosts BB gauge (5-9 BC) for 3 turns effect to BB/SBB self 860418"
+  },
+  "raw": {
+    "desc": "Boosts DEF relative to lost HP (0-150%) & restores HP each turn (all) & negates ATK, DEF, REC reduction effects (all) & adds damage taken boosts BB gauge (5-9 BC) for 3 turns effect to BB/SBB",
+    "effects": [
+      {
+        "buff proportional to hp": "lost",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 150,
+        "passive id": "46",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 20,
+        "turn heal high": 1500,
+        "turn heal low": 1000
+      },
+      {
+        "atk down resist%": 100,
+        "conditions": [],
+        "def down resist%": 100,
+        "passive id": "73",
+        "passive target": "party",
+        "rec down resist%": 100
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill when attacked high": 9,
+            "bc fill when attacked low": 5,
+            "bc fill when attacked turns (38)": 3,
+            "bc fill when attacked%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "20",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "860418",
+    "name": "Web of Shattered Deceptions",
+    "rarity": "0",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "buff proportional to hp: lost / def% base buff: 0 / def% extra buff based on hp: 150 / passive id: 46 / passive target: self",
+      "raw": {
+        "buff proportional to hp": "lost",
+        "conditions": [],
+        "def% base buff": 0,
+        "def% extra buff based on hp": 150,
+        "passive id": "46",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 33 / passive target: party / rec% added (turn heal): 20 / turn heal high: 1500 / turn heal low: 1000",
+      "raw": {
+        "conditions": [],
+        "passive id": "33",
+        "passive target": "party",
+        "rec% added (turn heal)": 20,
+        "turn heal high": 1500,
+        "turn heal low": 1000
+      }
+    },
+    {
+      "index": 3,
+      "summary": "atk down resist%: 100 / def down resist%: 100 / passive id: 73 / passive target: party / rec down resist%: 100",
+      "raw": {
+        "atk down resist%": 100,
+        "conditions": [],
+        "def down resist%": 100,
+        "passive id": "73",
+        "passive target": "party",
+        "rec down resist%": 100
+      }
+    },
+    {
+      "index": 4,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"bc fill when attacked high\":9,\"bc fill when attacked low\":5,\"bc fill when attacked turns (38)\":3,\"bc fill when attacked%\":100,\"effect delay time(ms)/frame\":\"0.0/0\",\"proc id\":\"20\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "bc fill when attacked high": 9,
+            "bc fill when attacked low": 5,
+            "bc fill when attacked turns (38)": 3,
+            "bc fill when attacked%": 100,
+            "effect delay time(ms)/frame": "0.0/0",
+            "proc id": "20",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": []
+}

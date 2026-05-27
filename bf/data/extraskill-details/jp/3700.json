@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "key": "jp:3700",
+    "server": "JP",
+    "id": "3700",
+    "name": "未来へ捧げる力",
+    "desc": "「神器」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に光属性を付与」を追加",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 2,
+    "conditionCount": 1,
+    "conditionSummary": "Needs item: 神器カタラ=マリヌス, 神器イース=カノッサ, 神器マハル=グラテカ, 神器テリオ=ビブラス, 神器コルツ=レゼッタ, 神器レド＝クローガ, 神器ジェナ=グレパス, 神器ヴォール=メオン, 神器テルラ=エデン",
+    "searchText": "未来へ捧げる力 「神器」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に光属性を付与」を追加 self 3700"
+  },
+  "raw": {
+    "desc": "「神器」を装備時、攻撃力・防御力・回復力・最大ＨＰを２０％アップ＆ＢＢ及びＳＢＢに「味方全体に３ターン、攻撃に光属性を付与」を追加",
+    "effects": [
+      {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "40400",
+              "43100",
+              "45900",
+              "47000",
+              "47100",
+              "47800",
+              "48207",
+              "49100",
+              "60150"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      },
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "light"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    ],
+    "id": "3700",
+    "name": "未来へ捧げる力",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "atk% buff: 20 / def% buff: 20 / hp% buff: 20 / passive id: 1 / passive target: self / rec% buff: 20",
+      "raw": {
+        "atk% buff": 20,
+        "conditions": [
+          {
+            "item required": [
+              "40400",
+              "43100",
+              "45900",
+              "47000",
+              "47100",
+              "47800",
+              "48207",
+              "49100",
+              "60150"
+            ]
+          }
+        ],
+        "def% buff": 20,
+        "hp% buff": 20,
+        "passive id": "1",
+        "passive target": "self",
+        "rec% buff": 20
+      }
+    },
+    {
+      "index": 2,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / triggered effect: [{\"effect delay time(ms)/frame\":\"0.0/0\",\"elements added\":[\"light\"],\"elements added turns\":3,\"proc id\":\"30\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "triggered effect": [
+          {
+            "effect delay time(ms)/frame": "0.0/0",
+            "elements added": [
+              "light"
+            ],
+            "elements added turns": 3,
+            "proc id": "30",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "effectIndex": 1,
+      "conditionIndex": 1,
+      "summary": "Needs item: 神器カタラ=マリヌス, 神器イース=カノッサ, 神器マハル=グラテカ, 神器テリオ=ビブラス, 神器コルツ=レゼッタ, 神器レド＝クローガ, 神器ジェナ=グレパス, 神器ヴォール=メオン, 神器テルラ=エデン",
+      "raw": {
+        "item required": [
+          "40400",
+          "43100",
+          "45900",
+          "47000",
+          "47100",
+          "47800",
+          "48207",
+          "49100",
+          "60150"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "key": "gl:43200",
+    "server": "GL",
+    "id": "43200",
+    "name": "見えざる存在",
+    "desc": "ＢＢ・ＳＢＢ・ＵＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加＆ＨＰを少し吸収＆低確率で被ダメージを超絶軽減",
+    "rarity": "1",
+    "rarityLabel": "Tier 1",
+    "target": "self",
+    "effectCount": 3,
+    "conditionCount": 0,
+    "conditionSummary": "No conditions",
+    "searchText": "見えざる存在 ＢＢ・ＳＢＢ・ＵＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加＆ＨＰを少し吸収＆低確率で被ダメージを超絶軽減 self 43200"
+  },
+  "raw": {
+    "desc": "ＢＢ・ＳＢＢ・ＵＢＢに「味方全体に３ターン、クリティカル率を超絶アップ」を追加＆ＨＰを少し吸収＆低確率で被ダメージを超絶軽減",
+    "effects": [
+      {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 15,
+        "hp drain% low": 10,
+        "passive id": "17",
+        "passive target": "self"
+      },
+      {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      }
+    ],
+    "id": "43200",
+    "name": "見えざる存在",
+    "rarity": "1",
+    "target": "self"
+  },
+  "effects": [
+    {
+      "index": 1,
+      "summary": "passive id: 66 / passive target: self / trigger on bb: true / trigger on sbb: true / trigger on ubb: true / triggered effect: [{\"buff turns\":3,\"crit% buff (7)\":60,\"effect delay time(ms)/frame\":\"0.0/0\",\"element buffed\":\"all\",\"proc id\":\"5\",\"target area\":\"aoe\",\"target type\":\"party\"}]",
+      "raw": {
+        "conditions": [],
+        "passive id": "66",
+        "passive target": "self",
+        "trigger on bb": true,
+        "trigger on sbb": true,
+        "trigger on ubb": true,
+        "triggered effect": [
+          {
+            "buff turns": 3,
+            "crit% buff (7)": 60,
+            "effect delay time(ms)/frame": "0.0/0",
+            "element buffed": "all",
+            "proc id": "5",
+            "target area": "aoe",
+            "target type": "party"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "summary": "hp drain chance%: 100 / hp drain% high: 15 / hp drain% low: 10 / passive id: 17 / passive target: self",
+      "raw": {
+        "conditions": [],
+        "hp drain chance%": 100,
+        "hp drain% high": 15,
+        "hp drain% low": 10,
+        "passive id": "17",
+        "passive target": "self"
+      }
+    },
+    {
+      "index": 3,
+      "summary": "passive id: 43 / passive target: self / take 1 dmg%: 15",
+      "raw": {
+        "conditions": [],
+        "passive id": "43",
+        "passive target": "self",
+        "take 1 dmg%": 15
+      }
+    }
+  ],
+  "conditions": []
+}
