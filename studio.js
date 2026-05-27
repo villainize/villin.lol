@@ -5,11 +5,14 @@ import {
   defaultProfile,
   escapeHtml,
   getCurrentSession,
+  getCurrentUserEmail,
   getCurrentUserProfile,
   logoutUser,
   parseProfileForm,
   profileUrl,
   renderProfileCard,
+  sendPasswordReset,
+  updateCurrentUserPassword,
   updateProfile
 } from "./app.js";
 
@@ -24,6 +27,7 @@ async function init() {
   }
 
   const sessionProfile = await getCurrentUserProfile();
+  const signedInEmail = await getCurrentUserEmail();
   if (!sessionProfile) {
     studioRoot.innerHTML = `
       <section class="empty-panel">
@@ -358,6 +362,27 @@ async function init() {
               ${initialProfile.buttons.map((item) => repeatItemMarkup("button", item)).join("")}
             </div>
           </section>
+
+          <section class="panel-section">
+            <p class="section-heading">Account security</p>
+            <div class="stack-form">
+              <div class="input-grid">
+                <div class="field">
+                  <label for="studioNewPassword">New password</label>
+                  <input id="studioNewPassword" name="studioNewPassword" type="password" autocomplete="new-password" placeholder="new password">
+                </div>
+                <div class="field">
+                  <label for="studioConfirmPassword">Confirm new password</label>
+                  <input id="studioConfirmPassword" name="studioConfirmPassword" type="password" autocomplete="new-password" placeholder="confirm password">
+                </div>
+              </div>
+              <p class="hint">Want a reset email instead? Send one to your signed-in email and finish the change from that link.</p>
+              <div class="row-actions">
+                <button class="secondary-button" type="button" id="sendResetEmailButton">email reset link</button>
+                <button class="button" type="button" id="changePasswordButton">change password</button>
+              </div>
+            </div>
+          </section>
         </form>
 
         <section class="preview-panel">
@@ -377,6 +402,8 @@ async function init() {
   const backgroundImageInput = document.getElementById("backgroundImageInput");
   const avatarPreview = document.getElementById("avatarPreview");
   const backgroundPreview = document.getElementById("backgroundPreview");
+  const newPasswordInput = document.getElementById("studioNewPassword");
+  const confirmPasswordInput = document.getElementById("studioConfirmPassword");
 
   function populateForm(profile) {
     const bubbleSource = (profile.infoBubbles && profile.infoBubbles.length)
@@ -506,7 +533,49 @@ async function init() {
 
   document.getElementById("resetButton").addEventListener("click", () => {
     populateForm(defaultDraftProfile);
+    newPasswordInput.value = "";
+    confirmPasswordInput.value = "";
     setStudioFlash("Reset preview to defaults. Click save changes to make it permanent.", "success");
+  });
+
+  document.getElementById("changePasswordButton").addEventListener("click", async () => {
+    const newPassword = newPasswordInput.value.trim();
+    const confirmPassword = confirmPasswordInput.value.trim();
+
+    if (!newPassword || !confirmPassword) {
+      setStudioFlash("Enter your new password twice before trying to change it.", "error");
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      setStudioFlash("Your new password and confirmation do not match.", "error");
+      return;
+    }
+
+    const result = await updateCurrentUserPassword(newPassword);
+    if (!result.ok) {
+      setStudioFlash(result.message || "Could not change the password right now.", "error");
+      return;
+    }
+
+    newPasswordInput.value = "";
+    confirmPasswordInput.value = "";
+    setStudioFlash("Password changed successfully.", "success");
+  });
+
+  document.getElementById("sendResetEmailButton").addEventListener("click", async () => {
+    if (!signedInEmail) {
+      setStudioFlash("Could not find the signed-in email for this account.", "error");
+      return;
+    }
+
+    const result = await sendPasswordReset(signedInEmail);
+    if (!result.ok) {
+      setStudioFlash(result.message || "Could not send the password reset email.", "error");
+      return;
+    }
+
+    setStudioFlash(`Password reset email sent to ${signedInEmail}.`, "success");
   });
 
   document.getElementById("logoutButton").addEventListener("click", async () => {

@@ -228,6 +228,10 @@ export function authUrl() {
   return "./auth.html";
 }
 
+export function authRecoveryUrl() {
+  return new URL("./auth.html?mode=recovery", window.location.href).toString();
+}
+
 export function applyPageTheme(profile) {
   document.title = `${profile.username} profile`;
   document.documentElement.style.setProperty("--accent", profile.accent);
@@ -261,6 +265,11 @@ async function getCurrentAuthSession() {
 
   const { data } = await supabase.auth.getSession();
   return data.session || null;
+}
+
+export async function getCurrentUserEmail() {
+  const session = await getCurrentAuthSession();
+  return session?.user?.email || "";
 }
 
 export async function logoutUser() {
@@ -333,6 +342,45 @@ export async function loginUser({ email, password }) {
     ok: true,
     username: sessionUsername(data.session)
   };
+}
+
+export async function sendPasswordReset(email) {
+  if (!supabase) {
+    return { ok: false, message: "Supabase is not configured yet." };
+  }
+
+  const normalizedEmail = String(email || "").trim();
+  if (!normalizedEmail) {
+    return { ok: false, message: "Enter your email first so we know where to send the reset link." };
+  }
+
+  const { error } = await supabase.auth.resetPasswordForEmail(normalizedEmail, {
+    redirectTo: authRecoveryUrl()
+  });
+
+  if (error) {
+    return { ok: false, message: error.message };
+  }
+
+  return { ok: true };
+}
+
+export async function updateCurrentUserPassword(password) {
+  if (!supabase) {
+    return { ok: false, message: "Supabase is not configured yet." };
+  }
+
+  if (String(password || "").length < 6) {
+    return { ok: false, message: "Password must be at least 6 characters." };
+  }
+
+  const { error } = await supabase.auth.updateUser({ password });
+
+  if (error) {
+    return { ok: false, message: error.message };
+  }
+
+  return { ok: true };
 }
 
 export async function getProfile(username) {
