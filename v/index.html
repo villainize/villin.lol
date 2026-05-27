@@ -2,11 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=../">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>v directory</title>
+  <title>villin.lol</title>
+  <style>
+    :root {
+      --bg: #09111f;
+      --panel: rgba(15, 23, 42, 0.88);
+      --panel-border: rgba(148, 163, 184, 0.2);
+      --text: #e5eefb;
+      --muted: #94a3b8;
+      --accent: #7dd3fc;
+      --accent-2: #f97316;
+      --shadow: 0 24px 60px rgba(2, 6, 23, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(125, 211, 252, 0.2), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.18), transparent 28%),
+        linear-gradient(160deg, #020617 0%, #0f172a 50%, #111827 100%);
+      display: grid;
+      place-items: center;
+      padding: 32px;
+    }
+
+    main {
+      width: min(1080px, 100%);
+    }
+
+    .hero {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      font-size: 0.78rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 5vw, 4.8rem);
+      line-height: 0.95;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .card:hover,
+    .card:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(125, 211, 252, 0.55);
+      background: rgba(15, 23, 42, 0.96);
+      outline: none;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(125, 211, 252, 0.12);
+      color: var(--accent);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.7rem;
+    }
+
+    .card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .path {
+      color: #fdba74;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to the main project hub...</p>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Project Hub</p>
+      <h1>villin.lol</h1>
+      <p>One GitHub Pages site with each project living under the <code>/v/</code> directory, so visitors can go straight to the page they want.</p>
+    </section>
+
+    <section class="grid" aria-label="Projects">
+      <a class="card" href="./yugioh/">
+        <span class="tag">Yu-Gi-Oh</span>
+        <h2>Deck Builder</h2>
+        <p>Static site hosted from its own folder.</p>
+        <span class="path">villin.lol/v/yugioh</span>
+      </a>
+
+      <a class="card" href="./bf/">
+        <span class="tag">Brave Frontier</span>
+        <h2>bf-db</h2>
+        <p>Database remake hosted from the <code>bf</code> folder.</p>
+        <span class="path">villin.lol/v/bf</span>
+      </a>
+
+      <a class="card" href="./gs/">
+        <span class="tag">Grand Summoners</span>
+        <h2>GS Library</h2>
+        <p>Units and equipment site hosted from the <code>gs</code> folder.</p>
+        <span class="path">villin.lol/v/gs</span>
+      </a>
+    </section>
+  </main>
 </body>
 </html>
