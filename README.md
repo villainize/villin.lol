@@ -1,21 +1,22 @@
 # villin.lol
 
-This repo is set up so each project lives in its own folder:
+This repo is set up so each project lives inside the `v/` folder:
 
-- `yugioh/` -> `villin.lol/yugioh`
-- `bf/` -> `villin.lol/bf`
-- `gs/` -> `villin.lol/gs`
+- `v/yugioh/` -> `villin.lol/v/yugioh`
+- `v/bf/` -> `villin.lol/v/bf`
+- `v/gs/` -> `villin.lol/v/gs`
 
 ## Folder layout
 
 ```text
-/
+/  
   index.html
   CNAME
   .nojekyll
-  yugioh/
-  bf/
-  gs/
+  v/
+    yugioh/
+    bf/
+    gs/
 ```
 
 ## GitHub setup
@@ -31,6 +32,6 @@ This repo is set up so each project lives in its own folder:
 ## What this gives you
 
 - `https://villin.lol/`
-- `https://villin.lol/yugioh/`
-- `https://villin.lol/bf/`
-- `https://villin.lol/gs/`
+- `https://villin.lol/v/yugioh/`
+- `https://villin.lol/v/bf/`
+- `https://villin.lol/v/gs/`
