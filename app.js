@@ -15,16 +15,16 @@ export const RESERVED_USERNAMES = new Set([
 ]);
 
 const DEMO_PROFILE = {
-  siteTitle: "nova profile",
-  displayName: "Nova Void",
-  bio: "Designer, builder, and internet ghost making sleek things for the web. Personal page, contact hub, and latest project drop in one place.",
-  status: "available for collabs",
+  siteTitle: "villen profile",
+  displayName: "Evil Villain",
+  bio: "Dark aesthetic, sharp links, and a profile page built to feel dangerous. One place for identity, socials, drops, and whatever chaos comes next.",
+  status: "plotting something",
   footer: `customized in ${BRAND_NAME} studio`,
-  avatarText: "NV",
+  avatarText: "EV",
   infoBubbles: [
-    { label: "handle", value: "@novavoid", visible: true },
-    { label: "focus", value: "design + frontend", visible: true },
-    { label: "location", value: "new york, usa", visible: false }
+    { label: "handle", value: "@villen", visible: true },
+    { label: "focus", value: "villain arc", visible: true },
+    { label: "location", value: "hidden lair", visible: false }
   ]
 };
 
@@ -101,7 +101,7 @@ export function defaultProfile(username = "demo") {
 }
 
 export function getDemoProfile() {
-  return normalizeProfile("nova", DEMO_PROFILE);
+  return normalizeProfile("villen", DEMO_PROFILE);
 }
 
 export function normalizeProfile(username, profile = {}) {
@@ -218,6 +218,10 @@ export function profileUrl(username) {
   return isLocalHost
     ? `./index.html?user=${encodeURIComponent(username)}`
     : `/${encodeURIComponent(username)}`;
+}
+
+export function homeUrl() {
+  return isLocalHost ? "./index.html" : "/";
 }
 
 export function studioUrl() {
@@ -385,7 +389,7 @@ export async function updateCurrentUserPassword(password) {
 
 export async function getProfile(username) {
   if (!supabase) {
-    return username === "nova" ? getDemoProfile() : null;
+    return username === "villen" ? getDemoProfile() : null;
   }
 
   const normalized = normalizeUsername(username);
@@ -396,7 +400,7 @@ export async function getProfile(username) {
     .maybeSingle();
 
   if (error || !data) {
-    return normalized === "nova" ? getDemoProfile() : null;
+    return normalized === "villen" ? getDemoProfile() : null;
   }
 
   return profileFromRow(data);

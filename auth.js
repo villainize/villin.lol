@@ -1,6 +1,7 @@
 import {
   authUrl,
   getCurrentSession,
+  homeUrl,
   isSupabaseConfigured,
   loginUser,
   profileUrl,
@@ -22,7 +23,7 @@ function renderRecoveryMode() {
   authRoot.innerHTML = `
     <section class="auth-shell">
       <nav class="site-nav">
-        <a class="brand" href="./index.html">
+        <a class="brand" href="${homeUrl()}">
           <span class="brand__orb"></span>
           <span class="brand__name">villainize.lol</span>
         </a>
@@ -116,13 +117,13 @@ function renderAccessMode() {
   authRoot.innerHTML = `
     <section class="auth-shell">
       <nav class="site-nav">
-        <a class="brand" href="./index.html">
+        <a class="brand" href="${homeUrl()}">
           <span class="brand__orb"></span>
           <span class="brand__name">villainize.lol</span>
         </a>
         <div class="nav-actions">
-          <a class="secondary-button" href="./index.html">home</a>
-          <a class="button" href="${profileUrl("nova")}">demo page</a>
+          <a class="secondary-button" href="${homeUrl()}">home</a>
+          <a class="button" href="${profileUrl("villen")}">demo page</a>
         </div>
       </nav>
 

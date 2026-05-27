@@ -5,6 +5,7 @@ import {
   getCurrentSession,
   getDemoProfile,
   getProfile,
+  homeUrl,
   normalizeUsername,
   profileUrl,
   renderProfileCard,
@@ -14,11 +15,21 @@ import {
 const pageRoot = document.getElementById("pageRoot");
 const params = new URLSearchParams(window.location.search);
 
+function normalizeVisibleUrl() {
+  if (!window.location.pathname.endsWith("/index.html")) {
+    return;
+  }
+
+  const cleanPath = window.location.pathname.replace(/\/index\.html$/, "/");
+  const cleanUrl = `${cleanPath}${window.location.search}${window.location.hash}`;
+  window.history.replaceState({}, "", cleanUrl);
+}
+
 async function renderLanding(currentSession) {
   pageRoot.innerHTML = `
     <section class="landing-shell">
       <nav class="site-nav">
-        <a class="brand" href="./index.html">
+        <a class="brand" href="${homeUrl()}">
           <span class="brand__orb"></span>
           <span class="brand__name">villainize.lol</span>
         </a>
@@ -26,7 +37,7 @@ async function renderLanding(currentSession) {
           <a class="secondary-button" href="${currentSession ? studioUrl() : authUrl()}">
             ${currentSession ? "open studio" : "log in"}
           </a>
-          <a class="button" href="${profileUrl("nova")}">view demo</a>
+          <a class="button" href="${profileUrl("villen")}">view demo</a>
         </div>
       </nav>
 
@@ -56,7 +67,7 @@ async function renderLanding(currentSession) {
 
           <div class="row-actions">
             <a class="button" href="${authUrl()}">create account</a>
-            <a class="secondary-button" href="${currentSession ? studioUrl() : profileUrl("nova")}">
+            <a class="secondary-button" href="${currentSession ? studioUrl() : profileUrl("villen")}">
               ${currentSession ? "edit your page" : "explore demo profile"}
             </a>
           </div>
@@ -85,7 +96,7 @@ async function renderPublicProfile(username, currentSession) {
         <p>Try creating an account first, then customize your own page in the studio.</p>
         <div class="row-actions">
           <a class="button" href="${authUrl()}">register</a>
-          <a class="secondary-button" href="./index.html">back home</a>
+          <a class="secondary-button" href="${homeUrl()}">back home</a>
         </div>
       </section>
     `;
@@ -97,7 +108,7 @@ async function renderPublicProfile(username, currentSession) {
   pageRoot.innerHTML = `
     <section class="profile-shell">
       <nav class="site-nav shell">
-        <a class="brand" href="./index.html">
+        <a class="brand" href="${homeUrl()}">
           <span class="brand__orb"></span>
           <span class="brand__name">villainize.lol</span>
         </a>
@@ -116,6 +127,8 @@ async function renderPublicProfile(username, currentSession) {
 }
 
 async function init() {
+  normalizeVisibleUrl();
+
   const currentSession = await getCurrentSession();
   const requestedUser = normalizeUsername(params.get("user") || "");
 

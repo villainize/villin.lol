@@ -7,6 +7,7 @@ import {
   getCurrentSession,
   getCurrentUserEmail,
   getCurrentUserProfile,
+  homeUrl,
   logoutUser,
   parseProfileForm,
   profileUrl,
@@ -35,7 +36,7 @@ async function init() {
         <h1 class="studio-title">profile row not found</h1>
         <p>Run the Supabase SQL setup first so new auth accounts automatically create profile rows.</p>
         <div class="row-actions">
-          <a class="button" href="./index.html">back home</a>
+          <a class="button" href="${homeUrl()}">back home</a>
         </div>
       </section>
     `;
@@ -118,7 +119,7 @@ async function init() {
   studioRoot.innerHTML = `
     <section class="studio-shell">
       <nav class="site-nav">
-        <a class="brand" href="./index.html">
+        <a class="brand" href="${homeUrl()}">
           <span class="brand__orb"></span>
           <span class="brand__name">villainize.lol</span>
         </a>

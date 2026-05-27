@@ -9,10 +9,10 @@
     (function () {
       var path = window.location.pathname.replace(/^\/+|\/+$/g, "");
       if (!path || path === "404.html") {
-        window.location.replace("./index.html");
+        window.location.replace("/");
         return;
       }
-      window.location.replace("./index.html?user=" + encodeURIComponent(path));
+      window.location.replace("/?user=" + encodeURIComponent(path));
     })();
   </script>
 </body>
