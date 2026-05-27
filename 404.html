@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script>
+    (function () {
+      var path = window.location.pathname.replace(/^\/+|\/+$/g, "");
+      if (!path || path === "404.html") {
+        window.location.replace("./index.html");
+        return;
+      }
+      window.location.replace("./index.html?user=" + encodeURIComponent(path));
+    })();
+  </script>
+</body>
+</html>
