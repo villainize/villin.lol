@@ -1,5 +1,6 @@
 const REPO = "https://github.com/Reymdusk/GSReact";
 const RAW_BASE = "https://raw.githubusercontent.com/Reymdusk/GSReact/main/src/shared";
+const RAW_PUBLIC_BASE = "https://raw.githubusercontent.com/Reymdusk/GSReact/main/public";
 const API_BASE = "https://api.github.com/repos/Reymdusk/GSReact";
 const ASSET_BASE = "https://www.grandsummoners.info";
 const CACHE_KEY = "gs-library-cache-v1";
@@ -248,23 +249,29 @@ function renderChips() {
 async function updateFromGitHub() {
   setLoading(true, "Checking GitHub for the newest units and equipment...");
   try {
-    const [unitsSource, equipmentSource, repoInfo] = await Promise.all([
-      fetchText(`${RAW_BASE}/unitInfo.js`),
-      fetchText(`${RAW_BASE}/equipInfo.js`),
+    const [unitsFile, equipmentFile, repoInfo] = await Promise.all([
+      fetchGitHubSource("src/shared/unitInfo.js"),
+      fetchGitHubSource("src/shared/equipInfo.js"),
       fetchJson(`${API_BASE}/commits/main`).catch(() => null),
     ]);
 
-    const units = normalizeCollection(parseExportedData(unitsSource), "unit");
-    const equipment = normalizeCollection(parseExportedData(equipmentSource), "equipment");
+    const units = normalizeCollection(parseExportedData(unitsFile.source), "unit", unitsFile);
+    const equipment = normalizeCollection(parseExportedData(equipmentFile.source), "equipment", equipmentFile);
     const payload = {
       items: [...units, ...equipment],
       fetchedAt: new Date().toISOString(),
       repoUpdatedAt: repoInfo?.commit?.committer?.date || null,
+      repoSha: repoInfo?.sha || null,
       repoUrl: REPO,
+      sourceFiles: {
+        unit: unitsFile,
+        equipment: equipmentFile,
+      },
     };
 
-    localStorage.setItem(CACHE_KEY, JSON.stringify(payload));
-    applyData(payload, "Updated from GitHub.");
+    const saved = saveCache(payload);
+    const itemCounts = `${units.length.toLocaleString()} units and ${equipment.length.toLocaleString()} equipment`;
+    applyData(payload, saved ? `Updated from GitHub: ${itemCounts}.` : `Updated from GitHub: ${itemCounts}. Browser storage was full, so this refresh may not persist after reload.`);
   } catch (error) {
     const cached = loadCache();
     if (cached) {
@@ -309,6 +316,18 @@ async function fetchText(url) {
   return response.text();
 }
 
+async function fetchGitHubSource(path) {
+  const fileInfo = await fetchJson(`${API_BASE}/contents/${path}`);
+  const source = await fetchText(fileInfo.download_url || `${RAW_BASE}/${path.split("/").pop()}`);
+  return {
+    path,
+    source,
+    sha: fileInfo.sha || null,
+    htmlUrl: fileInfo.html_url || `${REPO}/blob/main/${path}`,
+    downloadUrl: fileInfo.download_url || null,
+  };
+}
+
 async function fetchJson(url) {
   const response = await fetch(`${url}?cb=${Date.now()}`);
   if (!response.ok) throw new Error(`${response.status} ${url}`);
@@ -328,7 +347,7 @@ function parseExportedData(source) {
   return Function(`${cleaned}; return ${exportedName};`)();
 }
 
-function normalizeCollection(collection, kind) {
+function normalizeCollection(collection, kind, sourceInfo = null) {
   const list = Array.isArray(collection) ? collection : Object.values(collection || {});
   return list.map((entry, index) => {
     const flat = flattenObject(entry);
@@ -352,7 +371,8 @@ function normalizeCollection(collection, kind) {
       searchText: buildSearchCorpus(flat, kind, cleanName, cleanSubtype),
       abilitySearchText: buildAbilitySearchCorpus(flat),
       original: entry,
-      sourceFile: SOURCE_FILES[kind],
+      sourceFile: sourceInfo?.htmlUrl || SOURCE_FILES[kind],
+      sourceSha: sourceInfo?.sha || "",
       sourceOrder: index,
     };
   });
@@ -1448,6 +1468,9 @@ function persistGuides() {
 function getAssetUrl(value) {
   if (!isImagePath(value)) return "";
   if (/^https?:\/\//i.test(value)) return value;
+  if (value.startsWith("/db/") || value.startsWith("db/")) {
+    return `${RAW_PUBLIC_BASE}${value.startsWith("/") ? "" : "/"}${value}`;
+  }
   return `${ASSET_BASE}${value.startsWith("/") ? "" : "/"}${value}`;
 }
 
@@ -1546,6 +1569,52 @@ function loadCache() {
   } catch {
     return null;
   }
+}
+
+function saveCache(payload) {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(compactPayloadForStorage(payload)));
+    return true;
+  } catch (error) {
+    console.warn("Could not save GitHub data cache.", error);
+    try {
+      localStorage.removeItem(CACHE_KEY);
+      localStorage.setItem(CACHE_KEY, JSON.stringify(compactPayloadForStorage(payload, true)));
+      return true;
+    } catch (retryError) {
+      console.warn("Could not save compact GitHub data cache.", retryError);
+      return false;
+    }
+  }
+}
+
+function compactPayloadForStorage(payload, smallest = false) {
+  return {
+    ...payload,
+    items: payload.items.map((item) => {
+      const compact = {
+        id: item.id,
+        kind: item.kind,
+        name: item.name,
+        subtype: item.subtype,
+        image: item.image,
+        element: item.element,
+        race: item.race,
+        slot: item.slot,
+        flat: item.flat,
+        sourceFile: item.sourceFile,
+        sourceSha: item.sourceSha,
+        sourceOrder: item.sourceOrder,
+      };
+      return smallest ? {
+        kind: compact.kind,
+        flat: compact.flat,
+        sourceFile: compact.sourceFile,
+        sourceSha: compact.sourceSha,
+        sourceOrder: compact.sourceOrder,
+      } : compact;
+    }),
+  };
 }
 
 function setLoading(isLoading, message = "") {
