@@ -81,36 +81,70 @@
     search.addEventListener('input',()=>{page=0;render();});server.addEventListener('change',load);await load();
   }
   function workspace(kind,token) {
-    const squad=kind==='squads', storageKey='bf-db-'+kind, limit=squad?6:4;
-    const units=window.BFDB_DATA.units; const lookup=new Map(units.map(u=>[u.key,u]));
-    let saved;try {saved=JSON.parse(localStorage.getItem(storageKey));}catch{}
+    const isSquad=kind==='squads';
+    const storageKey='bf-db-'+kind, limit=isSquad?6:4, units=window.BFDB_DATA.units;
+    const lookup=new Map(units.map(u=>[u.key,u]));
+    let saved; try { saved=JSON.parse(localStorage.getItem(storageKey)); } catch {}
     let picks=(Array.isArray(saved?.units)?saved.units:[]).filter(key=>lookup.has(key)).slice(0,limit);
-    panel.replaceChildren(el('p',squad?'Build a six-unit squad. Slot 1 is your leader; slot 6 is your friend. Saved on this browser.':'Compare up to four units, including their stats and skills. Saved on this browser.','settings-note'));
-    const name=el('input');name.setAttribute('aria-label','Squad name'); name.placeholder='Squad name';name.value=typeof saved?.name==='string'?saved.name:'My squad'; if(squad) panel.append(name);
-    const controls=el('div',undefined,'archive-controls'); const wrap=el('label',undefined,'search-field');wrap.append(el('span','Find units'));const search=el('input');search.type='search';search.placeholder='Unit name or ID';wrap.append(search);
-    const [serverWrap,server]=select('Server',[['GL','GL'],['EU','EU'],['JP','JP'],['KR','KR']]);controls.append(wrap,serverWrap);panel.append(controls);
-    const message=el('p',undefined,'settings-note');message.setAttribute('role','status');const results=el('div',undefined,'unit-picker');const selected=el('div',undefined,'tool-selection');panel.append(message,results,selected);
-    function save(){try{localStorage.setItem(storageKey,JSON.stringify({name:name.value,units:picks}));}catch{message.textContent='Storage is unavailable; changes last for this session only.';}}
-    name.addEventListener('input',save);
-    function find(){results.replaceChildren();const q=search.value.toLowerCase().trim();const matches=units.filter(u=>u.server===server.value&&`${u.name} ${u.id}`.toLowerCase().includes(q));for(const unit of matches.slice(0,12)){const b=button(`${unit.name} / ${unit.id}`,()=>{if(picks.length>=limit){message.textContent=`Remove a unit before adding more (maximum ${limit}).`;return;} picks.push(unit.key);save();render();});results.append(b);} if(!matches.length) results.append(el('p','No matching units.'));}
-    async function render(){
-      const current=++renderId; selected.replaceChildren();message.textContent=`${picks.length} / ${limit} slots filled`;
-      if(!picks.length){selected.append(el('p','Choose a unit above to get started.','result-note'));return;}
-      const chosen=picks.map(key=>lookup.get(key));
-      if(squad) selected.append(el('p',`Base totals: ${['hp','atk','def','rec'].map(stat=>`${stat.toUpperCase()} ${chosen.reduce((n,u)=>n+(Number(u.stats?.[stat])||0),0).toLocaleString()}`).join(' / ')}. No leader, sphere, or skill bonuses applied.`,'settings-note'));
-      const grid=el('div',undefined,'comparison-grid');selected.append(grid);
-      chosen.forEach((unit,index)=>{
-        const card=el('article',undefined,'info-card');card.append(el('small',squad?(index===0?'Leader':index===5?'Friend':`Member ${index+1}`):`${unit.server} / ${unit.id}`),el('h3',unit.name));
-        const img=el('img');img.src=`assets/images/${unit.images.thumb}`;img.alt=unit.name;img.width=80;img.height=80;img.addEventListener('error',()=>{img.hidden=true;});card.append(img);
-        card.append(el('p',`${unit.element} / ${unit.rarity} / Cost ${unit.cost}`));
-        for(const stat of ['hp','atk','def','rec']) card.append(el('p',`${stat.toUpperCase()}: ${unit.stats?.[stat]??'Unavailable'}`));
-        card.append(button('Remove',()=>{picks.splice(index,1);save();render();}));
-        if(squad&&index>0)card.append(button('Make leader',()=>{const [key]=picks.splice(index,1);picks.unshift(key);save();render();}));
-        const skills=el('div');skills.append(el('p','Loading skills...'));card.append(skills);grid.append(card);
-        json(`data/unit-details/${unit.server.toLowerCase()}/${unit.id}.json`).then(detail=>{if(token!==revision||current!==renderId)return;skills.replaceChildren();for(const key of ['leader skill','extra skill','bb','sbb','ubb']){const skill=detail.raw?.[key];skills.append(el('h4',key.toUpperCase()),el('p',skill?`${skill.name}: ${skill.desc||'No description'}`:'None'));} if(!squad)skills.append(rawDetails(detail.raw?.stats||unit.stats));}).catch(()=>{skills.textContent='Skill details unavailable.';});
+    let renderId=0;
+    const shell=el('div',undefined,'workspace-shell');
+    const intro=el('div',undefined,'workspace-intro');
+    const eyebrow=el('p',isSquad?'SQUAD BUILDER':'UNIT COMPARISON','eyebrow');
+    const title=el('h2',isSquad?'Build a squad that makes sense.':'Put units side by side.');
+    const description=el('p',isSquad?'Arrange six units, mark the leader and friend slot, then review the team totals.':'Compare up to four units with their base stats, identity, and skill kit in one view.');
+    const introActions=el('div',undefined,'workspace-actions');
+    const clearButton=button('Clear lineup',()=>{picks=[];save();render();}); clearButton.classList.add('quiet-action'); introActions.append(clearButton);
+    intro.append(eyebrow,title,description,introActions);
+    const workspaceGrid=el('div',undefined,'workspace-grid');
+    const picker=el('section',undefined,'picker-panel');
+    const pickerHead=el('div',undefined,'workspace-section-head'); pickerHead.append(el('div',undefined,'section-head-copy'));
+    pickerHead.firstChild.append(el('p','1 / SELECT','eyebrow'),el('h3','Find a unit'),el('p','Search the local archive and add it to an open slot.'));
+    const controls=el('div',undefined,'workspace-controls');
+    const searchWrap=el('label',undefined,'search-field'); searchWrap.append(el('span','Search units')); const search=el('input'); search.type='search'; search.placeholder='Name or ID'; searchWrap.append(search);
+    const serverValues=[...new Set(units.map(u=>u.server))].sort(); const [serverWrap,server]=select('Server',serverValues.map(value=>[value,value])); controls.append(searchWrap,serverWrap); pickerHead.append(controls);
+    const resultCount=el('p','Search the archive to see matching units.','picker-status'); const results=el('div',undefined,'unit-picker'); picker.append(pickerHead,resultCount,results);
+    const lineup=el('section',undefined,'lineup-panel');
+    const lineupHead=el('div',undefined,'workspace-section-head'); const lineupCopy=el('div',undefined,'section-head-copy'); lineupCopy.append(el('p','2 / REVIEW','eyebrow'),el('h3',isSquad?'Your active squad':'Comparison board')); lineupHead.append(lineupCopy);
+    if(isSquad){ const name=el('input'); name.className='lineup-name'; name.setAttribute('aria-label','Squad name'); name.placeholder='Squad name'; name.value=typeof saved?.name==='string'?saved.name:'My squad'; lineupHead.append(name); name.addEventListener('input',save); }
+    const message=el('p',undefined,'workspace-status'); message.setAttribute('role','status'); const selected=el('div',undefined,'tool-selection'); lineup.append(lineupHead,message,selected);
+    workspaceGrid.append(picker,lineup); shell.append(intro,workspaceGrid); panel.replaceChildren(shell);
+    function save(){try {localStorage.setItem(storageKey,JSON.stringify({name:document.querySelector('.lineup-name')?.value || saved?.name || 'My squad',units:picks}));} catch {message.textContent='Storage is unavailable; changes last for this session only.';}}
+    function find(){
+      results.replaceChildren(); const q=search.value.toLowerCase().trim();
+      const matches=units.filter(u=>u.server===server.value&&`${u.name} ${u.id} ${u.element}`.toLowerCase().includes(q));
+      resultCount.textContent=`${matches.length.toLocaleString()} units found${q?` for “${search.value}”`:''}`;
+      matches.slice(0,18).forEach(unit=>{
+        const add=button('',()=>{if(picks.length>=limit){message.textContent=`Your ${isSquad?'squad':'comparison'} is full. Remove a unit first.`;return;} picks.push(unit.key);save();render();}); add.className='unit-search-result';
+        const img=el('img'); img.src=`assets/images/${unit.images.thumb}`; img.alt=''; img.loading='lazy'; img.addEventListener('error',()=>{img.hidden=true;});
+        const copy=el('span',undefined,'unit-search-copy'); copy.append(el('strong',unit.name),el('small',`${unit.element || 'Unknown'} · ${unit.server} · #${unit.id}`)); add.append(img,copy,el('span','+','add-mark')); results.append(add);
       });
+      if(!matches.length) results.append(el('p','No matching units in this server archive.','result-note'));
     }
-    let renderId=0;search.addEventListener('input',find);server.addEventListener('change',find);find();render();
+    function statRow(label,value,max){
+      const row=el('div',undefined,'metric-row'); const valueNumber=Number(value)||0; const fill=el('span',undefined,'stat-fill'); fill.style.width=`${Math.max(4,Math.min(100,(valueNumber/max)*100))}%`; row.append(el('span',label),el('strong',value===undefined?'—':Number(value).toLocaleString()),el('i',undefined,'stat-track')); row.lastChild.append(fill); return row;
+    }
+    async function render(){
+      const current=++renderId; selected.replaceChildren(); message.textContent=`${picks.length} / ${limit} ${isSquad?'slots':'units'} selected`;
+      const chosen=picks.map(key=>lookup.get(key));
+      if(isSquad){
+        const totals=el('div',undefined,'totals-strip'); ['hp','atk','def','rec'].forEach(stat=>{const total=chosen.reduce((sum,u)=>sum+(Number(u.stats?.[stat])||0),0); const cell=el('div');cell.append(el('small',stat.toUpperCase()),el('strong',total.toLocaleString()));totalsStripFix(cell,stat); totals.append(cell);}); selected.append(totals);
+      }
+      const grid=el('div',undefined,isSquad?'slot-grid':'compare-grid'); selected.append(grid);
+      for(let index=0;index<limit;index++){
+        const unit=chosen[index];
+        if(!unit){ const empty=el('article',undefined,'empty-slot'); empty.append(el('span',isSquad?String(index+1):String(index+1),'slot-number'),el('strong',isSquad?'Open squad slot':'Open comparison slot'),el('p',isSquad?(index===0?'Add a leader to start building.':'Choose another unit from the archive.'):'Add any unit to compare it.')); grid.append(empty); continue; }
+        const card=el('article',undefined,isSquad?'slot-card':'compare-card');
+        const role=isSquad?(index===0?'LEADER':index===5?'FRIEND':`SLOT ${index+1}`):`${unit.server} · #${unit.id}`;
+        const cardTop=el('div',undefined,'card-top'); cardTop.append(el('span',role,'role-chip'),button('×',()=>{picks.splice(index,1);save();render();})); card.append(cardTop);
+        const identity=el('div',undefined,'unit-identity'); const img=el('img'); img.src=`assets/images/${unit.images.thumb}`;img.alt=unit.name;img.loading='lazy';img.addEventListener('error',()=>{img.hidden=true;}); identity.append(img,el('div',undefined,'unit-identity-copy')); identity.lastChild.append(el('h4',unit.name),el('p',`${unit.element || 'Unknown'} · ${unit.rarity || '—'} star · Cost ${unit.cost || '—'}`)); card.append(identity);
+        const maxStats={hp:Math.max(1,...chosen.map(u=>Number(u?.stats?.hp)||0)),atk:Math.max(1,...chosen.map(u=>Number(u?.stats?.atk)||0)),def:Math.max(1,...chosen.map(u=>Number(u?.stats?.def)||0)),rec:Math.max(1,...chosen.map(u=>Number(u?.stats?.rec)||0))}; const stats=el('div',undefined,'stat-list'); ['hp','atk','def','rec'].forEach(stat=>stats.append(statRow(stat.toUpperCase(),unit.stats?.[stat],maxStats[stat]))); card.append(stats);
+        if(isSquad && index>0) card.append(button('Make leader',()=>{const [key]=picks.splice(index,1);picks.unshift(key);save();render();}));
+        const skills=el('div',undefined,'skill-preview'); skills.append(el('p','Loading skill kit…','loading-note')); card.append(skills); grid.append(card);
+        json(`data/unit-details/${unit.server.toLowerCase()}/${unit.id}.json`).then(detail=>{if(token!==revision||current!==renderId)return;skills.replaceChildren(el('p','SKILL KIT','eyebrow'));for(const key of ['leader skill','extra skill','bb','sbb','ubb']){const skill=detail.raw?.[key];if(skill)skills.append(el('strong',key.toUpperCase()),el('p',skill.desc||skill.name||'Available'));}if(!skills.children.length)skills.append(el('p','No skill details available.','loading-note'));}).catch(()=>{skills.replaceChildren(el('p','Skill details unavailable.','loading-note'));});
+      }
+    }
+    function totalsStripFix(cell,stat){cell.classList.add(`total-${stat}`);}
+    search.addEventListener('input',find);server.addEventListener('change',find);find();render();
   }
   window.BFDB_MULTITOOL={open(kind){const token=++revision;panel.replaceChildren();if(kind==='squads'||kind==='compare')workspace(kind,token);else archive(kind,token).catch(e=>{if(token===revision)error(e.message);});},labels};
 })();
