@@ -132,7 +132,7 @@
   function availableRootViews(charactersEnabled = state.charactersTabEnabled) {
     const views = ["units", "items"];
     if (charactersEnabled) views.push("characters");
-    views.push("extra-skills", "settings", "paths");
+    views.push("extra-skills", "settings", "paths", "bursts", "leader-skills", "missions", "dictionary", "squads", "compare");
     return views;
   }
 
@@ -462,7 +462,7 @@
     const unit = data.units.find((entry) => unitKey(entry) === state.selectedUnitKey) || data.units[0];
     if (!unit) return;
 
-    resolveImage(elements.detailArt, unit.images.full, unit.name, "full");
+    resolveImageWithFallbacks(elements.detailArt, [unit.images.full, unit.images.battle, unit.images.thumb], unit.name, "full");
     elements.detailId.textContent = `${unit.server || "GL"} Unit ${unit.id}`;
     elements.detailName.textContent = unit.name;
     elements.detailTitle.textContent = unit.title;
@@ -1137,7 +1137,7 @@
   function renderUnitDetail(summary, raw, detail = {}) {
     syncUnitDetailMode();
     const extended = state.unitDetailMode === "extended";
-    resolveImage(elements.unitPageArt, summary.images.full, summary.name, "full");
+    resolveImageWithFallbacks(elements.unitPageArt, [summary.images.full, summary.images.battle, summary.images.thumb], summary.name, "full");
     elements.unitPageId.textContent = `${summary.server} Unit ${summary.id}`;
     elements.unitPageName.textContent = summary.name;
     elements.unitPageTitle.textContent = raw.desc || summary.title || "No description available.";
@@ -1229,7 +1229,8 @@
 
   function setView(view) {
     state.view = normalizeView(view);
-    document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === `${state.view}-view`));
+    const tool = window.BFDB_MULTITOOL?.labels[state.view];
+    document.querySelectorAll(".view").forEach((section) => section.classList.toggle("active", section.id === (tool ? "multitool-view" : `${state.view}-view`)));
     document.querySelectorAll(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === state.view));
     const viewTitles = {
       units: "Units",
@@ -1243,7 +1244,7 @@
       "character-detail": "Character Details",
       "extra-skill-detail": "Extra Skill Details"
     };
-    elements.viewTitle.textContent = viewTitles[state.view] || state.view.charAt(0).toUpperCase() + state.view.slice(1);
+    elements.viewTitle.textContent = tool || viewTitles[state.view] || state.view.charAt(0).toUpperCase() + state.view.slice(1);
     const searchVisible = state.view === "units" || state.view === "items" || state.view === "characters" || state.view === "extra-skills";
     elements.search.closest(".search-field").hidden = !searchVisible;
     elements.serverFilter.closest(".select-field").hidden = state.view !== "units" && state.view !== "items" && state.view !== "extra-skills";
@@ -1256,7 +1257,8 @@
     else if (state.view === "extra-skills") elements.search.placeholder = "Name, description, target, server, id";
     else elements.search.placeholder = "Name, element, rarity, server, id";
     updateTypeFilter();
-    renderAll();
+    if (tool) window.BFDB_MULTITOOL.open(state.view);
+    else renderAll();
   }
 
   function changePage(kind, direction) {

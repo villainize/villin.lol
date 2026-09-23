@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bf-db</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/multitool.css">
 </head>
 <body>
   <div class="app-shell">
@@ -18,10 +19,19 @@
       </div>
 
       <nav class="nav-list" aria-label="Sections">
+        <p class="panel-label">Database</p>
         <button class="nav-item active" data-view="units" type="button">Units</button>
         <button class="nav-item" data-view="items" type="button">Items</button>
         <button id="nav-characters" class="nav-item" data-view="characters" type="button">Characters</button>
         <button class="nav-item" data-view="extra-skills" type="button">Extra Skills</button>
+        <button class="nav-item" data-view="bursts" type="button">Bursts</button>
+        <button class="nav-item" data-view="leader-skills" type="button">Leader Skills</button>
+        <button class="nav-item" data-view="missions" type="button">Missions</button>
+        <button class="nav-item" data-view="dictionary" type="button">Dictionary</button>
+        <p class="panel-label">Tools</p>
+        <button class="nav-item" data-view="squads" type="button">Squads</button>
+        <button class="nav-item" data-view="compare" type="button">Compare</button>
+        <p class="panel-label">Preferences</p>
         <button class="nav-item" data-view="settings" type="button">Settings</button>
         <button class="nav-item" data-view="paths" type="button">Image Paths</button>
       </nav>
@@ -81,8 +91,8 @@
         <div class="hero-strip">
           <div>
             <p class="eyebrow">Red archive shell</p>
-            <h3>Unit archive, thumbnails, items, and clean image routing.</h3>
-            <p>Built as a static project so you can keep expanding the database without touching the older game folders.</p>
+            <h3>Your Brave Frontier field guide.</h3>
+            <p>Explore units, skills, items, and missions. Build your squad and compare your next choices.</p>
           </div>
           <div class="stat-row" aria-label="Database stats">
             <div><strong id="unit-count">0</strong><span>Units</span></div>
@@ -278,6 +288,8 @@
         </div>
       </section>
 
+      <section id="multitool-view" class="view" aria-label="Database and tools"></section>
+
       <section id="settings-view" class="view" aria-label="Settings">
         <div class="section-head">
           <div>
@@ -318,6 +330,12 @@
                 <option value="items">Items</option>
                 <option id="default-view-characters-option" value="characters">Characters</option>
                 <option value="extra-skills">Extra Skills</option>
+                <option value="bursts">Bursts</option>
+                <option value="leader-skills">Leader Skills</option>
+                <option value="missions">Missions</option>
+                <option value="dictionary">Dictionary</option>
+                <option value="squads">Squads</option>
+                <option value="compare">Compare</option>
                 <option value="paths">Image Paths</option>
               </select>
             </label>
@@ -380,6 +398,7 @@
   <script src="data/catalog.js"></script>
   <script src="data/characters.js"></script>
   <script src="data/extraskills.js"></script>
+  <script src="js/multitool.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
