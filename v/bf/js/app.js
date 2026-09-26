@@ -132,7 +132,7 @@
   function availableRootViews(charactersEnabled = state.charactersTabEnabled) {
     const views = ["units", "items"];
     if (charactersEnabled) views.push("characters");
-    views.push("extra-skills", "settings", "paths", "bursts", "leader-skills", "missions", "dictionary", "squads", "compare");
+    views.push("extra-skills", "settings", "paths", "bursts", "leader-skills", "missions", "dictionary", "squads", "compare", "spark-simulator");
     return views;
   }
 

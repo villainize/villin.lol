@@ -1,5 +1,5 @@
 (() => {
-  const labels = {bursts:'Bursts', 'leader-skills':'Leader Skills', missions:'Missions', dictionary:'Dictionary', squads:'Squads', compare:'Spark Simulator'};
+  const labels = {bursts:'Bursts', 'leader-skills':'Leader Skills', missions:'Missions', dictionary:'Dictionary', squads:'Squads', compare:'Compare', 'spark-simulator':'Spark Simulator'};
   const panel = document.querySelector('#multitool-view');
   const cache = new Map();
   let revision = 0;
@@ -166,5 +166,5 @@
     function totalsStripFix(cell,stat){cell.classList.add(`total-${stat}`);}
     search.addEventListener('input',find);server.addEventListener('change',find);find();render();
   }
-  window.BFDB_MULTITOOL={open(kind){const token=++revision;panel.replaceChildren();if(kind==='compare')sparkWorkspace(token);else if(kind==='squads')workspace(kind,token);else archive(kind,token).catch(e=>{if(token===revision)error(e.message);});},labels};
+  window.BFDB_MULTITOOL={open(kind){const token=++revision;panel.replaceChildren();if(kind==='spark-simulator')sparkWorkspace(token);else if(kind==='squads'||kind==='compare')workspace(kind,token);else archive(kind,token).catch(e=>{if(token===revision)error(e.message);});},labels};
 })();
