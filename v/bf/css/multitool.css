@@ -127,7 +127,7 @@ button:disabled { opacity: .4; cursor: default; }
 .spark-controls .select-field { min-width: 180px; }
 .spark-controls input { width: 100%; padding: 8px; }
 .spark-controls .settings-note { margin: 0; max-width: 210px; font-size: .7rem; }
-.spark-unit-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 7px; }
+.spark-unit-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .spark-unit-stat { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: center; column-gap: 7px; padding: 7px; border: 1px solid var(--line); border-radius: 6px; background: rgba(0,0,0,.2); }
 .spark-unit-stat img { grid-row: span 2; width: 30px; height: 30px; object-fit: contain; }
 .spark-unit-stat strong, .spark-unit-stat span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -157,6 +157,7 @@ button:disabled { opacity: .4; cursor: default; }
   .totals-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spark-slots { grid-template-columns: 1fr; }
   .spark-fields { grid-template-columns: 1fr; }
+  .spark-unit-stats { grid-template-columns: 1fr; }
   .spark-controls { width: 100%; }
   .spark-controls .select-field { min-width: 0; }
 }
