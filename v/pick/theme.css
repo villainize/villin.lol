@@ -1,0 +1,42 @@
+:root { color-scheme: light; }
+.topbar { gap: 16px; flex-wrap: wrap; }
+.topbar .beta-pill { margin-left: auto; }
+.theme-toggle { display:flex; align-items:center; gap:9px; padding:9px 12px; border:1px solid var(--line); border-radius:24px; background:var(--card); color:var(--ink); font-size:12px; }
+.switch-track { width:32px; height:18px; background:#b9b0c4; border-radius:20px; padding:3px; }
+.switch-knob { display:block; width:12px; height:12px; background:white; border-radius:50%; transition:transform .2s; }
+[data-theme="dark"] { color-scheme:dark; --ink:#f0eaf6; --muted:#b8adca; --paper:#14111b; --card:#211b2b; --line:#42364f; --purple:#b79aff; }
+[data-theme="dark"] .switch-track { background:#7853c8; }
+[data-theme="dark"] .switch-knob { transform:translateX(14px); }
+[data-theme="dark"] .input-row input,
+[data-theme="dark"] .list-manager select,
+[data-theme="dark"] .list-name-input,
+[data-theme="dark"] .item,
+[data-theme="dark"] .mode-card,
+[data-theme="dark"] .player-stepper button { background:#2a2335; color:var(--ink); border-color:var(--line); }
+[data-theme="dark"] .mode-card.active { background:#40305c; color:#eadfff; border-color:#b79aff; }
+[data-theme="dark"] .preset-row button,
+[data-theme="dark"] .invite-btn { background:#30273c; color:var(--muted); }
+.setup-panel .invite-btn { background:#6c4ee2; color:#fff; min-height:44px; opacity:1; }
+.setup-panel .invite-btn:disabled { background:#524664; color:#f5efff; cursor:not-allowed; }
+[data-theme="dark"] .add-btn,
+[data-theme="dark"] .list-manager button,
+[data-theme="dark"] .brand-mark { background:#8055d1; color:white; }
+[data-theme="dark"] .item-index,
+[data-theme="dark"] .remove,
+[data-theme="dark"] .empty-items,
+[data-theme="dark"] .empty-history,
+[data-theme="dark"] .history-item small,
+[data-theme="dark"] footer { color:var(--muted); }
+[data-theme="dark"] input::placeholder { color:#b8adca; opacity:1; }
+[data-theme="dark"] .hero-orbit,
+[data-theme="dark"] .hero-orbit:before,
+[data-theme="dark"] .hero-orbit:after { border-color:var(--line); }
+[data-theme="dark"] .items::-webkit-scrollbar-thumb { background:#655174; }
+[data-theme="dark"] .result-stage { background:#19131f; border:1px solid var(--line); }
+[data-theme="dark"] .game-area button,
+[data-theme="dark"] .game-area input,
+[data-theme="dark"] .game-area select { background:#352943; color:#f1e8ff; border-color:#78658a; }
+[data-theme="dark"] .game-board.checkers button { background:#9685a1; }
+[data-theme="dark"] .game-board.checkers .dark { background:#44344f; }
+[data-theme="dark"] .stage-top { color:#b8adca; }
+@media(max-width:520px) { .topbar .beta-pill { display:none; } .theme-toggle { margin-left:auto; } }

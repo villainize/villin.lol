@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pick & Play</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="games.css" />
+    <style>
+      .saved-lists-heading{display:flex;align-items:center;justify-content:space-between;margin-top:22px}.saved-lists-heading .quick-label{margin:0}.new-list-btn{background:none;color:var(--purple);font:10px 'DM Mono',monospace}.list-manager{display:flex;gap:6px;margin-top:9px}.list-manager select,.list-name-input{border:1px solid var(--line);background:#faf7f2;color:var(--ink);border-radius:9px;padding:10px;font:11px 'Space Grotesk';outline:none}.list-manager select{min-width:0;flex:1}.list-manager button{background:var(--purple);color:#fff;border-radius:9px;padding:0 13px;font-size:11px}.list-name-input{width:100%;margin-top:6px;padding:8px 10px}
+    </style>
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="cloud.css" />
+    <link rel="stylesheet" href="rooms.css" />
+    <script src="theme.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#"><span class="brand-mark">✦</span><span>pick<span class="brand-dot">.</span>play</span></a>
+        <div class="beta-pill"><span class="live-dot"></span> LOCAL PLAYGROUND</div>
+        <button id="themeToggle" class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Night mode"><span aria-hidden="true" class="switch-track"><span class="switch-knob"></span></span><span id="themeLabel">Night mode</span></button>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Make the decision together</p>
+          <h1>Put it in the middle.<br /><em>Let chance decide.</em></h1>
+          <p class="hero-copy">Load up your options, pick a game, and let the group find out what happens next.</p>
+        </div>
+        <div class="hero-orbit" aria-hidden="true"><span>?</span><i>✦</i><b>↗</b></div>
+      </section>
+
+      <div class="workspace">
+        <aside class="setup-panel card">
+          <div class="section-heading"><div><span class="step">01</span><h2>Build your list</h2></div><span class="count" id="itemCount">0 items</span></div>
+          <div class="input-row"><input id="itemInput" type="text" placeholder="Add a game, anime, or anything…" maxlength="48" /><button class="add-btn" id="addBtn" aria-label="Add item">+</button></div>
+          <div class="quick-label">Quick start</div>
+          <div class="preset-row"><button data-preset="games">Games</button><button data-preset="anime">Anime</button><button data-preset="movies">Movies</button><button data-preset="clear">Clear</button></div>
+          <div class="saved-lists-heading"><span class="quick-label">Saved lists</span><button id="newListBtn" class="new-list-btn">+ New list</button></div>
+          <div class="list-manager"><select id="listSelect" aria-label="Choose a saved list"></select></div>
+          <input id="listNameInput" class="list-name-input" type="text" placeholder="Name this list…" maxlength="32" />
+          <p id="listSaveStatus" class="muted" role="status" aria-live="polite">Lists save automatically on this device.</p>
+          <div class="items" id="items" aria-live="polite"></div>
+          <div class="player-box">
+            <div><span class="player-title">Players</span><span class="muted">Local for now · 2–4 people</span></div>
+            <div class="player-stepper"><button id="minusPlayers">−</button><strong id="playerCount">2</strong><button id="plusPlayers">+</button></div>
+          </div>
+          <button class="invite-btn" type="button">Invite friends · Online room</button>
+        </aside>
+
+        <section class="play-panel">
+          <div class="section-heading mode-heading"><div><span class="step">02</span><h2>Choose your game</h2></div><span class="turn-label" id="turnLabel">Pick an item or a winner</span></div>
+          <div class="mode-grid" id="modeGrid">
+            <button class="mode-card active" data-mode="jar"><span class="mode-icon">◉</span><span><strong>Draw from a jar</strong><small>Pick one at random</small></span></button>
+            <button class="mode-card" data-mode="wheel"><span class="mode-icon spin-icon">◌</span><span><strong>Spin the wheel</strong><small>Pick an item at random</small></span></button>
+            <button class="mode-card" data-mode="dice"><span class="mode-icon">⚄</span><span><strong>Roll the dice</strong><small>Player vs player</small></span></button>
+            <button class="mode-card" data-mode="coin"><span class="mode-icon">◐</span><span><strong>Flip a coin</strong><small>Player 1 vs Player 2</small></span></button>
+            <button class="mode-card" data-mode="rps"><span class="mode-icon">✌</span><span><strong>Rock paper scissors</strong><small>Players choose</small></span></button>
+            <button class="mode-card" data-mode="number"><span class="mode-icon">#</span><span><strong>Guess the number</strong><small>Closest player wins</small></span></button>
+            <button class="mode-card" data-mode="checkers"><span class="mode-icon">◈</span><span><strong>Checkers</strong><small>Player vs player</small></span></button>
+            <button class="mode-card" data-mode="tictactoe"><span class="mode-icon">✕</span><span><strong>Tic-Tac-Toe</strong><small>Player vs player</small></span></button>
+          </div>
+
+          <div class="result-stage" id="resultStage">
+            <div class="stage-top"><span id="stageMode">DRAW FROM A JAR</span><span id="roundText">ROUND 01</span></div>
+            <div class="result-content"><div class="result-symbol" id="resultSymbol">?</div><p class="result-kicker" id="resultKicker">Your result will land here</p><h3 id="resultTitle">Add a few options<br />to get started</h3><p class="result-sub" id="resultSub">The group is waiting on you.</p></div>
+            <button class="play-btn" id="playBtn"><span id="playIcon">✦</span><span id="playText">Draw from the jar</span></button>
+          </div>
+          <div class="history"><div class="history-heading"><h2>Recent results</h2><button id="clearHistory">Clear</button></div><div id="historyList" class="history-list"><p class="empty-history">Your plays will show up here.</p></div></div>
+        </section>
+      </div>
+      <footer><span>pick.play / core playground</span><span>Invite mode is next <span class="footer-arrow">→</span></span></footer>
+    </main>
+    <script src="app.js?v=20261001-2"></script>
+    <script src="lists.js?v=20261001-2"></script>
+    <script src="games.js?v=20261001-2"></script>
+    <script src="cloud.js?v=20261001-2"></script>
+    <script src="autosave.js?v=20261001-2"></script>
+    <script src="rooms.js?v=20261001-2"></script>
+  </body>
+</html>
