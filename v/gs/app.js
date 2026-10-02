@@ -1,7 +1,7 @@
-const REPO = "https://github.com/Reymdusk/GSReact";
+const REPO = "https://github.com/Reymdusk/GSLibrary";
 const RAW_BASE = "https://raw.githubusercontent.com/Reymdusk/GSReact/main/src/shared";
-const RAW_PUBLIC_BASE = "https://raw.githubusercontent.com/Reymdusk/GSReact/main/public";
-const API_BASE = "https://api.github.com/repos/Reymdusk/GSReact";
+const RAW_PUBLIC_BASE = "https://raw.githubusercontent.com/Reymdusk/GSLibrary/main";
+const API_BASE = "https://api.github.com/repos/Reymdusk/GSLibrary";
 const ASSET_BASE = "https://www.grandsummoners.info";
 const CACHE_KEY = "gs-library-cache-v1";
 const GUIDE_KEY = "gs-library-guides-v1";
@@ -142,7 +142,7 @@ function init() {
   if (cached) {
     applyData(cached, "Loaded saved data.");
   } else if (window.GS_LIBRARY_DATA) {
-    applyData(window.GS_LIBRARY_DATA, "Loaded included data. Press Update from GitHub for the newest version.");
+    applyData(window.GS_LIBRARY_DATA, "Loaded included ability data and GSLibrary image listing.");
   } else {
     updateFromGitHub();
   }
@@ -247,31 +247,26 @@ function renderChips() {
 }
 
 async function updateFromGitHub() {
-  setLoading(true, "Checking GitHub for the newest units and equipment...");
+  setLoading(true, "Checking GSLibrary for image updates...");
   try {
-    const [unitsFile, equipmentFile, repoInfo] = await Promise.all([
-      fetchGitHubSource("src/shared/unitInfo.js"),
-      fetchGitHubSource("src/shared/equipInfo.js"),
-      fetchJson(`${API_BASE}/commits/main`).catch(() => null),
-    ]);
-
-    const units = normalizeCollection(parseExportedData(unitsFile.source), "unit", unitsFile);
-    const equipment = normalizeCollection(parseExportedData(equipmentFile.source), "equipment", equipmentFile);
+    const tree = await fetchJson(`${API_BASE}/git/trees/main?recursive=1`);
+    if (!Array.isArray(tree.tree) || tree.truncated) throw new Error("Incomplete image listing.");
+    const paths = tree.tree.filter((entry) => entry.type === "blob" && isImagePath(entry.path)).map((entry) => entry.path);
+    if (!paths.length) throw new Error("No images returned.");
+    const current = state.items.length ? { items: state.items } : loadCache() || window.GS_LIBRARY_DATA;
+    if (!current?.items?.length) throw new Error("Included unit data is missing.");
     const payload = {
-      items: [...units, ...equipment],
+      ...current,
       fetchedAt: new Date().toISOString(),
-      repoUpdatedAt: repoInfo?.commit?.committer?.date || null,
-      repoSha: repoInfo?.sha || null,
+      repoUpdatedAt: null,
+      repoSha: tree.sha,
       repoUrl: REPO,
-      sourceFiles: {
-        unit: unitsFile,
-        equipment: equipmentFile,
-      },
+      assetPaths: paths,
     };
-
+    window.GS_ASSET_PATHS = paths;
     const saved = saveCache(payload);
-    const itemCounts = `${units.length.toLocaleString()} units and ${equipment.length.toLocaleString()} equipment`;
-    applyData(payload, saved ? `Updated from GitHub: ${itemCounts}.` : `Updated from GitHub: ${itemCounts}. Browser storage was full, so this refresh may not persist after reload.`);
+    closeDetailPage(false);
+    applyData(payload, `Checked ${paths.length.toLocaleString()} GSLibrary images. Saved ability data retained; this repository has no replacement data feed.${saved ? "" : " Browser storage is full; this update will not persist."}`);
   } catch (error) {
     const cached = loadCache();
     if (cached) {
@@ -292,6 +287,7 @@ async function updateFromGitHub() {
 }
 
 function applyData(payload, message) {
+  if (payload.assetPaths) window.GS_ASSET_PATHS = payload.assetPaths;
   const orderByKind = { unit: 0, equipment: 0 };
   state.items = payload.items.map((item) => {
     const kind = item.kind === "equipment" ? "equipment" : "unit";
@@ -727,7 +723,7 @@ function renderCard(item) {
         </div>
       </div>
       ${metaMarkup}
-      <a class="source-link" href="${escapeAttr(item.sourceFile)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">GitHub data file</a>
+      <a class="source-link" href="./data-cache.js" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">Included data</a>
       <p class="snippet">${snippet}</p>
       <div class="match-list">${matches.map((term) => `<span>${escapeHtml(term)}</span>`).join("")}</div>
     </article>
@@ -1399,8 +1395,13 @@ function pickImage(flat, kind, preferDetail = false) {
 }
 
 function getItemImage(item, preferDetail = false) {
-  const image = item.image && isImagePath(item.image) ? item.image : pickImage(item.flat || {}, item.kind, preferDetail);
-  return getAssetUrl(image);
+  const image = pickImage(item.flat || {}, item.kind, preferDetail) || item.image;
+  const resolved = getAssetUrl(image);
+  if (resolved && !resolved.endsWith("image-unavailable.svg")) return resolved;
+  const name = item.name.replace(/[^a-z0-9]/gi, "").toLowerCase();
+  const prefix = preferDetail ? "db/Units/Detail/unit_detail_" : "db/Units/Thumbnail/unit_thumbnail_";
+  const named = (window.GS_ASSET_PATHS || []).find((path) => path.toLowerCase().startsWith(prefix.toLowerCase()) && path.slice(prefix.length).replace(/\.png$/i, "").toLowerCase() === `${name}awk`);
+  return named ? `${RAW_PUBLIC_BASE}/${named}` : resolved;
 }
 
 function openGuideEditor(guide = null) {
@@ -1467,11 +1468,11 @@ function persistGuides() {
 
 function getAssetUrl(value) {
   if (!isImagePath(value)) return "";
-  if (/^https?:\/\//i.test(value)) return value;
-  if (value.startsWith("/db/") || value.startsWith("db/")) {
-    return `${RAW_PUBLIC_BASE}${value.startsWith("/") ? "" : "/"}${value}`;
-  }
-  return `${ASSET_BASE}${value.startsWith("/") ? "" : "/"}${value}`;
+  const path = value.includes("/db/") ? `db/${value.split("/db/")[1]}` : value.replace(/^\//, "");
+  const paths = window.GS_ASSET_PATHS || [];
+  const candidates = [path, path.replace("/Detail/", "/Thumbnail/").replace("item_detail_", "item_thumbnail_")];
+  const found = candidates.find((candidate) => paths.includes(candidate));
+  return found ? `${RAW_PUBLIC_BASE}/${found}` : "./image-unavailable.svg";
 }
 
 function getDisplayName(item) {
