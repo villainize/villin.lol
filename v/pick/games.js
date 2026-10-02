@@ -35,6 +35,7 @@
     element.classList.remove(className); return current === token;
   }
   function start() {
+    if (window.pickplayRoom?.connected()) { window.pickplayRoom.select(mode); return; }
     if (items.length < 2) { $('gameStatus').textContent = 'Add at least two items to the saved list first.'; return; }
     token++; round++; pool = [...items]; contestants = Array.from({length:players}, (_,i) => i+1); lock(true);
     if (mode === 'jar' || mode === 'wheel') draw();
@@ -156,10 +157,11 @@
     }
     function legal() {if(forced!==null)return movesFrom(forced,true); const all=board.flatMap((p,i)=>p?.side===turn?movesFrom(i):[]);const jumps=all.filter(m=>m.capture!==undefined);return jumps.length?jumps:all;}
     function drawBoard() {
-      const moves=legal();$('gameBody').innerHTML='<div class="game-board checkers" role="group" aria-label="Checkers board"></div>';
+      const moves=legal();if(!$('gameBody').querySelector('.game-board'))$('gameBody').innerHTML='<div class="game-board checkers" role="group" aria-label="Checkers board"></div>';
       const grid=stage.querySelector('.game-board');
-      board.forEach((p,i)=>{const b=button('',()=>click(i),'',grid);b.className=(Math.floor(i/8)+i%8)%2?'dark':'';
-        if(p){const piece=document.createElement('span');piece.className='piece'+(p.side?' blue':'');piece.textContent=p.king?'K':'';b.append(piece);}
+      board.forEach((p,i)=>{const b=grid.children[i]||button('',()=>click(i),'',grid);b.className=(Math.floor(i/8)+i%8)%2?'dark':'';
+        const key=p?`${p.side}:${p.king}`:'empty';
+        if(b.dataset.piece!==key){b.replaceChildren();b.dataset.piece=key;if(p){const piece=document.createElement('span');piece.className='piece'+(p.side?' blue':'');piece.textContent=p.king?'K':'';b.append(piece);}}
         if(i===selected)b.classList.add('selected');if(moves.some(m=>m.from===selected&&m.to===i))b.classList.add('legal');
         b.setAttribute('aria-label',`Row ${Math.floor(i/8)+1}, column ${i%8+1}${p?`, ${player(pair[p.side])} ${p.king?'king':'piece'}`:''}`);b.disabled=ended;
       });
@@ -182,6 +184,7 @@
     screen('Checkers',`${player(pair[0])}: coral · ${player(pair[1])}: blue. Select a piece, then a highlighted square. Captures are required. Reach the far edge to become a king.`);
     button('Resign current player',()=>{if(confirm(`${player(pair[turn])}: resign this match?`))matchWon(1-turn);});drawBoard();
   }
-  document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{if(active&&!confirm('Cancel the current round and change games?'))return;mode=b.dataset.mode;document.querySelectorAll('[data-mode]').forEach(x=>x.classList.toggle('active',x===b));$('turnLabel').textContent=modeNames[mode];reset();});
+  document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{if(window.pickplayRoom?.connected()){window.pickplayRoom.select(b.dataset.mode);return;}if(active&&!confirm('Cancel the current round and change games?'))return;mode=b.dataset.mode;document.querySelectorAll('[data-mode]').forEach(x=>x.classList.toggle('active',x===b));$('turnLabel').textContent=modeNames[mode];reset();});
+  window.pickplayLocal={suspend(){token++;lock(false);},reset};
   reset();
 })();

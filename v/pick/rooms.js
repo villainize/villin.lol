@@ -6,7 +6,7 @@
     <p id="roomNotice"></p><p id="roomStatus" class="room-status" role="status" aria-live="polite"></p><div id="roomContent"></div>`;
   document.querySelector('.workspace').before(panel);
   const el=id=>document.getElementById(id),esc=s=>escapeHtml(String(s));
-  let client,room=null,me=null,timer=null,polling=false,busy=false,selected=null,lastRevision=-1,epoch=0;
+  let client,room=null,me=null,timer=null,polling=false,busy=false,selected=null,lastRevision=-1,epoch=0,preferredMode='jar';
   const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
   function open(){panel.hidden=false;panel.scrollIntoView({behavior:'smooth'});}
   document.querySelector('.invite-btn').onclick=open;
@@ -23,18 +23,21 @@
   function name(){const n=el('roomName').value.trim();if(!n)throw new Error('Enter your display name first.');return n;}
   function code(value){let id=value.trim();try{if(id.includes('://'))id=new URL(id).hash.replace(/^#room=/,'');else id=id.replace(/^#room=/,'');}catch{}if(!uuid.test(id))throw new Error('Paste a valid room invite link or code.');return id;}
   function link(){const url=new URL(location.href);url.hash='room='+room.id;return url.href;}
-  function accept(data){room=data;selected=null;render();}
+  function accept(data){
+    if(room?.id===data.id&&data.revision<=room.revision)return;
+    room=data;selected=null;render();
+  }
   function watch(){clearInterval(timer);timer=setInterval(poll,1800);}
   async function poll(){
     if(!room||polling||busy)return;polling=true;const current=epoch,id=room.id;
     try{
       const {data}=await client.auth.getSession();if(data.session?.user.id!==me){disconnect();message('Account changed. Sign in and rejoin your room.');return;}
       const next=await rpc('pickplay_room_get',{p_room:id});if(current!==epoch)return;
-      if(next.revision!==room.revision)accept(next);message('Connected · Room updates automatically.');
+      if(!busy&&room&&next.revision>room.revision)accept(next);
     }catch(e){if(current===epoch)fail(e);}finally{polling=false;}
   }
-  function disconnect(){epoch++;room=null;lastRevision=-1;clearInterval(timer);el('roomContent').replaceChildren();el('roomCreate').disabled=el('roomJoin').disabled=false;}
-  function enter(data){epoch++;lastRevision=-1;accept(data);el('roomCode').value=data.id;el('roomCreate').disabled=el('roomJoin').disabled=true;location.hash='room='+data.id;watch();message('Connected · Room updates automatically.');}
+  function disconnect(){epoch++;room=null;lastRevision=-1;clearInterval(timer);el('roomContent').replaceChildren();el('roomCreate').disabled=el('roomJoin').disabled=false;document.querySelector('.workspace').classList.remove('in-room');el('turnLabel').textContent='Local play';window.pickplayLocal.reset();}
+  function enter(data){epoch++;lastRevision=-1;room=null;window.pickplayLocal.suspend();document.querySelector('.workspace').classList.add('in-room');accept(data);el('roomCode').value=data.id;el('roomCreate').disabled=el('roomJoin').disabled=true;location.hash='room='+data.id;watch();message('Connected · Use the main game cards to play with this room.');}
   el('roomCreate').onclick=()=>run(async()=>{const n=name(),title=el('roomTitle').value.trim();if(!title)throw new Error('Enter a list or room title first.');await connect();enter(await rpc('pickplay_room_create',{p_title:title,p_name:n,p_items:[...items]}));});
   el('roomJoin').onclick=()=>run(async()=>{const n=name(),id=code(el('roomCode').value);await connect();enter(await rpc('pickplay_room_join',{p_room:id,p_name:n}));});
   async function action(type,value={}){
@@ -44,10 +47,18 @@
   function button(label,fn,parent,disabled=false){const b=document.createElement('button');b.textContent=label;b.disabled=disabled;b.onclick=fn;parent.append(b);return b;}
   function render(){
     const s=room.state,host=room.host_id===me,playing=s.phase==='playing';
+    const oldBoard=el('roomGame')?.querySelector('.game-board');
+    const boardKey=`${room.id}:${s.round}:${s.mode}:${(s.pair||[]).join(',')}:${s.phase}`;
+    const sharedDraft=el('roomItem')?.value||'',guessDraft=el('onlineGuess')?.value||'';
+    const focusId=document.activeElement?.id;
     const player=id=>s.players.find(p=>p.id===id)?.name||'Player';
     const self=s.players.some(p=>p.id===me);if(!self){disconnect();message('You left the room.');return;}
     const content=el('roomContent');content.innerHTML=`<h3>${esc(s.title||'Pick & Play room')}</h3><ul class="room-members">${s.players.map((p,i)=>`<li>${i+1}. ${esc(p.name)}${p.id===me?' (you)':''}${p.id===room.host_id?' · host':''}</li>`).join('')}</ul><label>Invite link<input id="roomInviteLink" class="room-link" readonly value="${esc(link())}"></label><div id="roomTools" class="room-bar"></div><details open><summary>Shared list (${s.items.length})</summary><ol class="room-list" id="sharedRoomList">${s.items.map((x,i)=>`<li><span>${esc(x)}</span>${s.phase==='lobby'?` <button data-edit-room-item="${i}">Edit</button><button data-delete-room-item="${i}">Delete</button>`:''}</li>`).join('')}</ol></details><div id="roomLobby"></div><div class="room-stage" id="roomStage"><h3>${esc(s.phase==='lobby'?'Waiting for friends':modeNames[s.mode]||'Room closed')}</h3><div id="roomGame"></div><div id="roomActions" class="room-bar"></div></div>`;
     const tools=el('roomTools'),body=el('roomGame'),actions=el('roomActions');
+    el('resultStage').replaceChildren(el('roomStage'));
+    el('turnLabel').textContent=`Online · ${s.players.length} players${host?' · You host':''}`;
+    const chosen=s.phase==='lobby'?preferredMode:s.mode;
+    document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===chosen));
     if(s.phase==='lobby'){
       content.querySelectorAll('[data-edit-room-item]').forEach(b=>b.onclick=()=>{const i=+b.dataset.editRoomItem;const next=prompt('Edit this list item:',s.items[i]);if(next?.trim())action('edit',{index:i,item:next.trim().slice(0,48)});});
       content.querySelectorAll('[data-delete-room-item]').forEach(b=>b.onclick=()=>{const i=+b.dataset.deleteRoomItem;if(confirm(`Delete “${s.items[i]}” from the shared list?`))action('delete',{index:i});});
@@ -64,11 +75,13 @@
     button('Disconnect this device',()=>{disconnect();message('Disconnected. Keep the invite to rejoin. Your seat remains until you leave the lobby or the room expires.');},tools);
     if(['127.0.0.1','localhost','::1','[::1]'].includes(location.hostname))el('roomNotice').textContent='This is a local preview. Test with two browser profiles on this computer. For friends on other devices, publish the site first; localhost links only work on your own computer.';
     else el('roomNotice').textContent='Anyone with the invite can join while the lobby is open (up to four people).';
-    if(s.phase==='closed'){body.textContent='The host closed this room.';clearInterval(timer);return;}
+    if(s.phase==='closed'){body.textContent='The host closed this room.';button('Return to local play',disconnect,actions);clearInterval(timer);return;}
     if(s.phase==='lobby'){
       body.innerHTML='<p>Everyone can add ideas. The host chooses a game and starts when everyone is here.</p>';
       const form=document.createElement('form');form.className='room-bar';form.innerHTML='<label>Add to shared list<input id="roomItem" maxlength="48" required></label><button>Add idea</button>';form.onsubmit=e=>{e.preventDefault();action('add',{item:el('roomItem').value.trim()});};el('roomLobby').append(form);
-      if(host){const select=document.createElement('select');select.id='roomMode';select.setAttribute('aria-label','Online game');Object.entries(modeNames).forEach(([id,label])=>{const option=document.createElement('option');option.value=id;option.textContent=label;option.disabled=id==='coin'&&s.players.length!==2;select.append(option);});actions.append(select);button('Start online game',()=>action('start',{mode:select.value}),actions,s.players.length<2);}
+      el('roomItem').value=sharedDraft;if(focusId==='roomItem')el('roomItem').focus({preventScroll:true});
+      if(host){const select=document.createElement('select');select.id='roomMode';select.setAttribute('aria-label','Online game');Object.entries(modeNames).forEach(([id,label])=>{const option=document.createElement('option');option.value=id;option.textContent=label;option.disabled=id==='coin'&&s.players.length!==2;select.append(option);});select.value=preferredMode;select.onchange=()=>{preferredMode=select.value;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===preferredMode));};actions.append(select);button('Start online game',()=>action('start',{mode:select.value}),actions,s.players.length<2||s.items.length===0);}
+      else body.append(Object.assign(document.createElement('p'),{textContent:'Waiting for the host to choose a game. Your moves will appear here when the match starts.'}));
       return;
     }
     const note=text=>{const p=document.createElement('p');p.textContent=text;body.append(p);};
@@ -90,27 +103,37 @@
       if(s.mode==='dice'){note('Roll two dice. Highest total wins; tied leaders roll again.');button('Roll both dice',()=>action('roll'),actions,!eligible);}
       else if(s.mode==='number'){
         note('Guess 1–100. Guesses stay hidden until everyone submits.');
-        if(eligible){const form=document.createElement('form');form.innerHTML='<label>Your guess<input type="number" min="1" max="100" step="1" required id="onlineGuess"></label><button>Lock guess</button>';form.onsubmit=e=>{e.preventDefault();action('guess',{number:Number(el('onlineGuess').value)});};body.append(form);}
+        if(eligible){const form=document.createElement('form');form.innerHTML='<label>Your guess<input type="number" min="1" max="100" step="1" required id="onlineGuess"></label><button>Lock guess</button>';form.onsubmit=e=>{e.preventDefault();action('guess',{number:Number(el('onlineGuess').value)});};body.append(form);el('onlineGuess').value=guessDraft;if(focusId==='onlineGuess')el('onlineGuess').focus({preventScroll:true});}
       }else if(s.mode==='rps'){
         note('Choose privately on your own device. Both moves reveal together.');['Rock','Paper','Scissors'].forEach((hand,i)=>button(hand,()=>action('hand',{hand:i}),actions,!s.pair.includes(me)||s.submitted.includes(me)));
       }else if(['tictactoe','checkers'].includes(s.mode)){
         const myTurn=s.pair[s.turn]===me;note(`${player(s.pair[s.turn])}'s turn. ${s.mode==='checkers'?'First player: coral; second: blue. Captures are required.':'First player: X; second: O.'}`);
-        const grid=document.createElement('div');grid.className='game-board '+(s.mode==='checkers'?'checkers':'ttt');body.append(grid);
+        const grid=oldBoard?.dataset.key===boardKey?oldBoard:document.createElement('div');grid.dataset.key=boardKey;grid.className='game-board '+(s.mode==='checkers'?'checkers':'ttt');body.append(grid);
         s.board.forEach((piece,i)=>{
-          const b=button(s.mode==='tictactoe'?(piece===1?'X':piece===2?'O':''):'',()=>{
+          const b=grid.children[i]||button('',()=>{},grid);b.disabled=!myTurn||(s.mode==='tictactoe'&&piece!==0);
+          b.onclick=()=>{
+            if(busy)return;
             if(s.mode==='tictactoe')action('move',{to:i});
             else if((s.legal||[]).some(m=>m.from===selected&&m.to===i))action('move',{from:selected,to:i});
-            else {selected=i;grid.querySelectorAll('button').forEach((cell,j)=>{cell.classList.toggle('selected',j===i);cell.classList.toggle('legal',(s.legal||[]).some(m=>m.from===i&&m.to===j));});}
-          },grid,!myTurn||(s.mode==='tictactoe'&&piece!==0));
+            else if((s.legal||[]).some(m=>m.from===i)){selected=i;grid.querySelectorAll('button').forEach((cell,j)=>{cell.classList.toggle('selected',j===i);cell.classList.toggle('legal',(s.legal||[]).some(m=>m.from===i&&m.to===j));});}
+          };
           b.setAttribute('aria-label',`Square ${i+1}${piece?' occupied':''}`);
-          if(s.mode==='checkers'){b.className=(Math.floor(i/8)+i%8)%2?'dark':'';if(piece){const disc=document.createElement('span');disc.className='piece'+(piece<0?' blue':'');disc.textContent=Math.abs(piece)===2?'K':'';b.append(disc);}}
+          if(s.mode==='checkers')b.className=(Math.floor(i/8)+i%8)%2?'dark':'';
+          if(b.dataset.piece!==String(piece)){b.dataset.piece=String(piece);b.replaceChildren();if(s.mode==='tictactoe')b.textContent=piece===1?'X':piece===2?'O':'';else if(piece){const disc=document.createElement('span');disc.className='piece'+(piece<0?' blue':'');disc.textContent=Math.abs(piece)===2?'K':'';b.append(disc);}}
         });
         if(s.pair.includes(me))button('Resign match',()=>{if(confirm('Resign this match?'))action('resign');},actions);
       }
       if(s.submitted?.length)note('Submitted: '+s.submitted.map(player).join(', '));
     }
-    if(lastRevision!==room.revision){el('roomStage').classList.remove('celebrate');void el('roomStage').offsetWidth;el('roomStage').classList.add('celebrate');lastRevision=room.revision;}
+    lastRevision=room.revision;
   }
+  window.pickplayRoom={connected:()=>!!room,select(chosen){
+    if(!room)return;
+    if(room.state.phase!=='lobby'){message('You are playing online. Finish the round or have the host return to the lobby to switch games.');}
+    else if(room.host_id!==me){message('The host chooses the game. Your moves will be available in the shared game below.');}
+    else{preferredMode=chosen;const select=el('roomMode');if(select)select.value=chosen;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===chosen));message(`${modeNames[chosen]} selected for the room. Click Start online game.`);}
+    el('resultStage').scrollIntoView({behavior:'smooth',block:'center'});
+  }};
   function readInvite(){const invite=location.hash.match(/^#room=([a-f0-9-]+)$/i);if(invite){el('roomCode').value=invite[1];panel.hidden=false;if(!room)message('Enter a display name, sign in, then join your friend.');}}
   window.addEventListener('hashchange',readInvite);readInvite();
 })();

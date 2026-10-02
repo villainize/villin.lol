@@ -110,7 +110,7 @@ begin
  if p_action in ('start','lobby','close') then
   if r.host_id<>auth.uid() then raise exception 'Only the host can do that.';end if;
   if p_action='close' then s:=s||jsonb_build_object('phase','closed','secret','{}'::jsonb);
-  elsif p_action='lobby' then s:=jsonb_build_object('phase','lobby','players',s->'players','items',s->'items','round',s->'round');
+  elsif p_action='lobby' then s:=jsonb_build_object('phase','lobby','title',coalesce(s->>'title','Pick & Play room'),'players',s->'players','items',s->'items','round',s->'round');
   else
    if phase<>'lobby' then raise exception 'Return to the lobby first.';end if;
    if jsonb_array_length(s->'players')<2 then raise exception 'Wait for a friend to join.';end if;
@@ -142,7 +142,6 @@ begin
   s:=jsonb_set(s,array['items',idx::text],to_jsonb(who));
  elsif p_action='delete' then
   if phase<>'lobby' then raise exception 'Delete items in the lobby.';end if;
-  if jsonb_array_length(s->'items')<=1 then raise exception 'Keep at least one item in the room list.';end if;
   idx:=(p_value->>'index')::int;if idx is null or idx<0 or idx>=jsonb_array_length(s->'items') then raise exception 'Invalid item deletion.';end if;
   s:=jsonb_set(s,'{items}',(s->'items')-idx);
  elsif p_action='choose' then
