@@ -58,18 +58,19 @@ begin
  return s;
 end $$;
 
-create or replace function public.pickplay_room_create(p_name text,p_items jsonb)
+create or replace function public.pickplay_room_create(p_title text,p_name text,p_items jsonb)
 returns jsonb language plpgsql security definer set search_path=public as $$
 declare r public.pickplay_rooms;
 begin
  if auth.uid() is null then raise exception 'Sign in first.';end if;
+ if p_title is null or length(trim(p_title)) not between 1 and 32 then raise exception 'Use a title of 1–32 characters.';end if;
  if p_name is null or length(trim(p_name)) not between 1 and 24 then raise exception 'Use a name of 1–24 characters.';end if;
  if jsonb_typeof(p_items) is distinct from 'array' then raise exception 'A list is required.';end if;
- if jsonb_array_length(p_items) not between 2 and 100 then raise exception 'Use 2–100 items for an online room.';end if;
+ if jsonb_array_length(p_items) not between 0 and 100 then raise exception 'Use 0–100 items for an online room.';end if;
  if exists(select 1 from jsonb_array_elements(p_items) x where jsonb_typeof(x)<>'string' or length(x#>>'{}') not between 1 and 48) then raise exception 'Items must be 1–48 characters.';end if;
  perform pg_advisory_xact_lock(hashtextextended(auth.uid()::text,0));
  if (select count(*) from public.pickplay_rooms where host_id=auth.uid() and expires_at>now() and state->>'phase'<>'closed')>=5 then raise exception 'Close an existing room first (maximum 5 active rooms).';end if;
- insert into public.pickplay_rooms(host_id,state) values(auth.uid(),jsonb_build_object('phase','lobby','items',p_items,'players',jsonb_build_array(jsonb_build_object('id',auth.uid(),'name',trim(p_name))),'round',0)) returning * into r;
+ insert into public.pickplay_rooms(host_id,state) values(auth.uid(),jsonb_build_object('phase','lobby','title',trim(p_title),'items',p_items,'players',jsonb_build_array(jsonb_build_object('id',auth.uid(),'name',trim(p_name))),'round',0)) returning * into r;
  return public.pickplay_room_view(r);
 end $$;
 
@@ -113,6 +114,7 @@ begin
   else
    if phase<>'lobby' then raise exception 'Return to the lobby first.';end if;
    if jsonb_array_length(s->'players')<2 then raise exception 'Wait for a friend to join.';end if;
+   if jsonb_array_length(s->'items')<1 then raise exception 'Add at least one item to the list first.';end if;
    m:=p_value->>'mode';if m is null or m not in ('jar','wheel','dice','coin','rps','number','tictactoe','checkers') then raise exception 'Unknown game.';end if;
    select jsonb_agg(x->'id') into group_ids from jsonb_array_elements(s->'players') x;
    s:=s||jsonb_build_object('mode',m,'phase','playing','round',coalesce((s->>'round')::int,0)+1,'group',group_ids,'submitted','[]'::jsonb,'secret','{}'::jsonb,'rolls','{}'::jsonb);
@@ -131,7 +133,18 @@ begin
  elsif p_action='add' then
   if phase<>'lobby' then raise exception 'Add items in the lobby.';end if;
   who:=trim(p_value->>'item');if who is null or length(who) not between 1 and 48 or jsonb_array_length(s->'items')>=100 then raise exception 'Use 1–48 characters, maximum 100 items.';end if;
-  if not (s->'items' ? who) then s:=jsonb_set(s,'{items}',s->'items'||to_jsonb(who));end if;
+ if not (s->'items' ? who) then s:=jsonb_set(s,'{items}',s->'items'||to_jsonb(who));end if;
+ elsif p_action='edit' then
+  if phase<>'lobby' then raise exception 'Edit items in the lobby.';end if;
+  idx:=(p_value->>'index')::int;who:=trim(p_value->>'item');
+  if idx is null or idx<0 or idx>=jsonb_array_length(s->'items') or who is null or length(who) not between 1 and 48 then raise exception 'Invalid item edit.';end if;
+  if (s->'items' ? who) and s->'items'->>idx<>who then raise exception 'That item is already on the list.';end if;
+  s:=jsonb_set(s,array['items',idx::text],to_jsonb(who));
+ elsif p_action='delete' then
+  if phase<>'lobby' then raise exception 'Delete items in the lobby.';end if;
+  if jsonb_array_length(s->'items')<=1 then raise exception 'Keep at least one item in the room list.';end if;
+  idx:=(p_value->>'index')::int;if idx is null or idx<0 or idx>=jsonb_array_length(s->'items') then raise exception 'Invalid item deletion.';end if;
+  s:=jsonb_set(s,'{items}',(s->'items')-idx);
  elsif p_action='choose' then
   if phase<>'choose' or s->>'winner'<>me then raise exception 'Only the winner can choose.';end if;
   idx:=(p_value->>'index')::int;if idx is null or idx<0 or idx>=jsonb_array_length(s->'items') then raise exception 'Invalid item.';end if;
@@ -212,7 +225,7 @@ begin
 end $$;
 
 revoke all on function public.pickplay_room_view(public.pickplay_rooms),public.pickplay_checkers_moves(jsonb),public.pickplay_next_match(jsonb,boolean) from public,anon,authenticated;
-revoke all on function public.pickplay_room_create(text,jsonb),public.pickplay_room_join(uuid,text),public.pickplay_room_get(uuid),public.pickplay_room_act(uuid,integer,text,jsonb) from public,anon;
-grant execute on function public.pickplay_room_create(text,jsonb),public.pickplay_room_join(uuid,text),public.pickplay_room_get(uuid),public.pickplay_room_act(uuid,integer,text,jsonb) to authenticated;
+revoke all on function public.pickplay_room_create(text,text,jsonb),public.pickplay_room_join(uuid,text),public.pickplay_room_get(uuid),public.pickplay_room_act(uuid,integer,text,jsonb) from public,anon;
+grant execute on function public.pickplay_room_create(text,text,jsonb),public.pickplay_room_join(uuid,text),public.pickplay_room_get(uuid),public.pickplay_room_act(uuid,integer,text,jsonb) to authenticated;
 notify pgrst,'reload schema';
 commit;

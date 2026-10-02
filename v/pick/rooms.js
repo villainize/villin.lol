@@ -1,7 +1,7 @@
 (() => {
   const panel=document.createElement('section');panel.className='room-panel';panel.hidden=true;
   panel.innerHTML=`<h2>Play with friends</h2><p>Share one list and play from separate devices. Each person signs in with their own account. Rooms hold 2–4 players and expire after 24 hours.</p>
-    <div class="room-bar"><label>Your display name<input id="roomName" maxlength="24" placeholder="Your name"></label><button id="roomCreate" class="room-primary">Create room from current list</button></div>
+    <div class="room-bar"><label>List / room title<input id="roomTitle" maxlength="32" placeholder="Friday anime night"></label><label>Your display name<input id="roomName" maxlength="24" placeholder="Your name"></label><button id="roomCreate" class="room-primary">Create room</button></div>
     <div class="room-bar"><label>Invite link or room code<input id="roomCode" placeholder="Paste an invite"></label><button id="roomJoin">Join room</button><button id="roomLogin">Sign in</button></div>
     <p id="roomNotice"></p><p id="roomStatus" class="room-status" role="status" aria-live="polite"></p><div id="roomContent"></div>`;
   document.querySelector('.workspace').before(panel);
@@ -35,7 +35,7 @@
   }
   function disconnect(){epoch++;room=null;lastRevision=-1;clearInterval(timer);el('roomContent').replaceChildren();el('roomCreate').disabled=el('roomJoin').disabled=false;}
   function enter(data){epoch++;lastRevision=-1;accept(data);el('roomCode').value=data.id;el('roomCreate').disabled=el('roomJoin').disabled=true;location.hash='room='+data.id;watch();message('Connected · Room updates automatically.');}
-  el('roomCreate').onclick=()=>run(async()=>{const n=name();if(items.length<2)throw new Error('Add at least two list items first.');await connect();enter(await rpc('pickplay_room_create',{p_name:n,p_items:[...items]}));});
+  el('roomCreate').onclick=()=>run(async()=>{const n=name(),title=el('roomTitle').value.trim();if(!title)throw new Error('Enter a list or room title first.');await connect();enter(await rpc('pickplay_room_create',{p_title:title,p_name:n,p_items:[...items]}));});
   el('roomJoin').onclick=()=>run(async()=>{const n=name(),id=code(el('roomCode').value);await connect();enter(await rpc('pickplay_room_join',{p_room:id,p_name:n}));});
   async function action(type,value={}){
     await run(async()=>{if(!room)return;const current=epoch;const data=await rpc('pickplay_room_act',{p_room:room.id,p_revision:room.revision,p_action:type,p_value:value});if(current===epoch){accept(data);message('Move saved.');}});
@@ -46,8 +46,12 @@
     const s=room.state,host=room.host_id===me,playing=s.phase==='playing';
     const player=id=>s.players.find(p=>p.id===id)?.name||'Player';
     const self=s.players.some(p=>p.id===me);if(!self){disconnect();message('You left the room.');return;}
-    const content=el('roomContent');content.innerHTML=`<ul class="room-members">${s.players.map((p,i)=>`<li>${i+1}. ${esc(p.name)}${p.id===me?' (you)':''}${p.id===room.host_id?' · host':''}</li>`).join('')}</ul><label>Invite link<input id="roomInviteLink" class="room-link" readonly value="${esc(link())}"></label><div id="roomTools" class="room-bar"></div><details><summary>Shared list (${s.items.length})</summary><ol class="room-list">${s.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></details><div id="roomLobby"></div><div class="room-stage" id="roomStage"><h3>${esc(s.phase==='lobby'?'Waiting for friends':modeNames[s.mode]||'Room closed')}</h3><div id="roomGame"></div><div id="roomActions" class="room-bar"></div></div>`;
+    const content=el('roomContent');content.innerHTML=`<h3>${esc(s.title||'Pick & Play room')}</h3><ul class="room-members">${s.players.map((p,i)=>`<li>${i+1}. ${esc(p.name)}${p.id===me?' (you)':''}${p.id===room.host_id?' · host':''}</li>`).join('')}</ul><label>Invite link<input id="roomInviteLink" class="room-link" readonly value="${esc(link())}"></label><div id="roomTools" class="room-bar"></div><details open><summary>Shared list (${s.items.length})</summary><ol class="room-list" id="sharedRoomList">${s.items.map((x,i)=>`<li><span>${esc(x)}</span>${s.phase==='lobby'?` <button data-edit-room-item="${i}">Edit</button><button data-delete-room-item="${i}">Delete</button>`:''}</li>`).join('')}</ol></details><div id="roomLobby"></div><div class="room-stage" id="roomStage"><h3>${esc(s.phase==='lobby'?'Waiting for friends':modeNames[s.mode]||'Room closed')}</h3><div id="roomGame"></div><div id="roomActions" class="room-bar"></div></div>`;
     const tools=el('roomTools'),body=el('roomGame'),actions=el('roomActions');
+    if(s.phase==='lobby'){
+      content.querySelectorAll('[data-edit-room-item]').forEach(b=>b.onclick=()=>{const i=+b.dataset.editRoomItem;const next=prompt('Edit this list item:',s.items[i]);if(next?.trim())action('edit',{index:i,item:next.trim().slice(0,48)});});
+      content.querySelectorAll('[data-delete-room-item]').forEach(b=>b.onclick=()=>{const i=+b.dataset.deleteRoomItem;if(confirm(`Delete “${s.items[i]}” from the shared list?`))action('delete',{index:i});});
+    }
     button('Copy invite',async()=>{try{await navigator.clipboard.writeText(link());message('Invite copied.');}catch{el('roomInviteLink').select();message('Select and copy the invite above.');}},tools);
     button('Save shared list locally',()=>{
       if(el('newListBtn').disabled){message('Finish or cancel your local game before saving this list.');return;}
