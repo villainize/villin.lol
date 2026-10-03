@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video Folder Player</title>
+<style>
+:root{
+  --bg:#0f1115; --panel:#171923; --muted:#9aa4b2; --text:#eef2f8; --accent:#7c93ff; --accent-2:#21d4a5; --radius:18px;
+}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial}
+.wrap{max-width:720px;margin:0 auto;padding:16px;text-align:center}
+.card{background:var(--panel);border-radius:var(--radius);padding:12px;margin-bottom:12px}
+.btn{appearance:none;border:1px solid rgba(255,255,255,.14);background:#131621;color:var(--text);padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:600}
+.btn:hover{border-color:var(--accent)}
+.video-container video{width:100%;border-radius:12px;background:#000}
+.pill{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--muted);margin:0 6px}
+.controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <label class="btn">
+      <input id="folderInput" type="file" webkitdirectory directory multiple hidden>
+      Select Video Folder
+    </label>
+    <div class="pill">Current: <span id="videoTitle">None</span></div>
+  </div>
+
+  <div class="video-container card">
+    <video id="videoPlayer" controls></video>
+  </div>
+
+  <!-- Primary navigation controls -->
+  <div class="controls card">
+    <button id="back5Btn" class="btn">⟲ 5s</button>
+    <button id="prevBtn" class="btn">« Previous</button>
+    <button id="playPauseBtn" class="btn">Play/Pause</button>
+    <button id="nextBtn" class="btn">Next »</button>
+    <button id="fwd5Btn" class="btn">5s ⟳</button>
+  </div>
+
+  <!-- Secondary controls -->
+  <div class="controls card">
+    <button id="muteBtn" class="btn">Mute</button>
+    <button id="volUpBtn" class="btn">Vol +</button>
+    <button id="volDnBtn" class="btn">Vol -</button>
+    <button id="loopBtn" class="btn">Loop Off</button>
+    <button id="fsBtn" class="btn">Fullscreen</button>
+    <button id="rateDnBtn" class="btn">– Speed</button>
+    <button id="rateUpBtn" class="btn">+ Speed</button>
+    <div class="pill">Speed: <span id="rateLabel">1.0×</span></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const folderInput = document.getElementById('folderInput');
+  const videoPlayer = document.getElementById('videoPlayer');
+  const videoTitle = document.getElementById('videoTitle');
+
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const back5Btn = document.getElementById('back5Btn');
+  const fwd5Btn = document.getElementById('fwd5Btn');
+  const muteBtn = document.getElementById('muteBtn');
+  const volUpBtn = document.getElementById('volUpBtn');
+  const volDnBtn = document.getElementById('volDnBtn');
+  const loopBtn = document.getElementById('loopBtn');
+  const fsBtn = document.getElementById('fsBtn');
+  const rateUpBtn = document.getElementById('rateUpBtn');
+  const rateDnBtn = document.getElementById('rateDnBtn');
+  const rateLabel = document.getElementById('rateLabel');
+
+  let videoFiles = [];
+  let currentIndex = 0;
+
+  function loadVideo(index){
+    if(index<0 || index>=videoFiles.length) return;
+    currentIndex=index;
+    const file = videoFiles[index];
+    const url = URL.createObjectURL(file);
+    videoPlayer.src=url;
+    videoTitle.textContent=file.name;
+    videoPlayer.play();
+  }
+
+  folderInput.addEventListener('change', e=>{
+    videoFiles = Array.from(e.target.files)
+      .filter(f=>/\.(mp4|mkv)$/i.test(f.name))
+      .sort((a,b)=>a.name.localeCompare(b.name));
+    if(videoFiles.length>0) loadVideo(0);
+  });
+
+  // Primary navigation
+  prevBtn.addEventListener('click', ()=> loadVideo(currentIndex-1));
+  nextBtn.addEventListener('click', ()=> loadVideo(currentIndex+1));
+  back5Btn.addEventListener('click', ()=> videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime-5));
+  fwd5Btn.addEventListener('click', ()=> videoPlayer.currentTime = Math.min(videoPlayer.duration || Infinity, videoPlayer.currentTime+5));
+  playPauseBtn.addEventListener('click', ()=> videoPlayer.paused?videoPlayer.play():videoPlayer.pause());
+
+  // Secondary controls
+  muteBtn.addEventListener('click', ()=> { videoPlayer.muted = !videoPlayer.muted; muteBtn.textContent = videoPlayer.muted ? 'Unmute':'Mute'; });
+  volUpBtn.addEventListener('click', ()=> videoPlayer.volume = Math.min(1, videoPlayer.volume + 0.05));
+  volDnBtn.addEventListener('click', ()=> videoPlayer.volume = Math.max(0, videoPlayer.volume - 0.05));
+  loopBtn.addEventListener('click', ()=> { videoPlayer.loop = !videoPlayer.loop; loopBtn.textContent = 'Loop ' + (videoPlayer.loop?'On':'Off'); });
+  fsBtn.addEventListener('click', ()=> {
+    if(!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  });
+  rateUpBtn.addEventListener('click', ()=> { videoPlayer.playbackRate = Math.min(4, videoPlayer.playbackRate + 0.1); updateRateLabel(); });
+  rateDnBtn.addEventListener('click', ()=> { videoPlayer.playbackRate = Math.max(0.25, videoPlayer.playbackRate - 0.1); updateRateLabel(); });
+  function updateRateLabel(){ rateLabel.textContent = videoPlayer.playbackRate.toFixed(2)+'×'; }
+
+  videoPlayer.addEventListener('ended', ()=> loadVideo(currentIndex+1));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e=>{
+    if(['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+    switch(e.key){
+      case ' ': e.preventDefault(); videoPlayer.paused?videoPlayer.play():videoPlayer.pause(); break;
+      case 'ArrowLeft': videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime-5); break;
+      case 'ArrowRight': videoPlayer.currentTime = Math.min(videoPlayer.duration || Infinity, videoPlayer.currentTime+5); break;
+      case 'ArrowUp': videoPlayer.volume = Math.min(1, videoPlayer.volume + 0.05); break;
+      case 'ArrowDown': videoPlayer.volume = Math.max(0, videoPlayer.volume - 0.05); break;
+      case 'm': case 'M': videoPlayer.muted = !videoPlayer.muted; muteBtn.textContent = videoPlayer.muted?'Unmute':'Mute'; break;
+      case 'l': case 'L': videoPlayer.loop = !videoPlayer.loop; loopBtn.textContent = 'Loop ' + (videoPlayer.loop?'On':'Off'); break;
+      case 'f': case 'F':
+        if(!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+        break;
+      case ',': videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime-1/30); break;
+      case '.': videoPlayer.currentTime = Math.min(videoPlayer.duration || Infinity, videoPlayer.currentTime+1/30); break;
+    }
+  });
+})();
+</script>
+</body>
+</html>

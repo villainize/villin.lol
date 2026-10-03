@@ -1,0 +1,864 @@
+.cont_wrap {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.chara_tab {
+  position: relative;
+  z-index: 100;
+  letter-spacing: -.4em;
+}
+.chara_tab ul {
+  position: relative;
+}
+.chara_tab li {
+  display: inline-block;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  vertical-align: top;
+}
+.chara_tab li div {
+  background: #FFF;
+  color: #000;
+  display: inline;
+  padding: 2px 5px;
+  line-height: 1.4;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.chara_tab li div.male {
+  color: #008bb6;
+}
+.chara_tab li div.female {
+  color: #ff4725;
+}
+.chara_tab li:first-child div span:nth-child(1) {
+  color: #008bb6;
+}
+.chara_tab li:first-child div span:nth-child(2) {
+  color: #ff4725;
+}
+.chara_tab li.current {
+  cursor: default;
+}
+.chara_tab li.current div {
+  background: #000;
+  color: #FFF;
+}
+
+@media only screen and (min-width: 751px) {
+  .cont_wrap {
+    min-width: 1280px;
+    min-height: 1144px;
+  }
+
+  .chara_tab {
+    width: 700px;
+    margin-bottom: 70px;
+    padding-left: 100px;
+  }
+  .chara_tab ul li {
+    margin-bottom: 10px;
+  }
+  .chara_tab ul li:not(:last-child) {
+    margin-right: 10px;
+  }
+  .chara_tab ul li:hover div {
+    background: #000;
+    color: #FFF;
+  }
+  .chara_tab ul.other:before, .chara_tab ul.otona:before, .chara_tab ul.kodomo:before, .chara_tab ul.franxx:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -100px;
+    width: 90px;
+    height: 1px;
+    background: #000;
+  }
+  .chara_tab ul.kodomo:after {
+    content: "\30B3\30C9\30E2";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -100px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .chara_tab ul.otona,
+  .chara_tab ul.other {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .chara_tab ul.other:after {
+    content: "OTHER";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -100px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .chara_tab ul.otona:after {
+    content: "\30AA\30C8\30CA";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -100px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .chara_tab ul.franxx:after {
+    content: "FRANXX";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -100px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 2px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .chara_tab {
+    padding-left: 20.533%;
+    margin-bottom: 160px;
+  }
+  .chara_tab ul li {
+    font-size: 11px;
+    margin-bottom: 7px;
+    margin-right: 2.3%;
+  }
+  .chara_tab ul.otona:before, .chara_tab ul.kodomo:before, .chara_tab ul.franxx:before, .chara_tab ul.other:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: -25.83%;
+    width: 23.15%;
+    height: 1px;
+    background: #000;
+  }
+  .chara_tab ul.kodomo:after {
+    content: "\30B3\30C9\30E2";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -25.83%;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .chara_tab ul.other,
+  .chara_tab ul.otona {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .chara_tab ul.otona:after {
+    content: "\30AA\30C8\30CA";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -25.83%;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .chara_tab ul.other:after {
+    content: "OTHER";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -25.83%;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .chara_tab ul.franxx:after {
+    content: "FRANXX";
+    display: inline;
+    position: absolute;
+    top: -1px;
+    left: -25.83%;
+    background: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 5px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}
+/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+PREV & NEXT, CHANGEbtn
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+.chara_wrap .prev {
+  background: url("https://darli-fra.jp/assets/img/common/point_prev.png") no-repeat left center;
+  position: absolute;
+  left: 0;
+}
+.chara_wrap .next {
+  background: url("https://darli-fra.jp/assets/img/common/point_next.png") no-repeat right center;
+  position: absolute;
+  right: 0;
+}
+
+.btn_wrap .btn_change img {
+  width: 100%;
+}
+@media only screen and (min-width: 751px) {
+  .chara_wrap .prev, .chara_wrap .next {
+    width: 66px;
+    height: 46px;
+    top: 755px;
+    margin-top: -120px;
+    z-index: 50;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+  }
+  .chara_wrap .prev:hover, .chara_wrap .next:hover {
+    opacity: 0.6;
+  }
+  .btn_wrap .btn_change {
+    position: absolute;
+    top: 262px;
+    z-index: 99;
+    width: 184px;
+    cursor: pointer;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  .btn_wrap .btn_change img {
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+  }
+  .btn_wrap .btn_change:hover img {
+    opacity: 0.6;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .chara_wrap .prev {
+    position: absolute;
+    top: 220px;
+    left: 15px;
+    width: 10%;
+    height: 40px;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+  .chara_wrap .next {
+    position: absolute;
+    top: 220px;
+    right: 15px;
+    width: 10%;
+    height: 40px;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+  .btn_wrap .btn_change {
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    width: 184px;
+/*     margin: 10px 16% 0; */
+  }
+}
+/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ HUMAN
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+.page_contents {
+  position: relative;
+}
+
+.chara_wrap {
+  background: no-repeat center top;
+  -webkit-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.chara_wrap.current {
+  position: relative;
+  opacity: 1;
+  display: block;
+}
+.chara_wrap .left, .chara_wrap .right {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.chara_wrap .left .image, .chara_wrap .right .image {
+  position: relative;
+}
+.chara_wrap .left .name_wrap, .chara_wrap .right .name_wrap {
+  position: absolute;
+}
+.chara_wrap .left .text, .chara_wrap .right .text {
+  line-height: 1.65;
+  font-weight: 600;
+}
+.chara_wrap .franxx_cont {
+  width: 100%;
+  position: relative;
+}
+.chara_wrap .franxx_cont .image {
+  position: relative;
+}
+.chara_wrap .franxx_cont .name_wrap {
+  position: absolute;
+  z-index: 5;
+}
+.chara_wrap .franxx_cont .text {
+  width: 20%;
+  margin-top: 104px;
+  line-height: 1.65;
+  font-weight: 600;
+}
+.chara_wrap .left .name_wrap p, .chara_wrap .left .name_wrap div, .chara_wrap .franxx_cont .name_wrap p, .chara_wrap .franxx_cont .name_wrap div {
+  background: #000;
+  color: #FFF;
+  display: inline-block;
+}
+.chara_wrap .left .name_wrap .this, .chara_wrap .franxx_cont .name_wrap .this {
+  font-size: 10px;
+  line-height: 24px;
+  padding: 0 12px 0 20px;
+  margin-bottom: 5px;
+}
+.chara_wrap.shichikenjin .left .image {
+  margin: auto;
+}
+.chara_wrap .left .image {
+  margin: 0 0 0 auto;
+}
+
+.chara_wrap .image .stand02, .chara_wrap .right .image .face02 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+.chara_wrap .left .name_wrap {
+  left: 0;
+}
+.chara_wrap .right .image {
+  margin: 0;
+}
+.chara_wrap .right .name_wrap {
+  text-align: right;
+  right: 0;
+}
+.chara_wrap .franxx_cont .image {
+  margin: 0 0 0 0;
+  text-align: center;
+}
+.chara_wrap .franxx_cont .name_wrap {
+  left: 0;
+}
+.chara_wrap .franxx .left .image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 751px) {
+  .chara_wrap {
+    /* overflow: hidden; */
+  }
+  .chara_wrap .left, .chara_wrap .right, .chara_wrap .franxx_cont {
+    z-index: 5;
+  }
+  .chara_wrap .left .name_wrap .code, .chara_wrap .right .name_wrap .code, .chara_wrap .franxx_cont .name_wrap .code {
+    font-size: 10px;
+    line-height: 24px;
+    padding: 0 12px;
+    margin-bottom: 5px;
+  }
+  .chara_wrap .left .name_wrap .name, .chara_wrap .right .name_wrap .name, .chara_wrap .franxx_cont .name_wrap .name {
+    font-size: 44px;
+    font-weight: 900;
+    padding: 10px 12px;
+    margin-bottom: 5px;
+  }
+  .chara_wrap .left .name_wrap .name span, .chara_wrap .right .name_wrap .name span, .chara_wrap .franxx_cont .name_wrap .name span {
+    font-size: 12px;
+    display: block;
+    padding: 6px 0 0;
+  }
+  .chara_wrap .franxx_cont .name_wrap span.sub {
+    font-size: 20px;
+    display: inline-block;
+    padding: 0 0 8px;
+    margin: 0  -13px 0 0;
+  }
+  .chara_wrap .left .name_wrap .cv, .chara_wrap .right .name_wrap .cv, .chara_wrap .franxx_cont .name_wrap .cv {
+    font-weight: 600;
+    padding: 6px 12px;
+  }
+  .chara_wrap .left .name_wrap .cv span, .chara_wrap .right .name_wrap .cv span, .chara_wrap .franxx_cont .name_wrap .cv span {
+    font-size: 12px;
+    padding-top: 6px;
+    display: block;
+  }
+  .chara_wrap .left .text, .chara_wrap .right .text, .chara_wrap .franxx_cont .text {
+    font-size: 14px;
+    position: absolute;
+  }
+  .chara_wrap .left .image, .chara_wrap .right .image {
+    width: 290px;
+  }
+  .chara_wrap .left .text, .chara_wrap .right .text {
+    top: 162px;
+    width: 40%;
+  }
+  .chara_wrap .left .text.lines_02 {
+    top: 133px;
+  }
+  .chara_wrap .left .text.name_long {
+    top: 180px;
+  }
+  .chara_wrap .franxx_cont .name_wrap {
+    position: absolute;
+    width: 50%;
+  }
+  .chara_wrap .franxx_cont .image img {
+    margin-top: -100px;
+  }
+  .chara_wrap .franxx_other .franxx_cont .text {
+    margin-top: 104px;
+  }
+  .chara_wrap.shichikenjin .left .text {
+    font-size: 14px;
+    position: absolute;
+    width: 40%;
+    top: 100px;
+  }
+  .chara_wrap.shichikenjin .left .image {
+    width: 200%;
+    text-align: center;
+    right: -103px;
+  }
+  .chara_wrap.shichikenjin .left .stand img {
+    position: relative;
+    top: 102px;
+  }
+  .chara_wrap.shichikenjin .left .chara_name {
+    position: absolute;
+    top: 74px;
+    display: inline-block;
+    width: max-content;
+    padding: 2px 5px;
+    background: #000;
+    color: #fff;
+  }
+  .chara_wrap.shichikenjin .left .chara_name.cn01 {
+    right: 490px;
+  }
+  .chara_wrap.shichikenjin .left .chara_name.cn02 {
+    left: 320px;
+  }
+  .chara_wrap.shichikenjin .left .chara_cv {
+    position: absolute;
+    display: inline-block;
+    bottom: -111px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .chara_wrap.shichikenjin .left .chara_cv.cv01 {
+    right: 410px;
+  }
+  .chara_wrap.shichikenjin .left .chara_cv.cv02 {
+    left: 246px;
+  }
+  .chara_wrap.unit_26 .image .chara_name {
+    position: absolute;
+    top: -20px;
+    left: 113px;
+    display: inline-block;
+    width: max-content;
+    padding: 2px 5px;
+    background: #000;
+    color: #fff;
+  }
+  .chara_wrap.unit_26 .image .chara_cv {
+    position: absolute;
+    left: 100px;
+    bottom: -12px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .chara_wrap.unit_9s .image .chara_name {
+    top: 36px;
+    left: 98px;
+  }
+  .chara_wrap.unit_9s .image .chara_cv {
+    left: 66px;
+    bottom: -26px;
+  }
+  .chara_wrap.unit_26 .text {
+    top: 100px;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, "ÃƒÆ’Ã‚Â¦Ãƒâ€šÃ‚Â¸Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã‚Â£ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã‚Â£ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â·ÃƒÆ’Ã‚Â£Ãƒâ€ Ã¢â‚¬â„¢Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â£ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¯", YuGothic, Verdana, sans-serif;
+  }
+  .chara_wrap .left .text {
+    left: 0;
+  }
+  .chara_wrap .right .text {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .chara_wrap {
+    padding-bottom: 35%;
+  }
+  .chara_wrap .human {
+    position: relative;
+  }
+  .chara_wrap .human .prev, .chara_wrap .human .next {
+    top: 220px;
+  }
+  .chara_wrap .human .left .name_wrap, .chara_wrap .human .right .name_wrap {
+    top: -133px;
+  }
+  .chara_wrap .human .left .name_wrap .code, .chara_wrap .human .right .name_wrap .code {
+    font-size: 10px;
+    line-height: 24px;
+    padding: 0 12px 0 20px;
+    margin-bottom: 5px;
+  }
+  .chara_wrap .human .left .name_wrap .name, .chara_wrap .human .right .name_wrap .name {
+    font-size: 28px;
+    font-weight: 900;
+    padding: 10px 12px 10px 20px;
+    margin-bottom: 5px;
+  }
+  .chara_wrap .human .left .name_wrap .name span, .chara_wrap .human .right .name_wrap .name span {
+    font-size: 10px;
+    display: block;
+    padding: 6px 0 0;
+  }
+  .chara_wrap .human .left .name_wrap .cv, .chara_wrap .human .right .name_wrap .cv {
+    font-weight: 600;
+    padding: 6px 12px 6px 20px;
+    font-size: 12px;
+  }
+  .chara_wrap .human .left .name_wrap .cv span, .chara_wrap .human .right .name_wrap .cv span {
+    font-size: 10px;
+    padding-top: 6px;
+    display: block;
+  }
+  .chara_wrap .human .left .image, .chara_wrap .human .right .image {
+    width: 80%;
+  }
+  .chara_wrap .human .left .image.double img, .chara_wrap .human .right .image.double img {
+    width: 200%;
+  }
+  .chara_wrap .franxx_cont {
+    padding-bottom: 9.9em;
+  }
+  .chara_wrap .franxx_cont .prev, .chara_wrap .franxx_cont .next {
+    top: 220px;
+  }
+  .chara_wrap .franxx_cont .text {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 84%;
+    margin: 50px auto 0;
+    font-size: 13px;
+    z-index: 5;
+    height: 9.9em;
+  }
+  .chara_wrap .franxx_cont .image img {
+    margin-top: -100px;
+  }
+  .chara_wrap.shichikenjin .human .left {
+    width: 100%;
+  }
+  .chara_wrap .human .left .text {
+    font-size: 13px;
+    width: 168%;
+    margin: 10px 16% 0;
+    position: relative;
+    z-index: 5;
+    height: 9.9em;
+  }
+  .chara_wrap.shichikenjin .left .image {
+    top: -70px;
+  }
+  .chara_wrap.shichikenjin .left .image .chara_name {
+    position: absolute;
+    top: 50px;
+    padding: 2px 5px;
+    font-size: 10px;
+    background: #000;
+    color: #fff;
+  }
+  .chara_wrap.shichikenjin .left .image .chara_name.cn01 {
+    left: -2%;
+  }
+  .chara_wrap.shichikenjin .left .image .chara_name.cn02 {
+    right: -5%;
+  }
+  .chara_wrap.shichikenjin .left .image .chara_cv {
+    position: absolute;
+    top: 70px;
+    width: 200px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .chara_wrap.shichikenjin .left .image .chara_cv.cv01 {
+    left: -8%;
+  }
+  .chara_wrap.shichikenjin .left .image .chara_cv.cv02 {
+    right: -8%;
+    text-align: right;
+  }
+  .chara_wrap.shichikenjin .left .text {
+    top: -60px;
+    width: 84%;
+    margin: 0 auto;
+  }
+  .chara_wrap.unit_26 .image.double .stand img {
+    width: 230%;
+    margin-top: -38px;
+    margin-left: -15%;
+    margin-bottom: 40px;
+  }
+  .chara_wrap.unit_26 .image.double .chara_name {
+    position: absolute;
+    top: -8%;
+    left: 19%;
+    padding: 2px 5px;
+    font-size: 10px;
+    background: #000;
+    color: #fff;
+  }
+  .chara_wrap.unit_26 .image.double .chara_cv {
+    position: absolute;
+    bottom: 12%;
+    left: 11%;
+    width: 200px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .chara_wrap.unit_9s .image.double .chara_name {
+    position: absolute;
+    top: 1%;
+    left: 13%;
+  }
+  .chara_wrap.unit_9s .image.double .chara_cv {
+    position: absolute;
+    bottom: 10%;
+    left: -3%;
+  }
+}
+/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ MACHINE
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+@media only screen and (max-width: 750px) {
+  .chara_wrap {
+    padding-bottom: 35%;
+  }
+  .chara_wrap .franxx .name_wrap {
+    position: absolute;
+    top: -133px;
+    left: 0;
+    /* left: 0; */
+    /* bottom: -90px; */
+  }
+  .chara_wrap .franxx .name_wrap .name {
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px 12px 6px 20px;
+    margin-bottom: 5px;
+  }
+  .chara_wrap .franxx .name_wrap .name span {
+    font-size: 10px;
+    display: block;
+    padding: 6px 0 0;
+  }
+  .chara_wrap .franxx .name_wrap .name span.sub {
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 0 6px;
+    margin: 0 -5px 0 0;
+  }
+  .chara_wrap .franxx .name_wrap .cv {
+    font-weight: 600;
+    padding: 6px 12px 6px 20px;
+  }
+  .chara_wrap .franxx .name_wrap .cv span {
+    font-size: 10px;
+    padding-top: 6px;
+    display: block;
+  }
+}
+/* -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ MODAL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+.floatContents {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 500;
+  display: none;
+  opacity: 0;
+}
+.floatContents .wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.floatContents .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.floatContents .close:before, .floatContents .close:after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #FFF;
+}
+.floatContents .close:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.floatContents .close:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.floatContents .player {
+  position: relative;
+}
+
+@media only screen and (min-width: 751px) {
+  .floatContents .close {
+    width: 30px;
+  }
+  .floatContents .player {
+    width: 100%;
+    max-width: 980px;
+    height: 100%;
+    max-height: 551px;
+    margin: 10% auto;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .floatContents .close {
+    width: 30px;
+  }
+  .floatContents .player {
+    width: 100%;
+    height: 40%;
+    margin: 50% 0;
+  }
+}

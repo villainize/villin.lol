@@ -1,0 +1,107 @@
+.staff, .cast {
+  position: relative;
+}
+.staff h3, .cast h3 {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0;
+}
+@media only screen and (min-width: 751px) {
+  .staff, .cast {
+    margin-left: 150px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .staff, .cast {
+    margin: 0 20px;
+  }
+  .staff h3, .cast h3 {
+    font-size: 16px;
+    margin-bottom: 1.5em;
+  }
+}
+
+.staff {
+  margin-bottom: 40px;
+}
+
+.staff_list li .role, .staff_list li .chara {
+  background: #FFF;
+  color: #000;
+}
+.staff_list li .name {
+  background: #000;
+  color: #FFF;
+}
+.staff_list li p {
+  display: inline;
+  padding: 2px 15px;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+}
+@media only screen and (min-width: 751px) {
+  .staff_list {
+    letter-spacing: -.4em;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+  }
+  .staff_list h3 {
+    position: absolute;
+    font-size: 20px;
+    left: -150px;
+    top: 0;
+  }
+  .staff_list h3:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background: #000;
+    left: 108px;
+    top: 9px;
+  }
+  .staff_list li {
+    display: inline-block;
+    min-width: 50%;
+    margin-bottom: 30px;
+    padding-right: 3%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .staff_list li p {
+    line-height: 33px;
+  }
+  .staff_list li .role, .staff_list li .chara {
+    font-size: 14px;
+  }
+  .staff_list li .name {
+    font-size: 24px;
+  }
+  .staff_list li .name span {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .staff_list {
+    letter-spacing: -.4em;
+  }
+  .staff_list li {
+    display: inline-block;
+    min-width: 50%;
+    margin-bottom: 1.2em;
+  }
+  .staff_list li p {
+    line-height: 25px;
+  }
+  .staff_list li .role, .staff_list li .chara {
+    font-size: 11px;
+  }
+  .staff_list li .name {
+    font-size: 16px;
+  }
+  .staff_list li .name span {
+    font-size: 11px;
+  }
+}

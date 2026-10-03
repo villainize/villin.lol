@@ -1,0 +1,510 @@
+.page_tab {
+  text-align: center;
+  letter-spacing: -0.4em;
+}
+.page_tab li {
+  display: inline-block;
+  letter-spacing: 0.05em;
+}
+.page_tab li a {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  background: #FFF;
+}
+.page_tab li.current a {
+  color: #FFF;
+  background: #000;
+}
+
+@media only screen and (min-width: 751px) {
+  .page_tab {
+    margin-bottom: 30px;
+  }
+  .page_tab li {
+    margin: 0 6px 20px;
+    height: 26px;
+  }
+  .page_tab li a {
+    padding: 10px 15px;
+    font-size: 12px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .page_tab li a:hover {
+    background: #000;
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .page_tab {
+    margin-bottom: 12px;
+  }
+  .page_tab li {
+    margin: 0 5px 18px;
+    letter-spacing: 0;
+  }
+  .page_tab li a {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+}
+.text {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.text p {
+  background: #FFF;
+  font-weight: 600;
+  padding: 0 10px;
+  margin-bottom: 5px;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+}
+.text p span {
+  background: #000;
+  color: #FFF;
+  padding: 0 5px;
+}
+.text p.line {
+  padding-right: 3.5em;
+  position: relative;
+}
+.text p.line:after {
+  content: '';
+  display: block;
+  width: 3em;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  right: 0.3em;
+  top: 50%;
+}
+
+@media only screen and (min-width: 751px) {
+  .text p {
+    line-height: 22px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  .text p span {
+    padding: 2px 5px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .text p {
+    display: inline;
+    font-size: 13px;
+  }
+}
+.lead {
+  text-align: center;
+  line-height: 2;
+}
+.lead p {
+  background: #000;
+  color: #FFF;
+  font-weight: 900;
+  display: inline;
+}
+.lead span {
+  position: relative;
+  padding-right: 3.5em;
+}
+.lead span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 3em;
+  height: 1px;
+  background: #FFF;
+  top: 50%;
+  right: 0.3em;
+}
+
+@media only screen and (min-width: 751px) {
+  .lead p {
+    font-size: 28px;
+    padding: 4px 8px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .lead p {
+    font-size: 18px;
+    padding: 7px 5px;
+    line-height: 2;
+  }
+}
+.story .story_notice h3 {
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  line-height: 1.4;
+}
+.story .story_notice .content {
+  background: #fff;
+}
+.story .story_notice .content .movie_btn .thumb {
+  position: relative;
+  cursor: pointer;
+}
+.story .story_notice h3 span {
+  display: block;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+}
+.story .story_notice h3 strong {
+  display: block;
+  letter-spacing: 0.05em;
+}
+
+@media only screen and (min-width: 751px) {
+  .story .story_notice h3 {
+    font-size: 19px;
+    padding: 14px 0 12px;
+  }
+  .story .story_notice h3 span {
+    font-size: 17px;
+  }
+  .story .story_notice h3 strong {
+    margin-top: 3px;
+    font-size: 33px;
+  }
+  .story .story_notice .content .movie_btn {
+    padding: 35px 40px 64px;
+    margin: 0 0 0;
+  }
+  .story .story_notice .content .movie_btn .thumb img {
+    width: 100%;
+  }
+  .story .story_notice .content .movie_btn .thumb:hover:after {
+    -webkit-transform: scale(0.92);
+    -moz-transform: scale(0.92);
+    -ms-transform: scale(0.92);
+    -o-transform: scale(0.92);
+    transform: scale(0.92);
+  }
+  .story .story_notice .content .movie_btn .thumb:after {
+    background: url("https://darli-fra.jp/assets/img/common/icon_movie-play.png") no-repeat center;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .story .story_notice {
+    margin: 0 20px;
+  }
+  .story .story_notice h3 {
+    font-size: 14px;
+    padding: 9px 0;
+    font-weight: 500;
+  }
+  .story .story_notice h3 span {
+    font-size: 14px;
+  }
+  .story .story_notice h3 strong {
+    font-size: 23px;
+  }
+  .story .story_notice .movie_btn {
+    padding: 24px 20px;
+  }
+  .story .story_notice .movie_btn .thumb img {
+    width: 100%;
+  }
+  .story .story_notice .movie_btn .thumb:after {
+    background: url("https://darli-fra.jp/assets/img/common/icon_movie-play.png") no-repeat center;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    -webkit-background-size: auto 45%;
+    -o-background-size: auto 45%;
+    background-size: auto 45%;
+  }
+}
+.story .story_all h3 {
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  line-height: 1.4;
+}
+.story .story_all h3 span {
+  display: block;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+}
+.story .story_all h3 strong {
+  display: block;
+  letter-spacing: 0.05em;
+}
+.story .story_all .content {
+  background: #fff;
+}
+.story .story_all .content .story-content {
+  background: #000;
+  color: #fff;
+}
+.story .story_all .content .story-content h4 {
+  position: relative;
+  letter-spacing: 0.05em;
+}
+.story .story_all .content .story-content p {
+  display: block;
+  font-weight: 200;
+  line-height: 1.7;
+}
+.story .story_all .content .movie_btn .thumb {
+  position: relative;
+  cursor: pointer;
+}
+
+.story .story_all h5 {
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  line-height: 1.4;
+  text-align: left;
+}
+
+@media only screen and (min-width: 751px) {
+  .story .story_all h3 {
+    font-size: 19px;
+    padding: 14px 0 12px;
+  }
+  .story .story_all h3 span {
+    font-size: 17px;
+  }
+  .story .story_all h3 strong {
+    margin-top: 3px;
+    font-size: 33px;
+  }
+  .story .story_all .content .story-content {
+    padding: 40px;
+  }
+  .story .story_all .content .story-content .staff {
+    margin-top: 24px;
+  }
+  .story .story_all .content .story-content h4 {
+    font-size: 14px;
+    padding: 0 0 12px 20px;
+  }
+  .story .story_all .content .story-content h4:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background: #fff;
+  }
+  .story .story_all .content .story-content p {
+    padding-left: 20px;
+    font-size: 15px;
+  }
+  .story .story_all .content .movie_btn {
+    padding: 35px 40px 40px;
+    margin: 0 0 0;
+  }
+  .story .story_all .content .movie_btn .thumb img {
+    width: 100%;
+  }
+  .story .story_all .content .movie_btn .thumb:hover:after {
+    -webkit-transform: scale(0.92);
+    -moz-transform: scale(0.92);
+    -ms-transform: scale(0.92);
+    -o-transform: scale(0.92);
+    transform: scale(0.92);
+  }
+  .story .story_all .content .movie_btn .thumb:after {
+    background: url("https://darli-fra.jp/assets/img/common/icon_movie-play.png") no-repeat center;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+  }
+  .story .story_all h5 {
+    font-size: 19px;
+    padding: 14px 40px 12px;
+  }
+  .story .story_all h5 strong {
+    display: block;
+  }
+  .story .story_all h5 span {
+    font-size: 15px;
+    font-weight: 200;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .story .story_all {
+    margin: 0 20px;
+  }
+  .story .story_all h3 {
+    font-size: 14px;
+    padding: 9px 0;
+    font-weight: 500;
+  }
+  .story .story_all h3 span {
+    font-size: 14px;
+  }
+  .story .story_all h3 strong {
+    font-size: 23px;
+  }
+  .story .story_all .story-content {
+    padding: 24px 20px;
+  }
+  .story .story_all .story-content .staff {
+    margin-top: 24px;
+  }
+  .story .story_all .story-content h4 {
+    font-size: 10px;
+    padding: 0 0 8px 12px;
+  }
+  .story .story_all .story-content h4:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 6px;
+    height: 1px;
+    background: #fff;
+  }
+  .story .story_all .story-content p {
+    padding-left: 12px;
+    font-size: 13px;
+  }
+  .story .story_all .movie_btn {
+    padding: 24px 20px;
+  }
+  .story .story_all .movie_btn .thumb img {
+    width: 100%;
+  }
+  .story .story_all .movie_btn .thumb:after {
+    background: url("https://darli-fra.jp/assets/img/common/icon_movie-play.png") no-repeat center;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    -webkit-background-size: auto 45%;
+    -o-background-size: auto 45%;
+    background-size: auto 45%;
+  }
+  .story .story_all h5 {
+    font-size: 17px;
+    padding: 14px 20px 12px;
+  }
+  .story .story_all h5 strong {
+    display: block;
+  }
+  .story .story_all h5 span {
+    font-weight: 200;
+    font-size: 13px;
+  }
+}
+.floatcontents {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 500;
+  display: none;
+  opacity: 0;
+}
+.floatcontents .wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.floatcontents .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.floatcontents .close:before, .floatcontents .close:after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #FFF;
+}
+.floatcontents .close:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.floatcontents .close:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.floatcontents .player {
+  position: relative;
+}
+
+@media only screen and (min-width: 751px) {
+  .floatcontents .close {
+    width: 30px;
+  }
+  .floatcontents .player {
+    width: 100%;
+    max-width: 980px;
+    height: 100%;
+    max-height: 551px;
+    margin: 10% auto;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .floatcontents .close {
+    width: 30px;
+  }
+  .floatcontents .player {
+    width: 100%;
+    height: 40%;
+    margin: 50% 0;
+  }
+}

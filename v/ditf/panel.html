@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darling in the FranXX Portal</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#loading {
+  text-align: center;
+  position: relative;
+}
+
+.loadimg img {
+  width: 600px;
+  max-width: 120vw;
+  transform: scale(1.5);  /* start zoomed in */
+  transition: transform 3s ease, opacity 1.5s ease;
+}
+
+.load_top {
+  margin: 8px 0;
+  opacity: 0;
+  transform: translateY(20px); /* start slightly below */
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  font-size: 28px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.buttons.show {
+  opacity: 1;
+}
+
+.buttons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  background: #171923;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.2s, background 0.2s;
+  width: 100px;
+}
+
+.buttons a:hover {
+  transform: scale(1.05);
+  background: #21242d;
+}
+
+.buttons img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.buttons span {
+  font-size: 14px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="loadimg">
+    <img src="assets/img/common/opening/opening_logo.png" alt="Darling in the FranXX" id="logo">
+  </div>
+  <p class="load_top" id="welcomeText">Welcome to DITF Portal</p>
+
+  <div class="buttons" id="buttons">
+    <a href="anime.html">
+      <img src="assets/img/thumb/Screenshot_2.png" alt="Watch Anime">
+      <span>Watch Anime</span>
+    </a>
+    <a href="manga.html">
+      <img src="assets/img/thumb/Screenshot_3.png" alt="Read Manga">
+      <span>Read Manga</span>
+    </a>
+    <a href="https://darli-fra.jp/" target="_blank">
+      <img src="assets/img/thumb/Screenshot_4.png" alt="Official Site">
+      <span>Official Site</span>
+    </a>
+  </div>
+</div>
+
+<script>
+window.addEventListener('load', () => {
+  const logo = document.getElementById('logo');
+  const buttons = document.getElementById('buttons');
+  const welcomeText = document.getElementById('welcomeText');
+
+  // Step 1: slowly zoom out logo
+  setTimeout(() => {
+    logo.style.transform = 'scale(1)';
+  }, 500);
+
+  // Step 2: fade out logo and remove it
+  setTimeout(() => {
+    logo.style.opacity = '0';
+    setTimeout(() => {
+      logo.style.display = 'none';
+
+      // Step 3: animate welcome text floating up
+      welcomeText.style.opacity = '1';
+      welcomeText.style.transform = 'translateY(-20px)';
+
+      // Step 4: show buttons after text floats
+      setTimeout(() => {
+        buttons.classList.add('show');
+      }, 1000);
+
+    }, 1500);
+  }, 3000);
+});
+</script>
+
+</body>
+</html>

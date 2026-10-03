@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Manga Reader – PDF & CBZ</title>
+<style>
+:root{
+  --bg:#0f1115; --panel:#171923; --muted:#9aa4b2; --text:#eef2f8; --accent:#7c93ff; --accent-2:#21d4a5; --radius:18px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+.toolbar{
+  position:sticky;top:0;z-index:10;background:linear-gradient(180deg,var(--bg),rgba(15,17,21,.8));
+  backdrop-filter: blur(8px);
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:12px;border-bottom:1px solid rgba(255,255,255,.06)
+}
+.card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:12px}
+.btn{appearance:none;border:1px solid rgba(255,255,255,.12);background:#131621;color:var(--text);padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:600}
+.btn:hover{border-color:var(--accent)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.primary{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#0c1022;border:none}
+.pill{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:var(--muted)}
+.grow{flex:1}
+.row{display:flex;gap:12px;align-items:center}
+.hidden{display:none}
+#viewer{display:flex;flex-direction:column;gap:16px;margin:16px auto;align-items:center}
+.page{position:relative;background:#0b0e16;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.06);text-align:center}
+.page img, .page canvas{max-width:100%;height:auto;display:block;margin:0 auto}
+.ph{display:grid;place-items:center;inset:0;padding:24px;color:#8b96a8}
+.badge{position:absolute;left:8px;top:8px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.2);color:#c8d1e1;padding:4px 8px;border-radius:999px;font-size:12px}
+.footnote{color:var(--muted);font-size:14px;text-align:center;margin:24px 0}
+.kbd{border:1px solid rgba(255,255,255,.2);padding:2px 6px;border-radius:6px;background:#0c0f18;color:#cdd7e7;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+</style>
+
+<!-- PDF.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+if(window['pdfjsLib']){pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';}
+</script>
+
+<!-- JSZip for CBZ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="toolbar card">
+    <div class="row" style="gap:8px;flex-wrap:wrap">
+      <label class="btn">
+        <input id="folderInput" type="file" webkitdirectory directory multiple class="hidden"/>
+        Choose Folder…
+      </label>
+      <button id="prevChapter" class="btn">« Previous Chapter</button>
+      <button id="nextChapter" class="btn">Next Chapter »</button>
+      <div class="pill">Pages: <span id="pageCount">0</span></div>
+      <div class="pill">Zoom: <span id="zoomPct">100%</span></div>
+    </div>
+    <div class="row grow">
+      <button id="zoomOut" class="btn" aria-label="Zoom out">−</button>
+      <button id="zoomIn" class="btn" aria-label="Zoom in">＋</button>
+      <button id="fitWidth" class="btn">Fit width</button>
+      <button id="fit100" class="btn">100%</button>
+      <div class="grow"></div>
+    </div>
+  </div>
+
+  <div id="viewer"></div>
+  <p class="footnote">Tip: Use <span class="kbd">Z</span>/<span class="kbd">X</span> to zoom, <span class="kbd">Home</span>/<span class="kbd">End</span> to jump to start/end, ←/→ for chapters.</p>
+</div>
+
+<script>
+(function(){
+  const folderInput = document.getElementById('folderInput');
+  const viewer = document.getElementById('viewer');
+  const zoomInBtn = document.getElementById('zoomIn');
+  const zoomOutBtn = document.getElementById('zoomOut');
+  const fitWBtn = document.getElementById('fitWidth');
+  const fit100Btn = document.getElementById('fit100');
+  const zoomPct = document.getElementById('zoomPct');
+  const pageCountEl = document.getElementById('pageCount');
+  const prevChapterBtn = document.getElementById('prevChapter');
+  const nextChapterBtn = document.getElementById('nextChapter');
+
+  let pdfDoc = null;
+  let scale = 1.0;
+  let pageMeta = [];
+  let chapterFiles = [];
+  let currentChapter = 0;
+
+  const io = new IntersectionObserver(onIO, { root:null, rootMargin:'800px 0px', threshold:0 });
+
+  function setZoom(v){
+    scale = Math.max(0.25, Math.min(5,v));
+    zoomPct.textContent = Math.round(scale*100)+'%';
+    pageMeta.forEach(meta=>{ if(meta?.visible && meta.type==='pdf') renderPage(meta.num,true); });
+  }
+
+  function onIO(entries){
+    for(const e of entries){
+      const idx = +e.target.dataset.index;
+      const meta = pageMeta[idx];
+      if(!meta) continue;
+      meta.visible = e.isIntersecting;
+      if(e.isIntersecting && !meta.rendered && meta.type==='pdf') renderPage(meta.num);
+    }
+  }
+
+  function clearViewer(){ viewer.innerHTML=''; pageMeta=[]; pageCountEl.textContent='0'; pdfDoc=null; }
+
+  async function loadPDFFile(file){
+    const ab = await file.arrayBuffer();
+    return { data: ab };
+  }
+
+  async function loadPDFChapter(file){
+    const src = await loadPDFFile(file);
+    try { pdfDoc = await pdfjsLib.getDocument(src).promise; } 
+    catch(err){ alert('Failed to load PDF: '+err.message); return; }
+
+    clearViewer();
+    pageCountEl.textContent = pdfDoc.numPages;
+    for(let i=1;i<=pdfDoc.numPages;i++){
+      const pageBox=document.createElement('div');
+      pageBox.className='page';
+      pageBox.dataset.index=i-1;
+      const badge=document.createElement('div');
+      badge.className='badge';
+      badge.textContent=`Page ${i}`;
+      const placeholder=document.createElement('div');
+      placeholder.className='ph';
+      placeholder.textContent='Loading…';
+      pageBox.appendChild(badge);
+      pageBox.appendChild(placeholder);
+      viewer.appendChild(pageBox);
+      pageMeta[i-1]={num:i, el:pageBox, canvas:null, rendered:false, visible:false, type:'pdf'};
+      io.observe(pageBox);
+    }
+    requestAnimationFrame(()=>fitWidth());
+  }
+
+  async function renderPage(num, force=false){
+    const meta = pageMeta[num-1];
+    if(!meta || (!force && meta.rendering)) return;
+    meta.rendering=true;
+    const page = await pdfDoc.getPage(num);
+    const viewport = page.getViewport({ scale });
+    let canvas = meta.canvas;
+    if(!canvas){
+      canvas=document.createElement('canvas');
+      meta.canvas=canvas;
+      meta.el.querySelector('.ph')?.remove();
+      meta.el.appendChild(canvas);
+    }
+    const ctx=canvas.getContext('2d');
+    const DPR=window.devicePixelRatio||1;
+    const maxWidth=Math.min(viewer.clientWidth-24,1000);
+    const scaled=page.getViewport({scale:1});
+    const fitScale=maxWidth/scaled.width;
+    const finalScale=scale*fitScale;
+    const finalViewport=page.getViewport({scale:finalScale});
+    canvas.width=Math.floor(finalViewport.width*DPR);
+    canvas.height=Math.floor(finalViewport.height*DPR);
+    canvas.style.width=Math.floor(finalViewport.width)+'px';
+    canvas.style.height=Math.floor(finalViewport.height)+'px';
+    await page.render({canvasContext:ctx,viewport:finalViewport,transform:[DPR,0,0,DPR,0,0]}).promise;
+    meta.rendering=false;
+    meta.rendered=true;
+  }
+
+  async function loadCBZChapter(file){
+    const ab = await file.arrayBuffer();
+    const zip = await JSZip.loadAsync(ab);
+    const imageFiles = Object.values(zip.files)
+      .filter(f=>!f.dir && /\.(jpe?g|png|webp)$/i.test(f.name))
+      .sort((a,b)=>a.name.localeCompare(b.name));
+
+    clearViewer();
+    pageCountEl.textContent=imageFiles.length;
+
+    for(let i=0;i<imageFiles.length;i++){
+      const pageBox=document.createElement('div');
+      pageBox.className='page';
+      pageBox.dataset.index=i;
+      const badge=document.createElement('div');
+      badge.className='badge';
+      badge.textContent=`Page ${i+1}`;
+      const placeholder=document.createElement('div');
+      placeholder.className='ph';
+      placeholder.textContent='Loading…';
+      pageBox.appendChild(badge);
+      pageBox.appendChild(placeholder);
+      viewer.appendChild(pageBox);
+
+      const imgData=await imageFiles[i].async('base64');
+      const img=new Image();
+      const ext = imageFiles[i].name.split('.').pop().toLowerCase();
+      img.src=`data:image/${ext==='png'?'png':'jpeg'};base64,${imgData}`;
+      img.onload=()=>{ placeholder.remove(); pageBox.appendChild(img); };
+      pageMeta[i]={el:pageBox, rendered:true, visible:true, type:'cbz'};
+    }
+  }
+
+  async function loadChapter(index){
+    if(index<0 || index>=chapterFiles.length) return;
+    currentChapter=index;
+    const file = chapterFiles[index];
+    if(file.name.endsWith('.pdf')) await loadPDFChapter(file);
+    else if(file.name.endsWith('.cbz')) await loadCBZChapter(file);
+  }
+
+  function fitWidth(){ setZoom(1.0); }
+
+  folderInput.addEventListener('change', async e=>{
+    chapterFiles = Array.from(e.target.files)
+      .filter(f=>f.type==='application/pdf' || f.name.endsWith('.cbz'))
+      .sort((a,b)=>a.name.localeCompare(b.name));
+    if(chapterFiles.length>0) await loadChapter(0);
+  });
+
+  prevChapterBtn.addEventListener('click', ()=> loadChapter(currentChapter-1));
+  nextChapterBtn.addEventListener('click', ()=> loadChapter(currentChapter+1));
+  zoomInBtn.addEventListener('click', ()=> setZoom(scale+0.1));
+  zoomOutBtn.addEventListener('click', ()=> setZoom(scale-0.1));
+  fitWBtn.addEventListener('click', ()=> fitWidth());
+  fit100Btn.addEventListener('click', ()=> setZoom(1.0));
+
+  window.addEventListener('keydown', e=>{
+    if(['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+    if(e.key==='z'||e.key==='Z') setZoom(scale+0.1);
+    if(e.key==='x'||e.key==='X') setZoom(scale-0.1);
+    if(e.key==='Home') window.scrollTo({top:0,behavior:'smooth'});
+    if(e.key==='End') window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+    if(e.key==='ArrowLeft') loadChapter(currentChapter-1);
+    if(e.key==='ArrowRight') loadChapter(currentChapter+1);
+  });
+
+})();
+</script>
+</body>
+</html>
