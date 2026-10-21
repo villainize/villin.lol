@@ -1,0 +1,37 @@
+.birthday-locked{background:#e9f8fc}
+.birthday-preview-banner{padding:10px 18px;background:#315c76;color:#fff;text-align:center;font-size:12px}
+.birthday-preview-banner a{color:#fff;margin-left:14px;text-decoration:underline}
+.birthday-ocean-screen{position:relative;isolation:isolate;overflow:hidden;border-radius:28px;padding:85px 22px;background:radial-gradient(ellipse at 50% 40%,#f5fdff,#d8eff5 70%,#bddfe9);border:1px solid #cce5ed}
+.birthday-ocean-content{position:relative;z-index:1;max-width:640px;margin:auto}
+#welcome .birthday-ocean-content{padding:24px 14px;border-radius:22px;background:#fffdf9e8;box-shadow:0 10px 35px #3158700c}
+.birthday-letter-ocean{z-index:0}
+.birthday-ocean-screen .letter-card{border-radius:18px;box-shadow:0 14px 40px #31587014}
+.birthday-ocean-screen .countdown-bubble{border-color:#7cb3c77a;background:#ffffff50}
+@media(max-width:500px){.birthday-ocean-screen{padding:80px 10px;border-radius:20px}.birthday-ocean-screen .letter-card{padding:25px 18px}}
+.birthday-locked .sparkles,.birthday-locked footer{display:none}
+.birthday-locked main{padding:20px 12px}
+.birthday-locked .topbar{background:#f0fbff;border-color:#cde7ed}
+.birthday-locked .screen:not(#countdown){display:none!important}
+#countdown{position:relative;isolation:isolate;overflow:hidden;max-width:1120px;min-height:min(730px,calc(100svh - 120px));border:1px solid #bbdce7;border-radius:28px;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 20%,#effdff,#c9eaf1 55%,#80bfd4);padding:110px 20px}
+#countdown[hidden]{display:none}
+.countdown-ocean{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.countdown-card{width:min(100%,590px);padding:38px 24px;border:1px solid #fff;border-radius:24px;background:#ffffffdb;box-shadow:0 18px 65px #27577914;text-align:center}
+.countdown-card .eyebrow{color:#46788d;font-size:10px}
+.countdown-card h1{font-size:clamp(32px,5vw,52px);margin:14px 0;color:#264e65;line-height:1.15}
+.countdown-card h1 em{color:#ca6d94}
+.countdown-card p{color:#54758a;line-height:1.7;font-size:14px}
+.countdown-clock{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:25px 0}
+.countdown-clock div{border:1px solid #d9eaf0;border-radius:14px;padding:16px 3px;background:#f6fcff}
+.countdown-clock strong{display:block;color:#315c76;font-size:clamp(25px,5vw,43px);font-variant-numeric:tabular-nums;font-weight:600}
+.countdown-clock span{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#648799}
+.countdown-card .countdown-date{font-size:12px;margin-bottom:0}
+.countdown-shark{position:absolute;left:-220px;width:180px;animation:shark-swim 23s linear infinite}
+.countdown-shark svg{display:block;width:100%;transform:scaleX(-1);animation:shark-bob 3s ease-in-out infinite alternate}
+.shark-0{top:3%;animation-delay:-5s}.shark-1{top:73%;width:210px;animation-duration:30s;animation-delay:-12s}.shark-2{top:36%;width:125px;animation-duration:34s;animation-delay:-23s}.shark-3{top:12%;width:120px;animation-duration:28s;animation-delay:-18s;animation-direction:reverse}.shark-4{top:85%;width:135px;animation-duration:20s;animation-delay:-4s;animation-direction:reverse}
+.shark-3 svg,.shark-4 svg{transform:scaleX(1)}
+.countdown-bubble{position:absolute;bottom:-40px;width:var(--size);height:var(--size);border:1px solid #ffffffaa;border-radius:50%;background:#ffffff24;animation:bubble-rise var(--duration) var(--delay) linear infinite}
+@keyframes shark-swim{to{left:calc(100% + 220px)}}
+@keyframes shark-bob{to{translate:0 12px;rotate:3deg}}
+@keyframes bubble-rise{to{bottom:110%;translate:18px 0}}
+@media(max-width:500px){#countdown{padding:100px 12px}.countdown-card{padding:25px 14px}.countdown-clock{gap:5px}.countdown-clock span{letter-spacing:0;font-size:9px}.countdown-shark{width:135px}}
+@media(prefers-reduced-motion:reduce){.countdown-shark,.countdown-shark svg,.countdown-bubble{animation:none}.shark-0{left:4%;top:2%}.shark-1{left:60%;top:80%}.shark-2{left:70%;top:5%}.shark-3,.shark-4{display:none}}

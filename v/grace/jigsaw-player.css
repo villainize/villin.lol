@@ -1,0 +1,37 @@
+.jig-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;max-width:950px;margin:32px auto}
+.jig-choice{padding:10px 10px 20px;border:1px solid #ead5dd;border-radius:14px;background:#fffaf8;color:#573e49;cursor:pointer;text-align:left;box-shadow:0 7px 25px #5425360c;transition:transform .2s,box-shadow .2s}
+.jig-choice:hover{transform:translateY(-4px);box-shadow:0 10px 28px #54253622}
+.jig-choice img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:8px;margin-bottom:16px;filter:blur(9px) brightness(.68);transform:scale(.97);transition:filter .55s ease,transform .55s ease}
+.jig-choice-completed img{filter:none;transform:scale(1)}
+.jig-choice strong{display:block;font:600 22px var(--serif);margin:0 9px 8px}.jig-choice span{font:12px var(--sans);margin:0 9px;color:#9e536e}
+.jig-choice-note{font-size:13px;color:#8f7e86;max-width:600px;margin:20px auto}
+.wide-puzzle:has(.jig-player){max-width:1600px}
+.wide-puzzle:has(.jig-player) .game-panel{padding:12px}
+.wide-puzzle:has(.jig-player) h2{font-size:26px;margin-bottom:4px}
+.wide-puzzle:has(.jig-player) .game-help{margin-bottom:10px;font-size:12px}
+body:has(.wide-puzzle:not([hidden]) .jig-player) main{padding:10px 14px;min-height:0}
+body:has(.wide-puzzle:not([hidden]) .jig-player) .topbar{height:48px}
+body:has(.wide-puzzle:not([hidden]) .jig-player) footer{display:none}
+.wide-puzzle:has(.jig-player) .back-link{margin-bottom:8px}
+.jig-player{text-align:left;display:flex;flex-direction:column;gap:9px;min-width:0}
+.jig-toolbar{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.jig-player button{border:1px solid #e2ced3;background:#fffaf9;color:#724855;padding:8px 10px;border-radius:7px;font:600 11px var(--sans);cursor:pointer}
+.jig-player button:hover{background:#fae9ef;border-color:#c98da2}
+.jig-player button[aria-pressed=true]{background:#b4416c;color:white;border-color:#b4416c}
+.jig-player button:focus-visible{outline:3px solid #be5379;outline-offset:2px}
+.jig-toolbar-spacer{flex:1}
+.jig-table{height:calc(100dvh - 300px);min-height:330px;position:relative;border:1px solid #dfd0c3;border-radius:10px;overflow:hidden;background:#f6f0ea}
+.jig-table canvas{position:absolute;inset:0;display:block;touch-action:none;cursor:grab;outline:none}
+.jig-table canvas:focus-visible{box-shadow:inset 0 0 0 2px #bb6887}
+.jig-table canvas.dragging{cursor:grabbing}
+.jig-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;color:#856e78}
+.jig-progress{font-weight:700;color:#a03760}.jig-save{font-size:10px}
+.jig-feedback{flex:1;text-align:center}
+.jig-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#fff8f3dc;backdrop-filter:blur(6px);font:26px var(--serif)}
+.jig-overlay[hidden],.jig-complete[hidden]{display:none}
+.jig-options{font-size:11px;color:#997681}.jig-options summary{cursor:pointer;width:fit-content}.jig-options button{margin-top:8px;margin-right:8px}.jig-options p{font-size:11px}
+.jig-complete{padding:18px;border:1px solid #e2bacb;border-radius:9px;background:#fff1f5;text-align:center}.jig-complete strong{font:24px var(--serif)}.jig-complete p{font-size:13px}
+.jig-preview{width:min(750px,90vw);max-height:90dvh;padding:16px;border:1px solid #d7aabe;border-radius:12px;background:#fffaf6}.jig-preview::backdrop{background:#24161dc9;backdrop-filter:blur(5px)}
+.jig-preview button{display:block;margin:0 0 12px auto}.jig-preview img{display:block;width:100%;max-height:72dvh;object-fit:contain}
+.jig-player:fullscreen{padding:14px;background:#fffaf6;height:100dvh;width:100vw;overflow:auto}.jig-player:fullscreen .jig-table{flex:1;min-height:0;height:auto}
+@media(max-width:650px){.jig-choices{grid-template-columns:1fr;max-width:360px;gap:12px}.jig-choice{display:grid;grid-template-columns:110px 1fr;column-gap:10px;padding:10px}.jig-choice img{grid-row:1/3;margin:0}.jig-choice strong{font-size:18px;align-self:end}.jig-choice span{font-size:10px}.jig-toolbar{gap:4px}.jig-player button{font-size:10px;padding:7px}.jig-table{height:calc(100dvh - 330px);min-height:350px}.jig-toolbar-spacer{display:none}.jig-feedback{flex-basis:100%;text-align:left}.jig-save{display:none}}

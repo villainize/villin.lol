@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f3">
+  <title>Happy Birthday, Grace!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="birthday-board.css">
+  <link rel="stylesheet" href="jigsaw-player.css">
+  <link rel="stylesheet" href="letter-game.css">
+  <link rel="stylesheet" href="birthday-countdown.css">
+  <script src="birthday-countdown.js" defer></script>
+  <script src="letter-settings.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="birthday-cards.js" defer></script>
+  <script src="board-maps.js" defer></script>
+  <script src="birthday-board.js" defer></script>
+  <script src="jigsaw-player.js" defer></script>
+  <script src="letter-game.js" defer></script>
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true">✦ <span>✧</span> ✦ <span>·</span> ✧</div>
+  <header class="topbar"><a href="#home" class="brand" aria-label="Grace's birthday home">for grace <span>♡</span></a><span class="date-tag">A little birthday surprise</span></header>
+  <main id="home">
+    <section class="screen" id="countdown" aria-labelledby="countdown-title">
+      <div class="countdown-ocean" aria-hidden="true"></div>
+      <div class="countdown-card">
+        <div class="eyebrow">A LITTLE OCEAN OF SURPRISES</div>
+        <h1 id="countdown-title">Something special<br>is swimming your way,<br><em>Grace.</em></h1>
+        <p>Your birthday adventure is almost here.<br>The sharks are keeping your surprises safe until then.</p>
+        <div class="countdown-clock" role="timer" aria-label="Time until your birthday adventure opens">
+          <div><strong data-countdown="days">--</strong><span>Days</span></div>
+          <div><strong data-countdown="hours">--</strong><span>Hours</span></div>
+          <div><strong data-countdown="minutes">--</strong><span>Minutes</span></div>
+          <div><strong data-countdown="seconds">--</strong><span>Seconds</span></div>
+        </div>
+        <p class="countdown-date">Opens October 25, 2026 at midnight &middot; New York time</p>
+      </div>
+    </section>
+    <section class="welcome screen" id="welcome" aria-labelledby="welcome-title" hidden>
+      <div class="eyebrow">✦ &nbsp; TODAY IS ALL ABOUT YOU &nbsp; ✦</div>
+      <div class="envelope-wrap"><div class="envelope" aria-hidden="true"><span>G</span><i>♥</i></div><div class="envelope-shadow"></div></div>
+      <h1 id="welcome-title">Happy birthday,<br><em>Grace!</em></h1>
+      <p class="intro">Someone made you a little something.</p>
+      <button class="button primary" id="open-letter">Open your letter <span>↗</span></button>
+      <p class="tiny-note">go on, it’s just for you ♡</p>
+    </section>
+
+    <section class="letter-screen screen" id="letter" aria-labelledby="letter-title" hidden>
+      <div class="letter-card">
+        <div class="letter-topline"><span>A NOTE FOR YOU</span><span>♡</span></div>
+        <div class="letter-flower" aria-hidden="true">✿</div>
+        <h2 id="letter-title">Dear Grace,</h2>
+        <p>Happy birthday to someone who makes the world a little brighter just by being in it. I hope today brings you all the laughter, love, and lovely little surprises you deserve.</p>
+        <p>Here’s a tiny birthday adventure made just for you. Pick a game, have some fun, and remember how very loved you are.</p>
+        <p class="signoff">Wishing you the happiest day, <span>♡</span></p>
+        <button class="button primary" id="to-games">Let’s celebrate <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="games-screen screen" id="games" aria-labelledby="games-title" hidden>
+      <div class="eyebrow">A BIRTHDAY ARCADE, JUST FOR YOU</div>
+      <h2 id="games-title">Pick your little <em>adventure</em></h2>
+      <p class="section-subtitle">Three games, one very special birthday girl.</p>
+      <div class="game-grid">
+        <button class="game-card" data-game="puzzle"><span class="game-icon pink">▧</span><span class="game-number">01 / PICTURE PUZZLE</span><strong>All Our Pictures</strong><span class="game-desc">Put a birthday picture back together, one piece at a time.</span><span class="play-link">Play game <b>↗</b></span></button>
+        <button class="game-card" data-game="path"><span class="game-icon yellow">♙</span><span class="game-number">02 / BOARD GAME</span><strong>Pick a Path</strong><span class="game-desc">Guide your little character along a birthday adventure.</span><span class="play-link">Play game <b>↗</b></span></button>
+        <button class="game-card" data-game="letters"><span class="game-icon lilac">G</span><span class="game-number">03 / LETTER HUNT</span><strong>Find Grace’s Letter</strong><span class="game-desc">Find the right letter in a pile, then take the 10-question quiz.</span><span class="play-link">Play game <b>↗</b></span></button>
+      </div>
+    </section>
+
+    <section class="game-screen screen" id="play" hidden aria-live="polite">
+      <button class="back-link" id="back-games">← All games</button>
+      <div id="game-content"></div>
+    </section>
+  </main>
+  <footer>MADE WITH <span>♥</span> FOR GRACE</footer>
+</body>
+</html>

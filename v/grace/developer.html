@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f7">
+  <title>Grace Birthday Site · Developer Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="developer.css">
+  <script src="letter-settings.js" defer></script>
+  <script src="birthday-cards.js" defer></script>
+  <script src="board-maps.js" defer></script>
+  <script src="developer-letters.js" defer></script>
+  <script src="developer.js" defer></script>
+</head>
+<body class="developer-page">
+  <header class="topbar"><a class="brand" href="index.html#board">for grace <span>♡</span></a><span class="date-tag">LOCAL DEVELOPER DASHBOARD</span></header>
+  <main class="dev-main">
+    <a class="dev-back" href="index.html#board">← Back to the birthday board</a>
+    <section class="dev-heading">
+      <p class="eyebrow">PRIVATE CREATOR SETTINGS</p>
+      <h1>Grace’s birthday settings</h1>
+      <p>Edit board cards, all 23 letter messages, and the ten quiz questions. Your changes save in this browser and are used by the game on this device.</p>
+      <div class="dev-top-actions"><button type="button" class="button primary" id="save-all">Save all changes</button><button type="button" class="button soft-button" id="reset-all">Restore all samples</button><span id="save-status" role="status" aria-live="polite"></span></div>
+    </section>
+    <section class="dev-section">
+      <h2>Board map settings</h2>
+      <label class="dev-field">Choose the map to edit<select id="dev-map-select"></select></label>
+      <p class="dev-help">Each map has separate card decks and rewards. Switching maps saves your current edits.</p>
+      <label class="dev-field">Map label<input id="dev-map-name" maxlength="100"></label>
+      <label class="dev-field">Message when this map is completed<textarea id="dev-map-reward" rows="3" maxlength="4000"></textarea></label>
+    </section>
+    <section class="dev-section" id="dev-date-section" aria-labelledby="date-heading">
+      <div class="dev-section-heading"><span class="dev-deck-icon date-icon">♡</span><div><p class="eyebrow">SPECIAL BOARD SPACE · 2 HEARTS</p><h2 id="date-heading">Date space secret letter</h2><p>This letter appears when Grace lands on the Date space. It always gives her two hearts.</p></div></div>
+      <label class="dev-field">Letter title<input id="date-title" type="text" maxlength="120"></label>
+      <label class="dev-field">Secret letter<textarea id="date-text" rows="8" maxlength="4000"></textarea></label>
+      <p class="dev-help">Use line breaks to format the letter. The two heart reward is fixed for this board space.</p>
+    </section>
+    <div id="deck-sections"></div>
+    <a class="button soft-button" href="index.html?preview=birthday">Preview the opening birthday letter</a>
+    <div id="letter-editors"></div>
+    <a class="dev-back" href="index.html#letters">Open the letter hunt and quiz</a>
+    <div class="dev-bottom-actions"><button type="button" class="button primary" id="save-bottom">Save all changes</button><a class="button soft-button" href="index.html#board">Open the playable board</a><span id="save-status-bottom" role="status" aria-live="polite"></span></div>
+  </main>
+  <footer>YOUR EDITS ARE STORED IN THIS BROWSER</footer>
+</body>
+</html>
