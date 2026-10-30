@@ -4,7 +4,7 @@ Run `node server.js`, then open http://127.0.0.1:8792. Requires Node.js; no npm 
 
 ## Sections
 
-Units, items, extra skills, bursts, leader skills, missions, dictionary, squads, and compare. Characters remain optional in Settings. Interface size and preferences persist in the browser. Squads support six slots, leader assignment, saved selection and base stat totals; compare supports four units and skill details. These tools do not simulate combat or calculate combined skill bonuses.
+Units, items, extra skills, bursts, leader skills, missions, dictionary, squads, compare, Spark Simulator, and Summon Studio. Characters remain optional in Settings. Interface size and preferences persist in the browser. Squads support six slots, leader assignment, saved selection and base stat totals; compare supports four units and skill details. Summon Studio lets visitors arrange up to six unit illustrations, add outlined text, change the backdrop, and export a PNG. These tools do not simulate combat or calculate combined skill bonuses.
 
 Archives use the existing local snapshot of https://github.com/cheahjs/bravefrontier_data. GL/EU/JP/KR coverage varies by category. The dictionary snapshot contains GL translations. This is not a live data feed.
 

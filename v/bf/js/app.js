@@ -132,7 +132,7 @@
   function availableRootViews(charactersEnabled = state.charactersTabEnabled) {
     const views = ["units", "items"];
     if (charactersEnabled) views.push("characters");
-    views.push("extra-skills", "settings", "paths", "bursts", "leader-skills", "missions", "dictionary", "squads", "compare", "spark-simulator");
+    views.push("extra-skills", "settings", "paths", "bursts", "leader-skills", "missions", "dictionary", "squads", "compare", "spark-simulator", "summon-studio");
     return views;
   }
 
@@ -1237,6 +1237,7 @@
       items: "Items",
       characters: "Characters",
       "extra-skills": "Extra Skills",
+      "summon-studio": "Summon Studio",
       settings: "Settings",
       paths: "Image Paths",
       "unit-detail": "Unit Details",
