@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17191c">
+  <title>tristan is a bozo — Tarkov maps</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle map menu">☰</button>
+      <a class="brand" href="#"><span class="brand-mark">⌖</span><b>tristan is a bozo</b><span class="brand-sub">TARKOV MAPS</span></a>
+      <label class="global-search"><span>⌕</span><input id="search" type="search" placeholder="Search extracts, quests, loot…" autocomplete="off"><kbd>/</kbd></label>
+      <div class="top-right"><span class="status"><i></i> FIELD MAP</span><button class="icon-button" id="fullscreen" title="Fullscreen map">⛶</button></div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="map-picker-head"><div><small>SELECT A MAP</small><h1>Escape from Tarkov</h1></div><span class="map-count">13 MAPS</span></div>
+        <label class="map-select-wrap"><span class="map-select-icon">◈</span><select id="mapSelect" aria-label="Select a map"></select><span class="select-arrow">⌄</span></label>
+        <div class="map-heading"><div><small>LOCATION</small><h2 id="mapName">Customs</h2></div><span class="map-pill" id="mapKind">OUTDOOR</span></div>
+        <div class="control-block" id="floorControl"><label for="floorSelect">FLOOR / LEVEL</label><select id="floorSelect"></select></div>
+        <div class="side-divider"></div>
+        <div class="side-section-title"><span>MAP CONTROLS</span><span class="hotkey">SCROLL TO ZOOM</span></div>
+        <div class="zoom-row"><button id="zoomOut" aria-label="Zoom out">−</button><div class="zoom-track"><span id="zoomLabel">100%</span></div><button id="zoomIn" aria-label="Zoom in">+</button><button id="reset" aria-label="Reset view">↺</button></div>
+        <div class="side-divider"></div>
+        <div class="poi-header"><div class="side-section-title"><span>LEGEND & POINTS OF INTEREST</span></div><button id="layersAll" class="text-control">ALL</button></div>
+        <div class="layer-list" id="layerList"></div>
+        <div class="poi-results-header"><span>VISIBLE MAP POINTS</span><span id="poiCount">0</span></div>
+        <div class="poi-list" id="poiList"><div class="poi-empty">Loading map information…</div></div>
+        <div class="map-info" id="mapInfo"><span class="info-icon">i</span><p>Choose a point to see its extract rules, quest details, or loot information here.</p></div>
+        <div class="sidebar-bottom"><div class="credit">Map art: <a href="https://github.com/the-hideout/tarkov-dev-svg-maps" target="_blank" rel="noreferrer">Tarkov.dev SVG Maps</a> + <a href="https://re3mr.com/" target="_blank" rel="noreferrer">Re3mr</a>. POI data: <a href="https://tarkov.dev/api" target="_blank" rel="noreferrer">Tarkov.dev API</a>.<br>CC BY-NC-SA 4.0 · <a href="assets/maps/ATTRIBUTION.md" target="_blank">Credits & license</a></div><span class="build-tag">LOCAL MAP TOOL · 1.2</span></div>
+      </aside>
+      <main class="map-area">
+        <div class="map-toolbar"><div class="breadcrumbs"><span>TACTICAL MAPS</span><b>/</b><strong id="crumbMap">CUSTOMS</strong></div><div class="toolbar-actions"><button class="toolbar-button" id="centerButton"><span>⊙</span> CENTER MAP</button><button class="toolbar-button" id="sideButton"><span>◧</span> MENU</button></div></div>
+        <section class="map-canvas" id="viewport" aria-label="Interactive Tarkov map"><div class="map-stage" id="mapStage"><div class="map-art" id="mapArt"></div></div><div class="canvas-tools"><button id="canvasZoomIn" aria-label="Zoom in">+</button><button id="canvasZoomOut" aria-label="Zoom out">−</button><span></span><button id="canvasReset" aria-label="Reset map">⌖</button></div><div class="north-indicator"><small>N</small><b>↑</b></div><div class="canvas-hint"><span>DRAG TO PAN</span><i></i><span>SCROLL TO ZOOM</span></div></section>
+        <footer class="map-footer"><span><i></i> MAP READY</span><span id="footerMap">CUSTOMS</span><span>UNOFFICIAL COMMUNITY MAP TOOL</span></footer>
+      </main>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
